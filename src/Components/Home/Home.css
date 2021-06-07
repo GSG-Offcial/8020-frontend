@@ -1,0 +1,57 @@
+:root {
+  --colorWhite: #fff;
+}
+.nav-contianer {
+  width: 100vw;
+}
+.navbar {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% 80%;
+  margin: 0 auto;
+  max-width: 1720px;
+}
+
+.main_page_logo {
+  width: 75%;
+  height: 65%;
+}
+.main_page_logo:hover {
+  cursor: pointer;
+}
+.nav-menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(15, auto);
+  text-align: center;
+  list-style: none;
+  margin-left: 25%;
+}
+.nav-link {
+  color: white;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+.nav-link:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  border-bottom: 2px solid #10b9eb;
+  border-radius: 10px;
+}
+.nav-link-btn {
+  width: 7em;
+  background-color: #10b9eb;
+  border-radius: 50px 50px;
+  text-decoration: none;
+  margin-left: 170%;
+}
+.nav-link-btn:hover {
+  background-color: white;
+  border-style: none;
+  background-image: url(../Icons/Open\ App.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+
