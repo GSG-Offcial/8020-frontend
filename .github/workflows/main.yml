@@ -30,10 +30,6 @@ jobs:
       with:
         cmd: install 
         
-     # Installs dependencies
-    - name: Installs all dependencies
-      run: yarn install
-    
     # Builds the App
     - name: Build React App
       run: yarn build
