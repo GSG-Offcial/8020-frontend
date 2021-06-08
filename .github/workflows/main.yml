@@ -22,22 +22,22 @@ jobs:
 
     # Installs Node JS
     - name: Install NodeJS
-      uses: actions/setup-node@v2-beta
+      uses: actions/setup-node@v7.0.0
       with:
         version: 12 
-      
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install 
-        
+
+     # Installs dependencies
+    - name: Installs all dependencies
+      run: npm install
+
     # Builds the App
     - name: Build React App
-      run: yarn build
-    
+      run: npm run build
+
     # Installs Surge
     - name: Install surge
       run: npm install --global surge
-    
+
     # Deploys to Surge
     - name: Deploy to surge
       run: surge ./build 8020testing.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
