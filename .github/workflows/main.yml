@@ -22,10 +22,13 @@ jobs:
 
     # Installs Node JS
     - name: Install NodeJS
-      uses: actions/setup-node@v7.0.0
+      uses: actions/setup-node@v2-beta
       with:
         version: 12 
-
+      
+    - name: Install latest NPM
+      run: npm install -g npm@7
+      
      # Installs dependencies
     - name: Installs all dependencies
       run: npm install
