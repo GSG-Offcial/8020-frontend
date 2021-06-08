@@ -10,9 +10,9 @@ export const Home = () => {
             <nav className="navbar">
               <img src={Group900} alt="Logo" title="Block-Chain Logo" className="main_page_logo"/>
               <ul className="nav-menu">
-              <li><a href="#" className="nav-link">Buy</a></li>
-              <li><a href="#" className="nav-link">How it works</a></li>
-              <li><a href="#" className="nav-link nav-link-btn">Open App</a></li>
+              <li><a href="https://github.com" className="nav-link">Buy</a></li>
+              <li><a href="https://github.com" className="nav-link">How it works</a></li>
+              <li><a href="https://github.com" className="nav-link nav-link-btn">Open App</a></li>
              </ul>
             </nav>
         </div>
