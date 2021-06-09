@@ -1,0 +1,47 @@
+.dashboard-contianer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    color: white;
+    width: 100%;
+}
+.h1{
+  font-weight: 900;  
+  font-size: 40px;
+}
+.h1:hover{
+    cursor: pointer;
+}
+.para-item li{
+    display: inline-block;
+  
+    list-style: none;
+    padding: 0 18px;
+}
+#para-1{
+    color: #10b9eb !important;
+}
+#para-2{
+    color: gray !important;
+    font-size: 16px !important;
+}
+#para-3{
+    border: 2px solid #10b9eb;
+    padding: 3px 10px !important;
+    font-size: 15px !important;
+    border-radius: 7%;
+}
+.dasboard-button{
+    padding: 5px 35px;
+    border-radius: 50px;
+    border-style: none;
+    height: 40px;
+    color: white !important;
+    cursor: pointer;
+    background-color: #10b9eb;
+    font-size: 1em;
+    
+}
