@@ -22,7 +22,7 @@ jobs:
 
     # Installs Node JS
     - name: Insatlling Nodejs
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
            version: 14
        
