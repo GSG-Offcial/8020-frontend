@@ -1,0 +1,33 @@
+.main-box{
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap !important;
+     margin: 0 auto;
+     width: 60%;
+     justify-content: space-around;
+     padding: 20px  10px;
+     color: white;
+     text-align: center;  
+}
+.boxes{
+    border: 2px solid #10b9eb;
+    width: 22%;
+    height: 170px;
+    border-radius: 7.5%;
+    padding: 28px 17px;
+   
+}
+#box_1 p,#box_4 p{
+    padding-top: 29px;
+    color: plum;
+}
+
+#box_2 p{
+    padding-top: 52px;
+    color: plum;
+}
+#box_3 p{
+    padding: 10px;
+    color: plum;
+}

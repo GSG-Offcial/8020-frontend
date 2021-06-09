@@ -1,8 +1,12 @@
-import React from 'react'
+import React,{Fragment} from 'react'
 import './DashBoardNavbar.css'
+import{FourBox} from '../DB-Body/index'
+
+
 
 export const DashBoardNavbar = () => {
     return (
+        <Fragment>
         <div className="dashboard-contianer">
             <h1 className="h1">Dashboard </h1>
             <div>
@@ -21,5 +25,7 @@ export const DashBoardNavbar = () => {
                 </form>
             </div>
         </div>
+        <FourBox/>
+        </Fragment>
     )
 }
