@@ -1,0 +1,67 @@
+
+li,
+a,
+button {
+  font-weight: 500 !important;
+  font-size: 1.2em !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+.nav-contianer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px 6%;
+}
+.main_page_logo {
+  cursor: pointer;
+}
+
+.main_page_logo:hover{
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+.nav-menu {
+  list-style: none;
+}
+.nav-menu li{
+  display: inline;
+  padding: 0 20px;
+}
+
+#li-1:hover {
+  cursor: pointer;
+  transition: all 0.2s ease 0s; 
+  border-bottom: 2px solid #10b9eb;
+  padding-bottom: 13px;
+  border-radius: 10px;
+
+}
+#li-2:hover{
+  cursor: pointer;
+  transition: all 0.2s ease 0s; 
+  border-bottom: 2px solid #10b9eb;
+  padding-bottom: 13px;
+  border-radius: 10px;
+
+}
+button{
+  padding: 5px 25px;
+  font-size: 1em;
+  background-color: #10b9eb;
+  border-radius: 50px 50px;
+  border-style: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in 0s; 
+}
+button:hover{
+  background-color: white;
+  border-style: none;
+  background-image: url(../../Icons/Open\ App.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  transition: all 0.2s ease-in; 
+}

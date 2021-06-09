@@ -1,12 +1,15 @@
 import React from 'react'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import {Home} from './Components/Home/Home'
+import {Navbar} from './Components/Home/NavBar/Navbar'
+import {SecondComp} from './Components/Home/SecCom/SecondComp'
 import './App.css';
 
 function App() {
   return (
     <div className="main_div">
-      <Home/>
+      <Navbar/>
+      <div>
+        <SecondComp/>
+      </div>
     </div>
   );
 }
