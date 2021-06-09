@@ -21,20 +21,26 @@ jobs:
     - uses: actions/checkout@v2
 
     # Installs Node JS
-    - name: Insatlling Nodejs
-        uses: actions/setup-node@v2
-        with:
-           version: 14
-       
-      - name: Installing yarn
-        uses: Borales/actions-yarn@v2.1.0
-        with: 
-           cmd: install
-           
-      - name: yarn build
-        run: sudo yarn build
-      # Runs a set of commands using the runners shell
-      - name: Installing Surge
-        run: npm install -g surge
-      - name: Deploying on Surge
-      run: surge ./build 8020_testing.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+    - name: Install NodeJS
+      uses: actions/setup-node@v2-beta
+      with:
+        version: 12 
+      
+    - name: Install latest NPM
+      run: npm install -g npm@7
+      
+     # Installs dependencies
+    - name: Installs all dependencies
+      run: npm install
+
+    # Builds the App
+    - name: Build React App
+      run: npm run build
+
+    # Installs Surge
+    - name: Install surge
+      run: npm install --global surge
+
+    # Deploys to Surge
+    - name: Deploy to surge
+      run: surge ./build 8020testing.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
