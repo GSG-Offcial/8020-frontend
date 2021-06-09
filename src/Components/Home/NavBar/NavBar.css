@@ -58,7 +58,7 @@ button{
 button:hover{
   background-color: white;
   border-style: none;
-  background-image: url(../../Icons/Open\ App.svg);
+  background-image: url(../../Icons/OpenApp.svg);
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
