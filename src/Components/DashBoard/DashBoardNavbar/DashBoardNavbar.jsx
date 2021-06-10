@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react'
 import './DashBoardNavbar.css'
-import{FourBox} from '../DB-Body/index'
+import{FourBox,SideBar} from '../DB-Body/index'
 
 
 
@@ -25,6 +25,8 @@ export const DashBoardNavbar = () => {
                 </form>
             </div>
         </div>
+        <SideBar/>
+
         <FourBox/>
         </Fragment>
     )

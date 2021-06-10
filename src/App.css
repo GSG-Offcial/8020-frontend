@@ -3,7 +3,9 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: 'Nunito Sans', sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 body{
-  background-color: #0D173A;
+  background-color: #17203F;
 }
