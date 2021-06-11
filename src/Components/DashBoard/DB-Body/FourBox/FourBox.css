@@ -3,7 +3,8 @@
 }
 
 .mainbox {
-  margin-left: 355px;
+  margin-left: 335px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -15,7 +16,7 @@
   flex: 1;
   height: auto;
   margin-right: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background-color: #0d173a;
   border-radius: 10px;
   text-align: center;

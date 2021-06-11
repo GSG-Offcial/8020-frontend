@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{Fragment} from 'react'
 import './FourBox.css'
+
 
 export const FourBox = () => {
   return (
+    <Fragment>
     <div className="mainbox">
       <div>
         <p className="boxes" id="box_1">Total Value Locked
@@ -30,6 +32,7 @@ export const FourBox = () => {
       </div>
 
     </div>
+    </Fragment>
   )
 }
 
