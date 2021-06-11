@@ -1,0 +1,39 @@
+.bottom-dislaimer{
+    margin-left: 335px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   align-content: center !important;
+   margin-top: 3rem;
+}
+.Des-h1{
+    color: white;
+    align-self: center;
+}
+.bottom-dislaimer .desc-div1{
+   border: 2px solid #10b9eb;
+   margin: 15px 2rem;
+   flex: 1;
+   text-align: left;
+   font-size: 1.4rem;
+   padding: 1.5rem;
+   color: white;
+   border-radius: 20px;
+   word-wrap: break-word;
+}
+.desc-button{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.desc-button input{
+    /* width: 10rem; */
+    flex-basis: 150px;
+    padding: 0.5rem;
+    border-radius: 50px;
+    color: white;
+    background-color: #10b9eb;
+    border-color: #10b9eb;
+    cursor: pointer;
+}

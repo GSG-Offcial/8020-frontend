@@ -1,36 +1,37 @@
-import React,{Fragment} from 'react'
+import React, { Fragment } from 'react'
 import './DashBoardNavbar.css'
-import{FourBox,SideBar,TwoBox,BottomFourBox,BottomTwoBox} from '../DB-Body/index'
+import { FourBox, SideBar, TwoBox, BottomFourBox, BottomTwoBox, Desclaimer } from '../DB-Body/index'
 
 
 
 export const DashBoardNavbar = () => {
     return (
         <Fragment>
-        <div className="dashboard-contianer">
-            <h1 className="h1">Dashboard </h1>
-            <div>
-                <nav>
-                    <ul className="para-item">
-                    <li className="para" id="para-1">Dashboard</li>
-                    <li className="para" id="para-2">Your spons ID: 0x02354309 </li>
-                    <li className="para" id="para-3">Copy Ref. link</li>
-                    </ul>
-                </nav>
+            <div className="dashboard-contianer">
+                <h1 className="h1">Dashboard </h1>
+                <div>
+                    <nav>
+                        <ul className="para-item">
+                            <li className="para" id="para-1">Dashboard</li>
+                            <li className="para" id="para-2">Your spons ID: 0x02354309 </li>
+                            <li className="para" id="para-3">Copy Ref. link</li>
+                        </ul>
+                    </nav>
 
+                </div>
+                <div>
+                    <form>
+                        <input type="submit" value="Connect" className="dasboard-button" />
+                    </form>
+                </div>
             </div>
-            <div>
-                <form>
-                    <input type="submit" value="Connect" className="dasboard-button" />
-                </form>
-            </div>
-        </div>
-        <SideBar/>
+            <SideBar />
 
-        <FourBox/>
-        <TwoBox/>
-        <BottomFourBox/>
-         <BottomTwoBox/>
+            <FourBox />
+            <TwoBox />
+            <BottomFourBox />
+            <BottomTwoBox />
+            <Desclaimer />
         </Fragment>
     )
 }

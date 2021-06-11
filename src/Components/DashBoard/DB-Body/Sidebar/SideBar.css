@@ -5,7 +5,6 @@
   top: 7rem;
   left: 0%;
   right: 0%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -13,7 +12,7 @@
   padding: 5rem 0 1rem 4rem;
   border: 2px solid #10b9eb;
   border-left-color: #0d173a;
-  height: 150vh !important;
+  height: 200vh !important;
   border-bottom-right-radius: 1em;
   border-top-right-radius: 1em;
   background-color: #0d173a !important;

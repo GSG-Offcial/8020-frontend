@@ -3,3 +3,4 @@ export {SideBar} from './Sidebar/SideBar';
 export {TwoBox} from './TwoBox/TwoBox';
 export {BottomFourBox} from './BottmFourBox/BottomFourBox'
 export {BottomTwoBox} from './BottomTwoBox/BottomTwoBox'
+export{Desclaimer} from './Desclaimer/Desclaimer'
