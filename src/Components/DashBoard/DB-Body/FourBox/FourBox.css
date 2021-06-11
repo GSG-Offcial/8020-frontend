@@ -1,50 +1,36 @@
-/* :root {
+:root {
   --plum: #dda0dd;
 }
 
-.main-box {
+.mainbox {
+  margin-left: 355px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap !important;
-  
-  /* margin-right: auto; */
-  /* margin-left: auto; */
-  /* padding: 20px 10px;
-  color: white;
-  text-align: center;
-  width: 60% !important;
- 
-
-  
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
 }
-.boxes {
+.mainbox div {
   border: 2px solid #10b9eb;
   flex: 1;
-  border-radius: 7.5%;
-  padding: 28px 17px;
-  word-wrap: break-word;
-  margin: 8px;
   height: auto;
-  display: flex;
-  flex-direction: column;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  background-color: #0d173a;
+  border-radius: 10px;
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  color: white;
+  word-wrap: break-word;
 }
-#box_1 p,
-#box_4 p {
-  color: var(--plum);
-  margin: 43px auto;
-
+.mainbox div p {
+  padding: 0 2rem 0 2rem;
 }
-
-#box_2 p {
+.mainbox div p.amount {
+  padding-top: 2rem;
   color: var(--plum);
-  margin: 63px auto;
 }
-#box_3 p {
+.mainbox div p.amount-2 {
+  padding-top: 3.3rem;
   color: var(--plum);
-  margin: 23px auto;
-} */ 
-
-
-.mainbox{
-  margin-left: 355px;
 }
