@@ -9,9 +9,9 @@
 }
 .two-box div{
     border: 2px solid #10B9EB;
-    /* width: 47.5%; */
-
     margin-right: 1.2rem;
+    margin-bottom: 1rem;
+
     border-radius: 10px;
     text-align: center;
     height: auto;
@@ -52,11 +52,13 @@
     padding: 1rem ;
     border-radius: 10px;
     cursor: pointer;
+    color: #dda0dd !important;
 }
 .link-2{
     flex-basis: 120px;
     background-color:#10B9EB;
     border-color: #10B9EB;
+    color: white !important;
 }
 .box-para{
     color: white;
@@ -74,6 +76,7 @@
     border-radius:  10rem;
     border-color: #9F9FFB;
     border-bottom-color: #9F9FFB !important;
+    color: white;
 
 }
 
