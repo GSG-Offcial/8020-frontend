@@ -1,0 +1,9 @@
+.Last_Footer{
+    background: linear-gradient(#3124ff , #10B9EB);
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: lighter;
+    margin-bottom: -2rem !important;
+    margin: 0 auto;
+    padding: 3% 0 0.5% 0;
+}

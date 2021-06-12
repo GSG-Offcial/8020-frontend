@@ -7,7 +7,7 @@ import telegram from '../../../Icons/telegram.svg'
 import facebook from '../../../Icons/facebook.svg'
 import twitter from '../../../Icons/twitter.svg'
 import github from '../../../Icons/github.svg'
-
+import {LastFooter} from '../lastFooter/LastFooter'
 export const FooterImage = () => {
     return (
         <div className="footer">
@@ -24,13 +24,14 @@ export const FooterImage = () => {
 
                 </ul>
                 <div className="nested-divfooter">
-                    <img src={discord} alt="" />
-                    <img src={instragram} alt="" />
-                    <img src={telegram} alt="" />
-                    <img src={facebook} alt="" />
-                    <img src={twitter} alt="" />
-                    <img src={github} alt="" />
+                    <img src={discord} alt="Discord" />
+                    <img src={instragram} alt="Instrgram" />
+                    <img src={telegram} alt="Telegram" />
+                    <img src={facebook} alt="Facebook" />
+                    <img src={twitter} alt="Twitter" />
+                    <img src={github} alt="Githhub" />
                 </div>
+                <LastFooter/>
             </div>
 
         </div>

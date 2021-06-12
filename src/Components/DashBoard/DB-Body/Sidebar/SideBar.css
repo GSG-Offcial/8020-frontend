@@ -1,7 +1,7 @@
 .sidebar {
   width: 300px;
   flex-grow: 1 !important;
-  position: absolute;
+  position: fixed;
   top: 7rem;
   left: 0%;
   right: 0%;

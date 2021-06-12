@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import './DashBoardNavbar.css'
-import { FourBox, SideBar, TwoBox, BottomFourBox, BottomTwoBox, Desclaimer,FooterImage } from '../DB-Body/index'
+import { FourBox, SideBar, TwoBox, BottomFourBox, BottomTwoBox, Desclaimer, FooterImage} from '../DB-Body/index'
 
 
 
@@ -26,13 +26,12 @@ export const DashBoardNavbar = () => {
                 </div>
             </div>
             <SideBar />
-
             <FourBox />
             <TwoBox />
             <BottomFourBox />
             <BottomTwoBox />
             <Desclaimer />
-            <FooterImage/>
+            <FooterImage />
         </Fragment>
     )
 }
