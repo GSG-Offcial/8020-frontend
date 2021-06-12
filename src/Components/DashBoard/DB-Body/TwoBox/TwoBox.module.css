@@ -25,17 +25,22 @@
 }
 
 .button-1{
-    border: 2px solid #9F9FFB;
-    padding-top: 1rem;
-    border-top-right-radius: 4px;
-    background-color: #9F9FFB;
-    border-top-left-radius: 5px;
+     border: 2px solid red;
+     border-top-left-radius: 5px;
+     padding-top: 1rem;
+ 
 }
 .button-2{
     border: 2px solid red;
     border-top-right-radius: 5px;
     padding-top: 1rem;
 
+}
+.button:hover{
+    border: 2px solid #9F9FFB;
+    padding-top: 1rem;
+    background-color: #9F9FFB;
+    cursor: pointer;
 }
 .two-box ul.second-ul{
 

@@ -26,9 +26,9 @@
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
+   margin-top: 1.5rem;
 }
 .desc-button input{
-    /* width: 10rem; */
     flex-basis: 150px;
     padding: 0.5rem;
     border-radius: 50px;

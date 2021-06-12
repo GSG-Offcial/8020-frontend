@@ -1,6 +1,5 @@
 import React from 'react'
-// import { GrPieChart } from 'react-icons/gr';
-// import {FaTicketAlt,FaChartPie} from 'react-icons/fa'
+
 import Group99 from '../../../Icons/Group 900.svg'
 import './SideBar.css'
 export const SideBar = () => {

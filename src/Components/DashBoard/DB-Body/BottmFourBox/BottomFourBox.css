@@ -1,4 +1,7 @@
-.mainbox{
-    margin-top: 28px !important;
-    padding-top: 3.5px !important;
+.bottom-mainbox{
+    padding-top: auto !important;
+    margin-top: auto;
+}
+.bottom-amount{
+    margin-top: 1.3rem;
 }

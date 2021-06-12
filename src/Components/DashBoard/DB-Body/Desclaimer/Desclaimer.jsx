@@ -13,10 +13,12 @@ export const Desclaimer = () => {
                 Contract and its affiliates, agents, and sponsors will not be liable for any actions
                 taken as a result of your use of this website or participation in the 80/20 Smart
                 Contract. For more information please read the disclaimer.
+                 
+                 <div className="desc-button">
+                 <input type="submit" value="DESCLAIMER"/>
+                 </div>
             </div>
-            <div  className="desc-button">
-                <input type="submit" value="DISCLAMER" />
-            </div>
+          
         </div>
     )
 }

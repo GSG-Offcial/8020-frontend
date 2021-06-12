@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
+  margin-top: 7.1rem;
 }
 .mainbox div {
   border: 2px solid #10b9eb;
@@ -24,6 +25,7 @@
   color: white;
   word-wrap: break-word;
   font-weight: 700;
+ 
 }
 .mainbox div p {
   padding: 0 2rem 0 2rem;
