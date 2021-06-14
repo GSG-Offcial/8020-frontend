@@ -1,28 +1,33 @@
-import React from "react";
-import { Navbar } from "./Components/Home/NavBar/Navbar";
+import React from 'react';
+import { Navbar } from './Components/Home/NavBar/Navbar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { DashBoardNavbar } from './Components/DashBoard/index';
+import { Header } from './Components/Lottery/Header/Header';
+import './App.css';
+import { Web3Provider } from '@ethersproject/providers';
+import { Web3ReactProvider } from '@web3-react/core';
 
-// import React Router
-import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
-
-// DashBoard Comp
-import { DashBoardNavbar } from "./Components/DashBoard/index";
-import {Header} from './Components/Lottery/Header/Header'
-import "./App.css";
+function getLibrary(provider) {
+  const library = new Web3Provider(provider);
+  library.pollingInterval = 8000;
+  return library;
+}
 
 function App() {
   return (
-    <Router>
-      <div className='main_div'>
-        <div>
-          <Switch>
-            <Route exact path="/" component={Navbar}/>
-            <Route exact path='/dashboard' component={DashBoardNavbar} />
-            <Route exact path="/lottery" component={Header}/>
-          </Switch>   
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <Router>
+        <div className="main_div">
+          <div>
+            <Switch>
+              <Route exact path="/" component={Navbar} />
+              <Route exact path="/dashboard" component={DashBoardNavbar} />
+              <Route exact path="/lottery" component={Header} />
+            </Switch>
+          </div>
         </div>
-       
-      </div>
-    </Router>
+      </Router>
+    </Web3ReactProvider>
   );
 }
 
