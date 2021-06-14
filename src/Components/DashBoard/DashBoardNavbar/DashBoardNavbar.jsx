@@ -66,28 +66,27 @@ export const DashBoardNavbar = () => {
         </div>
         <div>
           <form className="d-flex">
-            <input
+            <button
               style={{
                 cursor: disabled ? 'unset' : 'pointer',
               }}
               disabled={disabled}
               type="submit"
-              value={
-                account === undefined
-                  ? 'Connect'
-                  : account === null
-                  ? 'None'
-                  : `${account.substring(0, 6)}...${account.substring(
-                      account.length - 4
-                    )} 🟢`
-              }
               onClick={(e) => {
                 e.preventDefault();
                 setActivatingConnector(injected);
                 activate(injected);
               }}
               className="lottery-btn"
-            />
+            >
+              {account === undefined
+                ? 'Connect'
+                : account === null
+                ? 'None'
+                : `${account.substring(0, 6)}...${account.substring(
+                    account.length - 4
+                  )} 🟢`}
+            </button>
           </form>
         </div>
       </div>
