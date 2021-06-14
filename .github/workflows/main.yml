@@ -43,4 +43,4 @@ jobs:
 
     # Deploys to Surge
     - name: Deploy to surge
-      run: surge ./build 8020testing2.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build 8020testing.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
