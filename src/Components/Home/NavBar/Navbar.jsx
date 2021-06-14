@@ -7,16 +7,32 @@ import './NavBar.css'
 export const Navbar = () => {
   return (
     <Fragment>
-    <div className="nav-contianer">
-      <img src={Group900} alt="Logo" title="Block-Chain Logo" className="main_page_logo" />
-      <nav className="navbar">
-        <ul className="nav-menu">
-          <li className="li"><a href="/#" className="nav-link" id="li-1">Buy</a></li>
-          <li className="li"><a href="/#" className="nav-link" id="li-2">How it works</a></li>
-        </ul>
-      </nav>
-           <a href="/#"  id="nav-link-btn"> <button><Link to="/dashboard">Open App</Link> </button> </a>
+    <div className="contianer-home">
+  
+    <div>   
+       <a className="navbar-brand" href="#/">
+      <img src={Group900} alt="" className="mainpage-logo" />
+    </a>
     </div>
+
+    <div>
+    <ul class="nav justify-content-end" id="home-ul">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#/">Buy</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#/">How it works</a>
+  </li>
+  </ul>
+    </div>
+    <div>
+    <form class="d-flex">
+      <Link to="/dashboard">
+     <input type="submit" value="Open App" className="btn" />
+     </Link>
+    </form>
+    </div>
+      </div>
     <SecondComp />
     </Fragment>
   )

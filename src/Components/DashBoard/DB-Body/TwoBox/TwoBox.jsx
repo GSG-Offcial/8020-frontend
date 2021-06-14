@@ -5,7 +5,7 @@ export const TwoBox = () => {
              
         <div className="two-box">
             <div>
-               <ul className="ul">
+               <ul className="twobox-ul">
                    <li className="button button-1">Buy</li>
                    <li className="button button-2">Sell</li>
                </ul>

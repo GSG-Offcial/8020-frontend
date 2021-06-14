@@ -9,7 +9,7 @@
 
 .footerbottom-image{
     width: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 .footer-div2 ul{
@@ -48,6 +48,7 @@
     align-content: center;
     background-color: white;
     padding-bottom: 1.5rem;
+    margin-top: -1rem;
 }
 .nested-divfooter img{
     margin-right: 0.5rem;

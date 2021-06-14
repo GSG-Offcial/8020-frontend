@@ -1,0 +1,48 @@
+#lotter-maindiv {
+  background-color: #0d173a !important;
+}
+#lotter-maindiv  div {
+  align-self: center !important;
+}
+.header-heading {
+  color: white !important;
+}
+#lottery-li a.nav-link {
+  color: #10b9eb !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  border: 2px solid #0d173a !important;
+  border-radius: 0% !important;
+}
+#lottery-li2 a.nav-link {
+  font-size: 16px !important;
+  border: 2px solid #0d173a !important;
+  border-radius: 0% !important;
+  margin-top: 0.2rem;
+}
+#lottery-li3 a.nav-link {
+  font-size: 14px !important;
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.1rem !important;
+  border: 2px solid #10b9eb !important;
+  border-radius: 7% !important;
+  padding: 10px !important;
+}
+#lottery-li3 a.nav-link:hover {
+  border: 2px solid #10b9eb !important;
+  border-radius: 7% !important;
+  padding: 10px !important;
+}
+.lottery-btn {
+  border-radius: 50px;
+  border-style: none;
+  height: 40px;
+  color: white !important;
+  cursor: pointer;
+  background-color: #10b9eb;
+  font-size: 1em;
+  padding: 5px 35px;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+  align-self: center !important;
+}

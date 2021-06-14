@@ -11,24 +11,23 @@
     border: 2px solid #10B9EB;
     margin-right: 1.2rem;
     margin-bottom: 1rem;
-
     border-radius: 10px;
     text-align: center;
     height: auto;
     flex: 1;
 }
-.two-box ul.ul{
+ul.twobox-ul{
     display: grid;
     grid-template-rows: repeat(1, 60px);
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,2fr);
     text-align: center;
+    padding-left: 0%;
 }
 
 .button-1{
      border: 2px solid red;
      border-top-left-radius: 5px;
      padding-top: 1rem;
- 
 }
 .button-2{
     border: 2px solid red;

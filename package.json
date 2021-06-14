@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@wellyshen/use-web-animations": "^0.9.1",
+    "bootstrap": "^5.0.1",
     "chart.js": "^3.3.2",
     "chartjs-react": "^3.3.2",
     "react": "^17.0.2",
@@ -16,7 +16,6 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^1.1.5",
-    "web-animations-js": "^2.3.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

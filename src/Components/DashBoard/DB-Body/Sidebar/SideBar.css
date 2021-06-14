@@ -12,7 +12,7 @@
   padding: 5rem 0 1rem 4rem;
   border: 2px solid #10b9eb;
   border-left-color: #0d173a;
-  height: 70% !important;
+  height: 100% !important;
   border-bottom-right-radius: 1em;
   border-top-right-radius: 1em;
   background-color: #0d173a !important;
@@ -44,8 +44,8 @@
 
 .sidebar-menu a span {
   font-size: 1.3rem;
-  padding-right: 1.4rem;
-  padding-left: 0.8rem;
+  padding-right: 1.1rem;
+  padding-left: 0.3rem;
 }
 .sidebar-menu a.active:hover {
   background-color: #17203f;

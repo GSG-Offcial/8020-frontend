@@ -1,61 +1,52 @@
 
-li,
-a,
-button {
-  font-weight: 500 !important;
-  font-size: 1.2em !important;
-  color: white !important;
-  text-decoration: none !important;
-}
-.nav-contianer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 20px 6%;
-}
-.main_page_logo {
-  cursor: pointer;
+.contianer-home{
+    display: flex !important;
+   flex-direction: row !important;
+   flex-wrap: wrap !important;
+   justify-content: space-between !important;
+   align-content: center !important;
+   width: 100%;  
+   margin-right: auto;
+   margin-left: auto;
+   padding: 1rem 0.5rem;
 }
 
-.main_page_logo:hover{
+.mainpage-logo{
+  flex-basis: 100px !important;
+  width: 70% !important;
+  padding: 3% 0%;
+
+}
+.mainpage-logo:hover{
   transform: translateY(-10px);
   transition: all 0.2s ease-in-out;
 }
-.nav-menu {
-  list-style: none;
+.contianer-home div{
+  align-self: center !important;
 }
-.nav-menu li{
-  display: inline;
-  padding: 0 20px;
+#home-ul a.nav-link{
+  color: white !important;
+  font-size: 1.7em !important;
 }
-
-#li-1:hover {
+#home-ul a.nav-link:hover{
   cursor: pointer;
-  transition: all 0.2s ease 0s; 
   border-bottom: 2px solid #10b9eb;
   padding-bottom: 13px;
   border-radius: 10px;
-
 }
-#li-2:hover{
-  cursor: pointer;
-  transition: all 0.2s ease 0s; 
-  border-bottom: 2px solid #10b9eb;
-  padding-bottom: 13px;
-  border-radius: 10px;
 
-}
-button{
-  padding: 2px 14px;
-  font-size: 1em;
-  background-color: #10b9eb;
-  border-radius: 50px 50px;
+.btn{
+  border-radius: 50px;
   border-style: none;
+  height: 40px;
+  color: white !important;
   cursor: pointer;
-  transition: all 0.2s ease-in 0s; 
-}
-button:hover{
+  background-color: #10b9eb;
+  font-size: 1em;    
+  padding: 5px 35px;
+  margin-right: 1rem;
+} 
+.btn:hover{
   background-color: white;
   border-style: none;
   background-image: url(../../Icons/OpenApp.svg);
