@@ -2,13 +2,11 @@
   width: 300px;
   flex-grow: 1 !important;
   position: fixed;
-  top: 7rem;
-  left: 0%;
-  right: 0%;
+  top: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: auto;
+  margin-top: 2rem;
   padding: 5rem 0 1rem 4rem;
   border: 2px solid #10b9eb;
   border-left-color: #0d173a;

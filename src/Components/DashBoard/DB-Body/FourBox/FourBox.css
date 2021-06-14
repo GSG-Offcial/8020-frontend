@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
-  margin-top: 7.1rem;
+  padding-top: 2em;
 }
 .mainbox div {
   border: 2px solid #10b9eb;
