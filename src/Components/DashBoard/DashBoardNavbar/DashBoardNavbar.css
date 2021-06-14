@@ -1,3 +1,17 @@
-.header-heading{
-    cursor: pointer;
+.header-heading {
+  cursor: pointer;
+}
+
+.connect-btn {
+  border-radius: 50px;
+  border-style: none;
+  height: 40px;
+  color: white !important;
+  cursor: pointer;
+  background-color: #10b9eb;
+  font-size: 1em;
+  padding: 5px 35px;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+  align-self: center !important;
 }

@@ -11,14 +11,15 @@ import {
 } from '../DB-Body/index';
 import { useWeb3React } from '@web3-react/core';
 import { useEagerConnect, useInactiveListener } from '../../../Hooks/index';
-import { injected } from './../../../connectors';
+import { injected } from '../../../connectors';
 
 export const DashBoardNavbar = () => {
   const context = useWeb3React();
-  const { connector, account, activate, error } = context;
+  const { connector, account, library, activate, error } = context;
 
   // handle logic to recognize the connector currently being activated
   const [activatingConnector, setActivatingConnector] = useState();
+
   useEffect(() => {
     console.log('running');
     if (activatingConnector && activatingConnector === connector) {
@@ -77,7 +78,7 @@ export const DashBoardNavbar = () => {
                 setActivatingConnector(injected);
                 activate(injected);
               }}
-              className="lottery-btn"
+              className="connect-btn"
             >
               {account === undefined
                 ? 'Connect'
