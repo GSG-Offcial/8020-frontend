@@ -22,6 +22,9 @@ ul.twobox-ul{
     grid-template-columns: repeat(2,2fr);
     text-align: center;
     padding-left: 0%;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3em;
 }
 
 .button-1{

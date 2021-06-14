@@ -1,6 +1,9 @@
 #lotter-maindiv {
   background-color: #0d173a !important;
+   display: block;
 }
+
+
 #lotter-maindiv  div {
   align-self: center !important;
 }

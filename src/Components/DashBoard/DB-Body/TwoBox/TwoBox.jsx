@@ -1,5 +1,5 @@
-import React from 'react'
-import './TwoBox.module.css'
+import React from 'react';
+import './TwoBox.css';
 export const TwoBox = () => {
     return (
              
