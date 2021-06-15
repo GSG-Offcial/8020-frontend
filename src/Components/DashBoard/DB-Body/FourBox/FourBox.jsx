@@ -1,10 +1,15 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import './FourBox.css';
-import { getContract, fromWei } from '../../../../utils/index';
+import {
+  getContract,
+  calculatePrice,
+  formatValue,
+  formatNumber,
+} from '../../../../utils/index';
 import { abi, address } from '../../../../constants/8020.json';
 import { useWeb3React } from '@web3-react/core';
 
-export const FourBox = () => {
+export const FourBox = ({ price, GS50Price }) => {
   const { library, account } = useWeb3React();
 
   const [contract, setContract] = useState();
@@ -23,16 +28,16 @@ export const FourBox = () => {
   useEffect(async () => {
     if (contract) {
       let total_ETH = await contract.totalEthereumBalance();
-      setTvl(+total_ETH.toString());
+      setTvl(formatValue(total_ETH));
 
       let total_supply = await contract.totalSupply();
-      setTotalSupply(fromWei(+total_supply.toString()).toFixed(2));
+      setTotalSupply(formatValue(total_supply));
 
       let total_dep = await contract.totalDeposited();
-      setEth(fromWei(+total_dep.toString()).toFixed(2));
+      setEth(formatValue(total_dep));
 
       let total_withdraw = await contract.totalWithdraw();
-      setWithdrawn(fromWei(+total_withdraw.toString()).toFixed(2));
+      setWithdrawn(formatValue(total_withdraw));
     }
   }, [contract]);
 
@@ -43,17 +48,17 @@ export const FourBox = () => {
           <p className="boxes" id="box_1">
             Total Value Locked {tvl} ETH
           </p>
-          <p className="amount">$1000k</p>
+          <p className="amount">${calculatePrice(price, tvl)}</p>
         </div>
         <div>
           <p className="boxes" id="box_2">
-            Token Supply {totalSupply} GS50
+            Token Supply {formatNumber(totalSupply)} GS50
           </p>
-          <p className="amount-2">$1000k</p>
+          <p className="amount-2">${calculatePrice(GS50Price, totalSupply)}</p>
         </div>
         <div className="boxes" id="box_3">
-          <p>Total {eth} ETH Deposited since inception 1000k ETH</p>
-          <p className="amount">$1000k</p>
+          <p>Total {eth} ETH Deposited since inception</p>
+          <p className="amount">${calculatePrice(price, eth)}</p>
         </div>
         <div>
           <p className="boxes" id="box_4">
@@ -61,7 +66,7 @@ export const FourBox = () => {
             Total {withdrawn} ETH Withdrawn since inception
           </p>
 
-          <p className="amount">$1000k</p>
+          <p className="amount">${calculatePrice(price, withdrawn)}</p>
         </div>
       </div>
     </Fragment>
