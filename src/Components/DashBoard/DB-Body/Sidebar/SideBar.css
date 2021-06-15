@@ -2,11 +2,11 @@
   width: 300px;
   flex-grow: 1 !important;
   position: fixed;
-  top: auto;
+  top: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 2em;
+  margin-top: 9em !important;
   padding: 5rem 0 1rem 4rem;
   border: 2px solid #10b9eb;
   border-left-color: #0d173a;
@@ -14,6 +14,23 @@
   border-bottom-right-radius: 1em;
   border-top-right-radius: 1em;
   background-color: #0d173a !important;
+}
+@media only screen and  (max-width: 660px) {
+   .sidebar{
+     top:80px;
+   }
+}
+@media only screen and  (max-width: 500px) {
+  .sidebar{
+    top:110px;
+    
+  }
+}
+@media only screen and  (max-width: 378px) {
+  .sidebar{
+    top:150px;
+
+  }
 }
 .logo {
   width: 149px;

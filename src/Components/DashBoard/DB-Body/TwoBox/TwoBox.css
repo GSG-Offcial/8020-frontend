@@ -16,6 +16,11 @@
     height: auto;
     flex: 1;
 }
+input.token-input{
+    width: 90% !important;
+    margin: 3rem auto 1rem;
+    padding: 0.4rem 1rem !important;
+}
 ul.twobox-ul{
     display: grid;
     grid-template-rows: repeat(1, 60px);
@@ -32,18 +37,21 @@ ul.twobox-ul{
      border-top-left-radius: 5px;
      padding-top: 1rem;
 }
+.button-1:hover{
+    background-color: #198754;
+    border:2px solid  #198754;
+}
 .button-2{
     border: 2px solid red;
     border-top-right-radius: 5px;
     padding-top: 1rem;
+   
+}
+.button-2:hover{
+    border: 2px solid red;
+    background-color: red;
+}
 
-}
-.button:hover{
-    border: 2px solid #9F9FFB;
-    padding-top: 1rem;
-    background-color: #9F9FFB;
-    cursor: pointer;
-}
 .two-box ul.second-ul{
 
     padding-top: 50px;
@@ -73,18 +81,20 @@ ul.twobox-ul{
     padding: 2rem;
     font-weight: 600;
 }
-.buy-button{
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin: 2% auto;
-    word-wrap: break-word;
-    padding: 2px 8%;
-    background: #9F9FFB;
-    border-radius:  10rem;
-    border-color: #9F9FFB;
-    border-bottom-color: #9F9FFB !important;
-    color: white;
 
+button.token-buy-button{
+    height: 50px;  
+    width: 9rem;
+    margin: 0.4rem auto 2rem;
+      cursor: pointer !important;
+    font-size: 1.5em;
+    padding:0.5rem 1rem;
+    background-color: #198754 !important;
+    font-weight: 700 !important;
+    border-style: none !important;
+    border-radius: 2.5rem !important;
+    color: white !important;
+    box-sizing: border-box !important;
 }
 
 

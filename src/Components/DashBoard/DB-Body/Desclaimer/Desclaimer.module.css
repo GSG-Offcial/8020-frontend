@@ -1,4 +1,4 @@
-.bottom-dislaimer{
+.bottom_dislaimer{
     margin-left: 335px;
     display: flex;
     flex-direction: column;
@@ -6,11 +6,12 @@
    align-content: center !important;
    margin-top: 3rem;
 }
-.Des-h1{
+.Des_h1{
     color: white;
     align-self: center;
+
 }
-.bottom-dislaimer .desc-div1{
+.bottom_dislaimer  .desc_div1{
    border: 2px solid #10b9eb;
    margin: 15px 2rem;
    flex: 1;
@@ -21,19 +22,20 @@
    border-radius: 20px;
    word-wrap: break-word;
 }
-.desc-button{
+.desc_button{
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
    margin-top: 1.5rem;
 }
-.desc-button input{
-    flex-basis: 150px;
+.desc_button button{
+    flex-basis: 200px;
     padding: 0.5rem;
     border-radius: 50px;
     color: white;
     background-color: #10b9eb;
     border-color: #10b9eb;
     cursor: pointer;
-}
+    font-weight: 700;
+   }

@@ -1,14 +1,14 @@
 
-.contianer-home{
+#mainPage-Div{
     display: flex !important;
    flex-direction: row !important;
    flex-wrap: wrap !important;
    justify-content: space-between !important;
    align-content: center !important;
-   width: 100%;  
-   margin-right: auto;
-   margin-left: auto;
-   padding: 1rem 0.5rem;
+   width: 100% !important;  
+   margin-right: auto !important;
+   margin-left: auto !important;
+   padding: 1rem 0.5rem !important;
 }
 
 .mainpage-logo{
@@ -35,24 +35,24 @@
   border-radius: 10px;
 }
 
-.btn{
-  border-radius: 50px;
-  border-style: none;
-  height: 40px;
+.btn-DashBoard{
+  border-radius: 50px !important;
+  border-style: none !important;
+  height: 40px !important;
   color: white !important;
-  cursor: pointer;
-  background-color: #10b9eb;
-  font-size: 1em;    
-  padding: 5px 35px;
-  margin-right: 1rem;
+  cursor: pointer !important;
+  background-color: #10b9eb !important;
+  font-size: 1em !important;     
+  padding: 5px 35px !important;
+  margin-right: 1rem !important;
 } 
-.btn:hover{
-  background-color: white;
-  border-style: none;
+.btn-DashBoard:hover{
+  background-color: white !important;
+  border-style: none !important;
   background-image: url(../../Icons/OpenApp.svg);
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  transition: all 0.2s ease-in; 
+  background-size: 30px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  color: white !important;
+  transition: all 0.2s ease-in !important; 
 }

@@ -7,7 +7,7 @@ import './NavBar.css'
 export const Navbar = () => {
   return (
     <Fragment>
-    <div className="contianer-home">
+    <div className="contianer-home" id="mainPage-Div">
   
     <div>   
        <a className="navbar-brand" href="#/">
@@ -28,7 +28,7 @@ export const Navbar = () => {
     <div>
     <form class="d-flex">
       <Link to="/dashboard">
-     <input type="submit" value="Open App" className="btn" />
+     <input type="submit" value="Open App" className="btn btn-DashBoard" />
      </Link>
     </form>
     </div>

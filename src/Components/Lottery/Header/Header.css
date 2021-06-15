@@ -1,6 +1,18 @@
 #lotter-maindiv {
   background-color: #0d173a !important;
-   display: block;
+  /* display: block; */
+  position: fixed; 
+  top: 0;
+  margin-bottom: 4rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  align-content: center !important;
+  width: 100% !important;  
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding: 1rem 0.5rem !important;
 }
 
 
