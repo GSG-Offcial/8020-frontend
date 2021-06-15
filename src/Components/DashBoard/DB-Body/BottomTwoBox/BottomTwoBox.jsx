@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styles from './BottomTwoBox.module.css'
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+// import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {
   getContract,
   calculatePrice,
@@ -32,7 +32,7 @@ export const BottomTwoBox = ({ price }) => {
       setWithdrawAmount(formatValue(totalWithdrawn));
     }
   });
-
+console.log(styles);
   return (
     <div className={styles.bottom_box}>
       <div>
