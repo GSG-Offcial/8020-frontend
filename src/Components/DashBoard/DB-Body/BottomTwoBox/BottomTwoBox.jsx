@@ -2,7 +2,6 @@
 import React from 'react';
 import styles from './BottomTwoBox.module.css'
 import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './BottomTwoBox.css';
 import {
   getContract,
   calculatePrice,
