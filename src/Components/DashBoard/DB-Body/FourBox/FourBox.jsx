@@ -3,7 +3,6 @@ import './FourBox.css';
 import { getContract, fromWei } from '../../../../utils/index';
 import { abi, address } from '../../../../constants/8020.json';
 import { useWeb3React } from '@web3-react/core';
-import { BigNumber } from '@ethersproject/bignumber';
 
 export const FourBox = () => {
   const { library, account } = useWeb3React();
