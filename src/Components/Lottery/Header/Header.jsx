@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
 import React from 'react'
 import './Header.css'
 
-=======
-import React from 'react';
-import './Header.css';
->>>>>>> 9e52ef50b92feed54f5a5451ba9aef7797362617
+
+// import React from 'react';
+// import './Header.css';
 
 export const Header = () => {
   return (
