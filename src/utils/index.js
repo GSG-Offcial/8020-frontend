@@ -1,6 +1,16 @@
 import { Contract } from '@ethersproject/contracts';
 import { BigNumber } from '@ethersproject/bignumber';
 
+const nf = new Intl.NumberFormat();
+
+export function formatNumber(number) {
+  return nf.format(Math.floor(number));
+}
+
+export function calculatePrice(price, value) {
+  return formatNumber(value * price);
+}
+
 export function toWei(n, ethers) {
   return ethers.utils.parseEther(n);
 }
@@ -9,8 +19,8 @@ export function fromWei(n) {
   return n / BigNumber.from('1000000000000000000');
 }
 
-export function BnToString(n, ethers) {
-  return ethers.utils.formatUnits(n, 'ether');
+export function formatValue(value) {
+  return fromWei(+value.toString()).toFixed(2);
 }
 
 export function toBN(n) {

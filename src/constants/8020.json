@@ -940,6 +940,19 @@
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "totalWithdrawAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "internalType": "uint256",
@@ -1012,5 +1025,5 @@
       "type": "function"
     }
   ],
-  "address": "0xEcb9e97C9EC33CE061869f8fdccDDed12f09Fce7"
+  "address": "0x788f0d9107c2B2A06b660E4d65de6E6E0b9A83BE"
 }

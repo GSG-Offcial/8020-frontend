@@ -9,16 +9,23 @@ import {
   Desclaimer,
   FooterImage,
 } from '../DB-Body/index';
+import { getContract, fromWei } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 import { useEagerConnect, useInactiveListener } from '../../../Hooks/index';
+import { abi, address } from '../../../constants/8020.json';
 import { injected } from '../../../connectors';
 
 export const DashBoardNavbar = () => {
   const context = useWeb3React();
-  const { connector, account, activate, error } = context;
+  const { connector, account, library, activate, error } = context;
 
   // handle logic to recognize the connector currently being activated
   const [activatingConnector, setActivatingConnector] = useState();
+
+  const [contract, setContract] = useState();
+  const [ethPrice, setEthPrice] = useState(0);
+  const [tokenPrice, setTokenPrice] = useState(0);
+  const [refAddress, setRefAddress] = useState('loading');
 
   useEffect(() => {
     console.log('running');
@@ -26,6 +33,35 @@ export const DashBoardNavbar = () => {
       setActivatingConnector(undefined);
     }
   }, [activatingConnector, connector]);
+
+  useEffect(() => {
+    if (library) {
+      let contractGSG = getContract(abi, address, library, account);
+      setContract(contractGSG);
+    }
+  }, [library]);
+
+  useEffect(async () => {
+    if (contract) {
+      let buyPrice = await contract.buyPrice();
+      buyPrice = fromWei(+buyPrice.toString());
+      setTokenPrice(buyPrice * ethPrice);
+      const refId = await contract.getReferrer();
+      setRefAddress(refId);
+    }
+  }, [contract, library]);
+
+  console.log(tokenPrice);
+
+  useEffect(() => {
+    fetch(
+      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum'
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setEthPrice(data[0].current_price);
+      });
+  });
 
   // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
   const triedEager = useEagerConnect();
@@ -55,7 +91,10 @@ export const DashBoardNavbar = () => {
             </li>
             <li className="nav-item" id="lottery-li2">
               <a className="nav-link active " aria-current="page" href="#/">
-                Your spons ID: 0x02354309
+                Your spons ID:{' '}
+                {`${refAddress.substring(0, 6)}...${refAddress.substring(
+                  refAddress.length - 4
+                )} `}
               </a>
             </li>
             <li className="nav-item" id="lottery-li3">
@@ -92,10 +131,10 @@ export const DashBoardNavbar = () => {
         </div>
       </div>
       <SideBar />
-      <FourBox />
+      <FourBox price={ethPrice} GS50Price={tokenPrice} />
       <TwoBox />
-      <BottomFourBox />
-      <BottomTwoBox />
+      <BottomFourBox price={ethPrice} GS50Price={tokenPrice} />
+      <BottomTwoBox price={ethPrice} />
       <Desclaimer />
       <FooterImage />
     </Fragment>
