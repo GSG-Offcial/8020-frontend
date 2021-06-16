@@ -1,79 +1,80 @@
-.two-box{
-    margin-left: 290px;
-    margin-bottom: 1rem;
+
+.two-box {
+  
+  margin-left: 290px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
 }
-.two-box div{
-    border: 2px solid #10B9EB;
-    margin-right: 1.2rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    height: auto;
-    flex: 1;
+.two-box div {
+  border: 2px solid #10b9eb;
+  margin-right: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  height: auto;
+  flex: 1;
 }
-input.token-input{
-    width: 90% !important;
-    margin: 3rem auto 1rem;
-    padding: 0.4rem 1rem !important;
+input.token-input {
+  width: 90% !important;
+  margin: 3rem auto 1rem;
+  padding: 0.4rem 1rem !important;
 }
-ul.twobox-ul{
-    display: grid;
-    grid-template-rows: repeat(1, 60px);
-    grid-template-columns: repeat(2,2fr);
-    text-align: center;
-    padding-left: 0%;
-    color: white;
-    font-weight: 700;
-    font-size: 1.3em;
-}
-
-.button-1{
-     border: 2px solid red;
-     border-top-left-radius: 5px;
-     padding-top: 1rem;
-}
-.button-1:hover{
-    background-color: #198754;
-    border:2px solid  #198754;
-}
-.button-2{
-    border: 2px solid red;
-    border-top-right-radius: 5px;
-    padding-top: 1rem;
-   
-}
-.button-2:hover{
-    border: 2px solid red;
-    background-color: red;
+ul.twobox-ul {
+  display: grid;
+  grid-template-rows: repeat(1, 60px);
+  grid-template-columns: repeat(2, 2fr);
+  text-align: center;
+  padding-left: 0%;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3em;
 }
 
-.two-box ul.second-ul{
+.button-1 {
+  border: 2px solid white;
+  border-top-left-radius: 5px;
+  padding-top: 1rem;
+}
+.button-1:hover {
+  background-color: #198754;
+  border: 2px solid #198754;
+}
+.button-2 {
+  border: 2px solid white;
+  border-top-right-radius: 5px;
+  padding-top: 1rem;
+}
+.button-2:hover {
+  border: 2px solid white;
+  background-color: red;
+}
 
-    padding-top: 50px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-grow: 1;
+.two-box ul.second-ul {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-grow: 1;
 }
-.link-1,.link-2{
-    border: 2px solid white;
-    flex-basis: 260px;
-    padding: 1rem ;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #dda0dd !important;
+.link-1,
+.link-2 {
+  border: 2px solid white;
+  flex-basis: 260px;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #dda0dd !important;
 }
-.link-2{
-    flex-basis: 120px;
-    background-color:#10B9EB;
-    border-color: #10B9EB;
-    color: white !important;
+.link-2 {
+  flex-basis: 120px;
+  background-color: #10b9eb;
+  border-color: #10b9eb;
+  color: white !important;
 }
 .box-para{
     color: white;
@@ -83,27 +84,17 @@ ul.twobox-ul{
     font-size: 1.1rem;
 }
 
-button.token-buy-button{
-    height: 50px;  
-    width: 9rem;
-    margin: 0.4rem auto 2rem;
-      cursor: pointer !important;
-    font-size: 1.5em;
-    padding:0.5rem 1rem;
-    background-color: #198754 !important;
-    font-weight: 700 !important;
-    border-style: none !important;
-    border-radius: 2.5rem !important;
-    color: white !important;
-    box-sizing: border-box !important;
+button.token-buy-button {
+  height: 50px;
+  width: 9rem;
+  margin: 0.4rem auto 2rem;
+  cursor: pointer !important;
+  font-size: 1.5em;
+  padding: 0.5rem 1rem;
+  background-color: #198754;
+  font-weight: 700 !important;
+  border-style: none !important;
+  border-radius: 2.5rem !important;
+  color: white !important;
+  box-sizing: border-box !important;
 }
-
-
-
-
-
-
-
-
-
-

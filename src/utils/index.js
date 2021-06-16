@@ -1,5 +1,6 @@
 import { Contract } from '@ethersproject/contracts';
 import { BigNumber } from '@ethersproject/bignumber';
+import { parseEther } from '@ethersproject/units';
 
 const nf = new Intl.NumberFormat();
 
@@ -11,8 +12,8 @@ export function calculatePrice(price, value) {
   return formatNumber(value * price);
 }
 
-export function toWei(n, ethers) {
-  return ethers.utils.parseEther(n);
+export function toWei(n) {
+  return parseEther(n);
 }
 
 export function fromWei(n) {
