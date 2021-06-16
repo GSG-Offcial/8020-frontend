@@ -40,7 +40,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
       setUserLoyalty(formatValue(loyalty));
     }
   }, [contract]);
-  console.log(GS50Price, userBalance);
+
   return (
     <div>
       <div className="bottom-mainbox mainbox">

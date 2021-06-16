@@ -30,6 +30,20 @@ export const BottomTwoBox = ({ price }) => {
     }
   });
 
+  async function withdraw() {
+    if (contract) {
+      const tx = await contract.withdraw();
+      if (await tx.wait()) window.location.reload();
+    }
+  }
+
+  async function cycle() {
+    if (contract) {
+      const tx = await contract.reinvest();
+      if (await tx.wait()) window.location.reload();
+    }
+  }
+
   return (
     <div className="bottom_box">
       <div>
@@ -40,7 +54,11 @@ export const BottomTwoBox = ({ price }) => {
             (${calculatePrice(price, withdrawAmount)})
           </span>
         </p>
-        <button type="button" className="btn btn-primary btn-sm bottom_button">
+        <button
+          type="button"
+          onClick={withdraw}
+          className="btn btn-primary btn-sm bottom_button"
+        >
           Withdraw
         </button>
       </div>
@@ -52,7 +70,11 @@ export const BottomTwoBox = ({ price }) => {
             (${calculatePrice(price, withdrawAmount)})
           </span>
         </p>
-        <button type="button" className="btn btn-primary btn-sm bottom_button">
+        <button
+          type="button"
+          onClick={cycle}
+          className="btn btn-primary btn-sm bottom_button"
+        >
           Cycle
         </button>
       </div>

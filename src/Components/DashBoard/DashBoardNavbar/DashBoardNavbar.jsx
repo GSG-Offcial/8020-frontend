@@ -24,7 +24,7 @@ export const DashBoardNavbar = () => {
 
   const [contract, setContract] = useState();
   const [ethPrice, setEthPrice] = useState(0);
-  const [tokenPrice, setTokenPrice] = useState(0);
+  const [tokenPrice, setTokenPrice] = useState();
   const [refAddress, setRefAddress] = useState('loading');
 
   useEffect(() => {
@@ -51,8 +51,6 @@ export const DashBoardNavbar = () => {
     }
   }, [contract, library]);
 
-  console.log(tokenPrice);
-
   useEffect(() => {
     fetch(
       'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum'
@@ -61,7 +59,7 @@ export const DashBoardNavbar = () => {
       .then((data) => {
         setEthPrice(data[0].current_price);
       });
-  });
+  }, [library]);
 
   // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
   const triedEager = useEagerConnect();
