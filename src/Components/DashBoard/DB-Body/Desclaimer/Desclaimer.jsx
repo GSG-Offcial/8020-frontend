@@ -1,10 +1,10 @@
 import React from 'react'
-import desStyles from './Desclaimer.module.css'
+import './Desclaimer.css'
 export const Desclaimer = () => {
     return (
-        <div className={desStyles.bottom_dislaimer}>
-            <h1 className={desStyles.Des_h1}>DISCLAIMER</h1>
-            <div className={desStyles.desc_div1}>
+        <div className="bottom_dislaimer">
+            <h1 className="Des_h1">DISCLAIMER</h1>
+            <div className="desc_div1">
                 Before purchasing cryptocurrency and participating in the 80/20 Smart
                 Contract, you must ensure that the nature, complexity and risks inherent in the
                 investment arena are suitable for your objectives in light of your circumstances
@@ -14,7 +14,7 @@ export const Desclaimer = () => {
                 taken as a result of your use of this website or participation in the 80/20 Smart
                 Contract. For more information please read the disclaimer.
                  
-                 <div className={desStyles.desc_button}>
+                 <div className="desc_button">
                  <button type="button" className="btn btn-lg">DESCLAMIER</button>
                  </div>
             </div>
