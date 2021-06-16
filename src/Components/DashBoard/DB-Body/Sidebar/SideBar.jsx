@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Group99 from '../../../Icons/Group 900.svg'
+// import NFTIcon from '../../../Icons/icon-sidebar-NFT.svg'
+// import Logo8090 from '../../../Logo/Group903.svg'
 import './SideBar.css'
 export const SideBar = () => {
     return (
@@ -19,9 +21,13 @@ export const SideBar = () => {
                     </Link>
                     </li>
                     <li>
-                    <a href="#/" className="active"><span><i className="fas fa-atom"></i></span> <span>NFT Pool</span></a>
+                    <a href="#/" className="active"><span><i className="fas fa-dice-d20"></i></span> <span>NFT Pool</span></a>
                     </li>
                 </ul>
+            </div>
+            
+            <div className="sidebar-bottom">
+              <p className="sidebar-para"><span><i class="fas fa-dollar-sign logo-bitcoin"></i></span><span>$16.271</span></p> 
             </div>
         </div>
     )

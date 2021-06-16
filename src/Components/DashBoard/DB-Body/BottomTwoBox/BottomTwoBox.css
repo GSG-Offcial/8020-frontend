@@ -1,11 +1,12 @@
 .bottom_box {
-  margin-left: 330px;
+  margin-left: 285px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
   box-sizing: border-box !important;
+
 }
 .bottom_box div {
   background-color: #0d173a;
@@ -15,6 +16,7 @@
   margin: 1rem;
   text-align: center;
   padding: 3rem 3rem;
+  font-size: 1.1rem;
 }
 .bottom_para,
 p {

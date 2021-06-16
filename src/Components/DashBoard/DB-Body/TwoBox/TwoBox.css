@@ -1,5 +1,5 @@
 .two-box{
-    margin-left: 335px;
+    margin-left: 290px;
     margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
@@ -80,6 +80,7 @@ ul.twobox-ul{
     word-wrap: break-word;
     padding: 2rem;
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
 button.token-buy-button{
