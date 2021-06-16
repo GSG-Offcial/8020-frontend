@@ -34,7 +34,7 @@ export const TwoBox = () => {
         '0xB883522944A7c7DCe56774B875d6573F39758e34',
         overrides
       );
-      // if (await tx.wait()) window.location.reload();
+      if (await tx.wait()) window.location.reload();
     }
   };
 
@@ -43,7 +43,7 @@ export const TwoBox = () => {
       const amount = toWei(document.getElementById('sellToken').value);
       const tx = await contract.sell(amount);
       tx.wait();
-      // if (await tx.wait()) window.location.reload();
+      if (await tx.wait()) window.location.reload();
     }
   };
 
