@@ -1,13 +1,14 @@
 
-import React from 'react'
+import React,{Fragment} from 'react'
 import './Header.css'
-
+import {LotterySideBar} from '../index'
 
 // import React from 'react';
 // import './Header.css';
 
 export const Header = () => {
   return (
+    <Fragment>
     <div className="contianer-home" id="lotter-maindiv">
       <div>
         <h1>
@@ -39,6 +40,9 @@ export const Header = () => {
           <input type="submit" value="Connect" className="lottery-btn" />
         </form>
       </div>
+
     </div>
+    <LotterySideBar/>
+    </Fragment>
   );
 };
