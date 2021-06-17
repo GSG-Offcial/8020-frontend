@@ -1,0 +1,43 @@
+.lot_top_div{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+   margin-top: 9rem;
+   margin-left: 230px !important;
+}
+h1{
+    color: white;
+}
+.lot_top_div div{
+    border: 2px solid #10b9eb;
+    flex: 1;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: #0d173a;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.4rem 0 0rem !important;
+    color: white;
+    word-wrap: break-word;
+    font-weight: 700;
+   font-size: 1.1rem !important;
+   width: 90%;
+}
+.lot_Box p{
+    padding: 0.4rem !important;
+    box-sizing: border-box !important;
+}
+.first_para{
+    font-size: 1.5rem !important;
+}
+
+.second_para{
+    background-color: #17203f;
+    padding-bottom: 0.8rem !important;
+    border-radius: 30px;
+    width: 50%;
+    margin:  1rem auto;
+}

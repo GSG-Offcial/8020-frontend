@@ -1,13 +1,12 @@
 import React from 'react'
-import  './LotterySideBar.css'
+import   './LotterySideBar.css'
 import Group99 from '../../Icons/Group 900.svg' 
 import {Link} from 'react-router-dom'
 export const LotterySideBar = () => {
     return (
         <div  className="lot_sidebar">
-            {/* <h1>SideBar</h1> */}
             <div className="lot_logo">
-            <Link to="/"><img src={Group99} alt="Group 900" className="sidebar-icon" /></Link>    
+            <Link to="/"><img src={Group99} alt="Group 900" /></Link>    
             </div>
             <div >
                 <ul className="lot_sidebar_menu">
