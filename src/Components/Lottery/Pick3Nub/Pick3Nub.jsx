@@ -9,7 +9,7 @@ export const Pick3Nub = () => {
                         Pick 3 Numbers
                     </p>
                     <div className={styles.selection_div}>
-                        <select class="" aria-label="Default select example">
+                        <select className="" aria-label="Default select example">
                             <option selected value="select"></option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -23,22 +23,7 @@ export const Pick3Nub = () => {
                             <option value="3">Three</option>
 
                         </select>
-                        <select class="" aria-label="Default select example">
-                            <option selected value="select"></option>
-
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="3">Three</option>
-                            <option value="3">Three</option>
-                            <option value="3">Three</option>
-                            <option value="3">Three</option>
-                            <option value="3">Three</option>
-                            <option value="3">Three</option>
-                            <option value="3">Three</option>
-
-                        </select>
-                        <select class="" aria-label="Default select example">
+                        <select className="" aria-label="Default select example">
                             <option selected value="select"></option>
 
                             <option value="1">One</option>
@@ -53,8 +38,23 @@ export const Pick3Nub = () => {
                             <option value="3">Three</option>
 
                         </select>
-                        <div class="btn-group" role="group" aria-label="Third group">
-                            <button type="button" class={`btn btn-info ${styles.selector_button}`}>+</button>
+                        <select className="" aria-label="Default select example">
+                            <option selected value="select"></option>
+
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="3">Three</option>
+                            <option value="3">Three</option>
+                            <option value="3">Three</option>
+                            <option value="3">Three</option>
+                            <option value="3">Three</option>
+                            <option value="3">Three</option>
+                            <option value="3">Three</option>
+
+                        </select>
+                        <div className="btn-group" role="group" aria-label="Third group">
+                            <button type="button" className={`btn btn-info ${styles.selector_button}`}>+</button>
                         </div>
                     </div>
                     <p>Number on this ticket</p>
@@ -67,7 +67,7 @@ export const Pick3Nub = () => {
                         Pick 3 Numbers
                     </p>
                     <div className={styles.selection_div}>
-                        <select class="" aria-label="Default select example">
+                        <select className="" aria-label="Default select example">
                             <option selected value="select"></option>
 
                             <option value="1">One</option>
@@ -82,7 +82,7 @@ export const Pick3Nub = () => {
                             <option value="3">Three</option>
 
                         </select>
-                        <select class="" aria-label="Default select example">
+                        <select className="" aria-label="Default select example">
                             <option selected value="select"></option>
 
                             <option value="1">One</option>
@@ -97,7 +97,7 @@ export const Pick3Nub = () => {
                             <option value="3">Three</option>
 
                         </select>
-                        <select class="" aria-label="Default select example">
+                        <select className="" aria-label="Default select example">
                             <option selected value="select"></option>
 
                             <option value="1">One</option>
@@ -112,8 +112,8 @@ export const Pick3Nub = () => {
                             <option value="3">Three</option>
 
                         </select>
-                        <div class="btn-group" role="group" aria-label="Third group">
-                            <button type="button" class={`btn btn-info ${styles.selector_button}`}>+</button>
+                        <div className="btn-group" role="group" aria-label="Third group">
+                            <button type="button" className={`btn btn-info ${styles.selector_button}`}>+</button>
                         </div>
                     </div>
                     <p>Number on this ticket</p>

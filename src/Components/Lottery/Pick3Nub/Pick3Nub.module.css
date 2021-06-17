@@ -8,7 +8,8 @@
 .nested_div_pick3nub{
    min-height: 150px;
    border: 2px solid #10b9eb;
-   margin: 15px;
+   margin: 20px 0;
+   margin-right: 2px !important;
   border-radius: 10px;
   text-align: center;
   padding-top: 2rem;

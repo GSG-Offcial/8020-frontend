@@ -1,0 +1,23 @@
+.main_BottomTwoBox{
+    margin: 20px;
+
+    margin-left: 290px;
+    margin-right: 3rem;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+.BottomTwoBox_nesteddiv{
+    border: 2px solid #10b9eb;
+    min-height: 130px;
+    padding: 10px !important;
+    margin: 1px;
+    border-radius: 10px;
+    text-align: center;
+}
+.BottomTwoBox_nesteddiv::first-line{
+    font-size: 1.3rem;
+    color: #9F9FFB ;
+}
+.nub_bottomTwoBox{
+    font-size: 1.5rem;
+}
