@@ -1,7 +1,7 @@
 
 import React,{Fragment} from 'react'
 import './Header.css'
-import {LotterySideBar,LotteryTopBox,Pick3Drop,StatisFourBox} from '../index'
+import {LotterySideBar,LotteryTopBox,Pick3Drop,StatisFourBox,Pick3Nub} from '../index'
 
 // import React from 'react';
 // import './Header.css';
@@ -46,6 +46,7 @@ export const Header = () => {
     <LotteryTopBox/>
     <Pick3Drop/>    
     <StatisFourBox/>
+    <Pick3Nub/>
     </Fragment>
   );
 };
