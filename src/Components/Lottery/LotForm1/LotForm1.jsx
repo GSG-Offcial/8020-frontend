@@ -4,7 +4,7 @@ export const LotForm1 = () => {
     return (
         <div className={styles.Lot_From1_mainDiv}>
 
-            <h1 className={styles.headingform1}>PICK 3 DROP HISTORY</h1>
+            <h1 className={`mt-3 mb-3 ${styles.headingform1}`}>PICK 3 DROP HISTORY</h1>
             <div class="table-responsive ">
                 <table class="table  table-borderless">
                     <thead className={styles.thead_background}>
