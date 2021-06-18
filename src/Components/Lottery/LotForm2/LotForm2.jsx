@@ -1,13 +1,13 @@
 import React from 'react'
-import styles from './LotForm1.module.css';
-export const LotForm1 = () => {
-    return (
-        <div className={styles.Lot_From1_mainDiv}>
+import styles from './LotForm2.module.css';
 
-            <h1 className={styles.headingform1}>PICK 3 DROP HISTORY</h1>
+export const LotForm2 = () => {
+    return (
+        <div className={`mt-3 ${styles.lotfrom2_mainDiv}`}>
+            <h1 class={`display-6 text-center  ${styles.lot_from2_h1}`}>PICK 4 DROP HISTORY</h1>
             <div class="table-responsive ">
                 <table class="table  table-borderless">
-                    <thead className={styles.thead_background}>
+                    <thead >
                         <tr className="text-white">
                             <th scope="col">No:</th>
                             <th scope="col">Date</th>

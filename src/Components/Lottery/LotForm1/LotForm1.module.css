@@ -5,18 +5,12 @@
     margin-right: 3rem;
     border: 2px solid #10b9eb;
     border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 .headingform1{
     text-align: center;
     color: #9F9FFB;
     font-size: 1.9rem;
 }
-.main_table{
-    color: white !important;
-}
-.main_table thead{
-    background-color: #10b9eb;
-    font-weight: bolder !important;
+.thead_background{
+    background-color: #10b9eb !important;
 }
