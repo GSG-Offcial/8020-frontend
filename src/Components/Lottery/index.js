@@ -7,3 +7,4 @@ export {BottomTwoBox} from './LotBottomTwoBox/BottomTwoBox'
 export {LotForm1} from './LotForm1/LotForm1';
 export {LotForm2} from './LotForm2/LotForm2'
 export {LotForm3} from './Lottery3/LotForm3'
+export {LotDesclaimer} from './LotDesc/LotDesclaimer'

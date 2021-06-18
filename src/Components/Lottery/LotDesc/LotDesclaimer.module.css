@@ -1,0 +1,28 @@
+.LotDesclaimer_mainDiv{
+    margin-left: 290px;
+    color: white !important;
+    margin-right: 3rem;
+}
+.LotDesclaimer_mainDiv div.desc_content{
+    border: 2px solid #10b9eb !important;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    word-wrap: break-word;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.lot_descbutton{
+    border-radius: 50px;
+    color: white;
+    background-color: #10b9eb;
+    border-color: #10b9eb;
+    cursor: pointer;
+    font-weight: 700;
+    padding: .3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
