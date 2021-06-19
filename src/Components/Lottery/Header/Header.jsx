@@ -42,7 +42,7 @@ export const Header = () => {
         </div>
 
       </div>
-      {/* <LotterySideBar /> */}
+      <LotterySideBar />
       <LotteryTopBox />
       <Pick3Drop />
       <StatisFourBox />
