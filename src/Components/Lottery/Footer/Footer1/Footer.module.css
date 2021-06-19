@@ -1,3 +1,16 @@
 .FooterImages_mainDiv{
-    
+  background-color: white;   
+  margin-bottom: 0% !important;
+  width: 100% !important;
+  border-top-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.Footer_lis{
+    padding-top: 2rem;
+}
+.Footer_lis li a{
+    font-weight: bolder !important;
+}
+.Footer_images_SM  > li > a {
+  padding: .5rem .4rem;
 }
