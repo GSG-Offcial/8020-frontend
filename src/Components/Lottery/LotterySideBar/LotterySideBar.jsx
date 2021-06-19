@@ -11,7 +11,9 @@ export const LotterySideBar = () => {
             <div >
                 <ul className="lot_sidebar_menu">
                 <li>
+                    <Link to="/dashboard">
                     <a href="#/" className="lot-active"><span><i className="fas fa-chart-pie"></i></span> <span>DashBoard</span></a>
+                    </Link>
                     </li>
                     <li>
                     <Link to="/lottery">

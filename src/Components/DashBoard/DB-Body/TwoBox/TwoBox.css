@@ -38,6 +38,8 @@ ul.twobox-ul {
   border: 2px solid white;
   border-top-left-radius: 5px;
   padding-top: 1rem;
+  background-color: #198754;
+  border: 2px solid #198754;
 }
 .button-1:hover {
   background-color: #198754;
@@ -47,9 +49,12 @@ ul.twobox-ul {
   border: 2px solid white;
   border-top-right-radius: 5px;
   padding-top: 1rem;
+  background-color: red;
+  border: 2px solid red;
+
 }
 .button-2:hover {
-  border: 2px solid white;
+  border: 2px solid red;
   background-color: red;
 }
 

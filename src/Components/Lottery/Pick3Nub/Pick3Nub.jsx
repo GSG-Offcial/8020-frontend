@@ -53,9 +53,7 @@ export const Pick3Nub = () => {
                             <option value="3">Three</option>
 
                         </select>
-                        <div className="btn-group" role="group" aria-label="Third group">
                             <button type="button" className={`btn btn-info ${styles.selector_button}`}>+</button>
-                        </div>
                     </div>
                     <p>Number on this ticket</p>
                 </div>
@@ -112,9 +110,7 @@ export const Pick3Nub = () => {
                             <option value="3">Three</option>
 
                         </select>
-                        <div className="btn-group" role="group" aria-label="Third group">
                             <button type="button" className={`btn btn-info ${styles.selector_button}`}>+</button>
-                        </div>
                     </div>
                     <p>Number on this ticket</p>
 
