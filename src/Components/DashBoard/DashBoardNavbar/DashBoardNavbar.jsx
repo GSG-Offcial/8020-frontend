@@ -39,7 +39,7 @@ export const DashBoardNavbar = () => {
       let contractGSG = getContract(abi, address, library, account);
       setContract(contractGSG);
     }
-  }, [library]);
+  }, [library, account, connector]);
 
   useEffect(async () => {
     if (contract) {
@@ -49,7 +49,7 @@ export const DashBoardNavbar = () => {
       const refId = await contract.getReferrer();
       setRefAddress(refId);
     }
-  }, [contract, library]);
+  }, [contract, library, ethPrice]);
 
   useEffect(() => {
     fetch(
@@ -59,7 +59,36 @@ export const DashBoardNavbar = () => {
       .then((data) => {
         setEthPrice(data[0].current_price);
       });
-  }, [library]);
+  }, [library, contract]);
+
+  const copyToClipboard = () => {
+    const el = document.createElement('textarea');
+    el.value = 'http://8020testing.surge.sh/dashboard' + '?' + 'ref=' + account;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  };
+
+  useEffect(() => {
+    let address;
+    if (refAddress != 'loading') {
+      var url = document.URL;
+      if (url.indexOf('?') != -1) {
+        if (refAddress == '0x0000000000000000000000000000000000000000') {
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          address = urlParams.get('ref');
+          setRefAddress(address);
+        }
+      } else {
+        if (refAddress == '0x0000000000000000000000000000000000000000') {
+          address = '0x8Fac2C8dAfeb6bc93848C292772bfe68666a866a';
+          setRefAddress(address);
+        }
+      }
+    }
+  }, [library, contract, refAddress]);
 
   // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
   const triedEager = useEagerConnect();
@@ -96,7 +125,12 @@ export const DashBoardNavbar = () => {
               </a>
             </li>
             <li className="nav-item" id="lottery-li3">
-              <a className="nav-link active" aria-current="page" href="#/">
+              <a
+                className="nav-link active"
+                onClick={copyToClipboard}
+                aria-current="page"
+                href="#/"
+              >
                 Copy Ref. link
               </a>
             </li>
@@ -130,7 +164,7 @@ export const DashBoardNavbar = () => {
       </div>
       <SideBar />
       <FourBox price={ethPrice} GS50Price={tokenPrice} />
-      <TwoBox />
+      <TwoBox refAddress={refAddress} />
       <BottomFourBox price={ethPrice} GS50Price={tokenPrice} />
       <BottomTwoBox price={ethPrice} />
       <Desclaimer />

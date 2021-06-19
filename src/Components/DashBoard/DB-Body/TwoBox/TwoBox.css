@@ -1,6 +1,4 @@
-
 .two-box {
-  
   margin-left: 290px;
   margin-bottom: 1rem;
   display: flex;
@@ -49,13 +47,12 @@ ul.twobox-ul {
   border: 2px solid white;
   border-top-right-radius: 5px;
   padding-top: 1rem;
-  background-color: red;
-  border: 2px solid red;
-
+  background-color: rgba(228, 74, 74, 0.849);
+  border: 2px solid rgba(199, 56, 56, 0.883);
 }
 .button-2:hover {
-  border: 2px solid red;
-  background-color: red;
+  border: 2px solid rgb(189, 55, 55);
+  background-color: rgb(168, 50, 50);
 }
 
 .two-box ul.second-ul {
@@ -81,12 +78,12 @@ ul.twobox-ul {
   border-color: #10b9eb;
   color: white !important;
 }
-.box-para{
-    color: white;
-    word-wrap: break-word;
-    padding: 2rem;
-    font-weight: 600;
-    font-size: 1.1rem;
+.box-para {
+  color: white;
+  word-wrap: break-word;
+  padding: 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 button.token-buy-button {

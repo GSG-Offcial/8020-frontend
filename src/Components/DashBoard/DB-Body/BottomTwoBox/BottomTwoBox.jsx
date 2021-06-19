@@ -22,14 +22,14 @@ export const BottomTwoBox = ({ price }) => {
       let contractGSG = getContract(abi, address, library, account);
       setContract(contractGSG);
     }
-  }, [library]);
+  }, [library, account]);
 
   useEffect(async () => {
     if (contract) {
       const totalWithdrawn = await contract.totalWithdrawAmount();
       setWithdrawAmount(formatValue(totalWithdrawn));
     }
-  });
+  }, [contract, withdrawAmount]);
 
   async function withdraw() {
     if (contract) {

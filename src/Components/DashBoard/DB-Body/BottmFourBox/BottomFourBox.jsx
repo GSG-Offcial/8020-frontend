@@ -23,7 +23,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
       let contractGSG = getContract(abi, address, library, account);
       setContract(contractGSG);
     }
-  }, [library]);
+  }, [library, account]);
 
   useEffect(async () => {
     if (contract) {
@@ -39,7 +39,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
       let loyalty = await contract.loyaltyOf();
       setUserLoyalty(formatValue(loyalty));
     }
-  }, [contract]);
+  }, [contract, userBalance, userDivs, userRef, userLoyalty, price, GS50Price]);
 
   return (
     <div>

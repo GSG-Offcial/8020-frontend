@@ -23,7 +23,7 @@ export const FourBox = ({ price, GS50Price }) => {
       let contractGSG = getContract(abi, address, library, account);
       setContract(contractGSG);
     }
-  }, [library]);
+  }, [library, account]);
 
   useEffect(async () => {
     if (contract) {
@@ -39,7 +39,7 @@ export const FourBox = ({ price, GS50Price }) => {
       let total_withdraw = await contract.totalWithdraw();
       setWithdrawn(formatValue(total_withdraw));
     }
-  }, [contract]);
+  }, [contract, price, GS50Price]);
 
   return (
     <Fragment>
