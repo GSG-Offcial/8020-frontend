@@ -9,7 +9,7 @@ import {
 import { abi, address } from '../../../../constants/8020.json';
 import { useWeb3React } from '@web3-react/core';
 
-export const TwoBox = () => {
+export const TwoBox = ({ refAddress }) => {
   const { library, account } = useWeb3React();
 
   const [contract, setContract] = useState();
@@ -22,7 +22,7 @@ export const TwoBox = () => {
       let contractGSG = getContract(abi, address, library, account);
       setContract(contractGSG);
     }
-  }, [library]);
+  }, [library, account]);
 
   const buyToken = async () => {
     if (contract) {
@@ -30,11 +30,16 @@ export const TwoBox = () => {
       let overrides = {
         value: amount,
       };
-      const tx = await contract.buy(
-        '0xB883522944A7c7DCe56774B875d6573F39758e34',
-        overrides
-      );
-      if (await tx.wait()) window.location.reload();
+
+      if (
+        refAddress != 'loading' ||
+        refAddress != '0x0000000000000000000000000000000000000000'
+      ) {
+        const tx = await contract.buy(refAddress, overrides);
+        if (await tx.wait()) window.location.reload();
+      } else {
+        alert('Referral Addres is not loaded yet, TRy AGAIN');
+      }
     }
   };
 
@@ -116,7 +121,7 @@ export const TwoBox = () => {
           sellToken();
         }}
         style={{
-          backgroundColor: 'red',
+          backgroundColor: 'rgb(168, 50, 50)',
         }}
         type="submit"
         className={`token-buy-button btn-lg btn-outline-success `}
@@ -150,4 +155,3 @@ export const TwoBox = () => {
     </div>
   );
 };
-
