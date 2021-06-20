@@ -16,7 +16,7 @@
   background-color: #0d173a !important;
   box-sizing: border-box !important;
 }
-@media only screen and  (max-width: 660px) {
+/* @media only screen and  (max-width: 660px) {
    .sidebar{
      top:80px;
    }
@@ -32,7 +32,7 @@
     top:150px;
 
   }
-}
+} */
 .logo {
   width: 149px;
   height: 149px;
@@ -55,7 +55,7 @@
   margin-bottom: 1rem;
 }
 .sidebar-menu li a {
-  display: block !important;
+  display: inline-block !important;
   color: plum !important;
 }
 
@@ -90,3 +90,5 @@
  padding-right: 0.8rem;
 
 }
+
+

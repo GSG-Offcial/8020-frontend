@@ -39,12 +39,20 @@ ul.twobox-ul {
   border-top-left-radius: 5px;
   padding-top: 1rem;
   background-color: #198754;
-  border: 2px solid #198754;
+  border: 2px solid #198754; 
 }
+
 .button-1:hover {
   background-color: #198754;
   border: 2px solid #198754;
 }
+.button-1:visited{
+  background-color: #198754 ;
+  border: 2px solid #198754 ;
+  /* color: white; */
+
+}
+
 .button-2 {
   border: 2px solid white;
   border-top-right-radius: 5px;

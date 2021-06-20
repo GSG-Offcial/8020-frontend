@@ -1,8 +1,34 @@
+.DB-Navbar{
+  background-color: #0d173a !important;
+  position: fixed; 
+  top: 0 !important;
+  width: 100% !important;  
+}
+
 .header-heading {
   cursor: pointer;
 }
 
-.connect-btn {
+.menu-bar {
+  
+  margin-top: 10px;
+  display: none;
+}
+
+
+
+.mainDB-ul{
+  display: flex ;
+  flex-direction: row;
+  flex-wrap: wrap ;
+  justify-content: center;
+
+}
+
+.connect-dahboard{
+  display: none;
+}
+.dashboard-btn2,.connect-dahboard{
   border-radius: 50px;
   border-style: none;
   height: 40px;
@@ -11,7 +37,64 @@
   background-color: #10b9eb;
   font-size: 1em;
   padding: 5px 35px;
-  margin-top: 0.2rem;
-  margin-right: 1rem;
   align-self: center !important;
+  margin-right: 2rem !important;
+}
+
+.dashboard-text{
+  color: #10b9eb !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+}
+.dB-ID{
+  font-size: 16px !important;
+
+  margin-top: 0.2rem !important;
+}
+.db-copyRef{
+  font-size: 14px !important;
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.1rem !important;
+  border: 2px solid #10b9eb !important;
+  border-radius: 7% !important;
+  padding: 10px !important;
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+}
+
+
+
+@media (max-width:992px){
+   .dashboard-btn2{
+     display: none;
+   }
+}
+@media (max-width:992px){
+  .button-div{
+    margin-left: 0rem !important;
+    margin-right: 3rem !important;
+  }
+  .connect-dahboard{
+    display: inline-block;    
+  }
+
+  .mainDB-UL{
+    flex-direction: column !important;
+  flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .db-copyRef{
+    width: 30% !important;
+    margin: auto !important;  
+    display: block !important;
+   border-radius: 0rem !important ;
+   word-wrap: break-word !important;
+  }
 }

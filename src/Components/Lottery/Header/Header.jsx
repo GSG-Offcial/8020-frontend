@@ -19,17 +19,17 @@ export const Header = () => {
         <div>
           <ul className="nav justify-content-end" id="home-ul">
             <li className="nav-item" id="lottery-li">
-              <a className="nav-link active" aria-current="page" href="#/">
+              <a className="nav-link active simple-text" aria-current="page" href="#/">
                 Dashboard
               </a>
             </li>
             <li className="nav-item" id="lottery-li2">
-              <a className="nav-link active " aria-current="page" href="#/">
+              <a className="nav-link active simle-id " aria-current="page" href="#/">
                 Your spons ID: 0x02354309
               </a>
             </li>
             <li className="nav-item" id="lottery-li3">
-              <a className="nav-link active" aria-current="page" href="#/">
+              <a className="nav-link active copy-linkRef" aria-current="page" href="#/">
                 Copy Ref. link
               </a>
             </li>
