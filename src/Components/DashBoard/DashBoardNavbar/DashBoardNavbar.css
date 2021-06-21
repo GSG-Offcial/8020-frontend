@@ -6,6 +6,7 @@
 .main-NavBar {
   width: 100% !important;
   background-color: #0d173a !important;
+  min-height: 90px;
 }
 .nested-DivDB{
   max-width: 1500px !important;
@@ -23,6 +24,7 @@
 .dashboard-text{
   color: #10b9eb !important;
   font-weight: 900 !important;
+  font-size: 1.1rem;
 }
 .db-copyRef{
   font-size: 14px !important;

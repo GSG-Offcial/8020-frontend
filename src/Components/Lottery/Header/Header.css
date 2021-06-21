@@ -1,63 +1,75 @@
-#lotter-maindiv {
+
+
+
+
+.lotter-maindiv{
+  width: 100% !important;
   background-color: #0d173a !important;
-  position: fixed; 
-  top: 0;
-  margin-bottom: 4rem !important;
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between;
-  align-content: center !important;
-  width: 100% !important;  
-  margin-right: auto !important;
-  margin-left: auto !important;
-  padding: 1rem 0.5rem !important;
-  /* display: inline-block; */
+  min-height: 90px !important;
 }
-
-
-#lotter-maindiv  div {
-  align-self: center !important;
+.lot-nested-DivDB{
+  max-width: 1500px !important;
 }
-.header-heading {
+.lot-Icon-Navbar{
   color: white !important;
 }
-#lottery-li a.simple-text {
+
+.lot-Link-div{
+  width: 65%;
+  margin: 0 auto;
+}
+.lot-dashboard-text{
   color: #10b9eb !important;
-  font-weight: 700 !important;
-  font-size: 20px !important;
-  border: 2px solid #0d173a !important;
-  border-radius: 0% !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem;
 }
-#lottery-li2 a.simle-id {
-  font-size: 16px !important;
-  border: 2px solid #0d173a !important;
-  border-radius: 0% !important;
-  margin-top: 0.2rem;
+.lot-id-Nub{
+  color: white;
+  box-sizing: border-box !important;
+  word-wrap: break-word;
 }
-#lottery-li3 a.copy-linkRef {
+.lot-db-copyRef{
   font-size: 14px !important;
-  margin-top: 0.2rem !important;
-  margin-bottom: 0.1rem !important;
   border: 2px solid #10b9eb !important;
   border-radius: 7% !important;
-  padding: 10px !important;
+  color: white;
 }
-#lottery-li3 a:hover {
-  border: 2px solid #10b9eb !important;
-  border-radius: 7% !important;
-  padding: 10px !important;
-}
-.lottery-btn {
-  border-radius: 50px;
+
+.lot-dashboard-btn2{
+  border-radius: 50px !important;
   border-style: none;
   height: 40px;
-  color: white !important;
+  color: var(--color-WH) !important;
   cursor: pointer;
   background-color: #10b9eb;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 700;
   padding: 5px 35px;
-  margin-top: 0.2rem;
-  margin-right: 1rem;
-  align-self: center !important;
 }
+
+
+
+   @media  only screen and (max-width: 767px){
+     .lot-dashboard-btn1{
+      border-style: none;
+      height: 40px;
+      color: var(--color-WH) !important;
+      cursor: pointer;
+      background-color: #10b9eb;
+      font-size: 0.8em;
+      font-weight: 700;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 97%;
+      box-sizing: border-box !important;
+     }
+     .lotter-maindiv{
+      text-align: center;
+      font-size: x-large;
+     }
+     .lot-db-copyRef{
+      width: 96%;
+      margin: 0 auto;
+      border-radius: 0% !important;
+     }
+   }
