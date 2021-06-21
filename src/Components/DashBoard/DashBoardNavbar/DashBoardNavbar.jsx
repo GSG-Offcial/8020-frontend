@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom'
+
 import './DashBoardNavbar.css';
 import {
   FourBox,
@@ -73,17 +73,17 @@ export const DashBoardNavbar = () => {
 
   useEffect(() => {
     let address;
-    if (refAddress != 'loading') {
+    if (refAddress !== 'loading') {
       var url = document.URL;
-      if (url.indexOf('?') != -1) {
-        if (refAddress == '0x0000000000000000000000000000000000000000') {
+      if (url.indexOf('?') !== -1) {
+        if (refAddress === '0x0000000000000000000000000000000000000000') {
           const queryString = window.location.search;
           const urlParams = new URLSearchParams(queryString);
           address = urlParams.get('ref');
           setRefAddress(address);
         }
       } else {
-        if (refAddress == '0x0000000000000000000000000000000000000000') {
+        if (refAddress === '0x0000000000000000000000000000000000000000') {
           address = '0x8Fac2C8dAfeb6bc93848C292772bfe68666a866a';
           setRefAddress(address);
         }
@@ -103,98 +103,53 @@ export const DashBoardNavbar = () => {
 
   return (
     <Fragment>
+      {/* navbar */}
+      <nav className="navbar navbar-expand-md fixed-top main-NavBar">
+        <div className="container nested-DivDB">
+          <a href="#/" className="navbar-brand">
+            <span className="fw-bold display-6 text-white">
+              DashBoard
+            </span>
+          </a>
+          {/* toggler button for mobile */}
+          <button className="navbar-toggler Icon-Navbar" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span><i className="fas fa-bars text-white"></i></span>
+          </button>
+          <div className="collapse navbar-collapse align-center justify-content-center Link-div" id="main-nav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link dashboard-text" aria-current="page" href="#/">DashBoard</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link id-Nub" href="#/">Your ID:1213345545</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link db-copyRef" href="#/">Copy Ref.Link</a>
+              </li>
 
-
-      <nav className="navbar navbar-expand-lg navbar-mainbg DB-Navbar" id="NavBar">
-
-        <NavLink className="navbar-brand navbar-logo" to="/" exact>
-          <div>
-
-            <h1>
-              <span className="badge header-heading">DashBoard</span>
-            </h1>
+            </ul>
 
           </div>
-
-        </NavLink>
-        <div className="d-grid gap-2 d-md-flex justify-content-md-end button-div">
-          <button type="button" class="btn btn-primary btn-lg connect-dahboard me-md-2" style={{
-            cursor: disabled ? 'unset' : 'pointer',
-          }}
-            disabled={disabled}
-            type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-              setActivatingConnector(injected);
-              activate(injected);
-            }}>{account === undefined
-              ? 'Connect'
-              : account === null
-                ? 'None'
-                : `${account.substring(0, 6)}...${account.substring(
-                  account.length - 4
-                )} 🟢`}</button>
+          {/* button if screen less than madium then show first othrwise second button */}
+          <div className="collapse navbar-collapse  justify-content-end" id="main-nav">
+            <li className="nav-item ms-2 d-md-none">
+              <a className="btn dashboard-btn1" href="#/">Link</a>
+            </li>
+            {/* second button on bigger screen */}
+            <li className="nav-item ms-2 d-none d-md-inline">
+              <a className="btn dashboard-btn2" href="#/">Connect</a>
+            </li>
+          </div>
         </div>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i className="fas fa-bars text-white"></i>
-        </button>
-        <div className="collapse navbar-collapse text-center" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto mainDB-UL">
-            <div className="hori-selector">
-              <div className="left"></div>
-              <div className="right"></div>
-            </div>
-            <li className="nav-item" >
-
-              <a className="nav-link active dashboard-text" aria-current="page" href="#/">
-                Dashboard
-              </a>
-
-            </li>
-            <li className="nav-item" >
-
-              <a className="nav-link active dB-ID text-white" aria-current="page" href="#/">
-                Your spons ID:{' '}
-                {`${refAddress.substring(0, 6)}${refAddress.substring(
-                  refAddress.length - 4
-                )} `}
-              </a>
-
-            </li>
 
 
-            <li className="nav-item" id="lottery-li3">
-              <a
-                className="nav-link active db-copyRef text-white"
-                onClick={copyToClipboard}
-                aria-current="page"
-                href="#/"
-              >
-
-                Copy Ref. link
-              </a>
-            </li>
-          </ul>
-
-        </div>
-        <button type="button" class="btn btn-primary btn-lg dashboard-btn2" style={{
-          cursor: disabled ? 'unset' : 'pointer',
-        }}
-          disabled={disabled}
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-            setActivatingConnector(injected);
-            activate(injected);
-          }}>{account === undefined
-            ? 'Connect'
-            : account === null
-              ? 'None'
-              : `${account.substring(0, 6)}...${account.substring(
-                account.length - 4
-              )} 🟢`}</button>
+        {/* </div> */}
       </nav>
+
+
+
 
       <SideBar />
       <FourBox price={ethPrice} GS50Price={tokenPrice} />

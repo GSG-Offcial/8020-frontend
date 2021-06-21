@@ -1,8 +1,9 @@
-.DB-Navbar{
+/* .DB-Navbar{
   background-color: #0d173a !important;
   position: fixed; 
   top: 0 !important;
   width: 100% !important;  
+ 
 }
 
 .header-heading {
@@ -15,7 +16,9 @@
   display: none;
 }
 
-
+#navbarSupportedContent{
+  flex-grow: 0 !important;
+}
 
 .mainDB-ul{
   display: flex ;
@@ -26,7 +29,10 @@
 }
 
 .connect-dahboard{
-  display: none;
+ 
+ display: grid;
+ place-items: center;
+ place-content: center;
 }
 .dashboard-btn2,.connect-dahboard{
   border-radius: 50px;
@@ -59,7 +65,12 @@
   border-radius: 7% !important;
   padding: 10px !important;
 }
-
+@media (min-width: 992px){
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+}
 @media (min-width: 992px){
   .navbar-expand-lg .navbar-collapse {
     display: flex!important;
@@ -97,4 +108,81 @@
    border-radius: 0rem !important ;
    word-wrap: break-word !important;
   }
+  .dashboard-btn2{
+    display: inline-block;
+  }
+} */
+
+:root{
+  --color-WH: white
+}
+
+.main-NavBar {
+  width: 100% !important;
+  background-color: #0d173a !important;
+}
+.nested-DivDB{
+  max-width: 1500px !important;
+}
+
+.Link-div{
+  width: 65%;
+  margin: 0 auto;
+}
+
+.Icon-Navbar{
+  color: var(--color-WH) !important;
+}
+
+.dashboard-text{
+  color: #10b9eb !important;
+  font-weight: 900 !important;
+}
+.db-copyRef{
+  font-size: 14px !important;
+  border: 2px solid #10b9eb !important;
+  border-radius: 7% !important;
+  color: var(--color-WH);
+}
+.id-Nub{
+  color: var(--color-WH);
+}
+.dashboard-btn2{
+  border-radius: 50px;
+  border-style: none;
+  height: 40px;
+  color: var(--color-WH) !important;
+  cursor: pointer;
+  background-color: #10b9eb;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 5px 35px;
+}
+
+
+
+@media (max-width: 767px) {
+  .db-copyRef{
+    font-size: 14px !important;
+    border: 2px solid #10b9eb !important;
+    /* border-radius: 7% !important; */
+    color: var(--color-WH) !important;
+    display: block;
+    margin: auto;
+  }
+  .dashboard-btn1{
+    border-radius: 50px;
+  border-style: none;
+  height: 40px;
+  color: var(--color-WH) !important;
+  cursor: pointer;
+  background-color: #10b9eb;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 5px 35px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+
+  }      
 }

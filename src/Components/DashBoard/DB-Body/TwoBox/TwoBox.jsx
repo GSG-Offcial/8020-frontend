@@ -32,8 +32,8 @@ export const TwoBox = ({ refAddress }) => {
       };
 
       if (
-        refAddress != 'loading' ||
-        refAddress != '0x0000000000000000000000000000000000000000'
+        refAddress !== 'loading' ||
+        refAddress !== '0x0000000000000000000000000000000000000000'
       ) {
         const tx = await contract.buy(refAddress, overrides);
         if (await tx.wait()) window.location.reload();
