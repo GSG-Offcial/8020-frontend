@@ -9,6 +9,7 @@ import {
   BottomTwoBox,
   Desclaimer,
   FooterImage,
+  LastFooter
 } from '../DB-Body/index';
 import { getContract, fromWei } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
@@ -135,7 +136,7 @@ export const DashBoardNavbar = () => {
           {/* button if screen less than madium then show first othrwise second button */}
           <div className="collapse navbar-collapse  justify-content-end" id="main-nav">
             <li className="nav-item ms-2 d-md-none">
-              <a className="btn dashboard-btn1" href="#/">Link</a>
+              <a className="btn dashboard-btn1" href="#/">Connect</a>
             </li>
             {/* second button on bigger screen */}
             <li className="nav-item ms-2 d-none d-md-inline">
@@ -145,19 +146,20 @@ export const DashBoardNavbar = () => {
         </div>
 
 
-        {/* </div> */}
+       
       </nav>
 
 
 
 
-      <SideBar />
+      {/* <SideBar /> */}
       <FourBox price={ethPrice} GS50Price={tokenPrice} />
       <TwoBox refAddress={refAddress} />
       <BottomFourBox price={ethPrice} GS50Price={tokenPrice} />
       <BottomTwoBox price={ethPrice} />
       <Desclaimer />
       <FooterImage />
+      <LastFooter/>
     </Fragment>
   );
 };

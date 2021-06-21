@@ -1,4 +1,4 @@
-
+/* 
 .footer{
     display: flex;
     flex-direction: column;
@@ -9,9 +9,9 @@
 
 .footerbottom-image{
     width: 100%;
-    /* position: relative; */
-}
-
+    position: relative;
+} */
+/* 
 .footer-div2 ul{
     width: 100%;
     border: 2px solid gray;
@@ -53,4 +53,26 @@
 .nested-divfooter img{
     margin-right: 0.5rem;
     cursor: pointer;
+} */
+
+
+.footer_mainDiv{
+    background-color: white;   
+  margin-bottom: 0% !important;
+  width: 100% !important;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.Footer-ul{
+    box-sizing: border-box;
+    word-wrap: break-word;
+      padding-top: 2rem;
+}
+.Footer-ul li a{
+    font-weight: bolder;
+}
+.nested-divfooter-Image li a{
+    padding: .5rem .4rem;
+
 }

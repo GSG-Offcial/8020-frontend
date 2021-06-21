@@ -1,117 +1,3 @@
-/* .DB-Navbar{
-  background-color: #0d173a !important;
-  position: fixed; 
-  top: 0 !important;
-  width: 100% !important;  
- 
-}
-
-.header-heading {
-  cursor: pointer;
-}
-
-.menu-bar {
-  
-  margin-top: 10px;
-  display: none;
-}
-
-#navbarSupportedContent{
-  flex-grow: 0 !important;
-}
-
-.mainDB-ul{
-  display: flex ;
-  flex-direction: row;
-  flex-wrap: wrap ;
-  justify-content: center;
-
-}
-
-.connect-dahboard{
- 
- display: grid;
- place-items: center;
- place-content: center;
-}
-.dashboard-btn2,.connect-dahboard{
-  border-radius: 50px;
-  border-style: none;
-  height: 40px;
-  color: white !important;
-  cursor: pointer;
-  background-color: #10b9eb;
-  font-size: 1em;
-  padding: 5px 35px;
-  align-self: center !important;
-  margin-right: 2rem !important;
-}
-
-.dashboard-text{
-  color: #10b9eb !important;
-  font-weight: 700 !important;
-  font-size: 20px !important;
-}
-.dB-ID{
-  font-size: 16px !important;
-
-  margin-top: 0.2rem !important;
-}
-.db-copyRef{
-  font-size: 14px !important;
-  margin-top: 0.2rem !important;
-  margin-bottom: 0.1rem !important;
-  border: 2px solid #10b9eb !important;
-  border-radius: 7% !important;
-  padding: 10px !important;
-}
-@media (min-width: 992px){
-.navbar-expand-lg {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-}
-@media (min-width: 992px){
-  .navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    flex-basis: auto;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-}
-
-
-
-@media (max-width:992px){
-   .dashboard-btn2{
-     display: none;
-   }
-}
-@media (max-width:992px){
-  .button-div{
-    margin-left: 0rem !important;
-    margin-right: 3rem !important;
-  }
-  .connect-dahboard{
-    display: inline-block;    
-  }
-
-  .mainDB-UL{
-    flex-direction: column !important;
-  flex-wrap: wrap !important;
-    justify-content: center !important;
-  }
-  .db-copyRef{
-    width: 30% !important;
-    margin: auto !important;  
-    display: block !important;
-   border-radius: 0rem !important ;
-   word-wrap: break-word !important;
-  }
-  .dashboard-btn2{
-    display: inline-block;
-  }
-} */
 
 :root{
   --color-WH: white
@@ -146,9 +32,11 @@
 }
 .id-Nub{
   color: var(--color-WH);
+  box-sizing: border-box !important;
+  word-wrap: break-word;
 }
 .dashboard-btn2{
-  border-radius: 50px;
+  border-radius: 50px !important;
   border-style: none;
   height: 40px;
   color: var(--color-WH) !important;
@@ -162,16 +50,8 @@
 
 
 @media (max-width: 767px) {
-  .db-copyRef{
-    font-size: 14px !important;
-    border: 2px solid #10b9eb !important;
-    /* border-radius: 7% !important; */
-    color: var(--color-WH) !important;
-    display: block;
-    margin: auto;
-  }
+ 
   .dashboard-btn1{
-    border-radius: 50px;
   border-style: none;
   height: 40px;
   color: var(--color-WH) !important;
@@ -179,10 +59,19 @@
   background-color: #10b9eb;
   font-size: 1.2em;
   font-weight: 700;
-  padding: 5px 35px;
-  display: block;
-  margin: auto;
+  /* padding: 5px 35px; */
+  margin: 0 auto;
   margin-top: 20px;
+  width: 98%;
 
   }      
+  .Link-div{
+    text-align: center;
+    font-size: x-large;
+  }
+  .db-copyRef{
+    width: 97%;
+    margin: 0 auto;
+    border-radius: 0% !important;
+  }
 }
