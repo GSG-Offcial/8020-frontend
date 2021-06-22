@@ -10,6 +10,8 @@
    margin-left: auto !important;
    padding: 1rem 0.5rem !important;
    margin-bottom: 2rem;   
+   min-height: 100px;
+  
 }
 
 .mainpage-logo{

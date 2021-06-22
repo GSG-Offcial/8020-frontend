@@ -1,0 +1,13 @@
+
+.mainThreeBox_cont{
+    margin: 0 auto;
+    max-width: 88% !important;
+    word-wrap: break-word;
+}
+
+.mainThreeBox_cont div{
+    border: 2px solid #10b9eb;
+    margin-right: 1rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
