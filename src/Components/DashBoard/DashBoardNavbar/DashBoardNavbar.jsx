@@ -9,7 +9,7 @@ import {
   BottomTwoBox,
   Desclaimer,
   FooterImage,
-  LastFooter
+  LastFooter,
 } from '../DB-Body/index';
 import { getContract, fromWei } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
@@ -108,49 +108,102 @@ export const DashBoardNavbar = () => {
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
         <div className="container nested-DivDB">
           <a href="#/" className="navbar-brand">
-            <span className="fw-bold display-6 text-white">
-              DashBoard
-            </span>
+            <span className="fw-bold display-6 text-white">DashBoard</span>
           </a>
           {/* toggler button for mobile */}
-          <button className="navbar-toggler Icon-Navbar" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav"
+          <button
+            className="navbar-toggler Icon-Navbar"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav"
+            aria-controls="main-nav"
             aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span><i className="fas fa-bars text-white"></i></span>
+            aria-label="Toggle navigation"
+          >
+            <span>
+              <i className="fas fa-bars text-white"></i>
+            </span>
           </button>
-          <div className="collapse navbar-collapse align-center justify-content-center Link-div" id="main-nav">
+          <div
+            className="collapse navbar-collapse align-center justify-content-center Link-div"
+            id="main-nav"
+          >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link dashboard-text" aria-current="page" href="#/">DashBoard</a>
+                <a
+                  className="nav-link dashboard-text"
+                  aria-current="page"
+                  href="#/"
+                >
+                  DashBoard
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link id-Nub" href="#/">Your ID:1213345545</a>
+                <a className="nav-link id-Nub" href="#/">
+                  Your Referral :
+                  {`${refAddress.substring(0, 6)}...${refAddress.substring(
+                    refAddress.length - 4
+                  )} `}
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link db-copyRef" href="#/">Copy Ref.Link</a>
+                <a
+                  className="nav-link db-copyRef"
+                  onClick={copyToClipboard}
+                  href="#/"
+                >
+                  Copy Ref.Link
+                </a>
               </li>
-
             </ul>
-
           </div>
           {/* button if screen less than madium then show first othrwise second button */}
-          <div className="collapse navbar-collapse  justify-content-end" id="main-nav">
+          <div
+            className="collapse navbar-collapse  justify-content-end"
+            id="main-nav"
+          >
             <li className="nav-item ms-2 d-md-none">
-              <a className="btn dashboard-btn1" href="#/">Connect</a>
+              <a
+                className="btn dashboard-btn1"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActivatingConnector(injected);
+                  activate(injected);
+                }}
+                href="#/"
+              >
+                {account === undefined
+                  ? 'Connect'
+                  : account === null
+                  ? 'None'
+                  : `${account.substring(0, 6)}...${account.substring(
+                      account.length - 4
+                    )} 🟢`}
+              </a>
             </li>
             {/* second button on bigger screen */}
             <li className="nav-item ms-2 d-none d-md-inline">
-              <a className="btn dashboard-btn2" href="#/">Connect</a>
+              <a
+                className="btn dashboard-btn2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActivatingConnector(injected);
+                  activate(injected);
+                }}
+                href="#/"
+              >
+                {account === undefined
+                  ? 'Connect'
+                  : account === null
+                  ? 'None'
+                  : `${account.substring(0, 6)}...${account.substring(
+                      account.length - 4
+                    )} 🟢`}
+              </a>
             </li>
           </div>
         </div>
-
-
-       
       </nav>
-
-
-
 
       <SideBar />
       <FourBox price={ethPrice} GS50Price={tokenPrice} />
@@ -159,7 +212,7 @@ export const DashBoardNavbar = () => {
       <BottomTwoBox price={ethPrice} />
       <Desclaimer />
       <FooterImage />
-      <LastFooter/>
+      <LastFooter />
     </Fragment>
   );
 };
