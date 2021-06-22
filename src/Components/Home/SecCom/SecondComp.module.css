@@ -1,4 +1,4 @@
-
+/* 
 
 .second-div {
   height: 1120px;
@@ -41,4 +41,46 @@
   transform: translateY(-30px);
   transition: all 0.4s ease-in-out;
 }
+ */
 
+ #header{
+   width: 100% !important;
+ }
+ .SecondComp_Div1{
+   width: 50%;
+ }
+#header h1{
+  font-size: 48px;
+  font-weight: 700;
+}
+.paragrap_1{
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+.SecondComp_ImageDiv{
+  text-align: right;
+}
+ .SecondComp_Image{
+   width: 90%;
+   margin-left: .5rem;
+ }
+.SecondComp_Image:hover{
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down{
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-20px);
+  }
+}
+
+ @media only screen and (max-width: 991px){
+   .SecondComp_Div1{
+     width: 100%;
+     box-sizing: border-box !important;
+     word-wrap: break-word;
+   }
+ }
