@@ -1,7 +1,6 @@
-import React from 'react'
-import styles from './SecondComp.module.css'
-import AnimationBitCoin from '../../Images/bitcoinanimation.svg'
-
+import React from 'react';
+import styles from './SecondComp.module.css';
+import AnimationBitCoin from '../../Images/bitcoinanimation.svg';
 
 export const SecondComp = () => {
 

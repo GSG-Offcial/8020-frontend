@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react'
-import {SecondComp} from '../SecCom/SecondComp'
+import {SecondComp,BackgroundTopImage} from '../index'
 import {Link} from 'react-router-dom'
 import Group900 from '../../Icons/Group 900.svg'
 import './NavBar.css'
@@ -34,6 +34,7 @@ export const Navbar = () => {
     </div>
       </div>
     <SecondComp />
+    <BackgroundTopImage/>
     </Fragment>
   )
 }

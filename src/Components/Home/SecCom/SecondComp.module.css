@@ -62,7 +62,7 @@
 }
  .SecondComp_Image{
    width: 90%;
-   margin-left: .5rem;
+   margin-right: .5rem;
  }
 .SecondComp_Image:hover{
   animation: up-down 1s ease-in-out infinite alternate-reverse both;
