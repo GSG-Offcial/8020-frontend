@@ -19,7 +19,7 @@ import { injected } from '../../../connectors';
 
 export const DashBoardNavbar = () => {
   const context = useWeb3React();
-  const { connector, account, library, activate, error } = context;
+  const { connector, account, library, activate } = context;
 
   // handle logic to recognize the connector currently being activated
   const [activatingConnector, setActivatingConnector] = useState();
@@ -98,9 +98,7 @@ export const DashBoardNavbar = () => {
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
   useInactiveListener(!triedEager || !!activatingConnector);
 
-  const connected = injected === connector;
-
-  const disabled = !triedEager || !!activatingConnector || connected || !!error;
+  // const connected = injected === connector;
 
   return (
     <Fragment>
