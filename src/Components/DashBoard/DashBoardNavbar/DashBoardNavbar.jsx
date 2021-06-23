@@ -203,7 +203,7 @@ export const DashBoardNavbar = () => {
         </div>
       </nav>
 
-      <SideBar />
+      {/* <SideBar /> */}
       <FourBox price={ethPrice} GS50Price={tokenPrice} />
       <TwoBox refAddress={refAddress} />
       <BottomFourBox price={ethPrice} GS50Price={tokenPrice} />
