@@ -8,7 +8,7 @@ export const ThreeBoxes = () => {
         // <div>
         <div class={` row  justify-content-center text-white mt-5 mb-5  ${styles.mainThreeBox_cont} `}>
             {/* <div class={`row justify-content-center text-white   ${styles.ThreeBoxes_mainDiv}`}> */}
-                <div class="col-lg-3 col-md-5 col-sm-12 pt-md-4">
+                <div class={`col-lg-3 col-md-5 col-sm-12 pt-md-4 ${styles.firstBox}`}>
                     <span className={`px-3  fs-4 fw-bolder`}><img src={FirstImage} alt="" /><span className={`px-2`}>Decentralized </span></span>
                     <p className={`px-3 pt-2 fw-lighter`}>Powered by blockchain technology on publicly
                         accessible networks.</p>

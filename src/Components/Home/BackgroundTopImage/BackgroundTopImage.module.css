@@ -1,8 +1,7 @@
 .BackgroundTopImage_mainDiv{
     margin-top: -10rem;
+    box-sizing: border-box;
 }
 .BackgroundTopImage_mainDiv img{
     width: 100% !important;
-    position: relative;
-
 }

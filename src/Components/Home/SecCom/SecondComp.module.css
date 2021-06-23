@@ -46,6 +46,7 @@
  #header{
    width: 100% !important;
    margin-top: 3rem !important;
+   margin-bottom: 1rem;
  }
  .SecondComp_Div1{
    width: 50%;
