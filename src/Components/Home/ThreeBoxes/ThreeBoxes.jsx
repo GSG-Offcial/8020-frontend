@@ -6,7 +6,7 @@ import EarnImage from '../../Icons/Earn Passive Income.svg'
 export const ThreeBoxes = () => {
     return (
         // <div>
-        <div class={` row  justify-content-center text-white mt-5 mb-5  ${styles.mainThreeBox_cont} `}>
+        <div class={` row  col-10  justify-content-center text-white mt-5 mb-5  ${styles.mainThreeBox_cont} `}>
             {/* <div class={`row justify-content-center text-white   ${styles.ThreeBoxes_mainDiv}`}> */}
                 <div class={`col-lg-3 col-md-5 col-sm-12 pt-md-4 ${styles.firstBox}`}>
                     <span className={`px-3  fs-4 fw-bolder`}><img src={FirstImage} alt="" /><span className={`px-2`}>Decentralized </span></span>

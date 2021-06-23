@@ -16,3 +16,11 @@
     padding-right: 2rem;
     font-size: 22px;
 }
+
+@media only screen and (max-width: 991px){
+    .NFTLaunchpad_secondDiv{
+      width: 100%;
+      box-sizing: border-box !important;
+      word-wrap: break-word;
+    }
+  }

@@ -12,7 +12,7 @@ export const NFTLaunchpad = () => {
                             <div className={`col-lg-6 ${styles.NFTLaunchpad_image}`}>
                                 <img src={NFTLaunchpadformusic} alt="" />
                             </div>
-                            <div className={`col-md-6 pt-5 pt-lg-0 text-white d-flex justify-content-center flex-column`}>
+                            <div className={`col-md-6 pt-5 pt-lg-0 text-white d-flex justify-content-center flex-column ${styles.NFTLaunchpad_secondDiv}`}>
                                 <h2 className={`display-5 fw-bolder`}>NFT Launchpad for music, art,
                                     and visual creators.</h2>
                                 <p className={`px-4 py-3 ${styles.NFT_para}`}>

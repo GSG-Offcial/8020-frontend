@@ -1,0 +1,18 @@
+.NFTRewardPool_mainDiv{
+    width: 100%;
+    margin-top: 3rem !important;
+    margin-bottom: 1rem;
+}
+
+.NFTRewardPool_Image img{
+    width: 92%;
+}
+.NFTRewardPool_para{
+    border-left: 5px solid transparent;
+    border-image: linear-gradient(0deg, #3124FF , #00FFE2);
+    border-image-slice: 1;
+}
+.NFTRewardPool_para span{
+    padding-right: 2rem;
+    font-size: 22px;
+}
