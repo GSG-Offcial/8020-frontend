@@ -1,0 +1,15 @@
+.G50DropLottery_mainDiv{
+    width: 100%;
+}
+.G50DropLottery_image img{
+  width: 92%;
+}
+.G50DropLottery_para{
+    border-left: 5px solid transparent;
+    border-image: linear-gradient(0deg,#3124FF , #00FFE2);
+    border-image-slice: 1;
+}
+.G50DropLottery_para span{
+    padding-right: 2rem;
+    font-size: 28px;
+}

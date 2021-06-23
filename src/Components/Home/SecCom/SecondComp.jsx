@@ -12,7 +12,7 @@ export const SecondComp = () => {
     <div className={`row`}>
         <div className={`col-10 mx-auto`}>
             <div className={`row`}>
-              <div className={`col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column ${styles.SecondComp_Div1}`}>
+              <div className={`col-md-6 pt-5 pt-lg-0 order-1 order-lg-1 d-flex justify-content-center flex-column ${styles.SecondComp_Div1}`}>
               <h1>
                      A Wealth Distribution System for
                      Creators and Investors
@@ -23,7 +23,7 @@ export const SecondComp = () => {
                      The 80/20 Ecosystem.
                 </p>
               </div>
-              <div className={`col-lg-6 order-1 order-lg-2  ${styles.SecondComp_ImageDiv}`}>
+              <div className={`col-lg-6 order-2 order-lg-2  ${styles.SecondComp_ImageDiv}`}>
                 <img src={AnimationBitCoin} alt="" className={` ${styles.SecondComp_Image}`} />
               </div>
         </div>
