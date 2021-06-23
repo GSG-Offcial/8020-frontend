@@ -6,4 +6,5 @@ export {NFTRewardPool} from './NFTRewardPool/NFTRewardPool'
 export {G50DropLottery} from './G50DropLottery/G50DropLottery'
 export {Tokenomics} from './Tokenomics/Tokenomics'
 export {HomeDesc} from './HomeDesc/HomeDesc'
-export {HomeFooter1} from './HomeFooter/HomeFooter1/HomeFooter1'
+export {HomeFooter1} from './HomeFooter/HomeFooter1/HomeFooter1';
+export {HomeFooter2} from './HomeFooter/HomeFooter2/HomeFooter2'

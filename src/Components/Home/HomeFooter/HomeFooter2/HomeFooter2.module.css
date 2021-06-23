@@ -1,0 +1,8 @@
+.HomeFooter2_mainDiv{
+    background: linear-gradient(#3124ff , #10B9EB);
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+.HomeFooter2_mainDiv p{
+    font-size: x-large;
+}

@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react'
-import {SecondComp,BackgroundTopImage,ThreeBoxes,NFTLaunchpad,NFTRewardPool,G50DropLottery,Tokenomics,HomeDesc,HomeFooter1} from '../index'
+import {SecondComp,BackgroundTopImage,ThreeBoxes,NFTLaunchpad,NFTRewardPool,G50DropLottery,Tokenomics,HomeDesc,HomeFooter1,HomeFooter2} from '../index'
 import {Link} from 'react-router-dom'
 import Group900 from '../../Icons/Group 900.svg'
 import './NavBar.css'
@@ -42,6 +42,7 @@ export const Navbar = () => {
     <Tokenomics/>
     <HomeDesc/>
    <HomeFooter1/>  
+   <HomeFooter2/>
     </Fragment>
   )
 }
