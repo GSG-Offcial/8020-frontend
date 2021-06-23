@@ -1,0 +1,25 @@
+
+
+.HomeDesc_contentDiv{
+    border: 2px solid #10b9eb ;
+    padding: 2rem;
+    padding-bottom: 0rem !important;
+    border-radius: 16px;
+    word-wrap: break-word;
+}
+.HomeDesc_contentDiv p{
+    font-size: x-large;
+}
+.HomeDescButton button{
+    border-radius: 10px;
+    color: white;
+    background-color: #10b9eb;
+    border-color: #10b9eb;
+    cursor: pointer;
+    font-weight: 1000;
+    
+}
+.HomeDescButton button{
+    box-sizing: border-box;
+    word-wrap: break-word !important;
+}
