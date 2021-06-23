@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react'
-import {SecondComp,BackgroundTopImage,ThreeBoxes} from '../index'
+import {SecondComp,BackgroundTopImage,ThreeBoxes,NFTLaunchpad} from '../index'
 import {Link} from 'react-router-dom'
 import Group900 from '../../Icons/Group 900.svg'
 import './NavBar.css'
@@ -36,6 +36,7 @@ export const Navbar = () => {
     <SecondComp />
     <BackgroundTopImage/>
     <ThreeBoxes/>
+    <NFTLaunchpad/>
     </Fragment>
   )
 }
