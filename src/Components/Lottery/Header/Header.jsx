@@ -21,7 +21,7 @@ import { useWeb3React } from '@web3-react/core';
 
 export const Header = () => {
   const context = useWeb3React();
-  const { connector, account, library, activate, error } = context;
+  const { connector, account, activate } = context;
 
   // handle logic to recognize the connector currently being activated
   const [activatingConnector, setActivatingConnector] = useState();
