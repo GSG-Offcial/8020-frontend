@@ -100,8 +100,6 @@ export const DashBoardNavbar = () => {
 
   const connected = injected === connector;
 
-  const disabled = !triedEager || !!activatingConnector || connected || !!error;
-
   return (
     <Fragment>
       {/* navbar */}
