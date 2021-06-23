@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './NFTLaunchpad.module.css'
 import NFTLaunchpadformusic from '../../Images/NFTLaunchpadformusic.svg'
-import PathLine from '../../Icons/Path 2058.svg'
+
+
 export const NFTLaunchpad = () => {
     return (
         <section className={`${styles.NFT_mainDiv} d-flex align-items-center`}>

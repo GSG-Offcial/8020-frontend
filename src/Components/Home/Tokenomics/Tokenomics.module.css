@@ -1,0 +1,21 @@
+.Tokenomics_mainDiv{
+    width: 100%;
+   margin-top: 4rem; 
+}
+.Tokenomics_RowDiv{
+    background: linear-gradient(#3124ff 20%, #5f9ea0);
+    margin-bottom: 5rem;
+}
+
+.Tokenomics_Image img{
+    width: 61%;
+}
+.Tokenomics_text ul li{
+  line-height: 1.8rem;
+  font-size: 22px !important;
+  font-weight: 500;
+}
+.Tokenomics_starLOGO{
+  margin-left: -2rem;
+  margin-right: 0.7rem;
+}
