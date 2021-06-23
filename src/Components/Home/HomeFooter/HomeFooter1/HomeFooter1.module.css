@@ -1,0 +1,15 @@
+.HomeFooter1_mainDiv{
+    background-color: white;   
+  margin-bottom: 0% !important;
+  width: 100% !important;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+.HomeFooter1_Content{
+    word-wrap: break-word;
+    box-sizing: border-box;
+    padding-top: 2rem;
+}
+.HomeFooter1_Icons li a{
+    padding: 0.5rem 0.4rem;
+}
