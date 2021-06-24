@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 .BackgroundTopImage_mainDiv {
   margin-top: -30rem;
   /* box-sizing: border-box; */
+=======
+.BackgroundTopImage_mainDiv{
+    margin-top: -25rem;
+>>>>>>> 6ce5a409b1e155fd077c21d19f5be9748eaab86e
 }
 .BackgroundTopImage_mainDiv img {
   width: 100% !important;
