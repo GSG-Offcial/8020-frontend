@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './StatisFourBox.module.css';
 import { useContract } from '../../../Hooks/lottery';
 
