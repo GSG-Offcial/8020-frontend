@@ -1,0 +1,23 @@
+
+
+.Input_text{
+    width: 490px;
+    height: 50px;
+    border: none !important;
+    outline: none;
+    border-radius: 25px 0 0 25px;
+    padding: 0 25px;
+  box-sizing: border-box;
+}
+.Input_button{
+    position: relative;
+    left: -4rem;
+    border-radius: 25px 25px;
+    width: 200px ;
+    height: 50px;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+    background-color: #10b9eb;
+    box-sizing: border-box;
+}
