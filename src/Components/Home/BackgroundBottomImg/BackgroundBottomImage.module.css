@@ -1,4 +1,55 @@
 
+
+
 .BackgroundBottomImage_mainDiv img{
     width: 100% !important;
 }
+
+.BackgroundBottomImage_mainDiv{
+    margin-bottom: -11rem;
+}
+@media only screen and (max-width:1160px) {
+    .BackgroundBottomImage_mainDiv{
+        margin-bottom: -9rem;
+    }
+    
+}
+
+@media only screen and (max-width:950px) {
+    .BackgroundBottomImage_mainDiv{
+        margin-bottom: -8rem;
+    }
+    
+}
+@media only screen and (max-width:800px) {
+    .BackgroundBottomImage_mainDiv{
+        margin-bottom: -6.5rem;
+    }
+    
+}
+@media only screen and (max-width:700px) {
+    .BackgroundBottomImage_mainDiv{
+        margin-bottom: -5.5rem;
+    }
+    
+}
+
+@media only screen and (max-width:590px) {
+    .BackgroundBottomImage_mainDiv{
+        margin-bottom: -4.4rem;
+    }
+    
+}
+@media only screen and (max-width:470px) {
+    .BackgroundBottomImage_mainDiv{
+        margin-bottom: -3rem;
+    }
+    
+}
+@media only screen and (max-width:320px) {
+    .BackgroundBottomImage_mainDiv{
+        margin-bottom: -1rem;
+    }
+    
+}
+
