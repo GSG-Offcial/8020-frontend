@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 .mainThreeBox_cont {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   word-wrap: break-word;
-=======
-
-.mainThreeBox_cont{
-    margin: 0 auto;
-    width: 100%;
-    word-wrap: break-word;
->>>>>>> 6ce5a409b1e155fd077c21d19f5be9748eaab86e
 }
 
 .mainThreeBox_cont div {
