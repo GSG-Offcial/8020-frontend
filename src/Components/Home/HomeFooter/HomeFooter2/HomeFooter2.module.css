@@ -2,6 +2,7 @@
     background: linear-gradient(#3124ff , #10B9EB);
     word-wrap: break-word;
     box-sizing: border-box;
+    position: relative;
 }
 .HomeFooter2_mainDiv p{
     font-size: x-large;

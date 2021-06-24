@@ -4,6 +4,8 @@
   width: 100% !important;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
+  margin-top: -12rem;
+  position: relative;
 }
 .HomeFooter1_Content{
     word-wrap: break-word;

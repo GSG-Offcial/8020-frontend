@@ -9,3 +9,4 @@ export {HomeDesc} from './HomeDesc/HomeDesc'
 export {HomeFooter1} from './HomeFooter/HomeFooter1/HomeFooter1';
 export {HomeFooter2} from './HomeFooter/HomeFooter2/HomeFooter2'
 export {HomeConnect} from './Connect/HomeConnect'
+export {BackgroundBottomImage} from './BackgroundBottomImg/BackgroundBottomImage'

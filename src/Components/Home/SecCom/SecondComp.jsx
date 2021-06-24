@@ -7,8 +7,8 @@ export const SecondComp = () => {
 
     return (
 
-<section id={styles.header} className={`d-flex align-items-center`}>
-   <div className={`container-fluid `}>
+<section id={styles.header} className={`d-flex align-items-center mb-5`}>
+   <div className={`container-fluid`}>
     <div className={`row`}>
         <div className={`col-10 mx-auto`}>
             <div className={`row`}>
@@ -27,6 +27,7 @@ export const SecondComp = () => {
                 <img src={AnimationBitCoin} alt="" className={` ${styles.SecondComp_Image}`} />
               </div>
         </div>
+        
         </div>
     </div>
    </div>
