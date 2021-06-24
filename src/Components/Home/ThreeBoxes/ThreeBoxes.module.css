@@ -1,20 +1,18 @@
-
-.mainThreeBox_cont{
-    margin: 0 auto;
-    width: 90%;
-    word-wrap: break-word;
+.mainThreeBox_cont {
+  margin: 0 auto;
+  width: 90%;
+  word-wrap: break-word;
 }
 
-.mainThreeBox_cont div{
-    border: 2px solid #10b9eb;
-    margin-right: 1rem;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-   
+.mainThreeBox_cont div {
+  border: 2px solid #10b9eb;
+  margin-right: 1rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 767px){
-    .mainThreeBox_cont div{
-        padding-top: 2rem !important;
-    }
+@media (max-width: 767px) {
+  .mainThreeBox_cont div {
+    padding-top: 2rem !important;
+  }
 }

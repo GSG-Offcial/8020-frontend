@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './StatisFourBox.module.css';
 import { useContract } from '../../../Hooks/lottery';
+import { useReadData } from '../../../Hooks/lottery';
+import { useState } from 'react';
 
 export const StatisFourBox = () => {
   const contract = useContract();
+  console.log(contract);
 
-  console.log('Contract', contract);
+  const [pick3GS50, setPick3GS50] = useState('loading');
+  const [pick4GS50, setpick4GS50] = useState('loading');
+  const [totalAmount, settotalAmount] = useState('loading');
+  const [pick3Wallet, setpick3Wallet] = useState('loading');
+  const [pick4Wallet, setpick4Wallet] = useState('loading');
+
+  useEffect(async () => {
+    if (contract) {
+      setPick3GS50(String(await contract.pick3Pot()));
+      setPick3GS50(String(await contract.pick3Pot()));
+      setPick3GS50(String(await contract.pick3Pot()));
+      setPick3GS50(String(await contract.pick3Pot()));
+    }
+  }, [contract]);
+
+  console.log(pick3GS50);
 
   return (
     <div className={`${styles.statis_mainDiv} row`}>
