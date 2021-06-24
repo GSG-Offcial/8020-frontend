@@ -65,7 +65,7 @@ export const DashBoardNavbar = () => {
 
   const copyToClipboard = () => {
     const el = document.createElement('textarea');
-    el.value = 'http://8020testing.surge.sh/dashboard' + '?' + 'ref=' + account;
+    el.value = `http://8020testing.surge.sh/dashboard?ref=${account}`;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');

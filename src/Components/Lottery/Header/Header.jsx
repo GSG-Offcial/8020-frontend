@@ -39,8 +39,6 @@ export const Header = () => {
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
   useInactiveListener(!triedEager || !!activatingConnector);
 
-  const connected = injected === connector;
-
   return (
     <Fragment>
       {/* navbar */}
