@@ -1,7 +1,7 @@
 
 
 .Input_text{
-    width: 490px;
+    max-width: 490px;
     height: 50px;
     border: none !important;
     outline: none;
@@ -21,3 +21,38 @@
     background-color: #10b9eb;
     box-sizing: border-box;
 }
+
+@media (max-width:440px)  {
+    .Input_button{
+        width: 100px !important;
+    }  
+   .Input_text{
+       width: 200px !important;
+   } 
+  }
+
+@media (max-width:379px)  {
+  .Input_button{
+      width: 100px !important;
+  }  
+ .Input_text{
+     width: 185px !important;
+ } 
+}
+
+@media (max-width:355px)  {
+    .Input_button{
+        width: 110px !important;
+    }  
+   .Input_text{
+       width: 165px !important;
+   } 
+  }
+  @media (max-width:339px)  {
+    .Input_button{
+        width: 97px !important;
+    }  
+   .Input_text{
+       width: 157px !important;
+   } 
+  }
