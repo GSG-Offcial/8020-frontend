@@ -21,7 +21,16 @@
     background-color: #10b9eb;
     box-sizing: border-box;
 }
-
+.Input_button:hover{
+    background-image: url('../../Icons/Submit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent !important;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+    background-size: 25%;
+    border: 1px solid #10b9eb !important;
+}
 @media (max-width:440px)  {
     .Input_button{
         width: 100px !important;

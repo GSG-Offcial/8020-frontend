@@ -23,7 +23,7 @@ export const HomeDesc = () => {
                         </p>
                     </div>
                     <div className={`col-2 mx-auto d-flex justify-content-center text-center fw-bolder  my-4 ${style.HomeDescButton}`}>
-                 <button type="button" className={`btn text-white  px-5 py-3`}>DESCLAMIER</button>
+                 <button type="button" className={`btn text-white  px-5 py-3 ${style.HomeDesc_ORIGButton}`}>DESCLAMIER</button>
                  </div>
                 </div>
                 </div>

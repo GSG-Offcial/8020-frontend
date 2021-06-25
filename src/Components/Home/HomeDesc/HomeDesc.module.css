@@ -23,3 +23,13 @@
     box-sizing: border-box;
     word-wrap: break-word !important;
 }
+
+
+.HomeDesc_ORIGButton:hover{
+    background-image: url('../../Icons/disclaimer.svg');
+    background-color: white;
+    background-repeat: no-repeat;
+    color: transparent !important;
+    background-position: center;    
+    transition: all 0.3s linear 0s;
+}
