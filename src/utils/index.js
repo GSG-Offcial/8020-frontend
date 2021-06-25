@@ -44,3 +44,12 @@ export function getProviderOrSigner(library, account) {
 export const getContract = (ABI, address, library, account) => {
   return new Contract(address, ABI, getProviderOrSigner(library, account));
 };
+
+export function countAddress(address) {
+  let alladdress = address.reduce(
+    (x, y) => (x.includes(y) ? x : [...x, y]),
+    []
+  );
+
+  return alladdress.length;
+}

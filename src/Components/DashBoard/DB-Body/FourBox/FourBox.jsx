@@ -1,29 +1,19 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import './FourBox.css';
 import {
-  getContract,
   calculatePrice,
   formatValue,
   formatNumber,
 } from '../../../../utils/index';
-import { abi, address } from '../../../../constants/8020.json';
-import { useWeb3React } from '@web3-react/core';
+import { useContract } from '../../../../Hooks/index';
 
 export const FourBox = ({ price, GS50Price }) => {
-  const { library, account } = useWeb3React();
+  const contract = useContract();
 
-  const [contract, setContract] = useState();
   const [tvl, setTvl] = useState('loading');
   const [totalSupply, setTotalSupply] = useState('loading');
   const [eth, setEth] = useState('loading');
   const [withdrawn, setWithdrawn] = useState('loading');
-
-  useEffect(() => {
-    if (library) {
-      let contractGSG = getContract(abi, address, library, account);
-      setContract(contractGSG);
-    }
-  }, [library, account]);
 
   useEffect(async () => {
     if (contract) {

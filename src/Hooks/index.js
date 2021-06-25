@@ -1,7 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useWeb3React } from '@web3-react/core';
-
+import { abi, address } from '../constants/8020.json';
 import { injected } from '../connectors';
+import { getContract } from '../utils/index';
+
+export const useContract = () => {
+  const { library, account, chainId } = useWeb3React();
+
+  return useMemo(
+    () => (!!library ? getContract(abi, address, library, account) : undefined),
+    [library, account, chainId]
+  );
+};
 
 export function useEagerConnect() {
   const { activate, active } = useWeb3React();

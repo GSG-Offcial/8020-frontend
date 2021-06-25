@@ -1,28 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './TwoBox.css';
-import {
-  getContract,
-  formatNumber,
-  fromWei,
-  toWei,
-} from '../../../../utils/index';
-import { abi, address } from '../../../../constants/8020.json';
-import { useWeb3React } from '@web3-react/core';
+import { formatNumber, fromWei, toWei } from '../../../../utils/index';
+import { useContract } from '../../../../Hooks/index';
 
 export const TwoBox = ({ refAddress }) => {
-  const { library, account } = useWeb3React();
+  const contract = useContract();
 
-  const [contract, setContract] = useState();
   const [amount, setAmount] = useState('');
   const [button, setbutton] = useState('');
   const [input, setInput] = useState('');
-
-  useEffect(() => {
-    if (library) {
-      let contractGSG = getContract(abi, address, library, account);
-      setContract(contractGSG);
-    }
-  }, [library, account]);
 
   const buyToken = async () => {
     if (contract) {
@@ -62,7 +48,7 @@ export const TwoBox = ({ refAddress }) => {
   const calculateEth = async (token) => {
     if (contract) {
       const eth = await contract.calculateEthereumReceived(token);
-      setAmount(`you will receive ${formatNumber(fromWei(eth))} ETH`);
+      setAmount(`you will receive ${Number(fromWei(eth)).toFixed(6)} ETH`);
     }
   };
 

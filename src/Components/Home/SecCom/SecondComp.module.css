@@ -38,6 +38,7 @@
 @media only screen and (max-width: 991px) {
   .SecondComp_Div1 {
     width: 100%;
+    margin-top: 1rem;
     box-sizing: border-box !important;
     word-wrap: break-word;
   }

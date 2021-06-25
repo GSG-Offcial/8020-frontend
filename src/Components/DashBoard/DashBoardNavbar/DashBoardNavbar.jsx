@@ -14,17 +14,18 @@ import {
 import { getContract, fromWei } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 import { useEagerConnect, useInactiveListener } from '../../../Hooks/index';
-import { abi, address } from '../../../constants/8020.json';
 import { injected } from '../../../connectors';
+import { useContract } from '../../../Hooks/index';
 
 export const DashBoardNavbar = () => {
   const context = useWeb3React();
   const { connector, account, library, activate } = context;
 
+  const contract = useContract();
+
   // handle logic to recognize the connector currently being activated
   const [activatingConnector, setActivatingConnector] = useState();
 
-  const [contract, setContract] = useState();
   const [ethPrice, setEthPrice] = useState(0);
   const [tokenPrice, setTokenPrice] = useState();
   const [refAddress, setRefAddress] = useState('loading');
@@ -36,13 +37,6 @@ export const DashBoardNavbar = () => {
     }
   }, [activatingConnector, connector]);
 
-  useEffect(() => {
-    if (library) {
-      let contractGSG = getContract(abi, address, library, account);
-      setContract(contractGSG);
-    }
-  }, [library, account, connector]);
-
   useEffect(async () => {
     if (contract) {
       let buyPrice = await contract.buyPrice();
@@ -51,7 +45,7 @@ export const DashBoardNavbar = () => {
       const refId = await contract.getReferrer();
       setRefAddress(refId);
     }
-  }, [contract, library, ethPrice]);
+  }, [contract, ethPrice]);
 
   useEffect(() => {
     fetch(
