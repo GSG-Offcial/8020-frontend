@@ -1,8 +1,9 @@
 .HomeFooter2_mainDiv{
-    background: linear-gradient(#3124ff , #10B9EB);
+    background-color: #10b9eb !important;
     word-wrap: break-word;
     box-sizing: border-box;
     position: relative;
+    min-height: 100px;
 }
 .HomeFooter2_mainDiv p{
     font-size: x-large;

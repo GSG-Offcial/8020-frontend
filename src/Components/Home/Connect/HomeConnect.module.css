@@ -65,3 +65,12 @@
        width: 157px !important;
    } 
   }
+
+  @media (max-width:300px)  {
+    .Input_button{
+        width: 90px !important;
+    }  
+   .Input_text{
+       width: 132px !important;
+   } 
+  }

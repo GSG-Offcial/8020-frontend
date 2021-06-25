@@ -29,7 +29,7 @@ export const HomeFooter1 = () => {
       <div>
         <ul class={`nav justify-content-center ${styles.HomeFooter1_Icons}`}>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#/"><img src={discord} alt="Discord" /></a>
+            <a class="nav-link"  aria-current="page" href="#/"><img src={discord} alt="Discord" /></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#/"><img src={telegram} alt="Telegram" /></a>

@@ -56,6 +56,6 @@
   background-size: 30px !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  color: white !important;
+  color: transparent !important;
   transition: all 0.2s ease-in !important; 
 }

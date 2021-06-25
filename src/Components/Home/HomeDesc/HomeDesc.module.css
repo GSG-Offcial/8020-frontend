@@ -10,6 +10,7 @@
 .HomeDesc_contentDiv p{
     font-size: x-large;
 }
+
 .HomeDescButton button{
     border-radius: 10px;
     color: white;
@@ -32,4 +33,11 @@
     color: transparent !important;
     background-position: center;    
     transition: all 0.3s linear 0s;
+}
+
+@media (max-width:215px) {
+    .HomeDescButton button{
+        /* word-wrap: break-word; */
+        width: 80%;
+    }
 }
