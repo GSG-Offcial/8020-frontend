@@ -1,48 +1,44 @@
-
- #header{
-   width: 100% !important;
-  position: relative; 
- }
-
- .SecondComp_Div1{
-   width: 50%;
- }
-
-
-
-#header h1{
-  font-size: 48px;
-  font-weight: 700;
-  
+#header {
+  width: 100% !important;
+  position: relative;
 }
-.paragrap_1{
+
+.SecondComp_Div1 {
+  width: 50%;
+}
+
+#header h1 {
+  font-size: 37px;
+  font-weight: 600;
+}
+.paragrap_1 {
   font-size: 1.3em;
   font-weight: lighter;
 }
-.SecondComp_ImageDiv{
+.SecondComp_ImageDiv {
   text-align: right;
 }
- .SecondComp_Image{
-   width: 90%;
-   margin-right: .5rem;
- }
-.SecondComp_Image:hover{
+.SecondComp_Image {
+  width: 90%;
+  margin-right: 0.5rem;
+}
+.SecondComp_Image:hover {
   animation: up-down 1s ease-in-out infinite alternate-reverse both;
 }
 
-@keyframes up-down{
-  0%{
+@keyframes up-down {
+  0% {
     transform: translateY(10px);
   }
-  100%{
+  100% {
     transform: translateY(-20px);
   }
 }
 
- @media only screen and (max-width: 991px){
-   .SecondComp_Div1{
-     width: 100%;
-     box-sizing: border-box !important;
-     word-wrap: break-word;
-   }
- }
+@media only screen and (max-width: 991px) {
+  .SecondComp_Div1 {
+    width: 100%;
+    box-sizing: border-box !important;
+    word-wrap: break-word;
+  }
+}
