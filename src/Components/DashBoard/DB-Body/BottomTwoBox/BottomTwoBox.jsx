@@ -2,27 +2,14 @@ import React from 'react';
 // import styles from './BottomTwoBox.module.css'
 // import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './BottomTwoBox.css';
-import {
-  getContract,
-  calculatePrice,
-  formatValue,
-} from '../../../../utils/index';
-import { abi, address } from '../../../../constants/8020.json';
-import { useWeb3React } from '@web3-react/core';
+import { calculatePrice, formatValue } from '../../../../utils/index';
 import { useEffect, useState } from 'react';
+import { useContract } from '../../../../Hooks/index';
 
 export const BottomTwoBox = ({ price }) => {
-  const { library, account } = useWeb3React();
+  const contract = useContract();
 
-  const [contract, setContract] = useState();
   const [withdrawAmount, setWithdrawAmount] = useState('loading');
-
-  useEffect(() => {
-    if (library) {
-      let contractGSG = getContract(abi, address, library, account);
-      setContract(contractGSG);
-    }
-  }, [library, account]);
 
   useEffect(async () => {
     if (contract) {

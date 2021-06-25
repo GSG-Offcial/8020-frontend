@@ -1,29 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import './BottomFourBox.css';
 import {
-  getContract,
   calculatePrice,
   formatValue,
   formatNumber,
 } from '../../../../utils/index';
-import { abi, address } from '../../../../constants/8020.json';
 import { useWeb3React } from '@web3-react/core';
+import { useContract } from '../../../../Hooks/index';
 
 export const BottomFourBox = ({ price, GS50Price }) => {
-  const { library, account } = useWeb3React();
+  const { account } = useWeb3React();
+  const contract = useContract();
 
-  const [contract, setContract] = useState();
   const [userBalance, setUserBalance] = useState('loading');
   const [userDivs, setUserDivs] = useState('loading');
   const [userRef, setUserRef] = useState('loading');
   const [userLoyalty, setUserLoyalty] = useState('loading');
-
-  useEffect(() => {
-    if (library) {
-      let contractGSG = getContract(abi, address, library, account);
-      setContract(contractGSG);
-    }
-  }, [library, account]);
 
   useEffect(async () => {
     if (contract) {
@@ -39,7 +31,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
       let loyalty = await contract.loyaltyOf();
       setUserLoyalty(formatValue(loyalty));
     }
-  }, [contract, userBalance, userDivs, userRef, userLoyalty, price, GS50Price]);
+  }, [contract, price, GS50Price]);
 
   return (
     <div>

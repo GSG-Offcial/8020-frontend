@@ -4,10 +4,10 @@ import { abi, address } from '../constants/lottery.json';
 import { getContract } from '../utils/index';
 
 export const useContract = () => {
-  const { library, account } = useWeb3React();
+  const { library, account, chainId } = useWeb3React();
 
   return useMemo(
     () => (!!library ? getContract(abi, address, library, account) : undefined),
-    [library, account]
+    [library, account, chainId]
   );
 };
