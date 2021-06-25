@@ -1,6 +1,6 @@
 .Tokenomics_mainDiv{
     width: 100%;
-   margin-top: 4rem; 
+   margin-top: 7rem; 
 }
 .Tokenomics_RowDiv{
     background: linear-gradient(#3124ff 20%, #5f9ea0);
@@ -8,7 +8,7 @@
 }
 
 .Tokenomics_Image img{
-    width: 61%;
+    width: 64%;
 }
 .Tokenomics_text ul li{
   line-height: 1.8rem;
