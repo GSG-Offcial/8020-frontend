@@ -13,13 +13,13 @@ export const ThreeBoxes = () => {
                     <p className={`px-3 pt-2 fw-lighter`}>Powered by blockchain technology on publicly
                         accessible networks.</p>
                 </div>
-                <div class="col pt-md-4">
+                <div class={`col pt-md-4 ${styles.SecondBox}`}>
                     <span className={`px-3  fs-4 fw-bolder`}><img src={NFTImage} alt="" /><span className={`px-2`}>NFT Launchpad</span></span>
                     <p className={`px-3 pt-2 fw-lighter`}>NFT drops from professional  Video, Graphic,
                         and Photographic creators</p>
                 </div>
-                <div class="col pt-md-4">
-                    <span className={`px-3  fs-5 fw-bolder`}><img src={EarnImage} alt="" /><span className={`px-2`}>Earn Passive Income </span></span>
+                <div className={`col pt-md-4 ${styles.ThreeBoxes}`}>
+                    <span className={`px-3  fs-4 fw-bolder`}><img src={EarnImage} alt="" /><span className={`px-2`}>Earn Passive Income </span></span>
                     <p className={`px-3 pt-2 fw-lighter`}>Built on BSC,Matic for fast, secure, and low cost
                         transactions.</p>
                 </div>

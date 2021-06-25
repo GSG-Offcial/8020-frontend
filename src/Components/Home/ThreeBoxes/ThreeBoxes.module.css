@@ -3,7 +3,45 @@
     margin: 0 auto;
     width: 100%;
     word-wrap: break-word;
+   
+  
 }
+/* aniamtion on hover left to right */
+.firstBox,.SecondBox,.ThreeBoxes{
+    position: relative;
+    overflow: hidden;
+}
+.firstBox::before,.SecondBox::before,.ThreeBoxes::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:linear-gradient(#3124ff , #10B9EB);
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+    z-index: -1;
+}
+.firstBox:hover::before{
+   transform: translateY(0);
+}
+/* from bttom to top */
+.SecondBox::before{
+    transform: translateY(100%);
+}
+.SecondBox:hover::before{
+    transform: translateY(0);
+}
+/* from right to left */
+.ThreeBoxes::before{
+    transform: translateX(100%);
+}
+.ThreeBoxes:hover::before{
+    transform: translateX(0);
+}
+
+
 
 .mainThreeBox_cont div{
     border: 2px solid #10b9eb;
