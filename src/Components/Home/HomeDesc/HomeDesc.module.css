@@ -6,6 +6,8 @@
     padding-bottom: 0rem !important;
     border-radius: 16px;
     word-wrap: break-word;
+    width: 80%;
+    margin: 0 auto;
 }
 .HomeDesc_contentDiv p{
     font-size: x-large;

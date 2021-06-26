@@ -4,7 +4,7 @@ export const HomeDesc = () => {
     return (
         <div className={`d-flex align-items-center${style.HomeDesc_mainDiv}`}>
             <div className={`container-fluid`}>
-                <div className={`col-12 mx-auto`}>
+                {/* <div className={`col-11 mx-auto`}> */}
                 <div className={`column`}>
                     <div className={`d-flex  justify-content-center`}>
                         <h1 className={`display-4 fw-bolder`}>DISCLAIMER</h1>
@@ -26,7 +26,7 @@ export const HomeDesc = () => {
                  <button type="button" className={`btn text-white  px-5 py-3 ${style.HomeDesc_ORIGButton}`}>DESCLAMIER</button>
                  </div>
                 </div>
-                </div>
+                {/* </div> */}
             </div>
         </div>
     )
