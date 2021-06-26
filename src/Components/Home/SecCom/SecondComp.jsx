@@ -1,14 +1,10 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import styles from './SecondComp.module.css';
 import AnimationBitCoin from '../../Images/bitcoinanimation.svg';
-// import Aos from 'aos'
-// import 'aos/dist/aos.css'
+
 
 export const SecondComp = () => {
 
-//   useEffect(() =>{
-//     Aos.init({  duration: 500,easing: 'ease-in-sine'})
-// })
   return (
     <section id={styles.header} className={`d-flex align-items-center mb-5 `} >
       <div className={`container-fluid`}>

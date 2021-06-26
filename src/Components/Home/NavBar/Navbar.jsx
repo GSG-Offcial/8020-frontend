@@ -1,4 +1,4 @@
-import React,{Fragment,useEffect} from 'react'
+import React,{Fragment} from 'react'
 import {SecondComp,BackgroundTopImage,ThreeBoxes,NFTLaunchpad,NFTRewardPool,G50DropLottery,Tokenomics,HomeDesc,HomeFooter1,HomeFooter2,HomeConnect,BackgroundBottomImage} from '../index'
 import {Link} from 'react-router-dom'
 import Group900 from '../../Icons/Group 900.svg'
