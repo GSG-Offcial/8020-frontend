@@ -3,8 +3,17 @@ import styles from './ThreeBoxes.module.css';
 import FirstImage from '../../Icons/Decentralized.svg';
 import NFTImage from '../../Icons/NFT Launchpad.svg';
 import EarnImage from '../../Icons/Earn Passive Income.svg';
+// import Aos from 'aos'
+// import { useEffect } from 'react';
+
+
+
 export const ThreeBoxes = () => {
+  
+
+
     return (
+
         <div className={`container ${styles.ThreeBox_mainDiv}`}>
           {/* <div className={`col-12 mx-auto`}>   */}
         <div class={` row  justify-content-center text-white  mb-5  ${styles.mainThreeBox_cont} `}>

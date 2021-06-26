@@ -12,6 +12,7 @@
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "@wellyshen/use-web-animations": "^0.9.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.0.1",
     "chart.js": "^3.3.2",
     "chartjs-react": "^3.3.2",
