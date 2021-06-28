@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './StatisFourBox.module.css';
 import { useContract } from '../../../Hooks/lottery';
 import { useState } from 'react';
-import { fromWei, countAddress } from '../../../utils/index';
+import { formatValue, countAddress } from '../../../utils/index';
 
 export const StatisFourBox = () => {
   const contract = useContract();
@@ -16,8 +16,8 @@ export const StatisFourBox = () => {
 
   useEffect(async () => {
     if (contract) {
-      setPick3GS50(fromWei(String(await contract.pick3Pot())));
-      setPick4GS50(fromWei(String(await contract.pick4Pot())));
+      setPick3GS50(formatValue(await contract.pick3Pot()));
+      setPick4GS50(formatValue(await contract.pick4Pot()));
 
       let pick3Events = await contract.queryFilter(
         contract.filters.Pick3LotteryBought()
@@ -73,7 +73,7 @@ export const StatisFourBox = () => {
       </div>
       <div className="col-lg-6 col-md-12">
         <div className={styles.nested_div_statis}>
-          <p>{pick3GS50 + pick4GS50} GS50</p>
+          <p>{(+pick3GS50 + +pick4GS50).toFixed(2)} GS50</p>
           <p className={styles.para_statis}>Total GS50 being dropped.</p>
         </div>
       </div>
