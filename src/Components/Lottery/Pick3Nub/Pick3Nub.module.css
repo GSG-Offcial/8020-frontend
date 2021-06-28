@@ -1,35 +1,58 @@
-.main_Pick3Nub{
-   margin-left: 290px;
-   box-sizing: border-box;
-   word-wrap: break-word;
-   margin-right: 3rem;
+.main_Pick3Nub {
+  margin-left: 290px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-right: 3rem;
 }
 
-.nested_div_pick3nub{
-   min-height: 150px;
-   border: 2px solid #10b9eb;
-   margin: 20px 0;
-   margin-right: 2px !important;
+.nested_div_pick3nub {
+  min-height: 150px;
+  border: 2px solid #10b9eb;
+  margin: 20px 0;
+  margin-right: 2px !important;
   border-radius: 10px;
   text-align: center;
   padding-top: 2rem;
   padding: 20px !important;
 }
-.nested_div_pick3nub::first-line{
-   font-size: 1.3rem;
-   color: #9F9FFB ;
+.nested_div_pick3nub::first-line {
+  font-size: 1.3rem;
+  color: #9f9ffb;
 }
-.selection_div{
-   box-sizing: border-box;
-   padding-bottom: 30px;
+.selection_div {
+  box-sizing: border-box;
+  padding-bottom: 30px;
 }
-.selection_div select{
-   padding: 0.3rem;
-   border-color: none !important;
-  margin-right: .8rem;
+.selection_div select {
+  padding: 0.3rem;
+  border-color: none !important;
+  margin-right: 0.8rem;
   border-radius: 5px !important;
 }
-.selector_button{
-   font-size: 1rem !important;
-   font-weight: 1000;
+.selector_button {
+  font-size: 1rem !important;
+  font-weight: 1000;
+}
+
+.your_pick_box {
+  color: white;
+  width: 250px;
+  border: 2px solid #10b9eb;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin: 10px auto;
+  padding: 10px 15px;
+}
+
+.play_btn {
+  border-radius: 50px !important;
+  border-style: none;
+  height: 40px;
+  color: var(--color-WH) !important;
+  cursor: pointer;
+  background-color: #10b9eb;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 15px;
+  padding: 5px 35px;
 }

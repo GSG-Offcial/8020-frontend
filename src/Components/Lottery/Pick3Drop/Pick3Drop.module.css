@@ -18,21 +18,29 @@
   flex: 1;
   box-sizing: border-box !important;
 }
-.lot_nested_div p.para_lot1{
-    background-color: #9F9FFB !important;
- border-top-right-radius: .5rem;
-    border-top-left-radius: .5rem;
-    padding: 1rem 0;
-    font-weight: 900;
-    font-size: 1.2rem;
+.lot_nested_div p.para_lot1 {
+  background-color: #9f9ffb !important;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  padding: 1rem 0;
+  font-weight: 900;
+  font-size: 1.2rem;
 }
 
-.para_lot2,.para_lot3,.para_lot4{
-    font-weight: 800;
-    font-size: 1.3rem;
+.para_lot2,
+.para_lot3,
+.para_lot4 {
+  font-weight: 800;
+  font-size: 1.3rem;
 }
 
-.para_lot3{
-    font-weight: bolder !important;
-    font-size: 2rem !important;
+.para_lot3 {
+  font-weight: bolder !important;
+  font-size: 2rem !important;
+}
+
+.user_pick_lottery_numbers {
+  /* background-color: #fff; */
+  overflow-y: auto;
+  height: 150px;
 }
