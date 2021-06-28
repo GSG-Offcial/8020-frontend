@@ -170,7 +170,7 @@ export const DashBoardNavbar = () => {
                   ? 'None'
                   : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
-                    )} 🟢`}
+                    )}`}
               </a>
             </li>
             {/* second button on bigger screen */}
@@ -190,7 +190,7 @@ export const DashBoardNavbar = () => {
                   ? 'None'
                   : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
-                    )} 🟢`}
+                    )}`}
               </a>
             </li>
           </div>

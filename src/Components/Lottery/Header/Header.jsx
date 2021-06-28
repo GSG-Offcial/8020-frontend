@@ -45,7 +45,7 @@ export const Header = () => {
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
         <div className="container nested-DivDB">
           <a href="#/" className="navbar-brand">
-            <span className="fw-bold display-6 text-white">DashBoard</span>
+            <span className="fw-bold display-6 text-white">Lottery</span>
           </a>
           {/* toggler button for mobile */}
           <button
@@ -61,22 +61,7 @@ export const Header = () => {
               <i className="fas fa-bars text-white"></i>
             </span>
           </button>
-          <div
-            className="collapse navbar-collapse align-center justify-content-center Link-div"
-            id="main-nav"
-          >
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a
-                  className="nav-link dashboard-text"
-                  aria-current="page"
-                  href="#/"
-                >
-                  Lottery
-                </a>
-              </li>
-            </ul>
-          </div>
+
           {/* button if screen less than madium then show first othrwise second button */}
           <div
             className="collapse navbar-collapse  justify-content-end"
@@ -98,7 +83,7 @@ export const Header = () => {
                   ? 'None'
                   : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
-                    )} 🟢`}
+                    )}`}
               </a>
             </li>
             {/* second button on bigger screen */}
@@ -116,9 +101,7 @@ export const Header = () => {
                   ? 'Connect'
                   : account === null
                   ? 'None'
-                  : `${account.substring(0, 6)}...${account.substring(
-                      account.length - 4
-                    )} 🟢`}
+                  : 'Connected'}
               </a>
             </li>
           </div>
