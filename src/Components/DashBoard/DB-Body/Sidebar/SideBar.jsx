@@ -24,14 +24,12 @@ export const SideBar = () => {
             </a>
           </li>
           <li>
-            <Link to="/lottery">
-              <a href="#/" className="active">
+              <a href="#/" className="active" id="Lottery">
                 <span>
                   <i className="fas fa-ticket-alt"></i>
                 </span>{' '}
-                <span>Lottery</span>{' '}
+                <span><Link to="/lottery">Lottery</Link> </span>{' '}
               </a>
-            </Link>
           </li>
           <li>
             <a href="#/" className="active">
