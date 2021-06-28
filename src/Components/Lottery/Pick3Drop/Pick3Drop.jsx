@@ -29,50 +29,55 @@ export const Pick3Drop = () => {
   }, [contract]);
 
   return (
-    <div className={styles.Pick3Drop}>
-      <div className={styles.lot_nested_div}>
-        <p className={styles.para_lot1}>Pick 3 Drop</p>
+    <div className={`row ${styles.Pick3Drop}`}>
+      <div className="col-lg-6 col-md-12">
+        <div className={styles.lot_nested_div}>
+          <p className={styles.para_lot1}>Pick 3 Drop</p>
 
-        <p className={styles.para_lot2}>Total Active Picks</p>
-        <p className={styles.para_lot3}>{pick3Number.length}</p>
-        <p className={styles.para_lot4}>Your Active Number</p>
+          <p className={styles.para_lot2}>Total Active Picks</p>
+          <p className={styles.para_lot3}>{pick3Number.length}</p>
+          <p className={styles.para_lot4}>Your Active Number</p>
 
-        <div
-          class={`row col-10 col-md-10 mx-auto mb-4  ${styles.user_pick_lottery_numbers}`}
-        >
-          {pick3Number.map((e) => {
-            return (
-              <div class="col mx-auto">
-                <div
-                  class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}
-                >
-                  {e}
+          <div
+            class={`row col-10 col-md-10 mx-auto mb-4  ${styles.user_pick_lottery_numbers}`}
+          >
+            {pick3Number.map((e) => {
+              return (
+                <div class="col mx-auto">
+                  <div
+                    class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}
+                  >
+                    {e}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-      <div className={styles.lot_nested_div}>
-        <p className={styles.para_lot1}>Pick 4 Drop</p>
-        <p className={styles.para_lot2}>Total Active Picks</p>
-        <p className={styles.para_lot3}>{pick4Number.length}</p>
-        <p className={styles.para_lot4}>Your Active Number</p>
 
-        <div
-          class={`row col-10 col-md-10 mx-auto mb-4  ${styles.user_pick_lottery_numbers}`}
-        >
-          {pick4Number.map((e) => {
-            return (
-              <div class="col mx-auto">
-                <div
-                  class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}
-                >
-                  {e}
+      <div className="col-lg-6 col-md-12">
+        <div className={styles.lot_nested_div}>
+          <p className={styles.para_lot1}>Pick 4 Drop</p>
+          <p className={styles.para_lot2}>Total Active Picks</p>
+          <p className={styles.para_lot3}>{pick4Number.length}</p>
+          <p className={styles.para_lot4}>Your Active Number</p>
+
+          <div
+            class={`row col-10 col-md-10 mx-auto mb-4 user-pick-lottery-numbers ${styles.user_pick_lottery_numbers}`}
+          >
+            {pick4Number.map((e) => {
+              return (
+                <div class="col mx-auto">
+                  <div
+                    class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}
+                  >
+                    {e}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -64,6 +64,15 @@
 
 
 /* media query */
+
+
+@media (max-width: 767px){
+  .lot_sidebar{
+    display: none !important;
+  }
+}
+
+
 @media only screen and  (max-width: 640px) {
     .lot_sidebar{
       top:80px;

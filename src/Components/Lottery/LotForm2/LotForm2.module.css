@@ -1,6 +1,6 @@
 .lotfrom2_mainDiv{
     margin-left: 300px;
-    margin-right: 3rem;
+    margin-right: 1.8rem;
     border: 2px solid #10b9eb;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -9,6 +9,9 @@
 .lot_from2_h1{
     color: #9F9FFB;
     font-size: 1.9rem;
+    text-align: center !important; 
+    word-wrap: break-word !important;
+
 }
 .main_table_form2{
     color: white !important;
@@ -18,4 +21,9 @@
 .lotfrom2_mainDiv table thead tr{
     background-color: #10b9eb !important;
     font-weight: bolder !important;
+}
+@media (max-width: 767px){
+    .lotfrom2_mainDiv{
+        margin-left: 2.8%;
+    }
 }
