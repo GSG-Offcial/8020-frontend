@@ -181,7 +181,9 @@ export const Pick3Nub = () => {
               </>
             );
           })}
-
+ <div className={('list-group', styles.your_pick_box)} id="pick4Box">
+            1234
+          </div>
           <div class="col-12 text-center">
             <button
               type="button"
