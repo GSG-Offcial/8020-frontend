@@ -106,6 +106,25 @@ export const Pick3Nub = () => {
     }
   }
 
+  async function buyLotteryForPick4() {
+    const pick4Price = toWei('15');
+    const amount = String(pick4Price * pick4TicketsDiv.length);
+
+    if (tokenAllowance >= Number(amount)) {
+      const tx = await contract.buyLotteryForPick4(pick4TicketsDiv, amount);
+      if (await tx.wait()) window.location.reload();
+    } else {
+      let tx = await tokenContract.approve(
+        '0x5C5d8E2c3d603C1F7C2E7EcB5251f48F72bdFF97',
+        toWei('1000000000')
+      );
+      if (await tx.wait()) {
+        const tx = await contract.buyLotteryForPick4(pick4TicketsDiv, amount);
+        if (await tx.wait()) window.location.reload();
+      }
+    }
+  }
+
   return (
     <div className={`${styles.main_Pick3Nub} row`}>
       <div className="col-lg-6 col-md-12">
@@ -181,9 +200,6 @@ export const Pick3Nub = () => {
               </>
             );
           })}
- <div className={('list-group', styles.your_pick_box)} id="pick4Box">
-            1234
-          </div>
           <div class="col-12 text-center">
             <button
               type="button"
@@ -285,6 +301,7 @@ export const Pick3Nub = () => {
           <div class="col-12 text-center">
             <button
               type="button"
+              onClick={buyLotteryForPick4}
               class={('btn btn-lg play-btn', styles.play_btn)}
             >
               Play Lottery
