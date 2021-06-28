@@ -3,7 +3,7 @@ import styles from './Pick3Nub.module.css';
 import { useWeb3React } from '@web3-react/core';
 import { useContract, useTokenContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
-import { getContract, formatValue } from '../../../utils';
+import { getContract, formatValue, toWei } from '../../../utils';
 
 export const Pick3Nub = () => {
   const { account } = useWeb3React();
@@ -11,13 +11,14 @@ export const Pick3Nub = () => {
   const tokenContract = useTokenContract();
 
   const [pick3TicketsDiv, setPick3TicketsDiv] = useState([]);
+  const [pick4TicketsDiv, setPick4TicketsDiv] = useState([]);
   const [tokenAllowance, setTokenAllowance] = useState(0);
 
   function getValuesOfPick3() {
-    const n1 = document.querySelector('.pick3N1').value;
-    const n2 = document.querySelector('.pick3N2').value;
-    const n3 = document.querySelector('.pick3N3').value;
-    const finalNum = n1 + n2 + n3;
+    const n1 = document.querySelector('.pick3N1');
+    const n2 = document.querySelector('.pick3N2');
+    const n3 = document.querySelector('.pick3N3');
+    const finalNum = n1.value + n2.value + n3.value;
 
     if (pick3TicketsDiv.includes(finalNum)) {
       alert('ERROR: you pick same Number');
@@ -27,25 +28,56 @@ export const Pick3Nub = () => {
     if (pick3TicketsDiv.length < 5 && finalNum >= 0) {
       setPick3TicketsDiv((prev) => [...prev, finalNum]);
     }
+
+    n1.selectedIndex = 0;
+    n2.selectedIndex = 0;
+    n3.selectedIndex = 0;
   }
 
-  const handleRemoveItem = (idx) => {
-    console.log('removing');
+  function getValuesOfPick4() {
+    const n1 = document.querySelector('.pick4N1');
+    const n2 = document.querySelector('.pick4N2');
+    const n3 = document.querySelector('.pick4N3');
+    const n4 = document.querySelector('.pick4N4');
+    const finalNum = n1.value + n2.value + n3.value + n4.value;
 
-    // assigning the list to temp variable
-    const temp = [...pick3TicketsDiv];
+    if (pick4TicketsDiv.includes(finalNum)) {
+      alert('ERROR: you pick same Number');
+      return false;
+    }
 
-    // removing the element using splice
+    if (pick3TicketsDiv.length < 5 && finalNum >= 0) {
+      setPick4TicketsDiv((prev) => [...prev, finalNum]);
+    }
+
+    n1.selectedIndex = 0;
+    n2.selectedIndex = 0;
+    n3.selectedIndex = 0;
+    n4.selectedIndex = 0;
+  }
+
+  const handleRemoveItem = (idx, pick) => {
+    let temp;
+
+    if (pick == 3) {
+      temp = [...pick3TicketsDiv];
+    } else if (pick == 4) {
+      temp = [...pick4TicketsDiv];
+    }
+
     temp.splice(idx, 1);
 
-    // updating the list
-    setPick3TicketsDiv(temp);
+    if (pick == 3) {
+      setPick3TicketsDiv(temp);
+    } else if (pick == 4) {
+      setPick4TicketsDiv(temp);
+    }
   };
 
   useEffect(async () => {
     if (!!tokenContract) {
       setTokenAllowance(
-        formatValue(
+        String(
           await tokenContract.allowance(
             account,
             '0x5C5d8E2c3d603C1F7C2E7EcB5251f48F72bdFF97'
@@ -55,9 +87,23 @@ export const Pick3Nub = () => {
     }
   }, [tokenContract]);
 
-  function buyLottery() {
-    const pick3Price = 5000000000000000000;
-    const amount = pick3Price * pick3TicketsDiv.length;
+  async function buyLotteryForPick3() {
+    const pick3Price = toWei('5');
+    const amount = String(pick3Price * pick3TicketsDiv.length);
+
+    if (tokenAllowance >= Number(amount)) {
+      const tx = await contract.buyLotteryForPick3(pick3TicketsDiv, amount);
+      if (await tx.wait()) window.location.reload();
+    } else {
+      let tx = await tokenContract.approve(
+        '0x5C5d8E2c3d603C1F7C2E7EcB5251f48F72bdFF97',
+        toWei('1000000000')
+      );
+      if (await tx.wait()) {
+        const tx = await contract.buyLotteryForPick3(pick3TicketsDiv, amount);
+        if (await tx.wait()) window.location.reload();
+      }
+    }
   }
 
   return (
@@ -127,7 +173,7 @@ export const Pick3Nub = () => {
                   id="pick4Box"
                   key={index}
                   onClick={() => {
-                    handleRemoveItem(index);
+                    handleRemoveItem(index, 3);
                   }}
                 >
                   {e}
@@ -140,7 +186,7 @@ export const Pick3Nub = () => {
             <button
               type="button"
               class={('btn btn-lg play-btn', styles.play_btn)}
-              onClick={buyLottery}
+              onClick={buyLotteryForPick3}
             >
               Play Lottery
             </button>
@@ -152,7 +198,7 @@ export const Pick3Nub = () => {
         <div className={styles.nested_div_pick3nub}>
           <p>Pick 3 Numbers</p>
           <div className={styles.selection_div}>
-            <select className="" aria-label="Default select example">
+            <select className="pick4N1" aria-label="Default select example">
               <option selected value="select"></option>
 
               <option value="0">0</option>
@@ -166,7 +212,7 @@ export const Pick3Nub = () => {
               <option value="8">8</option>
               <option value="9">9</option>
             </select>
-            <select className="" aria-label="Default select example">
+            <select className="pick4N2" aria-label="Default select example">
               <option selected value="select"></option>
 
               <option value="0">0</option>
@@ -180,7 +226,7 @@ export const Pick3Nub = () => {
               <option value="8">8</option>
               <option value="9">9</option>
             </select>
-            <select className="" aria-label="Default select example">
+            <select className="pick4N3" aria-label="Default select example">
               <option selected value="select"></option>
 
               <option value="0">0</option>
@@ -194,7 +240,7 @@ export const Pick3Nub = () => {
               <option value="8">8</option>
               <option value="9">9</option>
             </select>
-            <select className="" aria-label="Default select example">
+            <select className="pick4N4" aria-label="Default select example">
               <option selected value="select"></option>
 
               <option value="0">0</option>
@@ -210,6 +256,7 @@ export const Pick3Nub = () => {
             </select>
             <button
               type="button"
+              onClick={getValuesOfPick4}
               className={`btn btn-info ${styles.selector_button}`}
             >
               +
@@ -218,9 +265,21 @@ export const Pick3Nub = () => {
           <p className="card-subtitle my-3  text-center">
             Numbers on this ticket:
           </p>
-          <div className={('list-group', styles.your_pick_box)} id="pick4Box">
-            1234
-          </div>
+          {pick4TicketsDiv.map((e, index) => {
+            return (
+              <>
+                <div
+                  className={('list-group', styles.your_pick_box)}
+                  key={index}
+                  onClick={() => {
+                    handleRemoveItem(index, 4);
+                  }}
+                >
+                  {e}
+                </div>
+              </>
+            );
+          })}
           <div class="col-12 text-center">
             <button
               type="button"
