@@ -2,7 +2,7 @@
     margin: 20px;
 
     margin-left: 290px;
-    margin-right: 3rem;
+    margin-right: 2rem;
     box-sizing: border-box;
     word-wrap: break-word;
 }
@@ -20,4 +20,10 @@
 }
 .nub_bottomTwoBox{
     font-size: 1.5rem;
+}
+
+@media (max-width: 767px){
+    .main_BottomTwoBox{
+        margin-left: 2%;
+    }
 }

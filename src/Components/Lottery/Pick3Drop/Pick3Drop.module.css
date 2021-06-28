@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
-  margin-left: 290px !important;
+  margin-left: 290px;
   margin-right: 3.5rem;
 }
 .Pick3Drop div.lot_nested_div {
@@ -15,7 +15,6 @@
   border-radius: 10px;
   text-align: center;
   flex: 1;
-  /* height: auto; */
   box-sizing: border-box !important;
   max-height: 550px !important;
 
@@ -56,3 +55,9 @@
 }
 
 
+@media(max-width: 767px){
+  .Pick3Drop{
+    margin-left: 3% !important;
+    margin-right: auto;
+  }
+}

@@ -1,6 +1,6 @@
 .statis_mainDiv{
     margin-left: 290px;
-    margin-right: 3rem;
+    margin-right: 1.8rem;
     box-sizing: border-box !important;
     word-wrap: break-word;
     --bs-gutter-x: 0 !important;
@@ -39,4 +39,14 @@
 #statistics_lastDiv div::first-line{
     color: #9F9FFB !important;
      
+}
+
+
+@media (max-width: 767px) {
+    .statis_mainDiv{
+        margin-left: 3% ;
+    }
+    .statis_heading1{
+    margin-left: 2% !important;
+    }
 }

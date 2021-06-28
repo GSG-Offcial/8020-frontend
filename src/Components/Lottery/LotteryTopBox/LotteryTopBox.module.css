@@ -41,3 +41,12 @@ h1{
     width: 50%;
     margin:  1rem auto;
 }
+
+
+
+
+@media(max-width:767px){
+    .lot_top_div{
+        margin-left: 1% !important;
+    }
+}

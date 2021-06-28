@@ -2,7 +2,7 @@
     margin-left: 300px;
     box-sizing: border-box;
     word-wrap: break-word;
-    margin-right: 3rem;
+    margin-right: 1.8rem;
     border: 2px solid #10b9eb;
     border-radius: 10px;
 }
@@ -13,4 +13,10 @@
 }
 .thead_background{
     background-color: #10b9eb !important;
+}
+
+@media(max-width: 767px){
+    .Lot_From1_mainDiv{
+        margin-left: 2.8%;
+    }
 }

@@ -2,8 +2,8 @@ import React from 'react'
 import styles from './BottomTwoBox.module.css' 
 export const BottomTwoBox = () => {
     return (
-        <div className={`${styles.main_BottomTwoBox} row`}>
-            <div className="col-lg-6 col-md-12">
+        <div className={`${styles.main_BottomTwoBox} row mb-3`}>
+            <div className="col-lg-6 col-md-12 mb-4">
             <div className={styles.BottomTwoBox_nesteddiv}>
               <p>Last Pick 3 Numbers</p>
               <p className={styles.nub_bottomTwoBox}>9 7 5</p>

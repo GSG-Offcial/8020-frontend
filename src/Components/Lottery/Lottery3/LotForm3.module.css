@@ -1,6 +1,6 @@
 .LotFrom3_mainDiv{
     margin-left: 300px;
-    margin-right: 3rem;
+    margin-right: 1.8rem;
     border: 2px solid #10b9eb;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -8,7 +8,15 @@
 .Lotfrom3_h1{
     font-size: 1.9rem;
     color: #9F9FFB;
+    text-align: center !important; 
+    word-wrap: break-word !important;
+
 }
 .Lot3_background_color{
     background-color: #10b9eb;
+}
+@media(max-width: 767px){
+    .LotFrom3_mainDiv{
+        margin-left: 2.8%;
+    }
 }

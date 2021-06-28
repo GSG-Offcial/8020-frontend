@@ -15,9 +15,7 @@ export const ThreeBoxes = () => {
     return (
 
         <div className={`container ${styles.ThreeBox_mainDiv}`}>
-          {/* <div className={`col-12 mx-auto`}>   */}
         <div class={` row  justify-content-center text-white  mb-5  ${styles.mainThreeBox_cont} `}>
-            {/* <div class={`row justify-content-center text-white   ${styles.ThreeBoxes_mainDiv}`}> */}
                 <div class={`col  pt-md-4 ${styles.firstBox}`}>
                     <span className={`px-3  fs-4 fw-bolder`}><img src={FirstImage} alt="" /><span className={`px-2`}>Decentralized </span></span>
                     <p className={`px-3 pt-2 fw-lighter`}>Powered by blockchain technology on publicly
@@ -34,9 +32,7 @@ export const ThreeBoxes = () => {
                         transactions.</p>
                 </div>
             </div>
-            {/* </div> */}
          </div>
-        // </div>
     )
 }
 

@@ -21,7 +21,10 @@ export const Pick3Drop = () => {
   }, [contract]);
 
   return (
-    <div className={styles.Pick3Drop}>
+    <div className={`row ${styles.Pick3Drop}`}>
+
+
+<div className="col-lg-6 col-md-12">
       <div className={styles.lot_nested_div}>
         <p className={styles.para_lot1}>Pick 3 Drop</p>
 
@@ -37,6 +40,11 @@ export const Pick3Drop = () => {
         </div>
 
       </div>
+      </div>
+
+
+      <div className="col-lg-6 col-md-12">
+      
       <div className={styles.lot_nested_div}>
         <p className={styles.para_lot1}>Pick 3 Drop</p>
         <p className={styles.para_lot2}>Total Active Picks</p>
@@ -47,28 +55,9 @@ export const Pick3Drop = () => {
           <div class="col mx-auto">
             <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
           </div>
-          <div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div><div class="col mx-auto">
-            <div class={`card p-2 m-1 text-white fw-bolder fs-4 ${styles.nestedDiv_LotteryNumber}`}>123345</div>
-          </div>
         </div>
       </div>
-
+      </div>
     </div>
   )
 }

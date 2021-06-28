@@ -52,7 +52,7 @@ export const StatisFourBox = () => {
 
   return (
     <div className={`${styles.statis_mainDiv} row`}>
-      <h1>Statictics</h1>
+      <h1 className={styles.statis_heading1}>Statictics</h1>
       <div className="col-lg-6 col-md-12">
         <div className={styles.nested_div_statis}>
           <p>{pick3GS50} GS50</p>
