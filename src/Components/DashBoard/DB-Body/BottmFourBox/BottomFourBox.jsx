@@ -42,24 +42,29 @@ export const BottomFourBox = ({ price, GS50Price }) => {
           </p>
           <p className="amount">${calculatePrice(GS50Price, userBalance)}</p>
         </div>
+
         <div>
           <p className="boxes" id="box_2">
             Dividends Earned {formatNumber(userDivs)} ETH
           </p>
           <p className="amount-2">${calculatePrice(price, userDivs)}</p>
         </div>
+
         <div className="boxes" id="box_3">
           <p>Ref. Commision {formatNumber(userRef)} ETH</p>
           <p className="bottom-amount amount">
             ${calculatePrice(price, userRef)}
           </p>
         </div>
+
+
         <div>
           <p className="boxes" id="box_4">
             Loyalty Bonus Earned {formatNumber(userLoyalty)} ETH
           </p>
           <p className="amount">${calculatePrice(price, userLoyalty)}</p>
         </div>
+        
       </div>
     </div>
   );

@@ -119,7 +119,8 @@ export const TwoBox = ({ refAddress }) => {
 
   return (
     <div className="two-box">
-      <div>
+      <div className="col-lg-6 col-12">
+        <div className="nested_Div1">
         <ul className="twobox-ul">
           <button className="button button-1" onClick={buyBtn}>
             Buy
@@ -134,9 +135,14 @@ export const TwoBox = ({ refAddress }) => {
         <p className="box-para">{amount}</p>
 
         <form class={`d-flex`}>{button}</form>
+        </div>
       </div>
-      <div>
-        <h1>Hello</h1>
+
+      <div className="col-lg-6 col-12">
+        <div className="nested_Div2"> 
+         <h1>Hello</h1>
+        </div>
+
       </div>
     </div>
   );

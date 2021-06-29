@@ -1,6 +1,6 @@
 
 :root{
-  --color-WH: white
+  --color-WH: #fff
 }
 
 .main-NavBar {
@@ -19,6 +19,7 @@
 
 .Icon-Navbar{
   color: var(--color-WH) !important;
+  /* color: white !important; */
 }
 
 .dashboard-text{

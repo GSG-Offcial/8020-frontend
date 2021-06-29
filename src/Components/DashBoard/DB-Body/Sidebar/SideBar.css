@@ -93,3 +93,8 @@
 }
 
 
+@media(max-width: 767px){
+  .sidebar{
+    display: none !important;
+  }
+}

@@ -13,7 +13,7 @@
 }
 .bottom_dislaimer  .desc_div1{
    border: 2px solid #10b9eb;
-   margin: 15px 2rem;
+   margin: 15px 1rem;
    flex: 1;
    text-align: left;
    font-size: 1.4rem;
@@ -39,3 +39,9 @@
     cursor: pointer;
     font-weight: 700;
    }
+
+ @media(max-width: 767px){
+   .bottom_dislaimer{
+      margin-left: 2%;
+   }
+ }  
