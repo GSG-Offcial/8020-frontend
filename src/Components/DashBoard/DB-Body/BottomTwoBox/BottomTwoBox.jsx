@@ -33,8 +33,9 @@ export const BottomTwoBox = ({ price }) => {
   }
 
   return (
-    <div className="bottom_box">
-      <div>
+    <div className=" bottom_box">
+      <div className="col-lg-6 col-12">
+      <div className="nested_BottomDiv1">
         <p className="bottom_para">Token you can withdraw</p>
         <p>
           {withdrawAmount} Eth{' '}
@@ -50,7 +51,10 @@ export const BottomTwoBox = ({ price }) => {
           Withdraw
         </button>
       </div>
-      <div>
+      </div>
+
+      <div className="col-lg-6 col-12">
+      <div className="nested_BottomDiv2">
         <p className="bottom_para">Token you can with draw</p>
         <p>
           {withdrawAmount} Eth
@@ -65,6 +69,7 @@ export const BottomTwoBox = ({ price }) => {
         >
           Cycle
         </button>
+      </div>
       </div>
     </div>
   );

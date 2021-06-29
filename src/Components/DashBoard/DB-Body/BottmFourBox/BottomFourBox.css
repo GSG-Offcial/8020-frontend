@@ -5,3 +5,9 @@
 .bottom-amount{
     margin-top: 1.3rem;
 }
+
+@media(max-width: 767px){
+    .bottom-mainbox{
+     margin-left: 2.8% !important;   
+    }
+}

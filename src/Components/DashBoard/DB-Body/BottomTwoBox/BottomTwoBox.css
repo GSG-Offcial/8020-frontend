@@ -8,12 +8,12 @@
   box-sizing: border-box !important;
 
 }
-.bottom_box div {
+.nested_BottomDiv2, .nested_BottomDiv1 {
   background-color: #0d173a;
   border: 2px solid #10b9eb;
   border-radius: 10px;
   flex: 1;
-  margin: 1rem;
+  margin: 0.8rem;
   text-align: center;
   padding: 3rem 3rem;
   font-size: 1.1rem;
@@ -35,4 +35,10 @@ p {
   border-radius: 0.2rem !important;
   color: white !important;
   font-weight: 600 !important;
+}
+
+@media(max-width: 767px){
+  .bottom_box{
+      margin-left: 1% !important;
+  }
 }

@@ -57,3 +57,9 @@
   padding-top: 3.3rem;
   color: var(--plum);
 }
+
+@media(max-width: 767px){
+  .mainbox{
+    margin-left: 2.8% !important;
+  }
+}

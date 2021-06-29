@@ -7,7 +7,7 @@
   justify-content: space-around;
   align-content: center;
 }
-.two-box div {
+.nested_Div2,.nested_Div1 {
   border: 2px solid #10b9eb;
   margin-right: 1.2rem;
   margin-bottom: 1rem;
@@ -107,4 +107,9 @@ button.token-buy-button {
   border-radius: 2.5rem !important;
   color: white !important;
   box-sizing: border-box !important;
+}
+@media(max-width: 767px){
+ .two-box{
+   margin-left: 2.7% !important;
+ } 
 }
