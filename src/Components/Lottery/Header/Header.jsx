@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import {NavLink} from 'react-router-dom'
 import './Header.css';
 import {
   LotterySideBar,
@@ -61,6 +62,45 @@ export const Header = () => {
               <i className="fas fa-bars text-white"></i>
             </span>
           </button>
+
+          <div
+            className="collapse navbar-collapse align-center justify-content-center Link-div_lottery"
+            id="main-nav"
+          >
+            <ul className="navbar-nav">
+
+              <li className="nav-item">
+
+                <a
+                  className="nav-link sidebar_text_lottery"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/dashboard" className="Nav_Link_lottery">DashBoard</NavLink>
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text_lottery"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/lottery" className="Nav_Link_lottery">Lottery</NavLink>
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text_lottery"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/NFT_Pool" className="Nav_Link_lottery">NFT Pool</NavLink>
+                </a>
+              </li>
+              </ul>
+              </div>
 
           {/* button if screen less than madium then show first othrwise second button */}
           <div

@@ -7,7 +7,6 @@
 /* aniamtion on hover left to right */
 .firstBox,.SecondBox,.ThreeBoxes{
     position: relative;
-    transition: all 0.5s linear 0s;
 }
 .firstBox::after,.SecondBox::after,.ThreeBoxes::after{
     content: '';
@@ -15,8 +14,7 @@
     background:linear-gradient(#3124ff , #10B9EB);
     z-index: -1;
     transition: all 0.3s linear;
-    border-radius: 0.8rem !important;
-  
+    border-radius: 0.8rem !important;  
 }
 
 .firstBox::after{
@@ -44,8 +42,7 @@
 
 /* from right to left */
 
-.ThreeBoxes::after{
-  
+.ThreeBoxes::after{ 
    width: 0%;
    height: 100%;
    top: 0;

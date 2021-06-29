@@ -73,3 +73,24 @@
       border-radius: 0% !important;
      }
    }
+
+.sidebar_text_lottery{
+  display: none;
+}
+
+@media (max-width: 767px){
+  .Link-div_lottery{
+    text-align: center;
+    font-size: x-large;
+  }
+  .sidebar_text_lottery{
+    display: inline-block;
+  }
+  .Nav_Link_lottery{
+    color: white !important;
+  }
+  .Nav_Link_lottery:hover{
+    border-bottom: 1px solid #10b9eb;
+    color: plum !important;
+  }
+}
