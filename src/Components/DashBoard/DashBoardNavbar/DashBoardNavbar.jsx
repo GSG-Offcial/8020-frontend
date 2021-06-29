@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-
+import {NavLink} from 'react-router-dom'
 import './DashBoardNavbar.css';
 import {
   FourBox,
@@ -121,6 +121,37 @@ export const DashBoardNavbar = () => {
             id="main-nav"
           >
             <ul className="navbar-nav">
+
+            <li className="nav-item">
+
+                <a
+                  className="nav-link sidebar_text"
+                  aria-current="page"
+                  href="#/"
+                >
+                 <NavLink to="/dashboard" className="Nav_Link">DashBoard</NavLink> 
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/lottery" className="Nav_Link">Lottery</NavLink> 
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text"
+                  aria-current="page"
+                  href="#/"
+                >
+                <NavLink to="/NFT_Pool" className="Nav_Link">NFT Pool</NavLink>
+                </a>
+              </li>
               <li className="nav-item">
                 <a
                   className="nav-link dashboard-text"
