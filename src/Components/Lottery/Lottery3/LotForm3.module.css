@@ -5,6 +5,8 @@
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+
 .Lotfrom3_h1{
     font-size: 1.9rem;
     color: #9F9FFB;
@@ -12,6 +14,12 @@
     word-wrap: break-word !important;
 
 }
+
+.LotForm1Table3{
+    overflow-y: auto !important;
+    max-height: 257px !important;   
+}
+
 .Lot3_background_color{
     background-color: #10b9eb;
 }

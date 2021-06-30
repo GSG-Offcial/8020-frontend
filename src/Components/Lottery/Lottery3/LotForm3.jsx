@@ -4,7 +4,7 @@ export const LotForm3 = () => {
     return (
         <div className={`mt-5 ${styles.LotFrom3_mainDiv}`}>
             <h1 className={`text-center display-6 mt-3 mb-3 ${styles.Lotfrom3_h1}`}>CONTRACT DRAWING HISTORY</h1>
-            <div class="table-responsive ">
+            <div class={`table-responsive ${styles.LotForm1Table3}`}>
                 <table class="table  table-borderless">
                     <thead className={styles.Lot3_background_color}>
                         <tr className="text-white">
@@ -48,7 +48,14 @@ export const LotForm3 = () => {
                             <td>4</td>
 
                         </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>1/4/2021</td>
+                            <td>B2ef3or4epu5rc6ha7si8ng8cr9yptocurrency</td>
+                            <td>8229</td>
+                            <td>4</td>
 
+                        </tr>
                     </tbody>
                 </table>
             </div>

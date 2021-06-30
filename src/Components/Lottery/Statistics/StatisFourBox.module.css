@@ -51,14 +51,3 @@
     }
 }
 
-@media(max-width: 1245px){
-    #thrid_DivBox{
-        min-height: 335px !important;
-
-    }
-}
-@media (max-width: 991px) {
-    #thrid_DivBox{
-        min-height: 130px !important;
-    }
-}

@@ -13,6 +13,13 @@
     word-wrap: break-word !important;
 
 }
+
+
+.LotForm1Table2{
+    overflow-y: auto !important;
+    max-height: 257px !important;   
+}
+
 .main_table_form2{
     color: white !important;
 }
