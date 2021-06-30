@@ -1,57 +1,79 @@
 import React from 'react';
 import styles from './LotForm3.module.css';
+import { useContract } from '../../../Hooks/lottery';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { formatValueOfPick3, formatValueOfPick4 } from '../../../utils/index';
+
 export const LotForm3 = () => {
-    return (
-        <div className={`mt-5 ${styles.LotFrom3_mainDiv}`}>
-            <h1 className={`text-center display-6 mt-3 mb-3 ${styles.Lotfrom3_h1}`}>CONTRACT DRAWING HISTORY</h1>
-            <div class="table-responsive ">
-                <table class="table  table-borderless">
-                    <thead className={styles.Lot3_background_color}>
-                        <tr className="text-white">
-                            <th scope="col">No:</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Wallet</th>
-                            <th scope="col">Number</th>
-                            <th scope="col">Pick</th>
-                        </tr>
-                    </thead>
-                    <tbody className="text-white">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>1/4/2021</td>
-                            <td>B2ef3or4epu5rc6ha7si8ng8cr9yptocurrency</td>
-                            <td>783</td>
-                            <td>3</td>
+  const contract = useContract();
 
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>1/4/2021</td>
-                            <td>B2ef3or4epu5rc6ha7si8ng8cr9yptocurrency</td>
-                            <td>0263</td>
-                            <td>4</td>
+  const [randomData, setRandomData] = useState([]);
 
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>1/4/2021</td>
-                            <td>B2ef3or4epu5rc6ha7si8ng8cr9yptocurrency</td>
-                            <td>975</td>
-                            <td>3</td>
+  useEffect(async () => {
+    if (contract) {
+      const randomNumberEvents = await contract.queryFilter(
+        contract.filters.Random()
+      );
 
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>1/4/2021</td>
-                            <td>B2ef3or4epu5rc6ha7si8ng8cr9yptocurrency</td>
-                            <td>8229</td>
-                            <td>4</td>
+      randomNumberEvents.map((e) => {
+        setRandomData((prevArray) => [
+          ...prevArray,
+          {
+            time: String(e.args.time),
+            wallet: String(e.args.Address),
+            txHash: String(e.transactionHash),
+            number: String(e.args.number),
+            pick: String(e.args.pick),
+          },
+        ]);
+      });
+    }
+  }, [contract]);
 
-                        </tr>
+  function calDate(time) {
+    const dateobj = new Date(time * 1000);
+    const day = dateobj.getDate();
+    const month = Number(dateobj.getMonth()) + 1;
+    const year = dateobj.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className={`mt-5 my-5 ${styles.LotFrom3_mainDiv}`}>
+      <h1 className={`text-center display-6 mt-3 mb-3 ${styles.Lotfrom3_h1}`}>
+        CONTRACT DRAWING HISTORY
+      </h1>
+      <div class="table-responsive ">
+        <table class="table  table-borderless">
+          <thead className={styles.Lot3_background_color}>
+            <tr className="text-white">
+              <th scope="col">No:</th>
+              <th scope="col">Date</th>
+              <th scope="col">Wallet</th>
+              <th scope="col">Number</th>
+              <th scope="col">Pick</th>
+            </tr>
+          </thead>
+          <tbody className="text-white">
+            {randomData.map((e, i) => {
+              return (
+                <tr>
+                  <th scope="row">{i + 1}</th>
+                  <td>{calDate(e.time)}</td>
+                  <td>{e.wallet}</td>
+                  <td>
+                    {e.pick == 3
+                      ? formatValueOfPick3(e.number)
+                      : formatValueOfPick4(e.number)}
+                  </td>
+                  <td>{e.pick}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};

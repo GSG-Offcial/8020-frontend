@@ -2,36 +2,13 @@ import React, { useState } from 'react';
 import styles from './BottomTwoBox.module.css';
 import { useContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
+import { formatValueOfPick3, formatValueOfPick4 } from '../../../utils/index';
 
 export const BottomTwoBox = () => {
   const contract = useContract();
 
   const [pick3Number, setPick3Number] = useState('0 0 0');
   const [pick4Number, setPick4Number] = useState('0 0 0 0');
-
-  function formatValueOfPick3(lastNumber) {
-    if (lastNumber < 10) {
-      return `0 0 ${lastNumber}`;
-    }
-    if (lastNumber > 10 && lastNumber < 100) {
-      return '0 ' + lastNumber.split('').join(' ');
-    } else {
-      return lastNumber.split('').join(' ');
-    }
-  }
-
-  function formatValueOfPick4(lastNumber) {
-    if (lastNumber < 10) {
-      return '0 0 0 ' + lastNumber;
-    }
-    if (lastNumber > 10 && lastNumber < 100) {
-      return '0 0 ' + lastNumber.split('').join(' ');
-    } else if (lastNumber > 100 && lastNumber < 1000) {
-      return '0 ' + lastNumber.split('').join(' ');
-    } else {
-      return lastNumber.split('').join(' ');
-    }
-  }
 
   useEffect(async () => {
     if (!!contract) {
@@ -49,8 +26,6 @@ export const BottomTwoBox = () => {
       setPick4Number(pick4Numbers[pick4Numbers.length - 1]);
     }
   }, [contract]);
-
-  console.log('pick3 Number', pick3Number);
 
   return (
     <div className={`${styles.main_BottomTwoBox} row mb-3`}>

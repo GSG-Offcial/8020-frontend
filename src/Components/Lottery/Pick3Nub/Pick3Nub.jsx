@@ -80,7 +80,7 @@ export const Pick3Nub = () => {
         String(
           await tokenContract.allowance(
             account,
-            '0x5C5d8E2c3d603C1F7C2E7EcB5251f48F72bdFF97'
+            '0x2393e25F0c370cA9bbee412a75AD750391BF268c'
           )
         )
       );
@@ -96,7 +96,7 @@ export const Pick3Nub = () => {
       if (await tx.wait()) window.location.reload();
     } else {
       let tx = await tokenContract.approve(
-        '0x5C5d8E2c3d603C1F7C2E7EcB5251f48F72bdFF97',
+        '0x2393e25F0c370cA9bbee412a75AD750391BF268c',
         toWei('1000000000')
       );
       if (await tx.wait()) {

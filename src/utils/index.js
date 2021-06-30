@@ -53,3 +53,34 @@ export function countAddress(address) {
 
   return alladdress.length;
 }
+
+export function formatValueOfPick3(lastNumber) {
+  if (lastNumber == undefined) {
+    return 0;
+  }
+  if (lastNumber < 10) {
+    return `0 0 ${lastNumber}`;
+  }
+  if (lastNumber > 10 && lastNumber < 100) {
+    return '0 ' + lastNumber.split('').join(' ');
+  } else {
+    return lastNumber.split('').join(' ');
+  }
+}
+
+export function formatValueOfPick4(lastNumber) {
+  if (lastNumber == undefined) {
+    return 0;
+  }
+
+  if (lastNumber < 10) {
+    return '0 0 0 ' + lastNumber;
+  }
+  if (lastNumber > 10 && lastNumber < 100) {
+    return '0 0 ' + lastNumber.split('').join(' ');
+  } else if (lastNumber > 100 && lastNumber < 1000) {
+    return '0 ' + lastNumber.split('').join(' ');
+  } else {
+    return lastNumber.split('').join(' ');
+  }
+}
