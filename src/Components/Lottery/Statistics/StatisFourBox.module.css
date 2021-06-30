@@ -34,7 +34,7 @@
     padding: 20px;
 }
 #statistics_lastDiv div{
-   padding-right: 40px !important;
+   padding-right: 20px !important;
 }
 #statistics_lastDiv div::first-line{
     color: #9F9FFB !important;
@@ -48,5 +48,17 @@
     }
     .statis_heading1{
     margin-left: 2% !important;
+    }
+}
+
+@media(max-width: 1245px){
+    #thrid_DivBox{
+        min-height: 335px !important;
+
+    }
+}
+@media (max-width: 991px) {
+    #thrid_DivBox{
+        min-height: 130px !important;
     }
 }

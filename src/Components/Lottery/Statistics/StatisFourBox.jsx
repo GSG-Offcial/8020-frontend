@@ -71,8 +71,8 @@ export const StatisFourBox = () => {
           </p>
         </div>
       </div>
-      <div className="col-lg-6 col-md-12">
-        <div className={styles.nested_div_statis}>
+      <div className={`col-lg-6 col-md-12`}>
+        <div className={styles.nested_div_statis} id={styles.thrid_DivBox}>
           <p>{(+pick3GS50 + +pick4GS50).toFixed(2)} GS50</p>
           <p className={styles.para_statis}>Total GS50 being dropped.</p>
         </div>
