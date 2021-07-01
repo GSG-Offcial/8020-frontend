@@ -3,7 +3,7 @@ import styles from './Pick3Nub.module.css';
 import { useWeb3React } from '@web3-react/core';
 import { useContract, useTokenContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
-import { getContract, formatValue, toWei } from '../../../utils';
+import { toWei } from '../../../utils';
 
 export const Pick3Nub = () => {
   const { account } = useWeb3React();
@@ -59,17 +59,17 @@ export const Pick3Nub = () => {
   const handleRemoveItem = (idx, pick) => {
     let temp;
 
-    if (pick == 3) {
+    if (pick === 3) {
       temp = [...pick3TicketsDiv];
-    } else if (pick == 4) {
+    } else if (pick === 4) {
       temp = [...pick4TicketsDiv];
     }
 
     temp.splice(idx, 1);
 
-    if (pick == 3) {
+    if (pick === 3) {
       setPick3TicketsDiv(temp);
-    } else if (pick == 4) {
+    } else if (pick === 4) {
       setPick4TicketsDiv(temp);
     }
   };
