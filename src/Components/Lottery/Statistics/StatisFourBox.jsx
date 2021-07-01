@@ -26,8 +26,8 @@ export const StatisFourBox = () => {
       pick3Events.filter(({ args }) => {
         if (args.UserAddress) {
           pick3Addresses.push(args.UserAddress);
-          return true;
         }
+        return true;
       });
 
       setpick3Wallet(countAddress(pick3Addresses));
