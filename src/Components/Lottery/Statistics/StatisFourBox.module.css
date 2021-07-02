@@ -13,11 +13,16 @@
   padding: 20px;
   margin: 10px;
   border: 2px solid #10b9eb;
+  position: relative;
+
 }
 .nested_div_statis::first-line {
   color: #9f9ffb !important;
   font-size: 1.6rem;
 }
+
+
+
 .para_statis {
   font-size: 1.2rem;
 }
@@ -27,7 +32,7 @@
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
-  font-size: 1.6rem;
+   font-size: 1.6rem;
   padding: 20px;
 }
 #statistics_lastDiv div {
@@ -35,6 +40,15 @@
 }
 #statistics_lastDiv div::first-line {
   color: #9f9ffb !important;
+}
+
+
+i.lottery_statistics_tip_icon > img {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 @media (max-width: 767px) {
