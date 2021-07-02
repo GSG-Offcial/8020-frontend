@@ -19,6 +19,9 @@
   max-height: 550px !important;
 
 }
+.lot_nested_div{
+  position: relative;
+}
 .lot_nested_div p.para_lot1 {
   background-color: #9f9ffb !important;
   border-top-right-radius: 0.5rem;
@@ -53,7 +56,14 @@
   font-weight: bolder !important;
   font-size: 2rem !important;
 }
-
+.dashboard_statistics_tip_icon > img {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;  
+}
 
 @media(max-width: 767px){
   .Pick3Drop{
