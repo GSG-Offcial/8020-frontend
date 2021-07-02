@@ -7,8 +7,6 @@ export const Pick3Drop = () => {
   const contract = useContract();
   const { account } = useWeb3React();
 
-  const [pick3Total, setPick3Total] = useState();
-  const [pick4Total, setPick4Total] = useState();
   const [pick3Number, setPick3Number] = useState([]);
   const [pick4Number, setPick4Number] = useState([]);
 
