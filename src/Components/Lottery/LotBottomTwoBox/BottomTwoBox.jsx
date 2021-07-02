@@ -16,11 +16,12 @@ export const BottomTwoBox = () => {
       let pick4Numbers = [];
       const pick3Events = await contract.queryFilter(contract.filters.Random());
       pick3Events.map(({ args }) => {
-        if (Number(String(args.pick)) == 3) {
+        if (Number(String(args.pick)) === 3) {
           pick3Numbers.push(String(args.number));
-        } else if (Number(String(args.pick)) == 4) {
+        } else if (Number(String(args.pick)) === 4) {
           pick4Numbers.push(String(args.number));
         }
+        return true;
       });
       setPick3Number(pick3Numbers[pick3Numbers.length - 1]);
       setPick4Number(pick4Numbers[pick4Numbers.length - 1]);

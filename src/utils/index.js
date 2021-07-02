@@ -55,7 +55,7 @@ export function countAddress(address) {
 }
 
 export function formatValueOfPick3(lastNumber) {
-  if (lastNumber == undefined) {
+  if (lastNumber === undefined) {
     return 0;
   }
   if (lastNumber < 10) {
@@ -69,7 +69,7 @@ export function formatValueOfPick3(lastNumber) {
 }
 
 export function formatValueOfPick4(lastNumber) {
-  if (lastNumber == undefined) {
+  if (lastNumber === undefined) {
     return 0;
   }
 

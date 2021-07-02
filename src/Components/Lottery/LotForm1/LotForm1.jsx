@@ -27,6 +27,7 @@ export const LotForm1 = () => {
             number: String(e.args.number),
           },
         ]);
+        return true;
       });
     }
   }, [contract]);

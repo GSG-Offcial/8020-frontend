@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './TwoBox.css';
 import { formatNumber, fromWei, toWei } from '../../../../utils/index';
 import { useContract } from '../../../../Hooks/index';
@@ -121,28 +121,27 @@ export const TwoBox = ({ refAddress }) => {
     <div className="two-box">
       <div className="col-lg-6 col-12">
         <div className="nested_Div1">
-        <ul className="twobox-ul">
-          <button className="button button-1" onClick={buyBtn}>
-            Buy
-          </button>
-          <button className="button button-2" onClick={sellBtn}>
-            Sell
-          </button>
-        </ul>
+          <ul className="twobox-ul">
+            <button className="button button-1" onClick={buyBtn}>
+              Buy
+            </button>
+            <button className="button button-2" onClick={sellBtn}>
+              Sell
+            </button>
+          </ul>
 
-        {input}
+          {input}
 
-        <p className="box-para">{amount}</p>
+          <p className="box-para">{amount}</p>
 
-        <form class={`d-flex`}>{button}</form>
+          <form class={`d-flex`}>{button}</form>
         </div>
       </div>
 
       <div className="col-lg-6 col-12">
-        <div className="nested_Div2"> 
-         <h1>Hello</h1>
+        <div className="nested_Div2">
+          <h1>Hello</h1>
         </div>
-
       </div>
     </div>
   );

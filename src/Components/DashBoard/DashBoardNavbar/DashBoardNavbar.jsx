@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import './DashBoardNavbar.css';
 import {
   FourBox,
@@ -11,7 +11,7 @@ import {
   FooterImage,
   LastFooter,
 } from '../DB-Body/index';
-import { getContract, fromWei } from '../../../utils';
+import { fromWei } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 import { useEagerConnect, useInactiveListener } from '../../../Hooks/index';
 import { injected } from '../../../connectors';
@@ -121,15 +121,15 @@ export const DashBoardNavbar = () => {
             id="main-nav"
           >
             <ul className="navbar-nav">
-
               <li className="nav-item">
-
                 <a
                   className="nav-link sidebar_text"
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/dashboard" className="Nav_Link">DashBoard</NavLink>
+                  <NavLink to="/dashboard" className="Nav_Link">
+                    DashBoard
+                  </NavLink>
                 </a>
               </li>
 
@@ -139,7 +139,9 @@ export const DashBoardNavbar = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/lottery" className="Nav_Link">Lottery</NavLink>
+                  <NavLink to="/lottery" className="Nav_Link">
+                    Lottery
+                  </NavLink>
                 </a>
               </li>
 
@@ -149,7 +151,9 @@ export const DashBoardNavbar = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/NFT_Pool" className="Nav_Link">NFT Pool</NavLink>
+                  <NavLink to="/NFT_Pool" className="Nav_Link">
+                    NFT Pool
+                  </NavLink>
                 </a>
               </li>
               <li className="nav-item">
@@ -198,8 +202,8 @@ export const DashBoardNavbar = () => {
                 {account === undefined
                   ? 'Connect'
                   : account === null
-                    ? 'None'
-                    : `${account.substring(0, 6)}...${account.substring(
+                  ? 'None'
+                  : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
                     )}`}
               </a>
@@ -218,8 +222,8 @@ export const DashBoardNavbar = () => {
                 {account === undefined
                   ? 'Connect'
                   : account === null
-                    ? 'None'
-                    : `${account.substring(0, 6)}...${account.substring(
+                  ? 'None'
+                  : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
                     )}`}
               </a>

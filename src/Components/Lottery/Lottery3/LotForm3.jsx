@@ -28,6 +28,7 @@ export const LotForm3 = () => {
             pick: String(e.args.pick),
           },
         ]);
+        return true;
       });
     }
   }, [contract]);
@@ -65,7 +66,7 @@ export const LotForm3 = () => {
                   <td>{calDate(e.time)}</td>
                   <td>{e.wallet}</td>
                   <td>
-                    {e.pick == 3
+                    {e.pick === 3
                       ? formatValueOfPick3(e.number)
                       : formatValueOfPick4(e.number)}
                   </td>
