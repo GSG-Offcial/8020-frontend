@@ -4,6 +4,9 @@ import { useWeb3React } from '@web3-react/core';
 import { useContract, useTokenContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
 import { toWei } from '../../../utils';
+import tip from '../../Images/tip.png'
+
+
 
 export const Pick3Nub = () => {
   const { account } = useWeb3React();
@@ -209,6 +212,10 @@ export const Pick3Nub = () => {
               Play Lottery
             </button>
           </div>
+          <i class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip"
+              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order." />
+          </i>
         </div>
       </div>
 
@@ -307,7 +314,12 @@ export const Pick3Nub = () => {
               Play Lottery
             </button>
           </div>
+          <i class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip"
+              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order." />
+          </i>
         </div>
+       
       </div>
     </div>
   );

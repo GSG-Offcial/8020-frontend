@@ -4,8 +4,15 @@
     border: 2px solid #10b9eb;
     border-radius: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
-
+.lottery_statistics_tip_icon > img{
+    position: absolute;
+    right: 20px;
+    bottom: 65px;
+    width: 20px; 
+    height: 20px;
+}
 
 .Lotfrom3_h1{
     font-size: 1.9rem;

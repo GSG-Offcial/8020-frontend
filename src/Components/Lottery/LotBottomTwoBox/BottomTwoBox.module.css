@@ -13,6 +13,7 @@
     margin: 1px;
     border-radius: 10px;
     text-align: center;
+    position: relative;
 }
 .BottomTwoBox_nesteddiv::first-line{
     font-size: 1.3rem;
@@ -21,7 +22,13 @@
 .nub_bottomTwoBox{
     font-size: 1.5rem;
 }
-
+.lottery_statistics_tip_icon > img{
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+   width: 18px ;
+   height: 18px;
+}
 @media (max-width: 767px){
     .main_BottomTwoBox{
         margin-left: 2%;

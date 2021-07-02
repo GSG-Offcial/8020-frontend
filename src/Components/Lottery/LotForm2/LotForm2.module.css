@@ -4,7 +4,7 @@
     border: 2px solid #10b9eb;
     border-radius: 10px;
     margin-bottom: 10px;
-   
+   position: relative;
 }
 .lot_from2_h1{
     color: #9F9FFB;
@@ -13,7 +13,13 @@
     word-wrap: break-word !important;
 
 }
-
+.lottery_statistics_tip_icon > img{
+   position: absolute;
+   right: 20px;
+   bottom: 65px;
+   width: 20px; 
+   height: 20px;
+}
 
 .LotForm1Table2{
     overflow-y: auto !important;

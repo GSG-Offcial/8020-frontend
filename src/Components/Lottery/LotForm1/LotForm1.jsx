@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './LotForm1.module.css';
+import tip from '../../Images/tip.png'
 
 import { useContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
@@ -46,6 +47,10 @@ export const LotForm1 = () => {
       <h1 className={`mt-3 mb-3 ${styles.headingform1}`}>
         PICK 3 DROP HISTORY
       </h1>
+      <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip"
+                  title="History of all drops in the Pick 3." />
+            </i>
       <div class={`table-responsive ${styles.LotForm1Table1} `}>
         <table class="table  table-borderless">
           <thead className={styles.thead_background}>

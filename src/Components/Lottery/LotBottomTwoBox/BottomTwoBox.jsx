@@ -3,6 +3,7 @@ import styles from './BottomTwoBox.module.css';
 import { useContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
 import { formatValueOfPick3, formatValueOfPick4 } from '../../../utils/index';
+import tip from '../../Images/tip.png'
 
 export const BottomTwoBox = () => {
   const contract = useContract();
@@ -36,6 +37,10 @@ export const BottomTwoBox = () => {
           <p className={styles.nub_bottomTwoBox}>
             {formatValueOfPick3(pick3Number)}
           </p>
+          <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip"
+                title="This is the last number that was randomly generated in the Pick 3 drawing.  You can only win by matching the numbers exactly." />
+            </i>
         </div>
       </div>
 
@@ -45,6 +50,10 @@ export const BottomTwoBox = () => {
           <p className={styles.nub_bottomTwoBox}>
             {formatValueOfPick4(pick4Number)}
           </p>
+          <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip"
+                title="This is the last number that was randomly generated in the Pick 4 drawing.  You can only win by matching the numbers exactly." />
+            </i>
         </div>
       </div>
     </div>

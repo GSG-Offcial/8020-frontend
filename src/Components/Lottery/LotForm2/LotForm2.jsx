@@ -4,6 +4,7 @@ import { useContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { formatValueOfPick4 } from '../../../utils/index';
+import tip from '../../Images/tip.png'
 
 export const LotForm2 = () => {
 
@@ -46,6 +47,10 @@ export const LotForm2 = () => {
       <h1 class={`display-6 text-center mt-3 mb-3 ${styles.lot_from2_h1}`}>
         PICK 4 DROP HISTORY
       </h1>
+      <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip"
+                  title="History of all drops in the Pick 4." />
+            </i>
       <div class={`table-responsive ${styles.LotForm1Table2} `}>
         <table class="table  table-borderless">
           <thead>

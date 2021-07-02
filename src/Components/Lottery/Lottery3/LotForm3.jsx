@@ -4,6 +4,7 @@ import { useContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { formatValueOfPick3, formatValueOfPick4 } from '../../../utils/index';
+import tip from '../../Images/tip.png'
 
 export const LotForm3 = () => {
 
@@ -47,6 +48,10 @@ export const LotForm3 = () => {
       <h1 className={`text-center display-6 mt-3 mb-3 ${styles.Lotfrom3_h1}`}>
         CONTRACT DRAWING HISTORY
       </h1>
+      <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip"
+                  title="CONTRACT DRAWING HISTORY." />
+            </i>
       <div class={`table-responsive  ${styles.LotForm1Table3}`}>
         <table class="table  table-borderless">
           <thead className={styles.Lot3_background_color}>
