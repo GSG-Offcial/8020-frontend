@@ -1,0 +1,40 @@
+:root{
+    --color-WH: #fff
+  }
+  
+  .main_NavBar {
+    width: 100% !important;
+    background-color: #0d173a !important;
+    min-height: 90px;
+  }
+
+  .nested_DivDB{
+    max-width: 1500px !important;
+  }
+
+
+  .Icon_Navbar_nft{
+    color: var(--color-WH) !important;
+  }
+
+
+
+  .sidebar_text_nft{
+    display: none;
+  }
+
+
+  /* media query */
+  @media(max-width: 767px){
+    .Link_div_nft{
+        /* width: 65% !important; */
+        /* margin: 0 auto !important; */
+        text-align: center;
+        font-size: x-large;
+      }
+      .sidebar_text_nft{
+        display: inline-block !important;
+      }
+  }
+
+  
