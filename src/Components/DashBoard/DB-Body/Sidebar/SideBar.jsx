@@ -36,7 +36,7 @@ export const SideBar = () => {
               <span>
                 <i className="fas fa-dice-d20"></i>
               </span>{' '}
-              <span>NFT Pool</span>
+              <span><Link to="/nft-pool">NFT Pool</Link> </span>
             </a>
           </li>
         </ul>
