@@ -24,7 +24,7 @@ function App() {
               <Route exact path="/" component={Navbar} />
               <Route exact path="/dashboard" component={DashBoardNavbar} />
               <Route exact path="/lottery" component={Header} />
-              <Route exact path="/nft-pool" component={NftHeader}/>
+              <Route exact path="/nftPool" component={NftHeader}/>
             </Switch>
           </div>
         </div>

@@ -1,4 +1,7 @@
-.lot_sidebar{
+
+
+
+.nft_sidebar{
     display: inline-block;
     width: 245px;
     flex-grow: 1 !important;
@@ -17,7 +20,7 @@
     background-color: #0d173a !important;
     box-sizing: border-box !important;
 }
-.lot_logo{
+.nft_logo{
     width: 149px;
     height: 149px;
     margin: 0 auto 2.6rem auto;
@@ -26,67 +29,39 @@
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    right: 10px;  
+    right: 10px;
 }
-.lot_logo img{
+
+.nft_logo img{
     width: 130px;
     padding: 3rem 0 0 1rem;
 }
-.lot_sidebar_menu li{
+
+.nft_siderbar_menu li{
     width: 101%;
     margin-bottom: 1rem;
 }
-.lot_sidebar_menu li a{
+
+.nft_siderbar_menu li a{
     display: block;
-    color:  plum !important;
+    color: plum ;
 }
-.lot_sidebar_menu li a span{
+
+.nft_siderbar_menu li a span{
     font-size: 1.4rem;
     padding-right: 1.1rem;
     padding-left: 0.5rem;
 }
-.lot_sidebar_menu a.lot-active:hover{
-    background-color: #17203f;
+
+.nft_active:hover{
+ background-color: #17203f;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     border-radius: 30px 0 0 30px;
-    color: #10b9eb !important;
+    color: #10b9eb;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* media query */
-
-
-@media (max-width: 767px){
-  .lot_sidebar{
-    display: none !important;
-  }
-}
-
-/* 
-@media only screen and  (max-width: 640px) {
-    .lot_sidebar{
-      top:80px;
-    }
- }
- @media only screen and  (max-width: 500px) {
-   .lot_sidebar{
-     top:110px;
-     
+@media (max-width:767px){
+   .nft_sidebar{
+       display:  none !important;
    }
- }
- @media only screen and  (max-width: 378px) {
-   .lot_sidebar{
-     top:150px;
- 
-   }
- } */
+} 

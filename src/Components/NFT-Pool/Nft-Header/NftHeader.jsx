@@ -1,12 +1,16 @@
 import React from 'react'
+import { Fragment } from 'react'
 import {NavLink} from 'react-router-dom'
 import styles from './Nftheader.module.css'
+
+// Import Comp
+import {NftSidebar} from '../index'
 
 
 
 export const NftHeader = () => {
     return (
-        <div>
+        <Fragment>
             {/* <h1>Hello world This NFT Pool</h1> */}
             <nav className={`navbar navbar-expand-md fixed-top ${styles.main_NavBar}`}>
         <div className={`container ${styles.nested_DivDB}`}>
@@ -62,7 +66,7 @@ export const NftHeader = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/NFT_Pool" className={styles.Nav_Link_nft}>NFT Pool</NavLink>
+                  <NavLink to="/nftPool" className={styles.Nav_Link_nft}>NFT Pool</NavLink>
                 </a>
               </li>
               </ul>
@@ -95,6 +99,7 @@ export const NftHeader = () => {
           </div>
         </div>
       </nav>
-        </div>
+      <NftSidebar/>
+        </Fragment>
     )
 }

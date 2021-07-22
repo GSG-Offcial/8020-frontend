@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './Header.css';
 import {
   LotterySideBar,
@@ -76,7 +76,7 @@ export const Header = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/dashboard" className="Nav_Link_lottery">DashBoard</NavLink>
+                  <Link to="/dashboard" className="Nav_Link_lottery">DashBoard</Link>
                 </a>
               </li>
 
@@ -86,7 +86,7 @@ export const Header = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/lottery" className="Nav_Link_lottery">Lottery</NavLink>
+                  <Link to="/lottery" className="Nav_Link_lottery">Lottery</Link>
                 </a>
               </li>
 
@@ -96,7 +96,7 @@ export const Header = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/NFT_Pool" className="Nav_Link_lottery">NFT Pool</NavLink>
+                  <Link to="/nftPool" className="Nav_Link_lottery">NFT Pool</Link>
                 </a>
               </li>
               </ul>

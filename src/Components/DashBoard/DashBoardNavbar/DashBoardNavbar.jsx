@@ -151,7 +151,7 @@ export const DashBoardNavbar = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/NFT_Pool" className="Nav_Link">
+                  <NavLink to="/nftPool" className="Nav_Link">
                     NFT Pool
                   </NavLink>
                 </a>
