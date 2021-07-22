@@ -41,7 +41,8 @@ export const NftHeader = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/dashboard" className="Nav_Link_lottery">DashBoard</NavLink>
+                  {/* Nav_Link_lottery */}
+                  <NavLink to="/dashboard" className={styles.Nav_Link_nft}>DashBoard</NavLink>
                 </a>
               </li>
 
@@ -51,7 +52,7 @@ export const NftHeader = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/lottery" className="Nav_Link_lottery">Lottery</NavLink>
+                  <NavLink to="/lottery" className={styles.Nav_Link_nft}>Lottery</NavLink>
                 </a>
               </li>
 
@@ -61,7 +62,7 @@ export const NftHeader = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <NavLink to="/NFT_Pool" className="Nav_Link_lottery">NFT Pool</NavLink>
+                  <NavLink to="/NFT_Pool" className={styles.Nav_Link_nft}>NFT Pool</NavLink>
                 </a>
               </li>
               </ul>
@@ -73,8 +74,9 @@ export const NftHeader = () => {
             id="main-nav"
           >
             <li className="nav-item ms-2 d-md-none">
+              {/* nft_btn1 */}
               <a
-                className="btn dashboard-btn1"
+                className={`btn ${styles.nft_btn1}`}
              
                 href="#/"
               >
@@ -84,7 +86,7 @@ export const NftHeader = () => {
             {/* second button on bigger screen */}
             <li className="nav-item ms-2 d-none d-md-inline">
               <a
-                className="btn dashboard-btn2"
+                className={`btn ${styles.nft_btn2}`}
                 href="#/"
               >
               Connect
