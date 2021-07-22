@@ -1,0 +1,23 @@
+.MintToken_miandiv{
+  
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+   margin-top: 9rem;
+   margin-left: 230px !important;
+}
+.MintToken_miandiv h1{
+    box-sizing:  border-box !important;
+   text-align: center !important;
+}
+.nested_div_nft{
+    border: 2px solid #10b9eb;
+    min-height: 370px;
+    width: 60%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #0d173a !important;
+}

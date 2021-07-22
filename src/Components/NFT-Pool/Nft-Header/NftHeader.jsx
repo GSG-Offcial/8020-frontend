@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom'
 import styles from './Nftheader.module.css'
 
 // Import Comp
-import {NftSidebar} from '../index'
+import {NftSidebar,MintToken} from '../index'
 
 
 
@@ -15,7 +15,7 @@ export const NftHeader = () => {
             <nav className={`navbar navbar-expand-md fixed-top ${styles.main_NavBar}`}>
         <div className={`container ${styles.nested_DivDB}`}>
           <a href="#/" className="navbar-brand">
-            <span className="fw-bold display-6 text-white">Lottery</span>
+            <span className="fw-bold display-6 text-white">DashBoard</span>
           </a>
           {/* toggler button for mobile */}
           <button
@@ -100,6 +100,7 @@ export const NftHeader = () => {
         </div>
       </nav>
       <NftSidebar/>
+      <MintToken/>
         </Fragment>
     )
 }
