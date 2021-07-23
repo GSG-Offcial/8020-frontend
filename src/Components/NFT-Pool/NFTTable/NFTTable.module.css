@@ -23,5 +23,10 @@
 @media(max-width: 767px){
     .NFTTable_mainDiv{
         margin-left: 2.8%;
+        margin-right: 2.8%;
+    }
+    .nftTable1{
+           width: 100%;
+           margin: 0 auto;
     }
 }

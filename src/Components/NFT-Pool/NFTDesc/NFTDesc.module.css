@@ -1,0 +1,44 @@
+.NFTDesc_mainDiv{
+    margin-top: 3rem;
+    margin-left: 300px;
+    margin-right: 2rem;
+
+}
+.NFTDesc_mainDiv h2{
+    font-weight: bold;
+    text-align: center;
+}
+.desc_contentNFT{
+    border: 2px solid #10b9eb !important;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    word-wrap: break-word;
+ 
+    padding: 1.5rem;
+}
+.nft_descbutton{
+    border-radius: 50px;
+    color: white;
+    background-color: #10b9eb;
+    border-color: #10b9eb;
+    cursor: pointer;
+    font-weight: 700;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    padding: 1rem;
+  margin: 0 auto !important;
+
+}
+
+@media(max-width:767px){
+    .NFTDesc_mainDiv{
+        margin-left: 2% !important;
+        margin-right: 2% !important;
+    }
+    .desc_contentNFT{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
