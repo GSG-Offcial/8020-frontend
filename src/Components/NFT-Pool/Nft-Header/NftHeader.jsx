@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom'
 import styles from './Nftheader.module.css'
 
 // Import Comp
-import {NftSidebar,MintToken,FiveNFTBox} from '../index'
+import {NftSidebar,MintToken,FiveNFTBox,NFTTable} from '../index'
 
 
 
@@ -102,6 +102,8 @@ export const NftHeader = () => {
       <NftSidebar/>
       <MintToken/>
       <FiveNFTBox/>
+      <NFTTable/>
+
         </Fragment>
     )
 }

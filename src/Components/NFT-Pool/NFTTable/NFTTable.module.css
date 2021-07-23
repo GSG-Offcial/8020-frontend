@@ -1,0 +1,27 @@
+.NFTTable_mainDiv {
+  margin-left: 300px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-right: 1.8rem;
+  margin-top: 5rem;
+  border: 2px solid #10b9eb;
+  border-radius: 10px;
+  background-color: #0d173a;
+}
+.NFTTable_mainDiv h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.nftTable1 {
+  overflow-y: auto !important;
+  max-height: 257px !important;
+}
+.thead_backgroundNFT {
+  background-color: #10b9eb;
+}
+@media(max-width: 767px){
+    .NFTTable_mainDiv{
+        margin-left: 2.8%;
+    }
+}
