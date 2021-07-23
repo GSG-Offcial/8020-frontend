@@ -14,9 +14,19 @@ export const MintToken = () => {
                         </div>
                         {/* justify-content-center align-items-center */}
                         <div className={`col-lg-6 order-lg-2  text-white d-flex flex-column  ${styles.MintToken_Text}`}>
-                            <h2>
+                            <h2 className={`mb-5`}>
                                 Access Key
                             </h2>
+                            <p>Current Supply: 50</p>
+                            <p>Max Supply: 100</p>
+                            <p>Usage: give Reward</p>
+                            <p>Price: 1 ETH</p>
+
+                            <button
+                                type="button"
+                                className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}>
+                                Buy NFT
+                            </button>
                         </div>
                     </div>
                 </div>
