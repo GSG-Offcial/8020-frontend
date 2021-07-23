@@ -67,11 +67,12 @@
 
 @media only screen and (max-width: 767px) {
   .MintToken_miandiv {
-    margin-left: 5% !important;
+    margin-left: 2% !important;
     margin-right: 1% !important;
   }
   .nested_div_nft {
-    width: 90% !important;
+    width: 95% !important;
+    /* margin: auto; */
   }
 }
 @media only screen and (max-width: 991px){
