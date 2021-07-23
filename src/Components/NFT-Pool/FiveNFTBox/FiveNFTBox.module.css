@@ -1,0 +1,10 @@
+.FiveNFTBox_mainDiv{
+    margin-left: 300px;
+    margin-top: 5rem;
+}
+.FiveNFTBox_mainDiv h1{
+    text-align: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-bottom: 2rem;
+}

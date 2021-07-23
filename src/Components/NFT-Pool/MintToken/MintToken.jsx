@@ -4,8 +4,8 @@ import nftToken from '../../Gif/nft_tokentop.gif'
 
 export const MintToken = () => {
     return (
-        <div className={styles.MintToken_miandiv}>
-            <h1 className="">Mint Access Key Token </h1>
+        <div className={` ${styles.MintToken_miandiv}`}>
+            <h1 className={``}>Mint Access Key Token </h1>
             <div className={`d-flex flex-row align-items-center mt-4   ${styles.nested_div_nft}`}>
                 <div className={`container-fluid`}>
                     <div className="row">
