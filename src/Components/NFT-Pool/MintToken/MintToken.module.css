@@ -1,23 +1,73 @@
-.MintToken_miandiv{
-  
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-   margin-top: 9rem;
-   margin-left: 230px !important;
+.MintToken_miandiv {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin-top: 9rem;
+  margin-left: 230px !important;
+  /* width: 100%; */
 }
-.MintToken_miandiv h1{
-    box-sizing:  border-box !important;
-   text-align: center !important;
-}
-.nested_div_nft{
-    border: 2px solid #10b9eb;
-    min-height: 370px;
-    width: 60%;
+.nested_div_nft {
+  border: 2px solid #10b9eb;
+  min-height: 500px;
+  width: 60%;
   border-radius: 10px;
   text-align: center;
   background-color: #0d173a !important;
+}
+
+/* imgage */
+.mintoken_imageDiv img {
+  width: 78% !important;
+  border-radius: 10px;
+  height: 420px !important;
+  box-sizing: border-box !important;
+}
+.MintToken_miandiv h1 {
+  box-sizing: border-box !important;
+  text-align: center !important;
+  word-wrap: break-word !important;
+}
+
+.MintToken_Text {
+  width: 50% !important;
+  padding-right: 5rem;
+  box-sizing: border-box !important;
+  padding-top: 5rem !important;
+}
+.MintToken_Text > h2 {
+  box-sizing: border-box !important;
+  /* word-break: break-all; */
+  width: 100%;
+  text-align: center;
+}
+
+.MintToken_Text > p {
+  margin-bottom: 1px !important;
+}
+
+.btn_nft {
+  padding: 0.2rem 0.9rem !important;
+  width: 8rem;
+  background-color: #9f9ffb !important;
+  border-color: #9f9ffb !important;
+  border-radius: 0.2rem !important;
+  color: white !important;
+  word-wrap: break-word !important;
+  box-sizing: border-box !important;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .MintToken_miandiv {
+    margin-left: 5% !important;
+    margin-right: 1% !important;
+  }
+  .nested_div_nft {
+    /* margin-left: 2% !important; */
+    /* margin-right: 1% !important; */
+    width: 90% !important;
+  }
 }

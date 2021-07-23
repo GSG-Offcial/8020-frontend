@@ -26,7 +26,7 @@ useEffect(() =>{
                         <div className={`col-lg-6 pt-5 order-lg-1 ${styles.G50DropLottery_image}`} data-aos="fade-right">
                             <img src={GS50DropLottery} alt="" />
                         </div>
-                        <div className={`col-lg-6 order-lg-2 pt-5 pt-lg-0 text-white d-flex justify-content-center flex-column ${styles.G50DropLottery_Div2}`} data-aos="fade-left">
+                        <div className={`col-lg-6 order-lg-2 pt-5 pb-5 pt-lg-0 text-white d-flex justify-content-center flex-column ${styles.G50DropLottery_Div2}`} data-aos="fade-left">
                             <h1 className={`display-5 fw-bolder`}>
                                 GS50 Drop Lottery
                             </h1>
