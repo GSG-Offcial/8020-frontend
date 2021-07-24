@@ -27,6 +27,17 @@
   color: plum;
 }
 
+.btn_nftBox{
+  padding: .4rem 2rem;
+  background-color: #9f9ffb !important;
+  font-weight: bold;
+  border: none !important;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-size: large;
+}
+
+
 @media only screen and (max-width:767px){
     .FiveNFTBox_mainDiv{
         margin-left: 2% !important;

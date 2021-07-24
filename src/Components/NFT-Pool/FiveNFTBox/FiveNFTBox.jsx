@@ -38,6 +38,11 @@ export const FiveNFTBox = () => {
                             Total NFT Staked
                         </p>
                         <p className={` ${styles.amount_nft}`}>100 NFT ($100)</p>
+                        <button
+                                type="button"
+                                className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}>
+                                Stake
+                            </button>
                     </div>
                 </div>
 
@@ -47,6 +52,11 @@ export const FiveNFTBox = () => {
                             Total NFT Staked
                         </p>
                         <p className={` ${styles.amount_nft}`}>100 NFT ($100)</p>
+                        <button
+                                type="button"
+                                className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}>
+                                Unstake
+                            </button>
                     </div>
                 </div>
             </div>

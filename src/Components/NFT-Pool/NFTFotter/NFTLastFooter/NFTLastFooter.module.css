@@ -1,0 +1,11 @@
+.NFTLastFooter{
+    background: #10b9eb !important;
+  margin-bottom: -1rem !important;
+  width: 100% !important;
+  min-height: 80px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+.NFTLastFooter p{
+   padding-top: 2rem; 
+}
