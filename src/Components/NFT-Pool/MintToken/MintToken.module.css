@@ -5,13 +5,13 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  margin-top: 11rem !important;
+  margin-top: 10rem !important;
   margin-left: 230px !important;
 }
 .nested_div_nft {
   border: 2px solid #10b9eb;
-  min-height: 500px;
-  width: 60%;
+  min-height: 400px !important;
+  width: 63%;
   border-radius: 10px;
   text-align: center;
   background-color: #0d173a !important;
@@ -19,9 +19,10 @@
 
 /* imgage */
 .mintoken_imageDiv img {
-  width: 80% !important;
-  border-radius: 10px;
-  height: 420px !important;
+  width: 100% !important;
+  height: 370px !important;
+  border-radius: 10px !important;
+  margin-left: 1rem;
   box-sizing: border-box !important;
 }
 .MintToken_miandiv h1 {
@@ -47,8 +48,7 @@
   margin-bottom: 1px !important;
   font-size: large;
   margin: 0 auto;
-    text-align: center;
-
+  text-align: center;
 }
 
 .btn_nft {
@@ -75,10 +75,13 @@
     /* margin: auto; */
   }
 }
-@media only screen and (max-width: 991px){
-   .MintToken_Text{
-     margin: 0 auto !important;
-     width: 100% !important;
-     padding: 0% !important;
-   } 
+@media only screen and (max-width: 991px) {
+  .MintToken_Text {
+    margin: 0 auto !important;
+    width: 100% !important;
+    padding: 0% !important;
+  }
+  .mintoken_imageDiv img{
+    width: 85% !important;
+  }
 }

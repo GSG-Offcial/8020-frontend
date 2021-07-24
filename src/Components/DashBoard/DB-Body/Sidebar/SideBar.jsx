@@ -13,7 +13,7 @@ export const SideBar = () => {
           <img src={Group99} alt="Group 900" className="sidebar-icon" />
         </Link>
       </div>
-      <div>
+      <div className="router-text">
         <ul className="sidebar-menu">
           <li>
             <a href="#/" className="active">
@@ -42,12 +42,12 @@ export const SideBar = () => {
         </ul>
       </div>
 
-      <div className="sidebar-bottom">
-        <p className="sidebar-para">
+      {/* <div className="sidebar-bottom"> */}
+        {/* <p className="sidebar-para">
           <span></span>
           <span>$16.271</span>
-        </p>
-      </div>
+        </p> */}
+      {/* </div> */}
     </div>
   );
 };
