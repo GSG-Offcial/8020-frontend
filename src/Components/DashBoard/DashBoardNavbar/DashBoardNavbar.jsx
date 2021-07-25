@@ -232,9 +232,9 @@ export const DashBoardNavbar = () => {
         </div>
       </nav>
 
-      <div style={{display: 'flex', maxHeight: "2000px", flexWrap: 'wrap'}}>
-        <SideBar />
-<div>
+      <div className="DashBoard_comp">
+        <SideBar className="sidebarBox"/>
+      <div >
         <FourBox price={ethPrice} GS50Price={tokenPrice} />
         <TwoBox refAddress={refAddress} />
         <BottomFourBox/>

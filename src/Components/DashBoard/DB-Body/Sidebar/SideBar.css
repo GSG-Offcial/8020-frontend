@@ -1,6 +1,5 @@
 .sidebar {
   min-width: 240px;
-  flex-grow: 1 !important;
   position:  absolute;
   top: 0;
   margin-top: 9em !important;
@@ -8,13 +7,13 @@
   border-top: 2px solid #10b9eb;
   border-right: 2px solid #10b9eb;
   border-bottom: 2px solid #10b9eb;
-   min-height: 950px ;
-
   border-bottom-right-radius: 1em;
   border-top-right-radius: 1em;
   background-color: #0d173a !important;
   box-sizing: border-box !important;
   display: inline-block !important;
+  min-height:123vh !important;
+
 }
 /* @media only screen and  (max-width: 660px) {
    .sidebar{
