@@ -20,7 +20,6 @@ import { useContract } from '../../../Hooks/index';
 export const DashBoardNavbar = () => {
   const context = useWeb3React();
   const { connector, account, library, activate } = context;
-
   const contract = useContract();
 
   // handle logic to recognize the connector currently being activated
@@ -128,7 +127,7 @@ export const DashBoardNavbar = () => {
                   href="#/"
                 >
                   <NavLink to="/dashboard" className="Nav_Link">
-                    DashBoard
+                    GS50: $2.00
                   </NavLink>
                 </a>
               </li>
@@ -162,7 +161,7 @@ export const DashBoardNavbar = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  DashBoard
+                 GS50: $2.00
                 </a>
               </li>
               <li className="nav-item">
@@ -209,6 +208,14 @@ export const DashBoardNavbar = () => {
               </a>
             </li>
             {/* second button on bigger screen */}
+            <li className="nav-item ms-2 d-none d-md-inline">
+              <a
+                className="btn dashboard-btn3"
+                href="#/"
+              >
+                Rinkeby
+              </a>
+            </li>
             <li className="nav-item ms-2 d-none d-md-inline">
               <a
                 className="btn dashboard-btn2"
