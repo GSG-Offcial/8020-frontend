@@ -1,10 +1,12 @@
-.bottom_dislaimer {
-  /* margin-left: 290px; */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center !important;
-  margin-top: 3rem;
+.bottom_dislaimer{
+    /* margin-left: 290px; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   align-content: center !important;
+   margin: auto;
+   margin-top: 3rem;
+   width: 95%;
 }
 .Des_h1 {
   color: white;

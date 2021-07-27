@@ -202,8 +202,8 @@ export const DashBoardNavbar = () => {
                 {account === undefined
                   ? 'Connect'
                   : account === null
-                  ? 'None'
-                  : `${account.substring(0, 6)}...${account.substring(
+                    ? 'None'
+                    : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
                     )}`}
               </a>
@@ -222,8 +222,8 @@ export const DashBoardNavbar = () => {
                 {account === undefined
                   ? 'Connect'
                   : account === null
-                  ? 'None'
-                  : `${account.substring(0, 6)}...${account.substring(
+                    ? 'None'
+                    : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
                     )}`}
               </a>
@@ -232,11 +232,15 @@ export const DashBoardNavbar = () => {
         </div>
       </nav>
 
-      <SideBar />
-      <FourBox price={ethPrice} GS50Price={tokenPrice} />
-      <TwoBox refAddress={refAddress} />
-      <BottomFourBox price={ethPrice} GS50Price={tokenPrice} />
-      <BottomTwoBox price={ethPrice} />
+      <div className="DashBoard_comp">
+        <SideBar className="sidebarBox"/>
+      <div >
+        <FourBox price={ethPrice} GS50Price={tokenPrice} />
+        <TwoBox refAddress={refAddress} />
+        <BottomFourBox/>
+        <BottomTwoBox price={ethPrice} />
+        </div>
+      </div>
       <Desclaimer />
       <FooterImage />
       <LastFooter />
