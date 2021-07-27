@@ -33,7 +33,7 @@ export const FourBox = ({ price, GS50Price }) => {
 
   return (
     <Fragment>
-      <div className="mainbox">
+      <span className="mainbox">
         <div>
           <p className="boxes" id="box_1">
             Total Value Locked {tvl} ETH
@@ -58,7 +58,7 @@ export const FourBox = ({ price, GS50Price }) => {
 
           <p className="amount">${calculatePrice(price, withdrawn)}</p>
         </div>
-      </div>
+      </span>
     </Fragment>
   );
 };

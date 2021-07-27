@@ -57,14 +57,12 @@ export const BottomFourBox = ({ price, GS50Price }) => {
           </p>
         </div>
 
-
         <div>
           <p className="boxes" id="box_4">
             Loyalty Bonus Earned {formatNumber(userLoyalty)} ETH
           </p>
           <p className="amount">${calculatePrice(price, userLoyalty)}</p>
         </div>
-        
       </div>
     </div>
   );
