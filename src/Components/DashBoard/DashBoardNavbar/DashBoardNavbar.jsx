@@ -19,7 +19,7 @@ import { useContract } from '../../../Hooks/index';
 
 export const DashBoardNavbar = () => {
   const context = useWeb3React();
-  const { connector, account, library, activate } = context;
+  const { connector, account, library, chainId, activate } = context;
   const contract = useContract();
 
   // handle logic to recognize the connector currently being activated
@@ -28,9 +28,9 @@ export const DashBoardNavbar = () => {
   const [ethPrice, setEthPrice] = useState(0);
   const [tokenPrice, setTokenPrice] = useState();
   const [refAddress, setRefAddress] = useState('loading');
+  const [chainName, setChainName] = useState('Loading');
 
   useEffect(() => {
-    console.log('running');
     if (activatingConnector && activatingConnector === connector) {
       setActivatingConnector(undefined);
     }
@@ -44,17 +44,54 @@ export const DashBoardNavbar = () => {
       const refId = await contract.getReferrer();
       setRefAddress(refId);
     }
-  }, [contract, ethPrice]);
+    if (chainId === 1) {
+      setChainName('Mainnet');
+    } else if (chainId === 3) {
+      setChainName('Ropsten');
+    } else if (chainId === 4) {
+      setChainName('Rinkeby');
+    } else if (chainId === 42) {
+      setChainName('Kovan');
+    } else if (chainId === 56) {
+      setChainName('BSC Mainnet');
+    } else if (chainId === 137) {
+      setChainName('MATIC Mainnet');
+    } else if (chainId === 80001) {
+      setChainName('Matic Testnet');
+    } else if (chainId === 97) {
+      setChainName('BSC Testnet');
+    } else {
+      setChainName('Wrong chain Check wallet');
+    }
+  }, [contract, ethPrice, chainId]);
 
   useEffect(() => {
-    fetch(
-      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum'
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setEthPrice(data[0].current_price);
-      });
-  }, [library, contract]);
+    if (chainId === 97 || chainId === 56) {
+      fetch(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=binancecoin'
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setEthPrice(data[0].current_price);
+        });
+    } else if (chainId === 80001 || chainId === 137) {
+      fetch(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=matic-network'
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setEthPrice(data[0].current_price);
+        });
+    } else {
+      fetch(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum'
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setEthPrice(data[0].current_price);
+        });
+    }
+  }, [library, contract, chainId]);
 
   const copyToClipboard = () => {
     const el = document.createElement('textarea');
@@ -127,7 +164,7 @@ export const DashBoardNavbar = () => {
                   href="#/"
                 >
                   <NavLink to="/dashboard" className="Nav_Link">
-                    GS50: $2.00
+                    GS50: ${Number(tokenPrice).toFixed(2)}
                   </NavLink>
                 </a>
               </li>
@@ -161,7 +198,7 @@ export const DashBoardNavbar = () => {
                   aria-current="page"
                   href="#/"
                 >
-                 GS50: $2.00
+                  GS50: ${Number(tokenPrice).toFixed(2)}
                 </a>
               </li>
               <li className="nav-item">
@@ -209,11 +246,8 @@ export const DashBoardNavbar = () => {
             </li>
             {/* second button on bigger screen */}
             <li className="nav-item ms-2 d-none d-md-inline">
-              <a
-                className="btn dashboard-btn3"
-                href="#/"
-              >
-                Rinkeby
+              <a className="btn dashboard-btn3" href="#/">
+                {chainName}
               </a>
             </li>
             <li className="nav-item ms-2 d-none d-md-inline">

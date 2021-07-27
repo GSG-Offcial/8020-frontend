@@ -1,14 +1,17 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useWeb3React } from '@web3-react/core';
-import { abi, address } from '../constants/8020.json';
+import { abi } from '../constants/8020.json';
 import { injected } from '../connectors';
-import { getContract } from '../utils/index';
+import { getContract, getContractaddress } from '../utils/index';
 
 export const useContract = () => {
   const { library, account, chainId } = useWeb3React();
 
   return useMemo(
-    () => (!!library ? getContract(abi, address, library, account) : undefined),
+    () =>
+      !!library
+        ? getContract(abi, getContractaddress(chainId), library, account)
+        : undefined,
     [library, account, chainId]
   );
 };
