@@ -6,7 +6,6 @@ import {
   SideBar,
   TwoBox,
   BottomFourBox,
-  BottomTwoBox,
   Desclaimer,
   FooterImage,
   LastFooter,
@@ -279,7 +278,6 @@ export const DashBoardNavbar = () => {
           <FourBox price={ethPrice} GS50Price={tokenPrice} />
           <TwoBox refAddress={refAddress} />
           <BottomFourBox price={ethPrice} GS50Price={tokenPrice} />
-          <BottomTwoBox price={ethPrice} />
         </div>
       </div>
       <Desclaimer />

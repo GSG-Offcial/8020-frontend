@@ -2,21 +2,11 @@ import React from 'react';
 // import styles from './BottomTwoBox.module.css'
 // import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './BottomTwoBox.css';
-import { calculatePrice, formatValue } from '../../../../utils/index';
-import { useEffect, useState } from 'react';
+import { calculatePrice } from '../../../../utils/index';
 import { useContract } from '../../../../Hooks/index';
 
-export const BottomTwoBox = ({ price }) => {
+export const BottomTwoBox = ({ price, withdrawAmount }) => {
   const contract = useContract();
-
-  const [withdrawAmount, setWithdrawAmount] = useState('loading');
-
-  useEffect(async () => {
-    if (contract) {
-      const totalWithdrawn = await contract.totalWithdrawAmount();
-      setWithdrawAmount(formatValue(totalWithdrawn));
-    }
-  }, [contract, withdrawAmount]);
 
   async function withdraw() {
     if (contract) {
@@ -35,41 +25,41 @@ export const BottomTwoBox = ({ price }) => {
   return (
     <div className=" bottom_box">
       <div className="col-lg-6 col-12">
-      <div className="nested_BottomDiv1">
-        <p className="bottom_para">Token you can withdraw</p>
-        <p>
-          {withdrawAmount} Eth{' '}
-          <span className="span_color">
-            (${calculatePrice(price, withdrawAmount)})
-          </span>
-        </p>
-        <button
-          type="button"
-          onClick={withdraw}
-          className="btn btn-primary btn-sm bottom_button"
-        >
-          Withdraw
-        </button>
-      </div>
+        <div className="nested_BottomDiv1">
+          <p className="bottom_para">Token you can withdraw</p>
+          <p>
+            {withdrawAmount} Eth{' '}
+            <span className="span_color">
+              (${calculatePrice(price, withdrawAmount)})
+            </span>
+          </p>
+          <button
+            type="button"
+            onClick={withdraw}
+            className="btn btn-primary btn-sm bottom_button"
+          >
+            Withdraw
+          </button>
+        </div>
       </div>
 
       <div className="col-lg-6 col-12">
-      <div className="nested_BottomDiv2">
-        <p className="bottom_para">Token you can with draw</p>
-        <p>
-          {withdrawAmount} Eth
-          <span className={'span_color'}>
-            (${calculatePrice(price, withdrawAmount)})
-          </span>
-        </p>
-        <button
-          type="button"
-          onClick={cycle}
-          className="btn btn-primary btn-sm bottom_button"
-        >
-          Cycle
-        </button>
-      </div>
+        <div className="nested_BottomDiv2">
+          <p className="bottom_para">Token you can with draw</p>
+          <p>
+            {withdrawAmount} Eth
+            <span className={'span_color'}>
+              (${calculatePrice(price, withdrawAmount)})
+            </span>
+          </p>
+          <button
+            type="button"
+            onClick={cycle}
+            className="btn btn-primary btn-sm bottom_button"
+          >
+            Cycle
+          </button>
+        </div>
       </div>
     </div>
   );
