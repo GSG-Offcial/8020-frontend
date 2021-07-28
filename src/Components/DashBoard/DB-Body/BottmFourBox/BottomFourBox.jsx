@@ -8,6 +8,9 @@ import {
 import { useWeb3React } from '@web3-react/core';
 import { useContract } from '../../../../Hooks/index';
 import { BottomTwoBox } from '../index';
+import MaskGroup24 from '../../../Images/MaskGroup24.svg'
+import Group902 from '../../../Images/Group902.svg'
+
 
 export const BottomFourBox = ({ price, GS50Price }) => {
   const { account } = useWeb3React();
@@ -41,6 +44,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
           <p className="boxes" id="box_1">
             Your Balance {formatNumber(userBalance)} GS50
           </p>
+          <img src={MaskGroup24} alt="" />
           <p className="amount">${calculatePrice(GS50Price, userBalance)}</p>
         </div>
 
@@ -48,11 +52,13 @@ export const BottomFourBox = ({ price, GS50Price }) => {
           <p className="boxes" id="box_2">
             Dividends Earned {formatNumber(userDivs)} ETH
           </p>
+          <img src={Group902} alt="" />
           <p className="amount-2">${calculatePrice(price, userDivs)}</p>
         </div>
 
         <div className="boxes" id="box_3">
           <p>Ref. Commision {formatNumber(userRef)} ETH</p>
+          <img src={MaskGroup24} alt="" /> 
           <p className="bottom-amount amount">
             ${calculatePrice(price, userRef)}
           </p>
@@ -62,6 +68,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
           <p className="boxes" id="box_4">
             Loyalty Bonus Earned {formatNumber(userLoyalty)} ETH
           </p>
+          <img src={MaskGroup24} alt="" />
           <p className="amount">${calculatePrice(price, userLoyalty)}</p>
         </div>
       </div>
