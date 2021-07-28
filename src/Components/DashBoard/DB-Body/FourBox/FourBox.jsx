@@ -6,6 +6,9 @@ import {
   formatNumber,
 } from '../../../../utils/index';
 import { useContract } from '../../../../Hooks/index';
+import MaskGroup24 from '../../../Images/MaskGroup24.svg'
+import Group902 from '../../../Images/Group902.svg'
+
 
 export const FourBox = ({ price, GS50Price }) => {
   const contract = useContract();
@@ -38,16 +41,19 @@ export const FourBox = ({ price, GS50Price }) => {
           <p className="boxes" id="box_1">
             Total Value Locked {tvl} ETH
           </p>
+          <img src={MaskGroup24} alt="" className="eth_image"/>
           <p className="amount">${calculatePrice(price, tvl)}</p>
         </div>
         <div>
           <p className="boxes" id="box_2">
             Token Supply {formatNumber(totalSupply)} GS50
           </p>
+          <img src={Group902} alt="" className="mt-1 golden_image"/>
           <p className="amount-2">${calculatePrice(GS50Price, totalSupply)}</p>
         </div>
         <div className="boxes" id="box_3">
           <p>Total {eth} ETH Deposited since inception</p>
+          <img src={MaskGroup24} alt=""  />
           <p className="amount">${calculatePrice(price, eth)}</p>
         </div>
         <div>
@@ -55,7 +61,7 @@ export const FourBox = ({ price, GS50Price }) => {
             {' '}
             Total {withdrawn} ETH Withdrawn since inception
           </p>
-
+          <img src={MaskGroup24} alt=""/>
           <p className="amount">${calculatePrice(price, withdrawn)}</p>
         </div>
       </div>
