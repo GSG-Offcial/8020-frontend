@@ -7,6 +7,7 @@ import {
 } from '../../../../utils/index';
 import { useWeb3React } from '@web3-react/core';
 import { useContract } from '../../../../Hooks/index';
+import { BottomTwoBox } from '../index';
 
 export const BottomFourBox = ({ price, GS50Price }) => {
   const { account } = useWeb3React();
@@ -57,15 +58,19 @@ export const BottomFourBox = ({ price, GS50Price }) => {
           </p>
         </div>
 
-
         <div>
           <p className="boxes" id="box_4">
             Loyalty Bonus Earned {formatNumber(userLoyalty)} ETH
           </p>
           <p className="amount">${calculatePrice(price, userLoyalty)}</p>
         </div>
-        
       </div>
+      <BottomTwoBox
+        price={price}
+        withdrawAmount={
+          Number(userDivs) + Number(userRef) + Number(userLoyalty)
+        }
+      />
     </div>
   );
 };

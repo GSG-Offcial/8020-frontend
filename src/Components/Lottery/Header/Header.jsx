@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './Header.css';
 import {
   LotterySideBar,
@@ -22,17 +22,37 @@ import { useWeb3React } from '@web3-react/core';
 
 export const Header = () => {
   const context = useWeb3React();
-  const { connector, account, activate } = context;
+  const { connector, account, chainId, activate } = context;
 
   // handle logic to recognize the connector currently being activated
   const [activatingConnector, setActivatingConnector] = useState();
+  const [chainName, setChainName] = useState('Loading');
 
   useEffect(() => {
     console.log('running');
     if (activatingConnector && activatingConnector === connector) {
       setActivatingConnector(undefined);
     }
-  }, [activatingConnector, connector]);
+    if (chainId === 1) {
+      setChainName('Mainnet');
+    } else if (chainId === 3) {
+      setChainName('Ropsten');
+    } else if (chainId === 4) {
+      setChainName('Rinkeby');
+    } else if (chainId === 42) {
+      setChainName('Kovan');
+    } else if (chainId === 56) {
+      setChainName('BSC Mainnet');
+    } else if (chainId === 137) {
+      setChainName('MATIC Mainnet');
+    } else if (chainId === 80001) {
+      setChainName('Matic Testnet');
+    } else if (chainId === 97) {
+      setChainName('BSC Testnet');
+    } else {
+      setChainName('Wrong chain Check wallet');
+    }
+  }, [activatingConnector, connector, chainId]);
 
   // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
   const triedEager = useEagerConnect();
@@ -68,15 +88,15 @@ export const Header = () => {
             id="main-nav"
           >
             <ul className="navbar-nav">
-
               <li className="nav-item">
-
                 <a
                   className="nav-link sidebar_text_lottery"
                   aria-current="page"
                   href="#/"
                 >
-                  <Link to="/dashboard" className="Nav_Link_lottery">DashBoard</Link>
+                  <Link to="/dashboard" className="Nav_Link_lottery">
+                    DashBoard
+                  </Link>
                 </a>
               </li>
 
@@ -86,7 +106,9 @@ export const Header = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <Link to="/lottery" className="Nav_Link_lottery">Lottery</Link>
+                  <Link to="/lottery" className="Nav_Link_lottery">
+                    Lottery
+                  </Link>
                 </a>
               </li>
 
@@ -96,11 +118,13 @@ export const Header = () => {
                   aria-current="page"
                   href="#/"
                 >
-                  <Link to="/nftPool" className="Nav_Link_lottery">NFT Pool</Link>
+                  <Link to="/nftPool" className="Nav_Link_lottery">
+                    NFT Pool
+                  </Link>
                 </a>
               </li>
-              </ul>
-              </div>
+            </ul>
+          </div>
 
           {/* button if screen less than madium then show first othrwise second button */}
           <div
@@ -127,6 +151,12 @@ export const Header = () => {
               </a>
             </li>
             {/* second button on bigger screen */}
+            <li className="nav-item ms-2 d-none d-md-inline">
+              <a className="btn lot-dashboard-btn3" href="#/">
+                {chainName}
+                {/* dashboard-btn3 */}
+              </a>
+            </li>
             <li className="nav-item ms-2 d-none d-md-inline">
               <a
                 className="btn dashboard-btn2"

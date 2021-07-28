@@ -54,6 +54,46 @@ export function countAddress(address) {
   return alladdress.length;
 }
 
+export function getContractaddress(chainId) {
+  if (chainId === 1) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 3) {
+    return '0xdBbc1Bc1Dd800DDdC08206681Ae8ad91240C503f';
+  } else if (chainId === 4) {
+    return '0x788f0d9107c2B2A06b660E4d65de6E6E0b9A83BE';
+  } else if (chainId === 42) {
+    return '0xc573ad9377B3544A1968F2cBc2b4b90FC2802dA2';
+  } else if (chainId === 56) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 137) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 80001) {
+    return '0x25abeD2C880b3Ca5EB5aF6ff4A6904A1fD10b649';
+  } else if (chainId === 97) {
+    return '0xBFFBf23ae1E12D0523908e4D3b442789C4B874bE';
+  }
+}
+
+export function getLotteryContractaddress(chainId) {
+  if (chainId === 1) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 3) {
+    return '0x70DA16C95c9a2e1b78774DF3d925fD8B85052c25';
+  } else if (chainId === 4) {
+    return '0x5f8abC2c5De6C5C39179102Ddf2D8C7819FE2ED4';
+  } else if (chainId === 42) {
+    return '0x591144Dc642Ca38E6cCbe44c5AC2fb14a082fC48';
+  } else if (chainId === 56) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 137) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 80001) {
+    return '0x114aFC2F6807756F87eEAB5bcF01D15cac2b3683';
+  } else if (chainId === 97) {
+    return '0x88e12EBA2Ac6f3C7BAaEDeE8951eB81F82c72617';
+  }
+}
+
 export function formatValueOfPick3(lastNumber) {
   if (lastNumber === undefined) {
     return 0;

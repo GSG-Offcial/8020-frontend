@@ -1,6 +1,6 @@
 .sidebar {
   min-width: 240px;
-  position:  absolute;
+  position: absolute;
   top: 0;
   margin-top: 9em !important;
   padding: 3rem 0 0 0.2rem;
@@ -12,8 +12,7 @@
   background-color: #0d173a !important;
   box-sizing: border-box !important;
   display: inline-block !important;
-  min-height:123vh !important;
-
+  min-height: 123vh !important;
 }
 /* @media only screen and  (max-width: 660px) {
    .sidebar{
@@ -42,7 +41,6 @@
   display: inline-block;
   position: relative;
   right: 10px;
- 
 }
 .logo img {
   width: 130px;
@@ -64,7 +62,8 @@
   padding-left: 0.3rem;
 }
 
-.sidebar-menu a.active:hover,#Lottery:hover {
+.sidebar-menu a.active:hover,
+#Lottery:hover {
   background-color: #17203f;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
@@ -73,27 +72,24 @@
   width: 100%;
 }
 /* Sidebar-bottom */
-.sidebar-bottom{
+.sidebar-bottom {
   position: fixed;
-  bottom: -2%;  
+  bottom: -2%;
   width: 235px;
   border-top: 1px solid #10b9eb;
-
 }
-.sidebar-bottom p{
-  font-size:  1.4rem;
+.sidebar-bottom p {
+  font-size: 1.4rem;
   color: plum;
   padding-left: 10%;
-   padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
-.sidebar-bottom p span{
- padding-right: 0.8rem;
-
+.sidebar-bottom p span {
+  padding-right: 0.8rem;
 }
 
-
-@media(max-width: 767px){
-  .sidebar{
+@media (max-width: 767px) {
+  .sidebar {
     display: none !important;
   }
 }

@@ -24,30 +24,27 @@ export const SideBar = () => {
             </a>
           </li>
           <li>
-              <a href="#/" className="active" id="Lottery">
-                <span>
-                  <i className="fas fa-ticket-alt"></i>
-                </span>{' '}
-                <span><Link to="/lottery">Lottery</Link> </span>{' '}
-              </a>
+            <a href="#/" className="active" id="Lottery">
+              <span>
+                <i className="fas fa-ticket-alt"></i>
+              </span>{' '}
+              <span>
+                <Link to="/lottery">Lottery</Link>{' '}
+              </span>{' '}
+            </a>
           </li>
           <li>
             <a href="#/" className="active">
               <span>
                 <i className="fas fa-dice-d20"></i>
               </span>{' '}
-              <span><Link to="/nftPool">NFT Pool</Link> </span>
+              <span>
+                <Link to="/nftPool">NFT Pool</Link>{' '}
+              </span>
             </a>
           </li>
         </ul>
       </div>
-
-      {/* <div className="sidebar-bottom"> */}
-        {/* <p className="sidebar-para">
-          <span></span>
-          <span>$16.271</span>
-        </p> */}
-      {/* </div> */}
     </div>
   );
 };
