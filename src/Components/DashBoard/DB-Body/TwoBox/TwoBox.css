@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
+  
 }
 .nested_Div2,.nested_Div1 {
   border: 2px solid #10b9eb;
@@ -15,6 +16,8 @@
   text-align: center;
   height: auto;
   flex: 1;
+  background-color: #0d173a !important;
+
 }
 input.token-input {
   width: 90% !important;

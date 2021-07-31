@@ -49,16 +49,28 @@
   padding: 0 2rem 0 2rem;
 }
 .mainbox div p.amount {
-  padding-top: 2rem;
+  padding-top: 0.8rem;
   color: var(--plum);
 }
 .mainbox div p.amount-2 {
-  padding-top: 3.3rem;
+  padding-top: 0.8rem;
   color: var(--plum);
+}
+.golden_image{
+  padding-top: 1.2rem !important;
 }
 
 @media (max-width: 767px) {
   .mainbox {
     margin-left: 2.8% !important;
   }
+
+ .golden_image{
+   margin-top: 1.8rem !important;
+ }
+ .eth_image{
+   margin-top: 2.4rem !important;
+ }
 }
+
+

@@ -152,8 +152,9 @@ export const Header = () => {
             </li>
             {/* second button on bigger screen */}
             <li className="nav-item ms-2 d-none d-md-inline">
-              <a className="btn dashboard-btn3" href="#/">
+              <a className="btn lot-dashboard-btn3" href="#/">
                 {chainName}
+                {/* dashboard-btn3 */}
               </a>
             </li>
             <li className="nav-item ms-2 d-none d-md-inline">
