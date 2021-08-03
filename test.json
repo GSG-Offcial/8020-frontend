@@ -1,0 +1,38 @@
+{
+  "series": "Special Access",
+  "title": "GSG Ecosystem Access Key",
+  "name": "GSG Official Membership",
+  "description": "This is the highest valued token in the GSG Ecosystem. It can be staked in our NFT pools or traded on the open market. This ERC-721 token is an additional resource for creators and contributors to create passive income. If you choose to sell this token you will lose access to the ecosystem.",
+  "animation_url": "https://gateway.pinata.cloud/ipfs/QmRDVYtugJC9Mkwuxmc3fJVqNipCrBgWjWaAv21YPPjqVF/gsg_access_token.mp4",
+  "image": "https://gateway.pinata.cloud/ipfs/QmQKbHngwm8Y7CRRg5Gm5oMC7BsJ62SYwnfG7E8QTB6x8K",
+  "author": "Rico Cunningham",
+  "designer": "GSG Global Marketing",
+  "external_url": "",
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Access Token"
+    },
+    {
+      "trait_type": "Genre",
+      "value": "Trophy"
+    },
+    {
+      "trait_type": "Max Supply",
+      "value": "500"
+    },
+    {
+      "trait_type": "Access Level",
+      "value": "5"
+    },
+    {
+      "trait_type": "Power",
+      "value": "10"
+    }
+  ],
+  "copyright": "Copyright GSG Marketing 2021 https://www.goldstandardgrp.com"
+}
