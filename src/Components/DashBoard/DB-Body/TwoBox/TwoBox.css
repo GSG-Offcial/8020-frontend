@@ -26,8 +26,8 @@ input.token-input {
 }
 ul.twobox-ul {
   display: grid;
-  grid-template-rows: repeat(1, 60px);
-  grid-template-columns: repeat(2, 2fr);
+  /* grid-template-rows: repeat(1, 60px); */
+  /* grid-template-columns: repeat(2, 2fr); */
   text-align: center;
   padding-left: 0%;
   color: white;

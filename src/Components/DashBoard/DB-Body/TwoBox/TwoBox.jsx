@@ -125,6 +125,27 @@ export const TwoBox = ({ refAddress }) => {
             <button className="button button-1" onClick={buyBtn}>
               Buy
             </button>
+            {/* <button className="button button-2" onClick={sellBtn}>
+              Sell
+            </button> */}
+          </ul>
+
+          {input}
+
+          <p className="box-para">{amount}</p>
+
+          <form class={`d-flex`}>{button}</form>
+        </div>
+        
+      </div>
+
+      <div className="col-lg-6 col-12">
+        <div className="nested_Div2">
+          {/* <h1>Hello</h1> */}
+          <ul className="twobox-ul">
+            {/* <button className="button button-1" onClick={buyBtn}>
+              Buy
+            </button> */}
             <button className="button button-2" onClick={sellBtn}>
               Sell
             </button>
@@ -135,12 +156,6 @@ export const TwoBox = ({ refAddress }) => {
           <p className="box-para">{amount}</p>
 
           <form class={`d-flex`}>{button}</form>
-        </div>
-      </div>
-
-      <div className="col-lg-6 col-12">
-        <div className="nested_Div2">
-          <h1>Hello</h1>
         </div>
       </div>
     </div>
