@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import styles from './G50DropLottery.module.css';
-import GS50DropLottery from '../../Images/GS50DropLottery.svg'
-// import Aos from 'aos'
+import GS50DropLottery from '../../Images/GS50DropLottery.svg';
+// import Aos from 'aos';
 import { useEffect } from 'react';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -11,8 +11,7 @@ import 'aos/dist/aos.css'
 export const G50DropLottery = () => {
 
 useEffect(() =>{
-   Aos.init({
-    
+   Aos.init({    
     duration: 1400,easing: 'ease-in-sine', once: false
    }) 
 })
@@ -41,7 +40,6 @@ useEffect(() =>{
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

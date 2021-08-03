@@ -1,0 +1,58 @@
+.YourReward_mainDiv{
+    /* margin-left: ; */
+    margin-top: 3rem;
+    margin-left: 330px;
+    margin-right: 2rem;
+}
+.YourReward_mainDiv h2{
+    text-align: center !important;
+    font-weight: bold;
+}
+.YourRewardnested_div{
+    width: 88%;
+    border-radius: 10px;
+    min-height: 250px;
+  padding: 20px;
+  margin: 10px auto;
+  border: 2px solid #10b9eb;
+  position: relative;
+  background-color: #0d173a;
+  text-align: center;
+}
+
+.nested_Div{
+    /* width: 100% !important; */
+}
+.para_statis_nft{
+    font-size: xx-large;
+    text-align: center;
+}
+.amount_nft_reward{
+    font-size: x-large;
+    text-align: center;
+}
+.btn_nftBox{
+    padding: .4rem 2rem;
+  background-color: #9f9ffb !important;
+  font-weight: bold;
+  border: none !important;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-size: large;
+  margin: 0 auto;
+  margin-right: 2rem !important;
+  min-width: 20%;
+
+}
+
+
+@media only screen and (max-width:767px){
+    .YourReward_mainDiv{
+        margin-left: 2% !important;
+    }
+    .YourRewardnested_div{
+        width: 100%;
+        margin: 0px !important;
+        margin-left: 2.2% !important;
+    }
+}
