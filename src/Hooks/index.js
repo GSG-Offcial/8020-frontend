@@ -51,6 +51,7 @@ export function useInactiveListener(suppress = false) {
     if (ethereum && ethereum.on && !active && !error && !suppress) {
       const handleChainChanged = (chainId) => {
         console.log('chainChanged', chainId);
+        window.location.reload();
         activate(injected);
       };
 
@@ -63,6 +64,7 @@ export function useInactiveListener(suppress = false) {
 
       const handleNetworkChanged = (networkId) => {
         console.log('networkChanged', networkId);
+        window.location.reload();
         activate(injected);
       };
 
