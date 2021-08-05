@@ -7,6 +7,7 @@
   box-sizing: border-box;
   word-wrap: break-word;
   margin-bottom: 2rem;
+  font-weight: bold;
 }
 .nested_FiveBox {
   width: 100%;
@@ -20,15 +21,15 @@
   margin: 10px;
   border: 2px solid #10b9eb;
   position: relative;
-  background-color: #0d173a;
+  background-color: #081235;
   text-align: center;
 }
 .amount_nft {
   color: plum;
 }
 
-.btn_nftBox{
-  padding: .4rem 2rem;
+.btn_nftBox {
+  padding: 0.4rem 2rem;
   background-color: #9f9ffb !important;
   font-weight: bold;
   border: none !important;
@@ -37,13 +38,12 @@
   font-size: large;
 }
 
-
-@media only screen and (max-width:767px){
-    .FiveNFTBox_mainDiv{
-        margin-left: 2% !important;
-    }
-    .nested_FiveBox{
-        width: 100%;
-        margin: 0px !important;
-    }
+@media only screen and (max-width: 767px) {
+  .FiveNFTBox_mainDiv {
+    margin-left: 2% !important;
+  }
+  .nested_FiveBox {
+    width: 100%;
+    margin: 0px !important;
+  }
 }

@@ -14,7 +14,7 @@
   width: 63%;
   border-radius: 10px;
   text-align: center;
-  background-color: #0d173a !important;
+  background-color: #081235 !important;
 }
 
 /* imgage */
@@ -29,6 +29,7 @@
   box-sizing: border-box !important;
   text-align: center !important;
   word-wrap: break-word !important;
+  font-weight: bold;
 }
 
 .MintToken_Text {
@@ -81,7 +82,7 @@
     width: 100% !important;
     padding: 0% !important;
   }
-  .mintoken_imageDiv img{
+  .mintoken_imageDiv img {
     width: 85% !important;
   }
 }

@@ -21,7 +21,7 @@ export function fromWei(n) {
 }
 
 export function formatValue(value) {
-  return fromWei(+value.toString()).toFixed(2);
+  return fromWei(+value.toString()).toFixed(3);
 }
 
 export function toBN(n) {
@@ -91,6 +91,18 @@ export function getLotteryContractaddress(chainId) {
     return '0x114aFC2F6807756F87eEAB5bcF01D15cac2b3683';
   } else if (chainId === 97) {
     return '0x88e12EBA2Ac6f3C7BAaEDeE8951eB81F82c72617';
+  }
+}
+
+export function getAccessKeyContractAddress(chainId) {
+  if (chainId === 4) {
+    return '0x7e0e491F74B1cEe58b0a4b590D3925d1C0d58905';
+  }
+}
+
+export function getNftRewardPoolAddress(chainId) {
+  if (chainId === 4) {
+    return '0x43ab6e9cA7af31584d3af1CCE5906daD383995C1';
   }
 }
 
