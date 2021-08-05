@@ -6,9 +6,12 @@ import { useContract } from '../../../../Hooks/index';
 export const TwoBox = ({ refAddress }) => {
   const contract = useContract();
 
-  const [amount, setAmount] = useState('');
-  const [button, setbutton] = useState('');
-  const [input, setInput] = useState('');
+  const [amountBuy, setAmountBuy] = useState('');
+  const [amountSell, setAmountSell] = useState('');
+  const [buttonBuy, setbuttonBuy] = useState('');
+  const [buttonSell, setbuttonSell] = useState('');
+  const [inputBuy, setInputBuy] = useState('');
+  const [inputSell, setInputSell] = useState('');
 
   const buyToken = async () => {
     if (contract) {
@@ -41,19 +44,21 @@ export const TwoBox = ({ refAddress }) => {
   const calculateToken = async (eth) => {
     if (contract) {
       const token = await contract.calculateTokensReceived(eth);
-      setAmount(`you will receive ${formatNumber(fromWei(token))} GS50 Token`);
+      setAmountBuy(
+        `you will receive ${formatNumber(fromWei(token))} GS50 Token`
+      );
     }
   };
 
   const calculateEth = async (token) => {
     if (contract) {
       const eth = await contract.calculateEthereumReceived(token);
-      setAmount(`you will receive ${Number(fromWei(eth)).toFixed(6)} ETH`);
+      setAmountSell(`you will receive ${Number(fromWei(eth)).toFixed(6)} ETH`);
     }
   };
 
   const buyBtn = () => {
-    setInput(
+    setInputBuy(
       <input
         id="buyToken"
         class="form-control form-control-lg token-input"
@@ -69,7 +74,7 @@ export const TwoBox = ({ refAddress }) => {
       />
     );
 
-    setbutton(
+    setbuttonBuy(
       <button
         type="submit"
         onClick={(e) => {
@@ -84,7 +89,7 @@ export const TwoBox = ({ refAddress }) => {
   };
 
   const sellBtn = () => {
-    setInput(
+    setInputSell(
       <input
         id="sellToken"
         class="form-control form-control-lg token-input"
@@ -100,7 +105,7 @@ export const TwoBox = ({ refAddress }) => {
       />
     );
 
-    setbutton(
+    setbuttonSell(
       <button
         onClick={(e) => {
           e.preventDefault();
@@ -130,13 +135,12 @@ export const TwoBox = ({ refAddress }) => {
             </button> */}
           </ul>
 
-          {input}
+          {inputBuy}
 
-          <p className="box-para">{amount}</p>
+          <p className="box-para">{amountBuy}</p>
 
-          <form class={`d-flex`}>{button}</form>
+          <form class={`d-flex`}>{buttonBuy}</form>
         </div>
-        
       </div>
 
       <div className="col-lg-6 col-12">
@@ -151,11 +155,11 @@ export const TwoBox = ({ refAddress }) => {
             </button>
           </ul>
 
-          {input}
+          {inputSell}
 
-          <p className="box-para">{amount}</p>
+          <p className="box-para">{amountSell}</p>
 
-          <form class={`d-flex`}>{button}</form>
+          <form class={`d-flex`}>{buttonSell}</form>
         </div>
       </div>
     </div>
