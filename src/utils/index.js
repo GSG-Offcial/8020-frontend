@@ -60,7 +60,7 @@ export function getContractaddress(chainId) {
   } else if (chainId === 3) {
     return '0xdBbc1Bc1Dd800DDdC08206681Ae8ad91240C503f';
   } else if (chainId === 4) {
-    return '0x788f0d9107c2B2A06b660E4d65de6E6E0b9A83BE';
+    return '0x28c9f2530e93b1c35ad10c7948724c9b1211d0d2';
   } else if (chainId === 42) {
     return '0xc573ad9377B3544A1968F2cBc2b4b90FC2802dA2';
   } else if (chainId === 56) {
@@ -80,7 +80,7 @@ export function getLotteryContractaddress(chainId) {
   } else if (chainId === 3) {
     return '0x70DA16C95c9a2e1b78774DF3d925fD8B85052c25';
   } else if (chainId === 4) {
-    return '0x5f8abC2c5De6C5C39179102Ddf2D8C7819FE2ED4';
+    return '0x14778471f99D28bEc37eC9C187BBf83A8175FeD4';
   } else if (chainId === 42) {
     return '0x591144Dc642Ca38E6cCbe44c5AC2fb14a082fC48';
   } else if (chainId === 56) {
