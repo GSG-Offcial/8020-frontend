@@ -18,11 +18,11 @@ export const MintToken = () => {
     }
   }, [tokenContract]);
 
-  function buy() {
+  async function buy() {
     let overrides = {
       value: price,
     };
-    let tx = tokenContract.buyNft(overrides);
+    let tx = await tokenContract.buyNft(overrides);
     if (await tx.wait()) {
       window.location.reload();
     }
