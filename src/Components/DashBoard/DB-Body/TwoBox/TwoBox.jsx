@@ -27,7 +27,7 @@ export const TwoBox = ({ refAddress }) => {
         const tx = await contract.buy(refAddress, overrides);
         if (await tx.wait()) window.location.reload();
       } else {
-        alert('Referral Addres is not loaded yet, TRy AGAIN');
+        alert('Referral Address is not loaded yet, TRy AGAIN');
       }
     }
   };

@@ -8,18 +8,20 @@ import {
 import { useWeb3React } from '@web3-react/core';
 import { useContract } from '../../../../Hooks/index';
 import { BottomTwoBox } from '../index';
-import MaskGroup24 from '../../../Images/MaskGroup24.svg'
-import Group902 from '../../../Images/Group902.svg'
-
+import ethereum from '../../../Images/MaskGroup24.svg';
+import matic from '../../../Images/matic.svg';
+import binance from '../../../Images/binance.svg';
 
 export const BottomFourBox = ({ price, GS50Price }) => {
-  const { account } = useWeb3React();
+  const { account, chainId } = useWeb3React();
   const contract = useContract();
+  const [logoInCard, setLogoInCard] = useState();
 
   const [userBalance, setUserBalance] = useState('loading');
   const [userDivs, setUserDivs] = useState('loading');
   const [userRef, setUserRef] = useState('loading');
   const [userLoyalty, setUserLoyalty] = useState('loading');
+  const [currency, setCurrency] = useState('');
 
   useEffect(async () => {
     if (contract) {
@@ -34,6 +36,16 @@ export const BottomFourBox = ({ price, GS50Price }) => {
 
       let loyalty = await contract.loyaltyOf();
       setUserLoyalty(formatValue(loyalty));
+      if (chainId === 80001 || chainId === 137) {
+        setLogoInCard(matic);
+        setCurrency('MATIC');
+      } else if (chainId === 56 || chainId === 97) {
+        setLogoInCard(binance);
+        setCurrency('BNB');
+      } else {
+        setLogoInCard(ethereum);
+        setCurrency('ETH');
+      }
     }
   }, [contract, price, GS50Price]);
 
@@ -44,21 +56,23 @@ export const BottomFourBox = ({ price, GS50Price }) => {
           <p className="boxes" id="box_1">
             Your Balance {formatNumber(userBalance)} GS50
           </p>
-          <img src={MaskGroup24} alt="" />
+          <img src={logoInCard} alt="" />
           <p className="amount">${calculatePrice(GS50Price, userBalance)}</p>
         </div>
 
         <div>
           <p className="boxes" id="box_2">
-            Dividends Earned {formatNumber(userDivs)} ETH
+            Dividends Earned {formatNumber(userDivs)} {currency}
           </p>
-          <img src={Group902} alt="" />
+          <img src={logoInCard} alt="" />
           <p className="amount-2">${calculatePrice(price, userDivs)}</p>
         </div>
 
         <div className="boxes" id="box_3">
-          <p>Ref. Commision {formatNumber(userRef)} ETH</p>
-          <img src={MaskGroup24} alt="" /> 
+          <p>
+            Ref. Commision {formatNumber(userRef)} {currency}
+          </p>
+          <img src={logoInCard} alt="" />
           <p className="bottom-amount amount">
             ${calculatePrice(price, userRef)}
           </p>
@@ -66,9 +80,9 @@ export const BottomFourBox = ({ price, GS50Price }) => {
 
         <div>
           <p className="boxes" id="box_4">
-            Loyalty Bonus Earned {formatNumber(userLoyalty)} ETH
+            Loyalty Bonus Earned {formatNumber(userLoyalty)} {currency}
           </p>
-          <img src={MaskGroup24} alt="" />
+          <img src={logoInCard} alt="" />
           <p className="amount">${calculatePrice(price, userLoyalty)}</p>
         </div>
       </div>

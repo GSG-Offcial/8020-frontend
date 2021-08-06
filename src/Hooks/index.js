@@ -22,6 +22,8 @@ export function useEagerConnect() {
   const [tried, setTried] = useState(false);
 
   useEffect(() => {
+    const { ethereum } = window;
+
     injected.isAuthorized().then((isAuthorized) => {
       if (isAuthorized) {
         activate(injected, undefined, true).catch(() => {
@@ -30,6 +32,14 @@ export function useEagerConnect() {
       } else {
         setTried(true);
       }
+    });
+
+    ethereum.on('chainChanged', () => {
+      window.location.reload();
+    });
+
+    ethereum.on('accountsChanged', () => {
+      window.location.reload();
     });
   }, [activate]); // intentionally only running on mount (make sure it's only mounted once :))
 
@@ -51,7 +61,6 @@ export function useInactiveListener(suppress = false) {
     if (ethereum && ethereum.on && !active && !error && !suppress) {
       const handleChainChanged = (chainId) => {
         console.log('chainChanged', chainId);
-        window.location.reload();
         activate(injected);
       };
 
@@ -64,7 +73,6 @@ export function useInactiveListener(suppress = false) {
 
       const handleNetworkChanged = (networkId) => {
         console.log('networkChanged', networkId);
-        window.location.reload();
         activate(injected);
       };
 

@@ -4,9 +4,18 @@ import React from 'react';
 import './BottomTwoBox.css';
 import { calculatePrice } from '../../../../utils/index';
 import { useContract } from '../../../../Hooks/index';
+import { useEffect, useState } from 'react';
+import ethereum from '../../../Images/MaskGroup24.svg';
+import matic from '../../../Images/matic.svg';
+import binance from '../../../Images/binance.svg';
+import { useWeb3React } from '@web3-react/core';
 
 export const BottomTwoBox = ({ price, withdrawAmount }) => {
   const contract = useContract();
+  const { chainId } = useWeb3React();
+
+  const [currency, setCurrency] = useState('');
+  const [logoInCard, setLogoInCard] = useState();
 
   async function withdraw() {
     if (contract) {
@@ -22,13 +31,27 @@ export const BottomTwoBox = ({ price, withdrawAmount }) => {
     }
   }
 
+  useEffect(() => {
+    if (chainId === 80001 || chainId === 137) {
+      setLogoInCard(matic);
+      setCurrency('MATIC');
+    } else if (chainId === 56 || chainId === 97) {
+      setLogoInCard(binance);
+      setCurrency('BNB');
+    } else {
+      setLogoInCard(ethereum);
+      setCurrency('ETH');
+    }
+  }, [contract]);
+
   return (
     <div className=" bottom_box">
       <div className="col-lg-6 col-12">
         <div className="nested_BottomDiv1">
           <p className="bottom_para">Token you can withdraw</p>
+          <img src={logoInCard} alt="" />
           <p>
-            {withdrawAmount} Eth{' '}
+            {withdrawAmount} {currency}{' '}
             <span className="span_color">
               (${calculatePrice(price, withdrawAmount)})
             </span>
@@ -46,8 +69,9 @@ export const BottomTwoBox = ({ price, withdrawAmount }) => {
       <div className="col-lg-6 col-12">
         <div className="nested_BottomDiv2">
           <p className="bottom_para">Token you can with draw</p>
+          <img src={logoInCard} alt="" />
           <p>
-            {withdrawAmount} Eth
+            {withdrawAmount} {currency}
             <span className={'span_color'}>
               (${calculatePrice(price, withdrawAmount)})
             </span>
