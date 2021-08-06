@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Nftheader.module.css';
 
 // Import Comp
 import {
