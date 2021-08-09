@@ -14,7 +14,7 @@ export const MintToken = () => {
   useEffect(async () => {
     if (tokenContract) {
       setPrice((await tokenContract.basePrice()).toString());
-      setSupply(formatValue(await tokenContract.totalSupply()));
+      setSupply((await tokenContract.totalSupply()).toString());
     }
   }, [tokenContract]);
 
