@@ -58,19 +58,19 @@ export function getContractaddress(chainId) {
   if (chainId === 1) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 3) {
-    return '0xdBbc1Bc1Dd800DDdC08206681Ae8ad91240C503f';
+    return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
     return '0x28c9f2530e93b1c35ad10c7948724c9b1211d0d2';
   } else if (chainId === 42) {
-    return '0xc573ad9377B3544A1968F2cBc2b4b90FC2802dA2';
+    return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 137) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 80001) {
-    return '0x25abeD2C880b3Ca5EB5aF6ff4A6904A1fD10b649';
+    return '0x732165A54f1e0e878977748543cdF5683e3A9C43';
   } else if (chainId === 97) {
-    return '0xBFFBf23ae1E12D0523908e4D3b442789C4B874bE';
+    return '0xD33E04d95fb2c7A5a66a7943dD3391d7eBBA0707';
   }
 }
 
@@ -78,31 +78,59 @@ export function getLotteryContractaddress(chainId) {
   if (chainId === 1) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 3) {
-    return '0x70DA16C95c9a2e1b78774DF3d925fD8B85052c25';
+    return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
     return '0x14778471f99D28bEc37eC9C187BBf83A8175FeD4';
   } else if (chainId === 42) {
-    return '0x591144Dc642Ca38E6cCbe44c5AC2fb14a082fC48';
+    return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 137) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 80001) {
-    return '0x114aFC2F6807756F87eEAB5bcF01D15cac2b3683';
+    return '0x2545dcCEDC798504B69fE21a63261857DBdfb7f6';
   } else if (chainId === 97) {
-    return '0x88e12EBA2Ac6f3C7BAaEDeE8951eB81F82c72617';
+    return '0xD33E04d95fb2c7A5a66a7943dD3391d7eBBA0707';
   }
 }
 
 export function getAccessKeyContractAddress(chainId) {
-  if (chainId === 4) {
+  if (chainId === 1) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 3) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 4) {
     return '0x7e0e491F74B1cEe58b0a4b590D3925d1C0d58905';
+  } else if (chainId === 80001) {
+    return '0x1C7AF3eb2F152a440f770D01be0Ef12F067c0D81';
+  } else if (chainId === 97) {
+    return '0x4769670ac2fEa2b864CB96708DB387e8Cf3d0797';
+  } else if (chainId === 42) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 56) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 137) {
+    return '0x00000000000000000000000000000000000000000';
   }
 }
 
 export function getNftRewardPoolAddress(chainId) {
-  if (chainId === 4) {
+  if (chainId === 1) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 3) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 4) {
     return '0x43ab6e9cA7af31584d3af1CCE5906daD383995C1';
+  } else if (chainId === 42) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 56) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 80001) {
+    return '0x4b35f6189673029FE74F47E6c31EE70cBca91d10';
+  } else if (chainId === 137) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 97) {
+    return '0x71F66178cc07E13f450726f1bc3C41a039A70381';
   }
 }
 
@@ -136,3 +164,5 @@ export function formatValueOfPick4(lastNumber) {
     return lastNumber.split('').join(' ');
   }
 }
+// /.5 ETH - 5 BNB - MATIC 1000
+//https://gateway.pinata.cloud/ipfs/QmSkyoAe45Sj4obdUeVgfxUbLJ81aDS2DG2p4yJ76hWsAL

@@ -64,7 +64,7 @@ export const NftHeader = () => {
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
         <div className="container nested-DivDB">
           <a href="#/" className="navbar-brand">
-            <span className="fw-bold display-6 text-white">Lottery</span>
+            <span className="fw-bold display-6 text-white">NFT Pool</span>
           </a>
           {/* toggler button for mobile */}
           <button

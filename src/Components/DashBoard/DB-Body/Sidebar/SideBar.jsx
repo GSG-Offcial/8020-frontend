@@ -7,8 +7,15 @@ import Group99 from '../../../Icons/logo2.png';
 import './SideBar.css';
 
 export const SideBar = () => {
+  const heigth = document.body.scrollHeight - 230 + 'px';
+
   return (
-    <div className="sidebar">
+    <div
+      className="sidebar"
+      style={{
+        'min-height': heigth,
+      }}
+    >
       <div className="logo">
         <Link to="/">
           <img src={Group99} alt="Group 900" className="sidebar-icon" />

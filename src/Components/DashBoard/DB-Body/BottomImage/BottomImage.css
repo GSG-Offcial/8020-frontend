@@ -55,28 +55,25 @@
     cursor: pointer;
 } */
 
-
-.footer_mainDiv{
-    background-color: white;   
+.footer_mainDiv {
+  background-color: white;
   margin-bottom: 0% !important;
   width: 100% !important;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
-
 }
 
-.Footer-ul{
-    box-sizing: border-box;
-    word-wrap: break-word;
-      padding-top: 2rem;
+.Footer-ul {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  padding-top: 2rem;
 }
-.Footer-ul li a{
-    font-weight: bolder;
+.Footer-ul li a {
+  font-weight: bolder;
 }
-.nested-divfooter-Image li a{
-    padding: .5rem .4rem;
-
+.nested-divfooter-Image li a {
+  padding: 0.5rem 0.4rem;
 }
-.nested-divfooter-Image img{
-    width: 40px;
+.nested-divfooter-Image img {
+  width: 40px;
 }

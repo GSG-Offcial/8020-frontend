@@ -29,6 +29,8 @@ export const DashBoardNavbar = () => {
   const [refAddress, setRefAddress] = useState('loading');
   const [chainName, setChainName] = useState('Loading');
 
+  console.log('chainId > ', chainId);
+
   useEffect(() => {
     if (activatingConnector && activatingConnector === connector) {
       setActivatingConnector(undefined);
@@ -43,7 +45,9 @@ export const DashBoardNavbar = () => {
       const refId = await contract.getReferrer();
       setRefAddress(refId);
     }
-    if (chainId === 1) {
+    if (chainId === undefined) {
+      setChainName('Wallet NOT Connected please Connect =>');
+    } else if (chainId === 1) {
       setChainName('Mainnet');
     } else if (chainId === 3) {
       setChainName('Ropsten');
