@@ -64,7 +64,7 @@ export function getContractaddress(chainId) {
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
-    return '0x00000000000000000000000000000000000000000';
+    return '0xC33E0b83D395FBBa0e2E463b10029F8379AD9c7e';
   } else if (chainId === 137) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 80001) {
@@ -120,7 +120,7 @@ export function getNftRewardPoolAddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0x43ab6e9cA7af31584d3af1CCE5906daD383995C1';
+    return '0x3002420902a325fBC097C3e8Ff1cc87266ea8AAd';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {

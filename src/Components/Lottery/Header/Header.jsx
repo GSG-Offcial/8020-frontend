@@ -138,9 +138,7 @@ export const Header = () => {
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
         <div className="container nested-DivDB">
           <a href="#/" className="navbar-brand">
-            <span className="fw-bold display-6 text-white">
-              GS50 Token Drop
-            </span>
+            <span className="fw-bold display-6 text-white">TOKEN DROP</span>
           </a>
           {/* toggler button for mobile */}
           <button

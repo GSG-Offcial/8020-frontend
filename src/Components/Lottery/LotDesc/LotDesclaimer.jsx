@@ -4,11 +4,6 @@ import styles from './LotDesclaimer.module.css';
 export const LotDesclaimer = () => {
   return (
     <div className={`mt-5 mb-5 ${styles.LotDesclaimer_mainDiv}`}>
-      {/* <div className={`d-flex  justify-content-center`}> */}
-      <h1 className={`text-center ${styles.LotDesclaimer_Heading1}`}>
-        DISCLAIMER
-      </h1>
-      {/* </div> */}
       <div className={styles.desc_content}>
         Before purchasing cryptocurrency and participating in the 80/20 Smart
         Contract, you must ensure that the nature, complexity and risks inherent

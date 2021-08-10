@@ -4,9 +4,6 @@ import styles from './NFTDesc.module.css';
 export const NFTDesc = () => {
   return (
     <div className={`mt-4 mb-4 ${styles.NFTDesc_mainDiv}`}>
-      <h2 className={`text-white display-5 ${styles.NFTDesc_h2}`}>
-        DISCLAIMER  
-      </h2>
       <div className={`text-white ${styles.desc_contentNFT}`}>
         Before purchasing cryptocurrency and participating in the 80/20 Smart
         Contract, you must ensure that the nature, complexity and risks inherent

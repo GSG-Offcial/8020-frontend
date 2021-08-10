@@ -16,7 +16,7 @@ export const FiveNFTBox = () => {
 
   const [totalStaked, setTotalStaked] = useState('Loading');
   const [totalETh, setTotalEth] = useState('Loading');
-  //   const [totalReward, setTotalReward] = useState('Loading');
+  const [totalReward, setTotalReward] = useState('Loading');
 
   useEffect(async () => {
     if (tokenContract) {
@@ -24,6 +24,7 @@ export const FiveNFTBox = () => {
     }
     if (nftContract) {
       setTotalEth(formatValue(await nftContract.checkBalance()));
+      setTotalReward(formatValue(await nftContract.totalClaimed()));
     }
   }, [tokenContract, nftContract]);
 
@@ -71,7 +72,7 @@ export const FiveNFTBox = () => {
             <p className={`mt-3 ${styles.para_statis_nft}`}>
               Total Rewards Given
             </p>
-            <p className={` ${styles.amount_nft}`}>100 NFT ($100)</p>
+            <p className={` ${styles.amount_nft}`}>{totalReward}</p>
           </div>
         </div>
         <div className={`col-lg-4 col-md-12`}>

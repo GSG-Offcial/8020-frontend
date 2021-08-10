@@ -10,11 +10,22 @@ export const MintToken = () => {
 
   const [price, setPrice] = useState('loading');
   const [supply, setSupply] = useState('loading');
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
 
   useEffect(async () => {
     if (tokenContract) {
       setPrice((await tokenContract.basePrice()).toString());
       setSupply((await tokenContract.totalSupply()).toString());
+      let uri = (await tokenContract.tokenURI(1)).toString();
+      fetch(uri)
+        .then((r) => {
+          return r.json();
+        })
+        .then((r) => {
+          setName(r.title);
+          setDescription(r.description);
+        });
     }
   }, [tokenContract]);
 
@@ -45,7 +56,8 @@ export const MintToken = () => {
             <div
               className={`col-lg-6 order-lg-2  text-white d-flex flex-column  ${styles.MintToken_Text}`}
             >
-              <h2 className={`mb-5`}>Access Key</h2>
+              <h2 className={`mb-5`}>{name}</h2>
+              <p>description : {description}</p>
               <p>Current Supply: {supply}</p>
               <p>Max Supply: 500</p>
               <p>Usage: give Reward</p>

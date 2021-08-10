@@ -9,7 +9,7 @@ import { useContract } from '../../../../Hooks/index';
 import ethereum from '../../../Images/MaskGroup24.svg';
 import matic from '../../../Images/matic.svg';
 import binance from '../../../Images/binance.svg';
-import Group902 from '../../../Images/Group902.svg';
+import Group902 from '../../../Images/GS50.svg';
 import { useWeb3React } from '@web3-react/core';
 
 export const FourBox = ({ price, GS50Price }) => {
@@ -68,7 +68,7 @@ export const FourBox = ({ price, GS50Price }) => {
         </div>
         <div className="boxes" id="box_3">
           <p>
-            Total {eth} {currency} Deposited since inception
+            Total {eth} {currency} Deposited
           </p>
           <img src={logoInCard} alt="" />
           <p className="amount">${calculatePrice(price, eth)}</p>
@@ -76,7 +76,7 @@ export const FourBox = ({ price, GS50Price }) => {
         <div>
           <p className="boxes" id="box_4">
             {' '}
-            Total {withdrawn} {currency} Withdrawn since inception
+            Total {withdrawn} {currency} Withdrawn
           </p>
           <img src={logoInCard} alt="" />
           <p className="amount">${calculatePrice(price, withdrawn)}</p>
