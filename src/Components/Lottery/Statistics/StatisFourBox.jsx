@@ -3,7 +3,7 @@ import styles from './StatisFourBox.module.css';
 import { useContract } from '../../../Hooks/lottery';
 import { useState } from 'react';
 import { formatValue, countAddress } from '../../../utils/index';
-import tip from '../../Images/tip.png'
+import tip from '../../Images/tip.png';
 
 export const StatisFourBox = () => {
   const contract = useContract();
@@ -64,8 +64,12 @@ export const StatisFourBox = () => {
             Entered the contest)
           </p>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img src={tip} alt="" data-toggle="tooltip"
-              title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing." />
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="This is the total amount of GS50 in the Pick 3 Drop. The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
+            />
           </i>
         </div>
       </div>
@@ -77,8 +81,12 @@ export const StatisFourBox = () => {
             Entered the contest)
           </p>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img src={tip} alt="" data-toggle="tooltip"
-              title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing." />
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
+            />
           </i>
         </div>
       </div>
@@ -87,8 +95,12 @@ export const StatisFourBox = () => {
           <p>{(+pick3GS50 + +pick4GS50).toFixed(2)} GS50</p>
           <p className={styles.para_statis}>Total GS50 being dropped.</p>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img src={tip} alt="" data-toggle="tooltip"
-              title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing." />
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
+            />
           </i>
         </div>
       </div>
@@ -106,8 +118,12 @@ export const StatisFourBox = () => {
             <p className={styles.para_statis}>Total Pick 3 Players .</p>
           </div>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img src={tip} alt="" data-toggle="tooltip"
-              title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing." />
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
+            />
           </i>
         </div>
       </div>
