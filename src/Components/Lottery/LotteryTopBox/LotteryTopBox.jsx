@@ -1,4 +1,3 @@
-import { useWeb3React } from '@web3-react/core';
 import React from 'react';
 import styles from './LotteryTopBox.module.css';
 export const LotteryTopBox = () => {
