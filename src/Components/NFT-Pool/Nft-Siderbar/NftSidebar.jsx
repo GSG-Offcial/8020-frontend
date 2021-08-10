@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './NftSiderbar.module.css';
 import { Link } from 'react-router-dom';
-import Group99 from '../../Icons/Group 900.svg';
+import Group99 from '../../Icons/logo2.png';
 
 export const NftSidebar = () => {
-  const heigth = document.body.scrollHeight - 230 + 'px';
+  const [height, setHeight] = useState('');
+
+  setInterval(() => {
+    setHeight(document.body.scrollHeight - 245 + 'px');
+  }, 100);
 
   return (
     // <div>
@@ -13,7 +17,7 @@ export const NftSidebar = () => {
     <div
       className={styles.nft_sidebar}
       style={{
-        'min-height': heigth,
+        'min-height': height,
       }}
     >
       <div className={styles.nft_logo}>

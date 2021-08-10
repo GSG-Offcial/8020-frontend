@@ -29,8 +29,6 @@ export const DashBoardNavbar = () => {
   const [refAddress, setRefAddress] = useState('loading');
   const [chainName, setChainName] = useState('Loading');
 
-  console.log('chainId > ', chainId);
-
   useEffect(() => {
     if (activatingConnector && activatingConnector === connector) {
       setActivatingConnector(undefined);
@@ -45,16 +43,10 @@ export const DashBoardNavbar = () => {
       const refId = await contract.getReferrer();
       setRefAddress(refId);
     }
-    if (chainId === undefined) {
-      setChainName('Wallet NOT Connected please Connect =>');
-    } else if (chainId === 1) {
+    if (chainId === 1) {
       setChainName('Mainnet');
-    } else if (chainId === 3) {
-      setChainName('Ropsten');
     } else if (chainId === 4) {
       setChainName('Rinkeby');
-    } else if (chainId === 42) {
-      setChainName('Kovan');
     } else if (chainId === 56) {
       setChainName('BSC Mainnet');
     } else if (chainId === 137) {
@@ -63,6 +55,8 @@ export const DashBoardNavbar = () => {
       setChainName('Matic Testnet');
     } else if (chainId === 97) {
       setChainName('BSC Testnet');
+    } else if (chainId === undefined) {
+      setChainName('Wallet NOT Connected please Connect =>');
     } else {
       setChainName('Wrong chain Check wallet');
     }

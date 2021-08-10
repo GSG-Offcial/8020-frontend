@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LotterySideBar.css';
-import Group99 from '../../Icons/Group 900.svg';
+import Group99 from '../../Icons/logo2.png';
 import { Link } from 'react-router-dom';
 export const LotterySideBar = () => {
-  const heigth = document.body.scrollHeight - 230 + 'px';
+  const [height, setHeight] = useState('');
+
+  setInterval(() => {
+    setHeight(document.body.scrollHeight - 295 + 'px');
+  }, 100);
 
   return (
     <div
       className="lot_sidebar"
       style={{
-        'min-height': heigth,
+        'min-height': height,
       }}
     >
       <div className="lot_logo">

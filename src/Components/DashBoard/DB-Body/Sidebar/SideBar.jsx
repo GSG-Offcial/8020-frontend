@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 // import Group99 from '../../../Icons/Group 900.svg';
 import Group99 from '../../../Icons/logo2.png';
@@ -7,13 +8,17 @@ import Group99 from '../../../Icons/logo2.png';
 import './SideBar.css';
 
 export const SideBar = () => {
-  const heigth = document.body.scrollHeight - 230 + 'px';
+  const [height, setHeight] = useState('');
+
+  setInterval(() => {
+    setHeight(document.body.scrollHeight - 245 + 'px');
+  }, 100);
 
   return (
     <div
       className="sidebar"
       style={{
-        'min-height': heigth,
+        'min-height': height,
       }}
     >
       <div className="logo">
