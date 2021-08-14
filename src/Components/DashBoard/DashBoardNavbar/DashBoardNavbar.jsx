@@ -45,12 +45,8 @@ export const DashBoardNavbar = () => {
     }
     if (chainId === 1) {
       setChainName('Mainnet');
-    } else if (chainId === 3) {
-      setChainName('Ropsten');
     } else if (chainId === 4) {
       setChainName('Rinkeby');
-    } else if (chainId === 42) {
-      setChainName('Kovan');
     } else if (chainId === 56) {
       setChainName('BSC Mainnet');
     } else if (chainId === 137) {
@@ -59,6 +55,8 @@ export const DashBoardNavbar = () => {
       setChainName('Matic Testnet');
     } else if (chainId === 97) {
       setChainName('BSC Testnet');
+    } else if (chainId === undefined) {
+      setChainName('Wallet NOT Connected please Connect =>');
     } else {
       setChainName('Wrong chain Check wallet');
     }
@@ -135,7 +133,7 @@ export const DashBoardNavbar = () => {
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
         <div className="container nested-DivDB">
           <a href="#/" className="navbar-brand">
-            <span className="fw-bold display-6 text-white">DashBoard</span>
+            <span className="fw-bold display-6 text-white">DASHBOARD</span>
           </a>
           {/* toggler button for mobile */}
           <button

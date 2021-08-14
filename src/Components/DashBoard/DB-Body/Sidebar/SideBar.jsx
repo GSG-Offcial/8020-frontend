@@ -1,13 +1,26 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Group99 from '../../../Icons/Group 900.svg';
+// import Group99 from '../../../Icons/Group 900.svg';
+import Group99 from '../../../Icons/logo2.png';
 // import NFTIcon from '../../../Icons/icon-sidebar-NFT.svg'
 // import Logo8090 from '../../../Logo/Group903.svg
 import './SideBar.css';
 
 export const SideBar = () => {
+  const [height, setHeight] = useState('');
+
+  setInterval(() => {
+    setHeight(document.body.scrollHeight - 245 + 'px');
+  }, 100);
+
   return (
-    <div className="sidebar">
+    <div
+      className="sidebar"
+      style={{
+        'min-height': height,
+      }}
+    >
       <div className="logo">
         <Link to="/">
           <img src={Group99} alt="Group 900" className="sidebar-icon" />
@@ -20,7 +33,7 @@ export const SideBar = () => {
               <span>
                 <i className="fas fa-chart-pie"></i>
               </span>{' '}
-              <span>DashBoard</span>
+              <span>Dashboard</span>
             </a>
           </li>
           <li>
