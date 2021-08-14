@@ -67,8 +67,7 @@ export const MintToken = () => {
                             <button
                                 type="button"
                                 className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
-                                onClick={buy}
-                            >
+                                onClick={buy}>
                                 Buy NFT
                             </button>
                         </div>
