@@ -9,7 +9,6 @@ export const MintToken = () => {
 
 
     const tokenContract = useContractAccessKey();
-
     const [price, setPrice] = useState('loading');
     const [supply, setSupply] = useState('loading');
     const [name, setName] = useState('');
