@@ -59,12 +59,12 @@ export const MintToken = () => {
                         <div
                             className={`col-lg-6 order-lg-2  text-white d-flex flex-column  ${styles.MintToken_Text}`}
                         >
-                            <h2 className={`mb-5`}> GSG Ecosystem Access Key</h2>
-                            <p>CURRENT SUPPLY: $10.00 </p>
-                            <p>MAX SUPPLY: $20.00</p>
-                            <p>SUPPLY RARITY: $30.00</p>
+                            <h2 className={`mb-5`}> {name}</h2>
+                            <p>CURRENT SUPPLY: {supply} </p>
+                            <p>MAX SUPPLY:{description} </p>
+                            <p>SUPPLY RARITY: {formatValue}</p>
                             <p>GENRE ACCESS: $50.00</p>
-                            <p>LEVEL POWER PRICE: $60.00</p>
+                            <p>LEVEL POWER PRICE: {price}</p>
                             <button
                                 type="button"
                                 className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
