@@ -57,8 +57,7 @@ export const MintToken = () => {
                         </div>
                         {/* justify-content-center align-items-center */}
                         <div
-                            className={`col-lg-6 order-lg-2  text-white d-flex flex-column  ${styles.MintToken_Text}`}
-                        >
+                            className={`col-lg-6 order-lg-2  text-white d-flex flex-column  ${styles.MintToken_Text}`}>
                             <h2 className={`mb-5`}> {name}</h2>
                             <p>CURRENT SUPPLY: {supply} </p>
                             <p>MAX SUPPLY:{description} </p>
