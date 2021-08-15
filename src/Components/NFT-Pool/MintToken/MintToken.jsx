@@ -53,7 +53,6 @@ export const MintToken = () => {
                         >
                             <img src={nftToken} alt="" />
                             <p className={`text-center pt-2`}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur amet eum deleniti eveniet iste, recusandae error excepturi aperiam exercitationem accusantium libero. Voluptatem reiciendis aperiam perspiciatis mollitia? Dolores optio suscipit dolor.</p>
-
                         </div>
                         {/* justify-content-center align-items-center */}
                         <div

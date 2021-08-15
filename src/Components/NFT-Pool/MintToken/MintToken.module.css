@@ -31,9 +31,9 @@
   word-wrap: break-word !important;
   font-weight: bold;
 }
-.mintoken_imageDiv p{
-   padding-bottom: 0rem !important;
-   padding-left: 2rem;
+.mintoken_imageDiv p {
+  padding-bottom: 0rem !important;
+  padding-left: 2rem;
 }
 
 .MintToken_Text {
@@ -51,12 +51,11 @@
 }
 
 .MintToken_Text > p {
-  margin-bottom: 1px !important;
+  /* margin-bottom: 1px !important; */
   font-size: 20px;
-  margin: 0 auto;
+  margin: -5px auto;
   text-align: left;
   width: 80%;
-  
 }
 
 .btn_nft {
