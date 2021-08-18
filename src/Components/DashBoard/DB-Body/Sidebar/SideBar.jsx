@@ -37,16 +37,6 @@ export const SideBar = () => {
             </a>
           </li>
           <li>
-            <a href="#/" className="active" id="Lottery">
-              <span>
-                <i className="fas fa-ticket-alt"></i>
-              </span>{' '}
-              <span>
-                <Link to="/lottery">Lottery</Link>{' '}
-              </span>{' '}
-            </a>
-          </li>
-          <li>
             <a href="#/" className="active">
               <span>
                 <i className="fas fa-dice-d20"></i>
@@ -54,6 +44,16 @@ export const SideBar = () => {
               <span>
                 <Link to="/nftPool">NFT Pool</Link>{' '}
               </span>
+            </a>
+          </li>
+          <li>
+            <a href="#/" className="active" id="Lottery">
+              <span>
+                <i className="fas fa-ticket-alt"></i>
+              </span>{' '}
+              <span>
+                <Link to="/lottery">Lottery</Link>{' '}
+              </span>{' '}
             </a>
           </li>
         </ul>

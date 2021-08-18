@@ -1,21 +1,25 @@
 import React from 'react';
 import styles from './MintToken.module.css';
-import nftToken from '../../Gif/nft_tokentop.gif';
 import { useEffect, useState } from 'react';
 import { useContractAccessKey } from '../../../Hooks/nftPool';
 import { formatValue } from '../../../utils';
 
 export const MintToken = () => {
   const tokenContract = useContractAccessKey();
-  const [price, setPrice] = useState('loading');
+  const [price, setPrice] = useState('0');
   const [supply, setSupply] = useState('loading');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+  const [attributes, setAttributes] = useState('');
+  const [image, setImage] = useState('');
+  const [maxSupply, setMaxSupply] = useState('');
+  const [reward, setReward] = useState();
 
   useEffect(async () => {
     if (tokenContract) {
       setPrice((await tokenContract.basePrice()).toString());
       setSupply((await tokenContract.totalSupply()).toString());
+      setMaxSupply(Number((await tokenContract.maxSupply()).toString()) + 1);
       let uri = (await tokenContract.tokenURI(1)).toString();
       fetch(uri)
         .then((r) => {
@@ -24,8 +28,12 @@ export const MintToken = () => {
         .then((r) => {
           setName(r.title);
           setDescription(r.description);
-          console.log(r);
+          setAttributes(r.attributes);
+          setImage(r.image);
         });
+      setReward(
+        Number(formatValue((await tokenContract.calculateGS50()).toString()))
+      );
     }
   }, [tokenContract]);
 
@@ -34,6 +42,13 @@ export const MintToken = () => {
       value: price,
     };
     let tx = await tokenContract.buyNft(overrides);
+    if (await tx.wait()) {
+      window.location.reload();
+    }
+  }
+
+  async function claimGS50() {
+    let tx = await tokenContract.getGS50Reward();
     if (await tx.wait()) {
       window.location.reload();
     }
@@ -50,21 +65,22 @@ export const MintToken = () => {
             <div
               className={`col-lg-6 pt-5  order-lg-1 ${styles.mintoken_imageDiv}`}
             >
-              <img src={nftToken} alt="" />
+              <img src={image} alt="" />
               <p className={`text-center pt-2`}>{description}</p>
             </div>
-            {/* justify-content-center align-items-center */}
             <div
               className={`col-lg-6 order-lg-2  text-white d-flex flex-column  ${styles.MintToken_Text}`}
             >
-              <h2 className={`mb-5`}> {name}</h2>
-              <p>CURRENT SUPPLY: {supply} </p>
-              <p>MAX SUPPLY: </p>
-              <p>RARITY: {formatValue}</p>
-              <p>GENRE</p>
-              <p>ACCESS Level : $50.00</p>
-              <p>Power</p>
-              <p>PRICE: {price}</p>
+              <p>NAME: {name}</p>
+              <p>CURRENT SUPPLY : {supply} </p>
+              <p>MAX SUPPLY : {maxSupply}</p>
+              <p>RARITY : {!!attributes ? attributes[0].value : 'loading'}</p>
+              <p>GENRE : {!!attributes ? attributes[2].value : 'loading'}</p>
+              <p>
+                ACCESS Level : {!!attributes ? attributes[4].value : 'loading'}
+              </p>
+              <p>Power : {!!attributes ? attributes[5].value : 'loading'}</p>
+              <p>PRICE: {price / 10 ** 18} ETH</p>
               <button
                 type="button"
                 className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
@@ -72,6 +88,20 @@ export const MintToken = () => {
               >
                 Buy NFT
               </button>
+              {reward > 0 ? (
+                <>
+                  <p>Your GS50 Reward: {reward} GS50 </p>
+                  <button
+                    type="button"
+                    className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
+                    onClick={claimGS50}
+                  >
+                    Claim GS50
+                  </button>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </div>
         </div>
