@@ -80,24 +80,29 @@ export const MintToken = () => {
                 ACCESS Level : {!!attributes ? attributes[4].value : 'loading'}
               </p>
               <p>Power : {!!attributes ? attributes[5].value : 'loading'}</p>
-              <p>PRICE: {price / 10 ** 18} ETH</p>
-              <button
-                type="button"
-                className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
-                onClick={buy}
-              >
-                Buy NFT
-              </button>
+              <p>
+                PRICE: {price / 10 ** 18} ETH{' '}
+                <button
+                  type="button"
+                  className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
+                  onClick={buy}
+                >
+                  Buy NFT
+                </button>
+              </p>
+
               {reward > 0 ? (
                 <>
-                  <p>Your GS50 Reward: {reward} GS50 </p>
-                  <button
-                    type="button"
-                    className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
-                    onClick={claimGS50}
-                  >
-                    Claim GS50
-                  </button>
+                  <p>
+                    Your GS50 Reward: {reward} GS50{' '}
+                    <button
+                      type="button"
+                      className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
+                      onClick={claimGS50}
+                    >
+                      Claim GS50
+                    </button>
+                  </p>
                 </>
               ) : (
                 <></>
