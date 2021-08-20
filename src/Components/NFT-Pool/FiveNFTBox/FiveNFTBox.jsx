@@ -8,7 +8,6 @@ import { formatValue, getNftRewardPoolAddress } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 
 import MaskGroup24 from '../../Images/MaskGroup24.svg'
-import Group902 from '../../Images/Group902.svg'
 
 export const FiveNFTBox = () => {
   const tokenContract = useContractAccessKey();
