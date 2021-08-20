@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MintToken.module.css';
-import nftToken from '../../Gif/nft_tokentop.gif';
+import minToken2 from '../../Images/minToken2.gif';
 import { useEffect, useState } from 'react';
 import { useContractAccessKey } from '../../../Hooks/nftPool';
 import { formatValue } from '../../../utils';
@@ -51,7 +51,7 @@ export const MintToken = () => {
                         <div
                             className={`col-lg-6 pt-5  order-lg-1 ${styles.mintoken_imageDiv}`}
                         >
-                            <img src={nftToken} alt="" />
+                            <img src={minToken2} alt="" />
                             <p className={`text-center pt-2`}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur amet eum deleniti eveniet iste, recusandae error excepturi aperiam exercitationem accusantium libero. Voluptatem reiciendis aperiam perspiciatis mollitia? Dolores optio suscipit dolor.</p>
                         </div>
                         {/* justify-content-center align-items-center */}

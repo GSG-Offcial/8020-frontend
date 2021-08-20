@@ -16,6 +16,10 @@
   color: var(--color-WH) !important;
 }
 
+.nftheader_heading {
+  font-size: 1.8rem !important;
+}
+
 .sidebar_text_nft {
   display: none;
 }

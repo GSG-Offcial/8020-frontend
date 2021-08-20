@@ -7,6 +7,9 @@ import {
 import { formatValue, getNftRewardPoolAddress } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 
+import MaskGroup24 from '../../Images/MaskGroup24.svg'
+import Group902 from '../../Images/Group902.svg'
+
 export const FiveNFTBox = () => {
   const tokenContract = useContractAccessKey();
   const nftContract = useNftRewardPoolContract();
@@ -64,6 +67,7 @@ export const FiveNFTBox = () => {
             <p className={`mt-3 ${styles.para_statis_nft}`}>
               Total ETH in the contract
             </p>
+            <img src={MaskGroup24} alt="#/" className={`pb-4`} />
             <p className={` ${styles.amount_nft}`}>{totalETh}</p>
           </div>
         </div>
@@ -72,6 +76,7 @@ export const FiveNFTBox = () => {
             <p className={`mt-3 ${styles.para_statis_nft}`}>
               Total Rewards Given
             </p>
+            <img src={MaskGroup24} alt="#/" className={`pb-4`} />
             <p className={` ${styles.amount_nft}`}>{totalReward}</p>
           </div>
         </div>
