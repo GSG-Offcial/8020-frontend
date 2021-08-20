@@ -38,22 +38,22 @@ export const NftSidebar = () => {
             </Link>
           </li>
           <li>
+            <li>
+              <Link to="/nftPool">
+                <a href="#/" className={styles.nft_active}>
+                  <span>
+                    <i className="fas fa-dice-d20"></i>
+                  </span>{' '}
+                  <span>NFT Pool</span>
+                </a>
+              </Link>
+            </li>
             <Link to="/lottery">
               <a href="#/" className={styles.nft_active}>
                 <span>
                   <i className="fas fa-ticket-alt"></i>
                 </span>{' '}
                 <span>Lottery</span>{' '}
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link to="/nftPool">
-              <a href="#/" className={styles.nft_active}>
-                <span>
-                  <i className="fas fa-dice-d20"></i>
-                </span>{' '}
-                <span>NFT Pool</span>
               </a>
             </Link>
           </li>

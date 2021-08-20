@@ -34,22 +34,22 @@ export const LotterySideBar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/lottery">
-              <a href="#/" className="lot-active">
-                <span>
-                  <i className="fas fa-ticket-alt"></i>
-                </span>{' '}
-                <span>Lottery</span>{' '}
-              </a>
-            </Link>
-          </li>
-          <li>
             <Link to="/nftPool">
               <a href="#/" className="lot-active">
                 <span>
                   <i className="fas fa-dice-d20"></i>
                 </span>{' '}
                 <span>NFT Pool</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/lottery">
+              <a href="#/" className="lot-active">
+                <span>
+                  <i className="fas fa-ticket-alt"></i>
+                </span>{' '}
+                <span>Lottery</span>{' '}
               </a>
             </Link>
           </li>
