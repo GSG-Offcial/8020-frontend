@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './MintToken.module.css';
+// import minToken2 from '../../Images/minToken2.gif';
 import { useEffect, useState } from 'react';
 import { useContractAccessKey } from '../../../Hooks/nftPool';
 import { formatValue } from '../../../utils';
