@@ -21,7 +21,7 @@ export const YourReward = () => {
   }
 
   function reinvest() {
-    nftContract.reinvestInGS50();
+    nftContract.reinvestInGs50();
   }
 
   return (

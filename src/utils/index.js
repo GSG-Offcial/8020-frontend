@@ -60,7 +60,7 @@ export function getContractaddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0x28c9f2530e93b1c35ad10c7948724c9b1211d0d2';
+    return '0x9986Dc8f1f0a015dbf2D787e8162a95375ec9651';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
@@ -80,7 +80,7 @@ export function getLotteryContractaddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0x14778471f99D28bEc37eC9C187BBf83A8175FeD4';
+    return '0x949714C9c6E1e389259EF7D5B1663BB54e38126d';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
@@ -100,7 +100,7 @@ export function getAccessKeyContractAddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0xFF225d56b4EC876d649C152630aB59B86Bb04781';
+    return '0xE63740064B5315A7c94E07A37B5b14e462C10434';
   } else if (chainId === 80001) {
     return '0x1C7AF3eb2F152a440f770D01be0Ef12F067c0D81';
   } else if (chainId === 97) {
@@ -120,7 +120,7 @@ export function getNftRewardPoolAddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0x9b1dcC9AaE6150b7B6C4588760d8281CEd10C36f';
+    return '0x4A4d90d33571Bb456F0Baf82985e4Dcc4b296ee9';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
@@ -164,5 +164,9 @@ export function formatValueOfPick4(lastNumber) {
     return lastNumber.split('').join(' ');
   }
 }
+
+//Xenobyte wallet 0x9128A47AB52017bacde7C0f1BC287863E9e16Acc
+//Here is my address for GS50 Contracts 0xA37b77E5670e70aCc62aBe86b6b02c450e9eEff7
+
 // /.5 ETH - 5 BNB - MATIC 1000
-//https://gateway.pinata.cloud/ipfs/QmSkyoAe45Sj4obdUeVgfxUbLJ81aDS2DG2p4yJ76hWsAL
+// https://gateway.pinata.cloud/ipfs/QmSkyoAe45Sj4obdUeVgfxUbLJ81aDS2DG2p4yJ76hWsAL
