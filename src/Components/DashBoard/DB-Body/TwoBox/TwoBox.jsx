@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import './TwoBox.css';
 import { formatNumber, fromWei, toWei } from '../../../../utils/index';
 import { useContract } from '../../../../Hooks/index';
+import { useWeb3React } from '@web3-react/core';
 
 export const TwoBox = ({ refAddress }) => {
   const contract = useContract();
+  const { chainId } = useWeb3React();
 
   const [amountBuy, setAmountBuy] = useState('');
   const [amountSell, setAmountSell] = useState('');
@@ -12,6 +14,7 @@ export const TwoBox = ({ refAddress }) => {
   const [buttonSell, setbuttonSell] = useState('');
   const [inputBuy, setInputBuy] = useState('');
   const [inputSell, setInputSell] = useState('');
+  const [currency, setCurrency] = useState('');
 
   const buyToken = async () => {
     if (contract) {
@@ -28,6 +31,13 @@ export const TwoBox = ({ refAddress }) => {
         if (await tx.wait()) window.location.reload();
       } else {
         alert('Referral Address is not loaded yet, TRy AGAIN');
+      }
+      if (chainId === 80001 || chainId === 137) {
+        setCurrency('MATIC');
+      } else if (chainId === 56 || chainId === 97) {
+        setCurrency('BNB');
+      } else {
+        setCurrency('ETH');
       }
     }
   };
@@ -53,7 +63,9 @@ export const TwoBox = ({ refAddress }) => {
   const calculateEth = async (token) => {
     if (contract) {
       const eth = await contract.calculateEthereumReceived(token);
-      setAmountSell(`you will receive ${Number(fromWei(eth)).toFixed(6)} ETH`);
+      setAmountSell(
+        `You will get  ${Number(fromWei(eth)).toFixed(6)} ${currency}`
+      );
     }
   };
 
@@ -63,7 +75,7 @@ export const TwoBox = ({ refAddress }) => {
         id="buyToken"
         class="form-control form-control-lg token-input"
         type="number"
-        placeholder="Enter ETH"
+        placeholder="Enter Amount"
         onChange={(e) => {
           const value = e.target.value;
           if (value > 0) {

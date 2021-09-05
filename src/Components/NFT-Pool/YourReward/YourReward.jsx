@@ -5,23 +5,36 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { formatValue } from '../../../utils';
+import { NFTTable } from '../index';
 
 export const YourReward = () => {
   const nftContract = useNftRewardPoolContract();
   const [rewards, setRewards] = useState('Loading');
+  const [rewardData, setRewardData] = useState([]);
   const { account } = useWeb3React();
   useEffect(async () => {
     if (nftContract) {
       setRewards(formatValue(await nftContract.claimAmount(account)));
+
+      const rewardEvents = await nftContract.queryFilter(
+        nftContract.filters.RewardClaim()
+      );
+      rewardEvents.map((e) => {
+        setRewardData((prevData) => [
+          ...prevData,
+          ,
+          {
+            time: String(e.args.time),
+            amount: String(e.args.amount),
+            address: String(e.args.userAddress),
+          },
+        ]);
+      });
     }
   }, [nftContract]);
 
   function claimReward() {
     nftContract.claimReward();
-  }
-
-  function reinvest() {
-    nftContract.reinvestInGs50();
   }
 
   return (
@@ -48,15 +61,16 @@ export const YourReward = () => {
           >
             Claim Reward
           </button>
-          <button
+          {/* <button
             type="button"
             className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}
             onClick={reinvest}
           >
             Reinvest In Gs50
-          </button>
+          </button> */}
         </span>
       </div>
+      <NFTTable data={rewardData} />
     </div>
   );
 };

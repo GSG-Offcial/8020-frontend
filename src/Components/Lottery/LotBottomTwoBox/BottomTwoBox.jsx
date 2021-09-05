@@ -3,14 +3,13 @@ import styles from './BottomTwoBox.module.css';
 import { useContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
 import { formatValueOfPick3, formatValueOfPick4 } from '../../../utils/index';
-import tip from '../../Images/tip.png'
+import tip from '../../Images/tip.png';
 
 export const BottomTwoBox = () => {
   const contract = useContract();
 
   const [pick3Number, setPick3Number] = useState('0 0 0');
   const [pick4Number, setPick4Number] = useState('0 0 0 0');
-
   useEffect(async () => {
     if (!!contract) {
       let pick3Numbers = [];
@@ -38,9 +37,13 @@ export const BottomTwoBox = () => {
             {formatValueOfPick3(pick3Number)}
           </p>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-              <img src={tip} alt="" data-toggle="tooltip"
-                title="This is the last number that was randomly generated in the Pick 3 drawing.  You can only win by matching the numbers exactly." />
-            </i>
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="This is the last number that was randomly generated in the Pick 3 drawing.  You can only win by matching the numbers exactly."
+            />
+          </i>
         </div>
       </div>
 
@@ -51,9 +54,13 @@ export const BottomTwoBox = () => {
             {formatValueOfPick4(pick4Number)}
           </p>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-              <img src={tip} alt="" data-toggle="tooltip"
-                title="This is the last number that was randomly generated in the Pick 4 drawing.  You can only win by matching the numbers exactly." />
-            </i>
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="This is the last number that was randomly generated in the Pick 4 drawing.  You can only win by matching the numbers exactly."
+            />
+          </i>
         </div>
       </div>
     </div>

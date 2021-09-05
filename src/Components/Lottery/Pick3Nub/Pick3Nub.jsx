@@ -3,15 +3,16 @@ import styles from './Pick3Nub.module.css';
 import { useWeb3React } from '@web3-react/core';
 import { useContract, useTokenContract } from '../../../Hooks/lottery';
 import { useEffect } from 'react';
-import { toWei } from '../../../utils';
-import tip from '../../Images/tip.png'
-
-
+import { getLotteryContractaddress, toWei } from '../../../utils';
+import tip from '../../Images/tip.png';
 
 export const Pick3Nub = () => {
-  const { account } = useWeb3React();
+  const { account, chainId } = useWeb3React();
   const contract = useContract();
   const tokenContract = useTokenContract();
+  const tokenAdress = getLotteryContractaddress(chainId);
+
+  console.log(tokenContract);
 
   const [pick3TicketsDiv, setPick3TicketsDiv] = useState([]);
   const [pick4TicketsDiv, setPick4TicketsDiv] = useState([]);
@@ -80,12 +81,7 @@ export const Pick3Nub = () => {
   useEffect(async () => {
     if (!!tokenContract) {
       setTokenAllowance(
-        String(
-          await tokenContract.allowance(
-            account,
-            '0x2393e25F0c370cA9bbee412a75AD750391BF268c'
-          )
-        )
+        String(await tokenContract.allowance(account, tokenAdress))
       );
     }
   }, [tokenContract]);
@@ -99,8 +95,8 @@ export const Pick3Nub = () => {
       if (await tx.wait()) window.location.reload();
     } else {
       let tx = await tokenContract.approve(
-        '0x2393e25F0c370cA9bbee412a75AD750391BF268c',
-        toWei('1000000000')
+        tokenAdress,
+        toWei('10000000000000')
       );
       if (await tx.wait()) {
         const tx = await contract.buyLotteryForPick3(pick3TicketsDiv, amount);
@@ -117,10 +113,7 @@ export const Pick3Nub = () => {
       const tx = await contract.buyLotteryForPick4(pick4TicketsDiv, amount);
       if (await tx.wait()) window.location.reload();
     } else {
-      let tx = await tokenContract.approve(
-        '0x5C5d8E2c3d603C1F7C2E7EcB5251f48F72bdFF97',
-        toWei('1000000000')
-      );
+      let tx = await tokenContract.approve(tokenAdress, toWei('1000000000'));
       if (await tx.wait()) {
         const tx = await contract.buyLotteryForPick4(pick4TicketsDiv, amount);
         if (await tx.wait()) window.location.reload();
@@ -213,8 +206,12 @@ export const Pick3Nub = () => {
             </button>
           </div>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img src={tip} alt="" data-toggle="tooltip"
-              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order." />
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
+            />
           </i>
         </div>
       </div>
@@ -315,11 +312,14 @@ export const Pick3Nub = () => {
             </button>
           </div>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img src={tip} alt="" data-toggle="tooltip"
-              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order." />
+            <img
+              src={tip}
+              alt=""
+              data-toggle="tooltip"
+              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
+            />
           </i>
         </div>
-       
       </div>
     </div>
   );

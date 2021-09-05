@@ -60,7 +60,7 @@ export function getContractaddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0x9986Dc8f1f0a015dbf2D787e8162a95375ec9651';
+    return '0xA7d5b65692948D4c6f49D4b71D849fAd3B9eDDe4';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
@@ -68,9 +68,9 @@ export function getContractaddress(chainId) {
   } else if (chainId === 137) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 80001) {
-    return '0x732165A54f1e0e878977748543cdF5683e3A9C43';
+    return '0x477C2a2EefF6690128D3b68294C40adD687d8F30';
   } else if (chainId === 97) {
-    return '0xD33E04d95fb2c7A5a66a7943dD3391d7eBBA0707';
+    return '0x6FeF7faeF1e86acE1e2093Bb06449D07eC2f1644';
   }
 }
 
@@ -80,7 +80,7 @@ export function getLotteryContractaddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0x949714C9c6E1e389259EF7D5B1663BB54e38126d';
+    return '0x84feE7A2773E20A87fb881fD9f6Cccf43Aa4f071';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
@@ -88,9 +88,9 @@ export function getLotteryContractaddress(chainId) {
   } else if (chainId === 137) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 80001) {
-    return '0x2545dcCEDC798504B69fE21a63261857DBdfb7f6';
+    return '0xcc1d5004149aEf9959f1B13C5a90A47f6d5fDb42';
   } else if (chainId === 97) {
-    return '0xD33E04d95fb2c7A5a66a7943dD3391d7eBBA0707';
+    return '0xFCaa2FfcC10a7C1011335f98E9e11E668680f5c9';
   }
 }
 
@@ -100,11 +100,11 @@ export function getAccessKeyContractAddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0xE63740064B5315A7c94E07A37B5b14e462C10434';
+    return '0xad704787A2C3b91fBAe0DFCA16b86793c4dD1C87';
   } else if (chainId === 80001) {
-    return '0x1C7AF3eb2F152a440f770D01be0Ef12F067c0D81';
+    return '0xBd42c2C8a6F233493D05C19bF79E549B483Fc8bB';
   } else if (chainId === 97) {
-    return '0x4769670ac2fEa2b864CB96708DB387e8Cf3d0797';
+    return '0xf0a8eF5ca440F84bFE33C34cFC1434a65b688d6A';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
@@ -120,17 +120,17 @@ export function getNftRewardPoolAddress(chainId) {
   } else if (chainId === 3) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 4) {
-    return '0x4A4d90d33571Bb456F0Baf82985e4Dcc4b296ee9';
+    return '0x0DD288513b235c38E6e3A24A4766D952d5f79B27';
   } else if (chainId === 42) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 56) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 80001) {
-    return '0x4b35f6189673029FE74F47E6c31EE70cBca91d10';
+    return '0xEb23D3F7AAf099272391fa76e5E4A58c5c48e41f';
   } else if (chainId === 137) {
     return '0x00000000000000000000000000000000000000000';
   } else if (chainId === 97) {
-    return '0x71F66178cc07E13f450726f1bc3C41a039A70381';
+    return '0x89e70113862CB7e8A8DFFFEcB13B921C6D0759a2';
   }
 }
 
@@ -169,4 +169,4 @@ export function formatValueOfPick4(lastNumber) {
 //Here is my address for GS50 Contracts 0xA37b77E5670e70aCc62aBe86b6b02c450e9eEff7
 
 // /.5 ETH - 5 BNB - MATIC 1000
-// https://gateway.pinata.cloud/ipfs/QmSkyoAe45Sj4obdUeVgfxUbLJ81aDS2DG2p4yJ76hWsAL
+// https://gateway.pinata.cloud/ipfs/QmTnkRhf5xTtoLSxG1fEkj4N84kzCUnnZ5ECDBfHq9eGkH

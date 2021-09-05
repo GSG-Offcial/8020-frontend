@@ -1,11 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import styles from './Nftheader.module.css'
+import styles from './Nftheader.module.css';
 // Import Comp
 import {
   NftSidebar,
   MintToken,
   FiveNFTBox,
-  NFTTable,
   NFTDesc,
   NFTFotter,
   NFTLastFooter,
@@ -136,7 +135,11 @@ export const NftHeader = () => {
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
         <div className="container nested-DivDB">
           <a href="#/" className="navbar-brand">
-            <span className={`fw-bold display-6 text-white ${styles.nftheader_heading}`}>NFT REWARDS</span>
+            <span
+              className={`fw-bold display-6 text-white ${styles.nftheader_heading}`}
+            >
+              NFT REWARDS
+            </span>
           </a>
           {/* toggler button for mobile */}
           <button
@@ -238,8 +241,8 @@ export const NftHeader = () => {
                 {account === undefined
                   ? 'Connect'
                   : account === null
-                    ? 'None'
-                    : `${account.substring(0, 6)}...${account.substring(
+                  ? 'None'
+                  : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
                     )}`}
               </a>
@@ -264,8 +267,8 @@ export const NftHeader = () => {
                 {account === undefined
                   ? 'Connect'
                   : account === null
-                    ? 'None'
-                    : `${account.substring(0, 6)}...${account.substring(
+                  ? 'None'
+                  : `${account.substring(0, 6)}...${account.substring(
                       account.length - 4
                     )}`}
               </a>
@@ -277,7 +280,7 @@ export const NftHeader = () => {
       <MintToken />
       <FiveNFTBox />
       <YourReward />
-      <NFTTable />
+      {/* <NFTTable /> */}
       <NFTDesc />
       <NFTFotter />
       <NFTLastFooter />

@@ -7,7 +7,7 @@ import {
 import { formatValue, getNftRewardPoolAddress } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 
-import MaskGroup24 from '../../Images/MaskGroup24.svg'
+import MaskGroup24 from '../../Images/MaskGroup24.svg';
 
 export const FiveNFTBox = () => {
   const tokenContract = useContractAccessKey();
@@ -44,7 +44,7 @@ export const FiveNFTBox = () => {
   }
 
   function unStake() {
-    nftContract.unstake();
+    nftContract.unStake();
   }
 
   return (

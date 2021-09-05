@@ -1,5 +1,5 @@
 .NFTTable_mainDiv {
-  margin-left: 300px;
+  /* margin-left: 100px; */
   box-sizing: border-box;
   word-wrap: break-word;
   margin-right: 1.8rem;
@@ -21,13 +21,13 @@
 .thead_backgroundNFT {
   background-color: #10b9eb;
 }
-@media(max-width: 767px){
-    .NFTTable_mainDiv{
-        margin-left: 2.8%;
-        margin-right: 2.8%;
-    }
-    .nftTable1{
-           width: 100%;
-           margin: 0 auto;
-    }
+@media (max-width: 767px) {
+  .NFTTable_mainDiv {
+    margin-left: 2.8%;
+    margin-right: 2.8%;
+  }
+  .nftTable1 {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

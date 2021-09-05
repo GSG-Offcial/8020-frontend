@@ -9,7 +9,7 @@ import { useContract } from '../../../../Hooks/index';
 import ethereum from '../../../Images/MaskGroup24.svg';
 import matic from '../../../Images/matic.svg';
 import binance from '../../../Images/binance.svg';
-import Group902 from '../../../Images/GS50.svg';
+import Group902 from '../../../Images/NewGS50.svg';
 import { useWeb3React } from '@web3-react/core';
 
 export const FourBox = ({ price, GS50Price }) => {

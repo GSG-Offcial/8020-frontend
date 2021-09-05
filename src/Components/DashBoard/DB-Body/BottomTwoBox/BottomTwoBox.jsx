@@ -48,10 +48,10 @@ export const BottomTwoBox = ({ price, withdrawAmount }) => {
     <div className=" bottom_box">
       <div className="col-lg-6 col-12">
         <div className="nested_BottomDiv1">
-          <p className="bottom_para">Token you can withdraw</p>
+          <p className="bottom_para">Total you can withdraw:</p>
           <img src={logoInCard} alt="" />
           <p>
-            {withdrawAmount} {currency}{' '}
+            {withdrawAmount.toFixed(3)} {currency}{' '}
             <span className="span_color">
               (${calculatePrice(price, withdrawAmount)})
             </span>
@@ -68,10 +68,10 @@ export const BottomTwoBox = ({ price, withdrawAmount }) => {
 
       <div className="col-lg-6 col-12">
         <div className="nested_BottomDiv2">
-          <p className="bottom_para">Token you can with draw</p>
+          <p className="bottom_para">Total you can reinvest:</p>
           <img src={logoInCard} alt="" />
           <p>
-            {withdrawAmount} {currency}
+            {withdrawAmount.toFixed(3)} {currency}
             <span className={'span_color'}>
               (${calculatePrice(price, withdrawAmount)})
             </span>
@@ -81,7 +81,7 @@ export const BottomTwoBox = ({ price, withdrawAmount }) => {
             onClick={cycle}
             className="btn btn-primary btn-sm bottom_button"
           >
-            Cycle
+            Reinvest
           </button>
         </div>
       </div>

@@ -1,17 +1,18 @@
 import { useMemo } from 'react';
 import { useWeb3React } from '@web3-react/core';
-import { abi, address } from '../constants/lottery.json';
-import { tokenAbi, tokenAddress } from '../constants/IERC20.json';
-import { getContract, getLotteryContractaddress } from '../utils/index';
+import { abi } from '../constants/lottery.json';
+import { tokenAbi } from '../constants/IERC20.json';
+import {
+  getContract,
+  getLotteryContractaddress,
+  getContractaddress,
+} from '../utils/index';
 
 export const useContract = () => {
   const { library, account, chainId } = useWeb3React();
-
+  const address = getLotteryContractaddress(chainId);
   return useMemo(
-    () =>
-      !!library
-        ? getLotteryContractaddress(abi, address, library, account)
-        : undefined,
+    () => (!!library ? getContract(abi, address, library, account) : undefined),
     [library, account, chainId]
   );
 };
@@ -22,7 +23,7 @@ export const useTokenContract = () => {
   return useMemo(
     () =>
       !!library
-        ? getContract(tokenAbi, tokenAddress, library, account)
+        ? getContract(tokenAbi, getContractaddress(chainId), library, account)
         : undefined,
     [library, account, chainId]
   );
