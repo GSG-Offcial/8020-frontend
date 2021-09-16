@@ -20,6 +20,10 @@ export const StatisFourBox = () => {
       setPick3GS50(formatValue(await contract.pick3Pot()));
       setPick4GS50(formatValue(await contract.pick4Pot()));
 
+      let maxLimit = await contract.maxNoOfLottery();
+      setPick4Limit(+maxLimit - +(await contract.currentIdForPick4()));
+      setPick3Limit(+maxLimit - +(await contract.currentIdForPick3()));
+
       let pick3Events = await contract.queryFilter(
         contract.filters.Pick3LotteryBought()
       );
@@ -44,12 +48,7 @@ export const StatisFourBox = () => {
         }
         return true;
       });
-
       setpick4Wallet(countAddress(pick4Addresses));
-
-      let maxLimit = await contract.maxNoOfLottery();
-      setPick4Limit(+maxLimit - +(await contract.currentIdForPick4()) + 1);
-      setPick3Limit(+maxLimit - +(await contract.currentIdForPick3()) + 1);
     }
   }, [contract]);
 

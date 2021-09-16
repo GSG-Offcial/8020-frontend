@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  margin-top: 10rem !important;
+  margin-top: 7.4rem !important;
   margin-left: 230px !important;
 }
 .nested_div_nft {
@@ -67,7 +67,8 @@
   color: white !important;
   word-wrap: break-word !important;
   box-sizing: border-box !important;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-top: 5px;
   font-size: large;
   font-weight: 900;
 }

@@ -22,6 +22,7 @@ export const FourBox = ({ price, GS50Price }) => {
   const [withdrawn, setWithdrawn] = useState('loading');
   const [logoInCard, setLogoInCard] = useState();
   const [currency, setCurrency] = useState('');
+  const [totalValue, setTotalValue] = useState('');
 
   useEffect(async () => {
     if (contract) {
@@ -30,6 +31,11 @@ export const FourBox = ({ price, GS50Price }) => {
 
       let total_supply = await contract.totalSupply();
       setTotalSupply(formatValue(total_supply));
+
+      let totalSupplyValue = await contract.calculateEthereumReceived(
+        total_supply
+      );
+      setTotalValue(formatValue(totalSupplyValue));
 
       let total_dep = await contract.totalDeposited();
       setEth(formatValue(total_dep));
@@ -64,7 +70,7 @@ export const FourBox = ({ price, GS50Price }) => {
             Token Supply {formatNumber(totalSupply)} GS50
           </p>
           <img src={Group902} alt="" className="mt-1 golden_image" />
-          <p className="amount-2">${calculatePrice(GS50Price, totalSupply)}</p>
+          <p className="amount-2">${calculatePrice(price, totalValue)}</p>
         </div>
         <div className="boxes" id="box_3">
           <p>
@@ -74,7 +80,7 @@ export const FourBox = ({ price, GS50Price }) => {
           <p className="amount">${calculatePrice(price, eth)}</p>
         </div>
         <div>
-          <p className="boxes" id="box_4">
+          <p className="boxes" id="box_3">
             {' '}
             Total {withdrawn} {currency} Withdrawn
           </p>

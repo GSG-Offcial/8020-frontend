@@ -16,7 +16,7 @@
   border-radius: 10px;
 }
 .firstBox {
-  min-height: 250px;
+  min-height: 228px;
   padding: 20px;
   margin: 10px;
   border: 2px solid #10b9eb;
@@ -36,6 +36,11 @@
   box-sizing: border-box;
   word-wrap: break-word;
   font-size: large;
+}
+
+p {
+  font-weight: bold;
+  font-size: larger;
 }
 
 @media only screen and (max-width: 767px) {

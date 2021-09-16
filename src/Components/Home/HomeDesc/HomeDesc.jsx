@@ -7,7 +7,7 @@ export const HomeDesc = () => {
         {/* <div className={`col-11 mx-auto`}> */}
         <div className={`column`}>
           <div className={`d-flex  justify-content-center`}>
-            <h1 className={`display-4 fw-bolder`}>DISCLAIMER</h1>
+            {/* <h1 className={`display-4 fw-bolder`}>DISCLAIMER</h1> */}
           </div>
 
           <div

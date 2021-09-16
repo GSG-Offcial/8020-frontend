@@ -10,6 +10,7 @@
 }
 .Pick3Drop div.lot_nested_div {
   border: 2px solid #10b9eb;
+  margin-top: -0.8rem;
   margin-right: 1.5rem !important;
   margin-bottom: 1rem;
   border-radius: 10px;
@@ -17,9 +18,8 @@
   flex: 1;
   box-sizing: border-box !important;
   max-height: 550px !important;
-
 }
-.lot_nested_div{
+.lot_nested_div {
   position: relative;
 }
 .lot_nested_div p.para_lot1 {
@@ -38,18 +38,18 @@
   font-size: 1.3rem;
 }
 
-.para_lot3{
-    font-weight: bolder !important;
-    font-size: 2rem !important;
+.para_lot3 {
+  font-weight: bolder !important;
+  font-size: 2rem !important;
 }
-.user_pick_lottery_numbers{
-     max-width: 75% !important;
-     overflow-y: auto;
-     height: 150px;    
+.user_pick_lottery_numbers {
+  max-width: 75% !important;
+  overflow-y: auto;
+  height: 150px;
 }
-.nestedDiv_LotteryNumber{
+.nestedDiv_LotteryNumber {
   border: 2px solid #10b9eb;
-  background-color: #17203F !important;
+  background-color: #17203f !important;
 }
 
 .para_lot3 {
@@ -62,11 +62,11 @@
   bottom: 20px;
   width: 18px;
   height: 18px;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
-@media(max-width: 767px){
-  .Pick3Drop{
+@media (max-width: 767px) {
+  .Pick3Drop {
     margin-left: 3% !important;
     margin-right: auto;
   }

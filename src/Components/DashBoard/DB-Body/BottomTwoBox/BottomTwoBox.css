@@ -6,9 +6,9 @@
   justify-content: space-evenly;
   align-content: center;
   box-sizing: border-box !important;
-
 }
-.nested_BottomDiv2, .nested_BottomDiv1 {
+.nested_BottomDiv2,
+.nested_BottomDiv1 {
   background-color: #0d173a;
   border: 2px solid #10b9eb;
   border-radius: 10px;
@@ -25,7 +25,7 @@ p {
   padding-bottom: 1.5rem;
 }
 .span_color {
-  color: #dda0dd;
+  color: #11e03e;
 }
 .bottom_button {
   padding: 0.2rem 0.9rem !important;
@@ -37,8 +37,8 @@ p {
   font-weight: 600 !important;
 }
 
-@media(max-width: 767px){
-  .bottom_box{
-      margin-left: 1% !important;
+@media (max-width: 767px) {
+  .bottom_box {
+    margin-left: 1% !important;
   }
 }

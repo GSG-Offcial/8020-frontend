@@ -23,6 +23,7 @@ export const MintToken = () => {
   const [priceInGS50, setPriceInGS50] = useState(
     '00000000000000000000000000000'
   );
+  const [currency, setCurrency] = useState('loading');
 
   useEffect(async () => {
     if (tokenContract) {
@@ -45,6 +46,14 @@ export const MintToken = () => {
           setAttributes(r.attributes);
           setImage(r.image);
         });
+
+      if (chainId === 80001 || chainId === 137) {
+        setCurrency('MATIC');
+      } else if (chainId === 56 || chainId === 97) {
+        setCurrency('BNB');
+      } else {
+        setCurrency('ETH');
+      }
     }
   }, [tokenContract]);
 
@@ -94,7 +103,6 @@ export const MintToken = () => {
 
   return (
     <div className={` ${styles.MintToken_miandiv}`}>
-      <h1 className={``}>Mint Access Key Token </h1>
       <div
         className={`d-flex flex-row align-items-center mt-4   ${styles.nested_div_nft}`}
       >
@@ -106,10 +114,16 @@ export const MintToken = () => {
               <img src={image} alt="" />
               <p className={`text-center pt-2`}>{description}</p>
             </div>
+            <h1
+              style={{
+                paddingTop: '20px',
+              }}
+            >
+              {name}
+            </h1>
             <div
               className={`col-lg-6 order-lg-2  text-white d-flex flex-column  ${styles.MintToken_Text}`}
             >
-              <p>NAME: {name}</p>
               <p>CURRENT SUPPLY : {supply} </p>
               <p>MAX SUPPLY : {maxSupply}</p>
               <p>RARITY : {!!attributes ? attributes[1].value : 'loading'}</p>
@@ -124,26 +138,30 @@ export const MintToken = () => {
               </p>
               <p>Power : {!!attributes ? attributes[7].value : 'loading'}</p>
               <p>
-                PRICE: {price / 10 ** 18} ETH{' '}
-                <button
-                  type="button"
-                  className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
-                  onClick={buy}
-                >
-                  Buy NFT
-                </button>
+                PRICE: {price / 10 ** 18} {currency}{' '}
+                <div>
+                  <button
+                    type="button"
+                    className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
+                    onClick={buy}
+                  >
+                    BUY NFT
+                  </button>
+                </div>
               </p>
 
               <p>
                 Buy With GS50 {(priceInGS50 / 10 ** 18).toFixed(4)}
+                <div>
+                  <button
+                    type="button"
+                    className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
+                    onClick={buyWithGS50}
+                  >
+                    BUY NFT
+                  </button>
+                </div>
                 <div>15% Discount using GS50 token</div>
-                <button
-                  type="button"
-                  className={`btn btn-primary btn-sm mb-4  ${styles.btn_nft}`}
-                  onClick={buyWithGS50}
-                >
-                  buy NFT
-                </button>
               </p>
             </div>
           </div>

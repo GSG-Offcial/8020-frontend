@@ -42,7 +42,7 @@ export const Header = () => {
 
   useEffect(async () => {
     if (contract) {
-      let buyPrice = await contract.buyPrice();
+      let buyPrice = await contract.sellPrice();
       buyPrice = fromWei(+buyPrice.toString());
       setTokenPrice(buyPrice * ethPrice);
       const refId = await contract.getReferrer();
@@ -97,7 +97,7 @@ export const Header = () => {
 
   const copyToClipboard = () => {
     const el = document.createElement('textarea');
-    el.value = `http://8020testing.surge.sh/dashboard?ref=${account}`;
+    el.value = `http://the8020.org/dashboard?ref=${account}`;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
@@ -204,7 +204,7 @@ export const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link id-Nub" href="#/">
+                <a className="nav-link id-Nub">
                   Your Referral :
                   {`${refAddress.substring(0, 6)}...${refAddress.substring(
                     refAddress.length - 4

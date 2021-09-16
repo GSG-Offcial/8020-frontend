@@ -1,5 +1,5 @@
 :root {
-  --plum: #dda0dd;
+  --plum: #11e03e;
 }
 
 .mainbox {
@@ -15,6 +15,7 @@
 
 @media only screen and (max-width: 660px) {
   .mainbox {
+    font-size: 1.1rem !important;
     margin-top: 14rem;
   }
 }

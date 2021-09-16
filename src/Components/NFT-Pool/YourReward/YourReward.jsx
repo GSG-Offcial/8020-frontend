@@ -11,9 +11,18 @@ export const YourReward = () => {
   const nftContract = useNftRewardPoolContract();
   const [rewards, setRewards] = useState('Loading');
   const [rewardData, setRewardData] = useState([]);
-  const { account } = useWeb3React();
+  const [currency, setCurrency] = useState('loading');
+
+  const { account, chainId } = useWeb3React();
   useEffect(async () => {
     if (nftContract) {
+      if (chainId === 80001 || chainId === 137) {
+        setCurrency('MATIC');
+      } else if (chainId === 56 || chainId === 97) {
+        setCurrency('BNB');
+      } else {
+        setCurrency('ETH');
+      }
       setRewards(formatValue(await nftContract.claimAmount(account)));
 
       const rewardEvents = await nftContract.queryFilter(
@@ -50,7 +59,9 @@ export const YourReward = () => {
             <p className={`mt-3 ${styles.para_statis_nft}`}>
               Total Reward Earned
             </p>
-            <p className={` ${styles.amount_nft_reward}`}>{rewards} ETH</p>
+            <p className={` ${styles.amount_nft_reward}`}>
+              {rewards} {currency}
+            </p>
           </div>
         </div>
         <span>

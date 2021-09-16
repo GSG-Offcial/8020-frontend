@@ -37,9 +37,10 @@ export const DashBoardNavbar = () => {
 
   useEffect(async () => {
     if (contract) {
-      let buyPrice = await contract.buyPrice();
+      let buyPrice = await contract.sellPrice();
       buyPrice = fromWei(+buyPrice.toString());
       setTokenPrice(buyPrice * ethPrice);
+      console.log(`buy price ${tokenPrice}`);
       const refId = await contract.getReferrer();
       setRefAddress(refId);
     }
@@ -92,7 +93,7 @@ export const DashBoardNavbar = () => {
 
   const copyToClipboard = () => {
     const el = document.createElement('textarea');
-    el.value = `http://8020testing.surge.sh/dashboard?ref=${account}`;
+    el.value = `http://the8020.org/dashboard?ref=${account}`;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
@@ -199,7 +200,7 @@ export const DashBoardNavbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link id-Nub" href="#/">
+                <a className="nav-link id-Nub">
                   Your Referral :
                   {`${refAddress.substring(0, 6)}...${refAddress.substring(
                     refAddress.length - 4
