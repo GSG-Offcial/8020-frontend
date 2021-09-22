@@ -62,7 +62,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
 
         <div>
           <p className="boxes" id="box_2">
-            Dividends Earned {formatNumber(userDivs)} {currency}
+            Dividends Earned {userDivs} {currency}
           </p>
           <img src={logoInCard} alt="" />
           <p className="amount-2">${calculatePrice(price, userDivs)}</p>
@@ -70,7 +70,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
 
         <div className="boxes" id="box_3">
           <p>
-            Ref. Commision {formatNumber(userRef)} {currency}
+            Ref. Commision {userRef} {currency}
           </p>
           <img src={logoInCard} alt="" />
           <p className="bottom-amount amount">
@@ -79,8 +79,8 @@ export const BottomFourBox = ({ price, GS50Price }) => {
         </div>
 
         <div>
-          <p className="boxes" id="box_4">
-            Loyalty Bonus Earned {formatNumber(userLoyalty)} {currency}
+          <p className="boxes" id="box_3">
+            Loyalty Bonus Earned {userLoyalty} {currency}
           </p>
           <img src={logoInCard} alt="" />
           <p className="amount">${calculatePrice(price, userLoyalty)}</p>

@@ -6,7 +6,7 @@ import instragram from '../../../Icons/instagram.svg';
 import facebook from '../../../Icons/facebook.svg';
 import github from '../../../Icons/github.svg';
 import twitter from '../../../Icons/twitter.svg';
-
+import Pdf from '../../../pdf/whitepaper.pdf';
 export const HomeFooter1 = () => {
   return (
     <div className={styles.HomeFooter1_mainDiv}>
@@ -19,7 +19,8 @@ export const HomeFooter1 = () => {
               class="nav-link "
               x
               aria-current="page"
-              href="https://firebasestorage.googleapis.com/v0/b/the-8020-ecosystem.appspot.com/o/TheGSGFoundation_GS50_Token_WhitePaper.pdf?alt=media&token=af86a07a-b516-4568-a137-1e53e350685a"
+              href={Pdf}
+              target="_blank"
             >
               White Paper
             </a>

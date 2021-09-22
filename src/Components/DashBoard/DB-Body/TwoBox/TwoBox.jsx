@@ -3,10 +3,11 @@ import './TwoBox.css';
 import { formatNumber, fromWei, toWei } from '../../../../utils/index';
 import { useContract } from '../../../../Hooks/index';
 import { useWeb3React } from '@web3-react/core';
+import { useEffect } from 'react';
 
 export const TwoBox = ({ refAddress }) => {
   const contract = useContract();
-  const { chainId } = useWeb3React();
+  const { chainId, library, account } = useWeb3React();
 
   const [amountBuy, setAmountBuy] = useState('');
   const [amountSell, setAmountSell] = useState('');
@@ -15,6 +16,20 @@ export const TwoBox = ({ refAddress }) => {
   const [inputBuy, setInputBuy] = useState('');
   const [inputSell, setInputSell] = useState('');
   const [currency, setCurrency] = useState('');
+  const [balance, setBalance] = useState('');
+
+  useEffect(async () => {
+    if (library) {
+      if (chainId === 80001 || chainId === 137) {
+        setCurrency('MATIC');
+      } else if (chainId === 56 || chainId === 97) {
+        setCurrency('BNB');
+      } else {
+        setCurrency('ETH');
+      }
+      setBalance(await library.getBalance(account));
+    }
+  }, [library]);
 
   const buyToken = async () => {
     if (contract) {
@@ -31,13 +46,6 @@ export const TwoBox = ({ refAddress }) => {
         if (await tx.wait()) window.location.reload();
       } else {
         alert('Referral Address is not loaded yet, TRy AGAIN');
-      }
-      if (chainId === 80001 || chainId === 137) {
-        setCurrency('MATIC');
-      } else if (chainId === 56 || chainId === 97) {
-        setCurrency('BNB');
-      } else {
-        setCurrency('ETH');
       }
     }
   };
@@ -75,7 +83,7 @@ export const TwoBox = ({ refAddress }) => {
         id="buyToken"
         class="form-control form-control-lg token-input"
         type="number"
-        placeholder="Enter Amount"
+        placeholder={`Enter Amount of ${currency}`}
         onChange={(e) => {
           const value = e.target.value;
           if (value > 0) {
@@ -106,7 +114,7 @@ export const TwoBox = ({ refAddress }) => {
         id="sellToken"
         class="form-control form-control-lg token-input"
         type="number"
-        placeholder="Enter GS50 Token"
+        placeholder="Enter Amount of GS50 to sell"
         onChange={(e) => {
           const value = e.target.value;
           if (value > 0) {
@@ -152,6 +160,9 @@ export const TwoBox = ({ refAddress }) => {
           <p className="box-para">{amountBuy}</p>
 
           <form class={`d-flex`}>{buttonBuy}</form>
+          <p style={{ textAlign: 'right', marginRight: '10px' }}>
+            Wallet Balance {Number(fromWei(balance)).toFixed(2)} {currency}{' '}
+          </p>
         </div>
       </div>
 

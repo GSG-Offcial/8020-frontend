@@ -7,7 +7,7 @@ import {
 import { formatValue, getNftRewardPoolAddress } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 
-import MaskGroup24 from '../../Images/MaskGroup24.svg';
+import tip from '../../Images/tip.png';
 
 export const FiveNFTBox = () => {
   const tokenContract = useContractAccessKey();
@@ -82,6 +82,14 @@ export const FiveNFTBox = () => {
               Total Rewards Given
             </p>
             <p className={` ${styles.amount_nft}`}>{totalReward}</p>
+            <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img
+                src={tip}
+                alt=""
+                data-toggle="tooltip"
+                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
+              />
+            </i>
           </div>
         </div>
 
@@ -97,6 +105,14 @@ export const FiveNFTBox = () => {
             >
               Stake
             </button>
+            <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img
+                src={tip}
+                alt=""
+                data-toggle="tooltip"
+                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
+              />
+            </i>
           </div>
           <div className={` ${styles.firstBox}`}>
             <p className={`mt-3 ${styles.para_statis_nft}`}>
@@ -109,6 +125,14 @@ export const FiveNFTBox = () => {
             >
               UnStake
             </button>
+            <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img
+                src={tip}
+                alt=""
+                data-toggle="tooltip"
+                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
+              />
+            </i>
           </div>
         </div>
         <div className={`col-lg-6 col-md-12`}>
@@ -145,6 +169,14 @@ export const FiveNFTBox = () => {
             >
               Transfer
             </button>
+            <i class={`${styles.lottery_statistics_tip_icon}`}>
+              <img
+                src={tip}
+                alt=""
+                data-toggle="tooltip"
+                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
+              />
+            </i>
           </div>
         </div>
       </div>

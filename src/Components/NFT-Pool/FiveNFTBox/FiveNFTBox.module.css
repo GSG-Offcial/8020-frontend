@@ -28,6 +28,14 @@
   color: plum;
 }
 
+.lottery_statistics_tip_icon > img {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  width: 18px;
+  height: 18px;
+}
+
 .btn_nftBox {
   padding: 0.4rem 2rem;
   background-color: #9f9ffb !important;

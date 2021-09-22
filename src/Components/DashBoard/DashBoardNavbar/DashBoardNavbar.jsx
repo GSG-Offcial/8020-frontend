@@ -15,10 +15,11 @@ import { useWeb3React } from '@web3-react/core';
 import { useEagerConnect, useInactiveListener } from '../../../Hooks/index';
 import { injected } from '../../../connectors';
 import { useContract } from '../../../Hooks/index';
+import { getErrorMessage } from '../../../utils/index';
 
 export const DashBoardNavbar = () => {
   const context = useWeb3React();
-  const { connector, account, library, chainId, activate } = context;
+  const { connector, account, library, chainId, error, activate } = context;
   const contract = useContract();
 
   // handle logic to recognize the connector currently being activated
@@ -57,7 +58,7 @@ export const DashBoardNavbar = () => {
     } else if (chainId === 97) {
       setChainName('BSC Testnet');
     } else if (chainId === undefined) {
-      setChainName('Wallet NOT Connected please Connect =>');
+      setChainName(getErrorMessage(error));
     } else {
       setChainName('Wrong chain Check wallet');
     }

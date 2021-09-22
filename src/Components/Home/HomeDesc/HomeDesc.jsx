@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './HomeDesc.module.css';
+import Pdf from '../../pdf/8020Site_Disclaimer.pdf';
+
 export const HomeDesc = () => {
   return (
     <div className={`d-flex align-items-center${style.HomeDesc_mainDiv}`}>
@@ -29,12 +31,14 @@ export const HomeDesc = () => {
           <div
             className={`col-lg-12 mx-auto d-flex justify-content-center text-center fw-bolder  my-4 ${style.HomeDescButton}`}
           >
-            <button
-              type="button"
-              className={`btn text-white  px-5 py-3 ${style.HomeDesc_ORIGButton}`}
-            >
-              DISCLAIMER
-            </button>
+            <a href={Pdf} target="_blank">
+              <button
+                type="button"
+                className={`btn text-white  px-5 py-3 ${style.HomeDesc_ORIGButton}`}
+              >
+                DISCLAIMER
+              </button>
+            </a>
           </div>
         </div>
         {/* </div> */}

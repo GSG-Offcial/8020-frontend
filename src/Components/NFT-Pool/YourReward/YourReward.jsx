@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { formatValue } from '../../../utils';
 import { NFTTable } from '../index';
+import tip from '../../Images/tip.png';
 
 export const YourReward = () => {
   const nftContract = useNftRewardPoolContract();
@@ -80,6 +81,14 @@ export const YourReward = () => {
             Reinvest In Gs50
           </button> */}
         </span>
+        <i class={`${styles.lottery_statistics_tip_icon}`}>
+          <img
+            src={tip}
+            alt=""
+            data-toggle="tooltip"
+            title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
+          />
+        </i>
       </div>
       <NFTTable data={rewardData} />
     </div>

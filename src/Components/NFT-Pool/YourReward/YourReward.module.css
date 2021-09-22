@@ -20,6 +20,14 @@
   text-align: center;
 }
 
+.lottery_statistics_tip_icon > img {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  width: 18px;
+  height: 18px;
+}
+
 .nested_Div {
   /* width: 100% !important; */
 }
