@@ -49,9 +49,6 @@ export const YourReward = () => {
 
   return (
     <div className={`mt-5 ${styles.YourReward_mainDiv}`}>
-      <h2 className={`text-white display-5 ${styles.NFTDesc_h2}`}>
-        Your Reward
-      </h2>
       <div
         className={`row justify-content-center d-flex ${styles.YourRewardnested_div}`}
       >
@@ -73,22 +70,16 @@ export const YourReward = () => {
           >
             Claim Reward
           </button>
-          {/* <button
-            type="button"
-            className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}
-            onClick={reinvest}
-          >
-            Reinvest In Gs50
-          </button> */}
         </span>
-        <i class={`${styles.lottery_statistics_tip_icon}`}>
-          <img
-            src={tip}
-            alt=""
-            data-toggle="tooltip"
-            title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
-          />
-        </i>
+        <div class={`${styles.lottery_statistics_tip_icon}`}>
+          <img src={tip} alt="" data-toggle="tooltip" />
+          <span className={`${styles.toolTipText}`}>
+            This window displays your available balance. There is no time limit
+            to claim your staking rewards and you only need to pay gas fees to
+            withdraw. Your balance will continue to grow until you return to
+            collect.
+          </span>
+        </div>
       </div>
       <NFTTable data={rewardData} />
     </div>

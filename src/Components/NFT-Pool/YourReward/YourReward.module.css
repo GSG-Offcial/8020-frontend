@@ -28,6 +28,23 @@
   height: 18px;
 }
 
+.lottery_statistics_tip_icon .toolTipText {
+  visibility: hidden;
+  width: 50%;
+  background-color: black;
+  color: #fff;
+  /* text-align: center; */
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.lottery_statistics_tip_icon:hover .toolTipText {
+  visibility: visible;
+}
+
 .nested_Div {
   /* width: 100% !important; */
 }

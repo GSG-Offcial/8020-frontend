@@ -1,5 +1,7 @@
 import React from 'react';
 import './Desclaimer.css';
+import Pdf from '../../../pdf/8020Site_Disclaimer.pdf';
+
 export const Desclaimer = () => {
   return (
     <div className="bottom_dislaimer">
@@ -14,9 +16,11 @@ export const Desclaimer = () => {
         use of this website or participation in the 80/20 Smart Contract. For
         more information please read the disclaimer.
         <div className="desc_button">
-          <button type="button" className="btn btn-lg">
-            DISCLAIMER
-          </button>
+          <a href={Pdf} target="_blank">
+            <button type="button" className="btn btn-lg">
+              DISCLAIMER
+            </button>
+          </a>
         </div>
       </div>
     </div>

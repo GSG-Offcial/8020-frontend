@@ -114,7 +114,7 @@ export const StatisFourBox = () => {
           </div>
           <div>
             <p>{pick4Wallet} Wallets</p>
-            <p className={styles.para_statis}>Total Pick 3 Players .</p>
+            <p className={styles.para_statis}>Total Pick 4 Players .</p>
           </div>
           <i class={`${styles.lottery_statistics_tip_icon}`}>
             <img

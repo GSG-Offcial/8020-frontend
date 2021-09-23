@@ -36,6 +36,22 @@
   height: 18px;
 }
 
+.lottery_statistics_tip_icon .toolTipText {
+  visibility: hidden;
+  width: 80%;
+  background-color: black;
+  color: #fff;
+  /* text-align: center; */
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.lottery_statistics_tip_icon:hover .toolTipText {
+  visibility: visible;
+}
 .btn_nftBox {
   padding: 0.4rem 2rem;
   background-color: #9f9ffb !important;

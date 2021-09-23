@@ -71,7 +71,7 @@ export const FiveNFTBox = () => {
       >
         <div className={` col-lg-4 col-md-12`}>
           <div className={` ${styles.firstBox}`}>
-            <p className={`mt-3 ${styles.para_statis_nft}`}>Total NFT Staked</p>
+            <p className={`mt-3 ${styles.para_statis_nft}`}>Total NFT staked</p>
             <p className={` ${styles.amount_nft}`}>{totalStaked}</p>
             <p className={`mt-3 ${styles.para_statis_nft}`}>
               Total {currency} in the contract
@@ -79,24 +79,29 @@ export const FiveNFTBox = () => {
             <p className={` ${styles.amount_nft}`}>{totalETh}</p>
 
             <p className={`mt-3 ${styles.para_statis_nft}`}>
-              Total Rewards Given
+              Total Rewards given
             </p>
             <p className={` ${styles.amount_nft}`}>{totalReward}</p>
-            <i class={`${styles.lottery_statistics_tip_icon}`}>
-              <img
-                src={tip}
-                alt=""
-                data-toggle="tooltip"
-                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
-              />
-            </i>
+            <div class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip" />
+              <span className={`${styles.toolTipText}`}>
+                In this window you will see the total number of Access Key NFT’s
+                currently being staked. There is only room for 500 NFT’s. Here,
+                you will also find the total value locked inside the staking
+                contract and the total lifetime rewards paid out. The staking
+                pool is coded to distribute 100% of the available amount evenly
+                with all stakeholders. Anytime the total amount of ETH, BNB, or
+                MATIC is more than 1 full unit, the pool is eligible for
+                distribution.
+              </span>
+            </div>
           </div>
         </div>
 
         <div className={`col-lg-4 col-md-12`}>
           <div className={` ${styles.firstBox}`}>
             <p className={`mt-3 ${styles.para_statis_nft}`}>
-              Stake Your NFT(GSACCESS KEY)
+              STAKE YOUR ACCESS KEY
             </p>
             <button
               type="button"
@@ -105,18 +110,21 @@ export const FiveNFTBox = () => {
             >
               Stake
             </button>
-            <i class={`${styles.lottery_statistics_tip_icon}`}>
-              <img
-                src={tip}
-                alt=""
-                data-toggle="tooltip"
-                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
-              />
-            </i>
+            <div class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip" />
+              <span className={`${styles.toolTipText}`}>
+                When staking your Access Key NFT you will have to confirm 2
+                (two) transactions in MetaMask. The first transaction approves
+                the use of your NFT in the staking contract, and the second will
+                move your NFT from your wallet into the staking contract. There
+                is no additional cost for staking your token. You only need to
+                pay for gas fees per transaction.
+              </span>
+            </div>
           </div>
           <div className={` ${styles.firstBox}`}>
             <p className={`mt-3 ${styles.para_statis_nft}`}>
-              UnStake NFT(GSACCESS KEY)
+              UNSTAKE YOUR ACCESS KEY
             </p>
             <button
               type="button"
@@ -125,20 +133,20 @@ export const FiveNFTBox = () => {
             >
               UnStake
             </button>
-            <i class={`${styles.lottery_statistics_tip_icon}`}>
-              <img
-                src={tip}
-                alt=""
-                data-toggle="tooltip"
-                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
-              />
-            </i>
+            <div class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip" />
+              <span className={`${styles.toolTipText}`}>
+                Anytime you would like to recover your Access Key simply unstake
+                it from the contract. There is no penalty for removing your NFT.
+                You only pay gas fees to execute the transaction.
+              </span>
+            </div>
           </div>
         </div>
         <div className={`col-lg-6 col-md-12`}>
           <div className={` ${styles.firstBox}`}>
             <p className={`mt-3 ${styles.para_statis_nft}`}>
-              Transfer Your Access Key
+              TRANSFER YOUR ACCESS KEY
             </p>
             <input
               type="text"
@@ -169,14 +177,16 @@ export const FiveNFTBox = () => {
             >
               Transfer
             </button>
-            <i class={`${styles.lottery_statistics_tip_icon}`}>
-              <img
-                src={tip}
-                alt=""
-                data-toggle="tooltip"
-                title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
-              />
-            </i>
+            <div class={`${styles.lottery_statistics_tip_icon}`}>
+              <img src={tip} alt="" data-toggle="tooltip" />
+              <span className={`${styles.toolTipText}`}>
+                You can transfer your Access Key to any compatible wallet. All
+                you need is the wallet address and your token ID. In order to
+                find your token ID, inspect your wallet contents on the network
+                block explorer and you will find your NFT in the ERC721 tab as
+                GSAK.
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './LotDesclaimer.module.css';
+import Pdf from '../../pdf/8020Site_Disclaimer.pdf';
 
 export const LotDesclaimer = () => {
   return (
@@ -15,12 +16,14 @@ export const LotDesclaimer = () => {
         use of this website or participation in the 80/20 Smart Contract. For
         more information please read the disclaimer.
         <div className={`text-center ${styles.lot_descButtonDiv}`}>
-          <button
-            type="button"
-            className={`btn  btn-lg text-white mt-3 ${styles.lot_descbutton}`}
-          >
-            DISCLAIMER
-          </button>
+          <a href={Pdf} target="_blank">
+            <button
+              type="button"
+              className={`btn  btn-lg text-white mt-3 ${styles.lot_descbutton}`}
+            >
+              DISCLAIMER
+            </button>
+          </a>
         </div>
       </div>
     </div>

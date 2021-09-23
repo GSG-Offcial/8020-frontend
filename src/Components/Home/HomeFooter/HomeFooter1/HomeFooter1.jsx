@@ -7,6 +7,7 @@ import facebook from '../../../Icons/facebook.svg';
 import github from '../../../Icons/github.svg';
 import twitter from '../../../Icons/twitter.svg';
 import Pdf from '../../../pdf/whitepaper.pdf';
+
 export const HomeFooter1 = () => {
   return (
     <div className={styles.HomeFooter1_mainDiv}>
@@ -35,11 +36,6 @@ export const HomeFooter1 = () => {
               Privacy Policy
             </a>
           </li>
-          {/* <li class="nav-item">
-            <a class="nav-link " href="#/">
-              FAQs
-            </a>
-          </li> */}
         </ul>
       </div>
       <div>

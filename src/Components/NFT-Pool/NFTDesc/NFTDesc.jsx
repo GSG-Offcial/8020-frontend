@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './NFTDesc.module.css';
+import Pdf from '../../pdf/8020Site_Disclaimer.pdf';
 
 export const NFTDesc = () => {
   return (
@@ -15,12 +16,14 @@ export const NFTDesc = () => {
         use of this website or participation in the 80/20 Smart Contract. For
         more information please read the disclaimer.
         <div className={`mt-5 text-center ${styles.nft_descButtonDiv}`}>
-          <button
-            type="button"
-            className={`btn  btn-lg text-white mt-3 ${styles.nft_descbutton}`}
-          >
-            DISCLAIMER
-          </button>
+          <a href={Pdf} target="_blank">
+            <button
+              type="button"
+              className={`btn  btn-lg text-white mt-3 ${styles.nft_descbutton}`}
+            >
+              DISCLAIMER
+            </button>
+          </a>
         </div>
       </div>
     </div>
