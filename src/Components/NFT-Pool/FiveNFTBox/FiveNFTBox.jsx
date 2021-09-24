@@ -108,7 +108,7 @@ export const FiveNFTBox = () => {
               className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}
               onClick={stake}
             >
-              Stake
+              STAKE
             </button>
             <div class={`${styles.lottery_statistics_tip_icon}`}>
               <img src={tip} alt="" data-toggle="tooltip" />
@@ -118,7 +118,8 @@ export const FiveNFTBox = () => {
                 the use of your NFT in the staking contract, and the second will
                 move your NFT from your wallet into the staking contract. There
                 is no additional cost for staking your token. You only need to
-                pay for gas fees per transaction.
+                pay for gas fees per transaction.You can only stake one NFT per
+                wallet.
               </span>
             </div>
           </div>
@@ -131,7 +132,7 @@ export const FiveNFTBox = () => {
               className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}
               onClick={unStake}
             >
-              UnStake
+              UNSTAKE
             </button>
             <div class={`${styles.lottery_statistics_tip_icon}`}>
               <img src={tip} alt="" data-toggle="tooltip" />
@@ -175,7 +176,7 @@ export const FiveNFTBox = () => {
               className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}
               onClick={transfer}
             >
-              Transfer
+              TRANSFER
             </button>
             <div class={`${styles.lottery_statistics_tip_icon}`}>
               <img src={tip} alt="" data-toggle="tooltip" />

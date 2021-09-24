@@ -9,6 +9,7 @@ import {
   NFTFotter,
   NFTLastFooter,
   YourReward,
+  NFTinfo,
 } from '../index';
 
 import { useEagerConnect, useInactiveListener } from '../../../Hooks/index';
@@ -274,6 +275,7 @@ export const NftHeader = () => {
       </nav>
       <NftSidebar />
       <MintToken />
+      <NFTinfo />
       <FiveNFTBox />
       <YourReward />
       {/* <NFTTable /> */}

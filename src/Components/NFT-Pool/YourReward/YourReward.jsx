@@ -68,7 +68,7 @@ export const YourReward = () => {
             className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}
             onClick={claimReward}
           >
-            Claim Reward
+            CLAIM
           </button>
         </span>
         <div class={`${styles.lottery_statistics_tip_icon}`}>

@@ -205,14 +205,14 @@ export const Pick3Nub = () => {
               Play Lottery
             </button>
           </div>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img
-              src={tip}
-              alt=""
-              data-toggle="tooltip"
-              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
-            />
-          </i>
+
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              Use the dropdown to select 4 numbers between 0-9. You can have up
+              to 3 entries per ticket order.
+            </span>
+          </div>
         </div>
       </div>
 
@@ -311,14 +311,14 @@ export const Pick3Nub = () => {
               Play Lottery
             </button>
           </div>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img
-              src={tip}
-              alt=""
-              data-toggle="tooltip"
-              title="Use the dropdown to select 4 numbers between 0-9. You can have up to 3 entries per ticket order."
-            />
-          </i>
+
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              Use the dropdown to select 4 numbers between 0-9. You can have up
+              to 3 entries per ticket order.
+            </span>
+          </div>
         </div>
       </div>
     </div>

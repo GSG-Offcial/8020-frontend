@@ -7,3 +7,4 @@ export { NFTDesc } from './NFTDesc/NFTDesc';
 export { NFTFotter } from './NFTFotter/NFTFotter';
 export { NFTLastFooter } from './NFTFotter/NFTLastFooter/NFTLastFooter';
 export { YourReward } from './YourReward/YourReward';
+export { NFTinfo } from './NFTInfo/nftInfo';

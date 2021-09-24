@@ -62,14 +62,23 @@ export const StatisFourBox = () => {
             GS50 in Pick 3(Next Drawing will run after {pick3Limit} wallets
             Entered the contest)
           </p>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
+          {/* <i class={`${styles.lottery_statistics_tip_icon}`}>
             <img
               src={tip}
               alt=""
               data-toggle="tooltip"
               title="This is the total amount of GS50 in the Pick 3 Drop. The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
             />
-          </i>
+          </i> */}
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              This is the total amount of GS50 in the Pick 3 Drop. The drawing
+              will start once the required number of unique wallets enter the
+              contest. You can only make three picks per ticket order and can
+              have up to 20 tickets per drawing.
+            </span>
+          </div>
         </div>
       </div>
       <div className="col-lg-6 col-md-12">
@@ -79,28 +88,46 @@ export const StatisFourBox = () => {
             GS50 in Pick 4(Next Drawing will run after {pick4Limit} wallets
             Entered the contest)
           </p>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
+          {/* <i class={`${styles.lottery_statistics_tip_icon}`}>
             <img
               src={tip}
               alt=""
               data-toggle="tooltip"
               title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
             />
-          </i>
+          </i> */}
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              This is the total amount of GS50 in the Pick 3 Drop. The drawing
+              will start once the required number of unique wallets enter the
+              contest. You can only make three picks per ticket order and can
+              have up to 20 tickets per drawing.
+            </span>
+          </div>
         </div>
       </div>
       <div className={`col-lg-6 col-md-12`}>
         <div className={styles.nested_div_statis} id={styles.thrid_DivBox}>
           <p>{(+pick3GS50 + +pick4GS50).toFixed(2)} GS50</p>
           <p className={styles.para_statis}>Total GS50 being dropped.</p>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
+          {/* <i class={`${styles.lottery_statistics_tip_icon}`}>
             <img
               src={tip}
               alt=""
               data-toggle="tooltip"
               title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
             />
-          </i>
+          </i> */}
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              This is the total amount of GS50 in the Pick 3 Drop. The drawing
+              will start once the required number of unique wallets enter the
+              contest. You can only make three picks per ticket order and can
+              have up to 20 tickets per drawing.
+            </span>
+          </div>
         </div>
       </div>
       <div className="col-lg-6 col-md-12">
@@ -116,14 +143,23 @@ export const StatisFourBox = () => {
             <p>{pick4Wallet} Wallets</p>
             <p className={styles.para_statis}>Total Pick 4 Players .</p>
           </div>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              This is the total amount of GS50 in the Pick 3 Drop. The drawing
+              will start once the required number of unique wallets enter the
+              contest. You can only make three picks per ticket order and can
+              have up to 20 tickets per drawing.
+            </span>
+          </div>
+          {/* <i class={`${styles.lottery_statistics_tip_icon}`}>
             <img
               src={tip}
               alt=""
               data-toggle="tooltip"
               title="This is the total amount of GS50 in the Pick 3 Drop.  The drawing will start once the required number of unique wallets enter the contest.  You can only make three picks per ticket order and can have up to 20 tickets per drawing."
             />
-          </i>
+          </i> */}
         </div>
       </div>
     </div>

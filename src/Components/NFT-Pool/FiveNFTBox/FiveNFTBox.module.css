@@ -26,6 +26,7 @@
 }
 .amount_nft {
   color: plum;
+  font-size: 20px;
 }
 
 .lottery_statistics_tip_icon > img {
@@ -66,7 +67,9 @@ p {
   font-weight: bold;
   font-size: larger;
 }
-
+.para_statis_nft {
+  font-size: 25px !important;
+}
 @media only screen and (max-width: 767px) {
   .FiveNFTBox_mainDiv {
     margin-left: 2% !important;
