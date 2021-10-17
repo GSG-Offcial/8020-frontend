@@ -1,0 +1,81 @@
+.FiveNFTBox_mainDiv {
+  margin-left: 300px;
+  margin-top: 5rem;
+}
+.FiveNFTBox_mainDiv h1 {
+  text-align: center;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.nested_FiveBox {
+  width: 100%;
+}
+.FiveNFTBox_mainDiv div {
+  border-radius: 10px;
+}
+.firstBox {
+  min-height: 228px;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #10b9eb;
+  position: relative;
+  background-color: #081235;
+  text-align: center;
+}
+.amount_nft {
+  color: plum;
+  font-size: 20px;
+}
+
+.lottery_statistics_tip_icon > img {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  width: 18px;
+  height: 18px;
+}
+
+.lottery_statistics_tip_icon .toolTipText {
+  visibility: hidden;
+  width: 80%;
+  background-color: black;
+  color: #fff;
+  /* text-align: center; */
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.lottery_statistics_tip_icon:hover .toolTipText {
+  visibility: visible;
+}
+.btn_nftBox {
+  padding: 0.4rem 2rem;
+  background-color: #9f9ffb !important;
+  font-weight: bold;
+  border: none !important;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-size: large;
+}
+
+p {
+  font-weight: bold;
+  font-size: larger;
+}
+.para_statis_nft {
+  font-size: 25px !important;
+}
+@media only screen and (max-width: 767px) {
+  .FiveNFTBox_mainDiv {
+    margin-left: 2% !important;
+  }
+  .nested_FiveBox {
+    width: 100%;
+    margin: 0px !important;
+  }
+}

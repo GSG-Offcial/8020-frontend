@@ -48,7 +48,7 @@ export const FooterImage = () => {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://t.me/the8020contract">
+            <a class="nav-link" href="https://t.me/the8020contractchat">
               <img src={telegram} alt="Telegram" />
             </a>
           </li>

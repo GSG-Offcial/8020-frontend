@@ -14,7 +14,7 @@ export const SecondComp = () => {
               >
                 <h1>A Wealth Distribution System for Creators and Investors</h1>
                 <p className={`my-3 ${styles.paragrap_1}`}>
-                  The 80/20 Contract pay’s holders dividends in ETH, BSC, and
+                  The 80/20 Contract pays holders dividends in ETH, BSC, and
                   MATIC when users buy or sell GS50 tokens. The GS50 is the
                   native currency in The 80/20 Ecosystem.
                 </p>

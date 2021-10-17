@@ -19,7 +19,7 @@ import { useContract } from '../../../Hooks/index';
 import { fromWei } from '../../../utils';
 import { NavLink } from 'react-router-dom';
 
-export const NftHeader = () => {
+export const NftHeader1 = () => {
   const context = useWeb3React();
   const { connector, account, library, chainId, activate } = context;
   const contract = useContract();
@@ -188,7 +188,18 @@ export const NftHeader = () => {
                   href="#/"
                 >
                   <NavLink to="/nftPool" className="Nav_Link">
-                    NFT Pool
+                    Access Pool
+                  </NavLink>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/communityPool" className="Nav_Link">
+                    Community Pool
                   </NavLink>
                 </a>
               </li>

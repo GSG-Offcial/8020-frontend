@@ -56,13 +56,31 @@
   font-weight: bolder !important;
   font-size: 2rem !important;
 }
-.dashboard_statistics_tip_icon > img {
+
+.lottery_statistics_tip_icon > img {
   position: absolute;
   right: 20px;
   bottom: 20px;
   width: 18px;
   height: 18px;
-  cursor: pointer;
+}
+
+.lottery_statistics_tip_icon .toolTipText {
+  visibility: hidden;
+  width: 80%;
+  background-color: black;
+  color: #fff;
+  /* text-align: center; */
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.lottery_statistics_tip_icon:hover .toolTipText {
+  visibility: visible;
 }
 
 @media (max-width: 767px) {

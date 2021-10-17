@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../FiveNFTBox/FiveNFTBox.module.css';
 import {
-  useNftRewardPoolContract,
-  useContractAccessKey,
+  useNftCommunityRewardPoolContract,
+  useContractCommunityToken,
 } from '../../../Hooks/nftPool';
 import { formatValue, getNftRewardPoolAddress } from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
@@ -14,8 +14,8 @@ export const NFTinfo = () => {
   const [stakeText, setStakedText] = useState('NO');
 
   const { account } = useWeb3React();
-  const tokenContract = useContractAccessKey();
-  const nftContract = useNftRewardPoolContract();
+  const tokenContract = useContractCommunityToken();
+  const nftContract = useNftCommunityRewardPoolContract();
 
   let count = 0;
 

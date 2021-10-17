@@ -3,7 +3,8 @@ import { Navbar } from './Components/Home/NavBar/Navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { DashBoardNavbar } from './Components/DashBoard/index';
 import { Header } from './Components/Lottery/Header/Header';
-import {NftHeader} from './Components/NFT-Pool/index'
+import { NftHeader } from './Components/NFTCommunity/index';
+import { NftHeader1 } from './Components/NFT-Pool/index';
 import './App.css';
 import { Web3Provider } from '@ethersproject/providers';
 import { Web3ReactProvider } from '@web3-react/core';
@@ -24,7 +25,8 @@ function App() {
               <Route exact path="/" component={Navbar} />
               <Route exact path="/dashboard" component={DashBoardNavbar} />
               <Route exact path="/lottery" component={Header} />
-              <Route exact path="/nftPool" component={NftHeader}/>
+              <Route exact path="/nftPool" component={NftHeader1} />
+              <Route exact path="/communityPool" component={NftHeader} />
             </Switch>
           </div>
         </div>

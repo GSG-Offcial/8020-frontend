@@ -26,7 +26,12 @@ export const HomeConnect = () => {
               />
               <input
                 type="submit"
-                href="mailto: contact@the8020.io"
+                href=""
+                onClick={() => {
+                  window.open(
+                    'https://docs.google.com/forms/d/e/1FAIpQLSdzxRaGI9K3nON-QZj6ei5PiMAZ_WlruIesBAT4ujrIcD5ACw/viewform?embedded=true'
+                  );
+                }}
                 value="Submit"
                 className={`fw-bolder text-white fs-3 ${styles.Input_button}`}
               />

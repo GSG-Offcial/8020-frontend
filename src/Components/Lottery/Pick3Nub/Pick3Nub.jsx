@@ -218,7 +218,7 @@ export const Pick3Nub = () => {
 
       <div className="col-lg-6 col-md-12">
         <div className={styles.nested_div_pick3nub}>
-          <p>Pick 3 Numbers</p>
+          <p>Pick 4 Numbers</p>
           <div className={styles.selection_div}>
             <select className="pick4N1" aria-label="Default select example">
               <option selected value="select"></option>

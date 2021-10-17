@@ -1,36 +1,55 @@
-.main_BottomTwoBox{
-    margin: 20px;
+.main_BottomTwoBox {
+  margin: 20px;
 
-    margin-left: 290px;
-    margin-right: 2rem;
-    box-sizing: border-box;
-    word-wrap: break-word;
+  margin-left: 290px;
+  margin-right: 2rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
-.BottomTwoBox_nesteddiv{
-    border: 2px solid #10b9eb;
-    min-height: 130px;
-    padding: 10px !important;
-    margin: 1px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
+.BottomTwoBox_nesteddiv {
+  border: 2px solid #10b9eb;
+  min-height: 130px;
+  padding: 10px !important;
+  margin: 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
 }
-.BottomTwoBox_nesteddiv::first-line{
-    font-size: 1.3rem;
-    color: #9F9FFB ;
+.BottomTwoBox_nesteddiv::first-line {
+  font-size: 1.3rem;
+  color: #9f9ffb;
 }
-.nub_bottomTwoBox{
-    font-size: 1.5rem;
+.nub_bottomTwoBox {
+  font-size: 1.5rem;
 }
-.lottery_statistics_tip_icon > img{
-   position: absolute;
-   right: 20px;
-   bottom: 20px;
-   width: 18px ;
-   height: 18px;
+
+.lottery_statistics_tip_icon > img {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 18px;
+  height: 18px;
 }
-@media (max-width: 767px){
-    .main_BottomTwoBox{
-        margin-left: 2%;
-    }
+
+.lottery_statistics_tip_icon .toolTipText {
+  visibility: hidden;
+  width: 80%;
+  background-color: black;
+  color: #fff;
+  /* text-align: center; */
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.lottery_statistics_tip_icon:hover .toolTipText {
+  visibility: visible;
+}
+@media (max-width: 767px) {
+  .main_BottomTwoBox {
+    margin-left: 2%;
+  }
 }

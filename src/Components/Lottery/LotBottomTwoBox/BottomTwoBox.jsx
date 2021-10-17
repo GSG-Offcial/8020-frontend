@@ -36,14 +36,14 @@ export const BottomTwoBox = () => {
           <p className={styles.nub_bottomTwoBox}>
             {formatValueOfPick3(pick3Number)}
           </p>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img
-              src={tip}
-              alt=""
-              data-toggle="tooltip"
-              title="This is the last number that was randomly generated in the Pick 3 drawing.  You can only win by matching the numbers exactly."
-            />
-          </i>
+
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              This is the last number that was randomly generated in the Pick 3
+              drawing. You can only win by matching the numbers exactly.
+            </span>
+          </div>
         </div>
       </div>
 
@@ -53,14 +53,14 @@ export const BottomTwoBox = () => {
           <p className={styles.nub_bottomTwoBox}>
             {formatValueOfPick4(pick4Number)}
           </p>
-          <i class={`${styles.lottery_statistics_tip_icon}`}>
-            <img
-              src={tip}
-              alt=""
-              data-toggle="tooltip"
-              title="This is the last number that was randomly generated in the Pick 4 drawing.  You can only win by matching the numbers exactly."
-            />
-          </i>
+
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              This is the last number that was randomly generated in the Pick 4
+              drawing. You can only win by matching the numbers exactly.
+            </span>
+          </div>
         </div>
       </div>
     </div>

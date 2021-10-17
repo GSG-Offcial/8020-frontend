@@ -1,36 +1,35 @@
-.Lot_From1_mainDiv{
-    margin-left: 300px;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    margin-right: 1.8rem;
-    border: 2px solid #10b9eb;
-    border-radius: 10px;
-    position: relative;
-   
+.Lot_From1_mainDiv {
+  margin-left: 300px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-right: 1.8rem;
+  border: 2px solid #10b9eb;
+  border-radius: 10px;
+  position: relative;
 }
-.lottery_statistics_tip_icon > img{
-    position: absolute;
-    right: 20px;
-    bottom: 65px;
-    width: 20px; 
-    height: 20px;
+.lottery_statistics_tip_icon > img {
+  position: absolute;
+  right: 20px;
+  bottom: 65px;
+  width: 20px;
+  height: 20px;
 }
-.LotForm1Table1{
-    overflow-y: auto !important;
-    max-height: 257px !important;   
-}
-
-.headingform1{
-    text-align: center;
-    color: #9F9FFB;
-    font-size: 1.9rem;
-}
-.thead_background{
-    background-color: #10b9eb !important;
+.LotForm1Table1 {
+  overflow-y: auto !important;
+  max-height: 257px !important;
 }
 
-@media(max-width: 767px){
-    .Lot_From1_mainDiv{
-        margin-left: 2.8%;
-    }
+.headingform1 {
+  text-align: center;
+  color: #9f9ffb;
+  font-size: 1.9rem;
+}
+.thead_background {
+  background-color: #10b9eb !important;
+}
+
+@media (max-width: 767px) {
+  .Lot_From1_mainDiv {
+    margin-left: 2.8%;
+  }
 }

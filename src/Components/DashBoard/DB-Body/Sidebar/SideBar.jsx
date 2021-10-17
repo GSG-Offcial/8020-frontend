@@ -42,7 +42,17 @@ export const SideBar = () => {
                 <i className="fas fa-dice-d20"></i>
               </span>{' '}
               <span>
-                <Link to="/nftPool">NFT Pool</Link>{' '}
+                <Link to="/nftPool">Access Pool</Link>{' '}
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#/" className="active">
+              <span>
+                <i className="fas fa-dice-d20"></i>
+              </span>{' '}
+              <span>
+                <Link to="/communityPool">Community Pool</Link>{' '}
               </span>
             </a>
           </li>
@@ -52,7 +62,7 @@ export const SideBar = () => {
                 <i className="fas fa-ticket-alt"></i>
               </span>{' '}
               <span>
-                <Link to="/lottery">Lottery</Link>{' '}
+                <Link to="/lottery">Drop Lottery</Link>{' '}
               </span>{' '}
             </a>
           </li>

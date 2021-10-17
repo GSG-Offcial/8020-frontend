@@ -1,25 +1,27 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import './DashBoardNavbar.css';
+import styles from './Nftheader.module.css';
+// Import Comp
 import {
-  FourBox,
-  SideBar,
-  TwoBox,
-  BottomFourBox,
-  Desclaimer,
-  FooterImage,
-  LastFooter,
-} from '../DB-Body/index';
-import { fromWei } from '../../../utils';
-import { useWeb3React } from '@web3-react/core';
+  NftSidebar,
+  MintToken,
+  FiveNFTBox,
+  NFTDesc,
+  NFTFotter,
+  NFTLastFooter,
+  YourReward,
+  NFTinfo,
+} from '../index';
+
 import { useEagerConnect, useInactiveListener } from '../../../Hooks/index';
 import { injected } from '../../../connectors';
+import { useWeb3React } from '@web3-react/core';
 import { useContract } from '../../../Hooks/index';
-import { getErrorMessage, getChainPrams } from '../../../utils/index';
+import { fromWei } from '../../../utils';
+import { NavLink } from 'react-router-dom';
 
-export const DashBoardNavbar = () => {
+export const NftHeader = () => {
   const context = useWeb3React();
-  const { connector, account, library, chainId, error, activate } = context;
+  const { connector, account, library, chainId, activate } = context;
   const contract = useContract();
 
   // handle logic to recognize the connector currently being activated
@@ -30,32 +32,6 @@ export const DashBoardNavbar = () => {
   const [refAddress, setRefAddress] = useState('loading');
   const [chainName, setChainName] = useState('Loading');
 
-  async function switchChain(id) {
-    const params = getChainPrams(id);
-    const hexId = '0x' + id.toString(16);
-    try {
-      library.provider.request({
-        method: 'wallet_switchEthereumChain',
-        params: [{ chainId: hexId }],
-      });
-    } catch (switchError) {
-      // console.log(switchError.code === 4902);
-      // This error code indicates that the chain has not been added to MetaMask.
-      // if (error.code === 4902) {
-      try {
-        await library.provider.request({
-          method: 'wallet_addEthereumChain',
-          params,
-        });
-      } catch (addError) {
-        // handle "add" error
-        console.log('error', addError);
-      }
-      // }
-      // handle other "switch" errors
-    }
-  }
-
   useEffect(() => {
     if (activatingConnector && activatingConnector === connector) {
       setActivatingConnector(undefined);
@@ -64,14 +40,11 @@ export const DashBoardNavbar = () => {
 
   useEffect(async () => {
     if (contract) {
-      let buyPrice = await contract.buyPrice();
+      let buyPrice = await contract.sellPrice();
       buyPrice = fromWei(+buyPrice.toString());
       setTokenPrice(buyPrice * ethPrice);
-      console.log(`buy price ${tokenPrice}`);
       const refId = await contract.getReferrer();
       setRefAddress(refId);
-      // switchChain();
-      // console.log('library', library.provider);
     }
     if (chainId === 1) {
       setChainName('Mainnet');
@@ -86,7 +59,7 @@ export const DashBoardNavbar = () => {
     } else if (chainId === 97) {
       setChainName('BSC Testnet');
     } else if (chainId === undefined) {
-      setChainName(getErrorMessage(error));
+      setChainName('Wallet NOT Connected please Connect =>');
     } else {
       setChainName('Wrong chain Check wallet');
     }
@@ -163,7 +136,7 @@ export const DashBoardNavbar = () => {
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
         <div className="container nested-DivDB">
           <a href="#/" className="navbar-brand">
-            <span className="fw-bold display-6 text-white">DASHBOARD</span>
+            <span className={`fw-bold display-6 text-white `}>NFT REWARDS</span>
           </a>
           {/* toggler button for mobile */}
           <button
@@ -251,42 +224,9 @@ export const DashBoardNavbar = () => {
                 <a
                   className="nav-link db-copyRef"
                   onClick={copyToClipboard}
-                  // onClick={() => {
-                  //   switchChain(137);
-                  // }}
                   href="#/"
                 >
                   Copy Ref.Link
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={{ marginLeft: '15px', marginRight: '15px' }}
-              >
-                <a
-                  className="nav-link db-copyRef"
-                  onClick={copyToClipboard}
-                  onClick={() => {
-                    switchChain(137);
-                  }}
-                  href="#/"
-                >
-                  Add Matic
-                </a>
-              </li>
-              <li
-                className="nav-item"
-                style={{ marginLeft: '15px', marginRight: '15px' }}
-              >
-                <a
-                  className="nav-link db-copyRef"
-                  // onClick={copyToClipboard}
-                  onClick={() => {
-                    switchChain(56);
-                  }}
-                  href="#/"
-                >
-                  Add BSC
                 </a>
               </li>
             </ul>
@@ -344,18 +284,15 @@ export const DashBoardNavbar = () => {
           </div>
         </div>
       </nav>
-
-      <div className="DashBoard_comp">
-        <SideBar className="sidebarBox" />
-        <div>
-          <FourBox price={ethPrice} GS50Price={tokenPrice} />
-          <TwoBox refAddress={refAddress} />
-          <BottomFourBox price={ethPrice} GS50Price={tokenPrice} />
-        </div>
-      </div>
-      <Desclaimer />
-      <FooterImage />
-      <LastFooter />
+      <NftSidebar />
+      <MintToken />
+      <NFTinfo />
+      <FiveNFTBox />
+      <YourReward />
+      {/* <NFTTable /> */}
+      <NFTDesc />
+      <NFTFotter />
+      <NFTLastFooter />
     </Fragment>
   );
 };

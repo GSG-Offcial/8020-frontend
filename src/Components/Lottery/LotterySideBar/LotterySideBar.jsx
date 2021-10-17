@@ -29,7 +29,7 @@ export const LotterySideBar = () => {
                 <span>
                   <i className="fas fa-chart-pie"></i>
                 </span>{' '}
-                <span>DashBoard</span>
+                <span>Dashboard</span>
               </a>
             </Link>
           </li>
@@ -39,7 +39,17 @@ export const LotterySideBar = () => {
                 <span>
                   <i className="fas fa-dice-d20"></i>
                 </span>{' '}
-                <span>NFT Pool</span>
+                <span>Access Pool</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/communityPool">
+              <a href="#/" className="lot-active">
+                <span>
+                  <i className="fas fa-dice-d20"></i>
+                </span>{' '}
+                <span>Community Pool</span>
               </a>
             </Link>
           </li>
@@ -49,7 +59,7 @@ export const LotterySideBar = () => {
                 <span>
                   <i className="fas fa-ticket-alt"></i>
                 </span>{' '}
-                <span>Lottery</span>{' '}
+                <span>Drop Lottery</span>{' '}
               </a>
             </Link>
           </li>

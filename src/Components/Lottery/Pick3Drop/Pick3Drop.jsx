@@ -2,7 +2,8 @@ import { useWeb3React } from '@web3-react/core';
 import React, { useState, useEffect } from 'react';
 import { useContract } from '../../../Hooks/lottery';
 import styles from './Pick3Drop.module.css';
-import Tip from '../../Images/tip.png'
+import tip from '../../Images/tip.png';
+
 export const Pick3Drop = () => {
   const contract = useContract();
   const { account } = useWeb3React();
@@ -51,10 +52,16 @@ export const Pick3Drop = () => {
               );
             })}
           </div>
-          <i className={`${styles.dashboard_statistics_tip_icon}`}>
-                    <img src={Tip} alt="" data-toggle="tooltip"
-                      title="Here you will see your connected wallet and your active picks for the current drawing.  Once the drawing takes place all tickets become used and numbers are cleared.  If you win the drawing you will be notified the next time you connect to the site." />
-                  </i>
+
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              Here you will see your connected wallet and your active picks for
+              the current drawing. Once the drawing takes place all tickets
+              become used and numbers are cleared. If you win the drawing you
+              will be notified the next time you connect to the site.
+            </span>
+          </div>
         </div>
       </div>
 
@@ -80,10 +87,23 @@ export const Pick3Drop = () => {
               );
             })}
           </div>
-          <i className={`${styles.dashboard_statistics_tip_icon}`}>
-                    <img src={Tip} alt="" data-toggle="tooltip"
-                      title="Here you will see your connected wallet and your active picks for the current drawing.  Once the drawing takes place all tickets become used and numbers are cleared.  If you win the drawing you will be notified the next time you connect to the site." />
-                  </i>
+          {/* <i className={`${styles.dashboard_statistics_tip_icon}`}>
+            <img
+              src={Tip}
+              alt=""
+              data-toggle="tooltip"
+              title="Here you will see your connected wallet and your active picks for the current drawing.  Once the drawing takes place all tickets become used and numbers are cleared.  If you win the drawing you will be notified the next time you connect to the site."
+            />
+          </i> */}
+          <div class={`${styles.lottery_statistics_tip_icon}`}>
+            <img src={tip} alt="" data-toggle="tooltip" />
+            <span className={`${styles.toolTipText}`}>
+              Here you will see your connected wallet and your active picks for
+              the current drawing. Once the drawing takes place all tickets
+              become used and numbers are cleared. If you win the drawing you
+              will be notified the next time you connect to the site.
+            </span>
+          </div>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import './BottomFourBox.css';
 import {
   calculatePrice,
   formatValue,
-  formatNumber,
+  formatNumberInDecimals,
 } from '../../../../utils/index';
 import { useWeb3React } from '@web3-react/core';
 import { useContract } from '../../../../Hooks/index';
@@ -29,13 +29,14 @@ export const BottomFourBox = ({ price, GS50Price }) => {
       setUserBalance(formatValue(tokens));
 
       let divs = await contract.dividendsOf(account);
-      setUserDivs(formatValue(divs));
+      setUserDivs(formatNumberInDecimals(divs));
 
       let refCom = await contract.referralBalance_(account);
-      setUserRef(formatValue(refCom));
+      setUserRef(formatNumberInDecimals(refCom));
 
       let loyalty = await contract.loyaltyOf();
-      setUserLoyalty(formatValue(loyalty));
+      setUserLoyalty(formatNumberInDecimals(loyalty));
+
       if (chainId === 80001 || chainId === 137) {
         setLogoInCard(matic);
         setCurrency('MATIC');
@@ -54,7 +55,7 @@ export const BottomFourBox = ({ price, GS50Price }) => {
       <div className="bottom-mainbox mainbox">
         <div>
           <p className="boxes" id="box_1">
-            Your Balance {formatNumber(userBalance)} GS50
+            Your Balance {userBalance} GS50
           </p>
           <img src={logoInCard} alt="" />
           <p className="amount">${calculatePrice(GS50Price, userBalance)}</p>

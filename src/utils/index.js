@@ -11,15 +11,22 @@ import {
 const nf = new Intl.NumberFormat();
 
 export function formatNumber(number) {
-  return nf.format(Math.floor(number));
+  let number1 = parseFloat(String(number).replace(/,/g, ''));
+  return nf.format(Math.floor(number1));
 }
 
 export function calculatePrice(price, value) {
-  return formatNumber(value * price);
+  let value1 = parseFloat(String(value).replace(/,/g, ''));
+  let price1 = parseFloat(String(price).replace(/,/g, ''));
+  return formatNumber(value1 * price1);
 }
 
 export function toWei(n) {
   return parseEther(n);
+}
+
+export function formatNumberInDecimals(params) {
+  return +fromWei(+params.toString()).toFixed(4);
 }
 
 export function fromWei(n) {
@@ -27,7 +34,7 @@ export function fromWei(n) {
 }
 
 export function formatValue(value) {
-  return fromWei(+value.toString()).toFixed(3);
+  return formatNumber(fromWei(+value.toString()).toFixed(3));
 }
 
 export function toBN(n) {
@@ -85,7 +92,7 @@ export function getContractaddress(chainId) {
   } else if (chainId === 56) {
     return '0xC33E0b83D395FBBa0e2E463b10029F8379AD9c7e';
   } else if (chainId === 137) {
-    return '0x00000000000000000000000000000000000000000';
+    return '0xe7c15C988528baE6E2C6961E394f0ad663e52CB5';
   } else if (chainId === 80001) {
     return '0x477C2a2EefF6690128D3b68294C40adD687d8F30';
   } else if (chainId === 97) {
@@ -105,7 +112,7 @@ export function getLotteryContractaddress(chainId) {
   } else if (chainId === 56) {
     return '0x6005d83cdE0bc9Cd5C04c44C207023a2fEA4e79B';
   } else if (chainId === 137) {
-    return '0x00000000000000000000000000000000000000000';
+    return '0x57e81c944eF3f5BCBAED03e1161F07AF8A8933FF';
   } else if (chainId === 80001) {
     return '0xcc1d5004149aEf9959f1B13C5a90A47f6d5fDb42';
   } else if (chainId === 97) {
@@ -129,7 +136,7 @@ export function getAccessKeyContractAddress(chainId) {
   } else if (chainId === 56) {
     return '0x7EEb595ab39056686Dc4eC84D41C2906CF289693';
   } else if (chainId === 137) {
-    return '0x00000000000000000000000000000000000000000';
+    return '0xC72F8C9E38aE575E03ed49A854B75E4e81B75eaa';
   }
 }
 
@@ -147,9 +154,83 @@ export function getNftRewardPoolAddress(chainId) {
   } else if (chainId === 80001) {
     return '0xEb23D3F7AAf099272391fa76e5E4A58c5c48e41f';
   } else if (chainId === 137) {
-    return '0x00000000000000000000000000000000000000000';
+    return '0xBa48Df724FbC574D795160914DC9d9886698eae5';
   } else if (chainId === 97) {
     return '0x28386e2bA6e346C7D4ce48BA73DE9957D088E160';
+  }
+}
+
+export function getCommunityContractAddress(chainId) {
+  if (chainId === 1) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 3) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 4) {
+    return '0x92C3870d6f24dAdBFCF84770dfcEEE49eC1733EC';
+  } else if (chainId === 80001) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 97) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 42) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 56) {
+    return '0x7163C575Ca8BCF881e4abE3360A6B2462C6eb73F';
+  } else if (chainId === 137) {
+    return '0x00000000000000000000000000000000000000000';
+  }
+}
+
+export function getCommunityRewardContractAddress(chainId) {
+  if (chainId === 1) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 3) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 4) {
+    return '0x9647F6fd1a9fdB2211fB8F791C3cc1FB5Bb1BC6d';
+  } else if (chainId === 80001) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 97) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 42) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 56) {
+    return '0xE78dE4abD4663eA868E97b9b2ff1DeDc952eEA48';
+  } else if (chainId === 137) {
+    return '0x00000000000000000000000000000000000000000';
+  }
+}
+
+export function getChainPrams(id) {
+  const hexId = '0x' + id.toString(16);
+  if (id === 56) {
+    return [
+      {
+        chainId: hexId,
+        chainName: 'Binance Smart Chain Mainnet',
+        nativeCurrency: {
+          name: 'Binance',
+          symbol: 'BNB',
+          decimals: 18,
+        },
+        rpcUrls: ['https://bsc-dataseed.binance.org/'],
+        blockExplorerUrls: ['https://bscscan.com/'],
+      },
+    ];
+  }
+  if (id === 137) {
+    return [
+      {
+        chainId: hexId,
+        chainName: 'Matic/Polygon Mainnet',
+        nativeCurrency: {
+          name: 'Matic',
+          symbol: 'MATIC',
+          decimals: 18,
+        },
+        rpcUrls: ['https://rpc-mainnet.maticvigil.com'],
+        blockExplorerUrls: ['https://polygonscan.com/'],
+      },
+    ];
   }
 }
 

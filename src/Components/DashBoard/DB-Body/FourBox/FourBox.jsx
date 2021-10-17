@@ -67,7 +67,7 @@ export const FourBox = ({ price, GS50Price }) => {
         </div>
         <div>
           <p className="boxes" id="box_2">
-            Token Supply {formatNumber(totalSupply)} GS50
+            Token Supply {totalSupply} GS50
           </p>
           <img src={Group902} alt="" />
           <p className="amount-2">${calculatePrice(price, totalValue)}</p>

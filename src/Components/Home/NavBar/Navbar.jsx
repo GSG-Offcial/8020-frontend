@@ -43,8 +43,13 @@ export const Navbar = () => {
         <div>
           <ul class="nav justify-content-end" id="home-ul">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#/">
-                Buy
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="https://youtu.be/fSIgFZUwh-4"
+                target="_blank"
+              >
+                Video
               </a>
             </li>
             <li class="nav-item">
