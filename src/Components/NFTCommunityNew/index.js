@@ -1,0 +1,10 @@
+export { NftHeader2 } from './Nft-Header/NftHeader';
+export { NftSidebar } from './Nft-Siderbar/NftSidebar';
+export { MintToken } from './MintToken/MintToken';
+export { FiveNFTBox } from './FiveNFTBox/FiveNFTBox';
+export { NFTTable } from './NFTTable/NFTTable';
+export { NFTDesc } from './NFTDesc/NFTDesc';
+export { NFTFotter } from './NFTFotter/NFTFotter';
+export { NFTLastFooter } from './NFTFotter/NFTLastFooter/NFTLastFooter';
+export { YourReward } from './YourReward/YourReward';
+export { NFTinfo } from './NFTInfo/nftInfo';

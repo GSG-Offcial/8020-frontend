@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../FiveNFTBox/FiveNFTBox.module.css';
 import {
-  useNftCommunityRewardPoolContract,
+  useNftCommunityRewardPoolContract2,
   useContractCommunityToken,
 } from '../../../Hooks/nftPool';
 import { formatValue, getNftRewardPoolAddress } from '../../../utils';
@@ -15,7 +15,7 @@ export const NFTinfo = () => {
 
   const { account } = useWeb3React();
   const tokenContract = useContractCommunityToken();
-  const nftContract = useNftCommunityRewardPoolContract();
+  const nftContract = useNftCommunityRewardPoolContract2();
 
   let count = 0;
 

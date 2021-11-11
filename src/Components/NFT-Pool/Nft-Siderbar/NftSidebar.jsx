@@ -33,7 +33,7 @@ export const NftSidebar = () => {
                 <span>
                   <i className="fas fa-chart-pie"></i>
                 </span>{' '}
-                <span>Dashboard</span>
+                <span><small>Dashboard</small></span>
               </a>
             </Link>
           </li>
@@ -44,7 +44,9 @@ export const NftSidebar = () => {
                   <span>
                     <i className="fas fa-dice-d20"></i>
                   </span>{' '}
-                  <span>Access Pool</span>
+                  <span>
+                    <small>Access Pool</small>
+                  </span>
                 </a>
               </Link>
             </li>
@@ -54,7 +56,21 @@ export const NftSidebar = () => {
                   <span>
                     <i className="fas fa-dice-d20"></i>
                   </span>{' '}
-                  <span>Community Pool</span>
+                  <span>
+                    <small>Old Community Pool</small>
+                  </span>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/communityPoolNew">
+                <a href="#/" className={styles.nft_active}>
+                  <span>
+                    <i className="fas fa-dice-d20"></i>
+                  </span>{' '}
+                  <span>
+                    <small>New Community Pool</small>
+                  </span>
                 </a>
               </Link>
             </li>
@@ -63,7 +79,9 @@ export const NftSidebar = () => {
                 <span>
                   <i className="fas fa-ticket-alt"></i>
                 </span>{' '}
-                <span>Drop Lottery</span>{' '}
+                <span>
+                  <small>Drop Lottery</small>
+                </span>{' '}
               </a>
             </Link>
           </li>

@@ -1,0 +1,21 @@
+.NFTFotter_mainDiv{
+    background-color: white;   
+  margin-bottom: 0% !important;
+  width: 100% !important;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+.Footer_li{
+    box-sizing: border-box;
+    word-wrap: break-word;
+    padding-top: 2rem;
+}
+.Footer_li li a{
+    font-weight: bold;
+}
+.Footer_images_SMNFT li a {
+    padding: .3rem .2rem;
+}
+.Footer_images_SMNFT img{
+    width: 80%;
+}

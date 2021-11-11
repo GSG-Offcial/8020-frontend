@@ -42,7 +42,7 @@ export const Header = () => {
 
   useEffect(async () => {
     if (contract) {
-      let buyPrice = await contract.sellPrice();
+      let buyPrice = await contract.buyPrice();
       buyPrice = fromWei(+buyPrice.toString());
       setTokenPrice(buyPrice * ethPrice);
       const refId = await contract.getReferrer();
@@ -136,7 +136,14 @@ export const Header = () => {
     <Fragment>
       {/* navbar */}
       <nav className="navbar navbar-expand-md fixed-top main-NavBar">
-        <div className="container nested-DivDB">
+        <div
+          className="container nested-DivDB"
+          style={{
+            width: '735px',
+            marginLeft: '0px',
+            marginRight: '0px',
+          }}
+        >
           <a href="#/" className="navbar-brand">
             <span className="fw-bold display-6 text-white">TOKEN DROP</span>
           </a>
@@ -201,7 +208,18 @@ export const Header = () => {
                   href="#/"
                 >
                   <NavLink to="/communityPool" className="Nav_Link">
-                    Community Pool
+                    Old Community Pool
+                  </NavLink>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/communityPoolNew" className="Nav_Link">
+                    New Community Pool
                   </NavLink>
                 </a>
               </li>

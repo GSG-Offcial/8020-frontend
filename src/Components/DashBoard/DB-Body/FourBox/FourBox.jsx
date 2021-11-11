@@ -1,10 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import './FourBox.css';
-import {
-  calculatePrice,
-  formatValue,
-  formatNumber,
-} from '../../../../utils/index';
+import { calculatePrice, formatValue } from '../../../../utils/index';
 import { useContract } from '../../../../Hooks/index';
 import ethereum from '../../../Images/MaskGroup24.svg';
 import matic from '../../../Images/matic.svg';

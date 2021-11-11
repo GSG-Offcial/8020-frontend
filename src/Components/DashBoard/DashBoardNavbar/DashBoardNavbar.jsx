@@ -226,7 +226,18 @@ export const DashBoardNavbar = () => {
                   href="#/"
                 >
                   <NavLink to="/communityPool" className="Nav_Link">
-                    Community Pool
+                    Old Community Pool
+                  </NavLink>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/communityPoolNew" className="Nav_Link">
+                    New Community Pool
                   </NavLink>
                 </a>
               </li>

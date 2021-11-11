@@ -4,7 +4,7 @@ import { useNftRewardPoolContract } from '../../../Hooks/nftPool';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
-import { formatValue } from '../../../utils';
+import { formatNumberInDecimals } from '../../../utils';
 import { NFTTable } from '../index';
 import tip from '../../Images/tip.png';
 
@@ -24,7 +24,9 @@ export const YourReward = () => {
       } else {
         setCurrency('ETH');
       }
-      setRewards(formatValue(await nftContract.claimAmount(account)));
+      setRewards(
+        formatNumberInDecimals(await nftContract.claimAmount(account))
+      );
 
       const rewardEvents = await nftContract.queryFilter(
         nftContract.filters.RewardClaim()

@@ -40,7 +40,7 @@ export const NftHeader1 = () => {
 
   useEffect(async () => {
     if (contract) {
-      let buyPrice = await contract.sellPrice();
+      let buyPrice = await contract.buyPrice();
       buyPrice = fromWei(+buyPrice.toString());
       setTokenPrice(buyPrice * ethPrice);
       const refId = await contract.getReferrer();
@@ -199,7 +199,18 @@ export const NftHeader1 = () => {
                   href="#/"
                 >
                   <NavLink to="/communityPool" className="Nav_Link">
-                    Community Pool
+                    Old Community Pool
+                  </NavLink>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link sidebar_text"
+                  aria-current="page"
+                  href="#/"
+                >
+                  <NavLink to="/communityPoolNew" className="Nav_Link">
+                    New Community Pool
                   </NavLink>
                 </a>
               </li>

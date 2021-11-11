@@ -7,6 +7,7 @@ import {
   NoEthereumProviderError,
   UserRejectedRequestError as UserRejectedRequestErrorInjected,
 } from '@web3-react/injected-connector';
+import Swal from 'sweetalert2';
 
 const nf = new Intl.NumberFormat();
 
@@ -26,7 +27,7 @@ export function toWei(n) {
 }
 
 export function formatNumberInDecimals(params) {
-  return +fromWei(+params.toString()).toFixed(4);
+  return +fromWei(+params.toString()).toFixed(3);
 }
 
 export function fromWei(n) {
@@ -65,6 +66,15 @@ export function countAddress(address) {
   );
 
   return alladdress.length;
+}
+
+export function fail(msg) {
+  Swal.fire({
+    icon: 'error',
+    title: 'Transaction may Fail',
+    text: msg,
+    footer: '<a href="">Contact us for more info contact@the8020.io </a>',
+  });
 }
 
 export function getErrorMessage(error) {
@@ -176,7 +186,7 @@ export function getCommunityContractAddress(chainId) {
   } else if (chainId === 56) {
     return '0x7163C575Ca8BCF881e4abE3360A6B2462C6eb73F';
   } else if (chainId === 137) {
-    return '0x00000000000000000000000000000000000000000';
+    return '0x9D93c2d045F785aE1de8D99C5150366f64DE4b8e';
   }
 }
 
@@ -196,7 +206,27 @@ export function getCommunityRewardContractAddress(chainId) {
   } else if (chainId === 56) {
     return '0xE78dE4abD4663eA868E97b9b2ff1DeDc952eEA48';
   } else if (chainId === 137) {
+    return '0xC21dB24C069D32f419ad2FE2EFF3baB90379dfca';
+  }
+}
+
+export function getCommunityRewardContractAddress2(chainId) {
+  if (chainId === 1) {
     return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 3) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 4) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 80001) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 97) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 42) {
+    return '0x00000000000000000000000000000000000000000';
+  } else if (chainId === 56) {
+    return '0xC5739287ebb48F7C55E6562340745551D0986fE9';
+  } else if (chainId === 137) {
+    return '0x6f7F6c8f7F0d40ad7705DfED49e4760E467d2561';
   }
 }
 

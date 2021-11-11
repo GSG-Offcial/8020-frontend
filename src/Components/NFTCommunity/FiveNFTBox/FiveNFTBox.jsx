@@ -4,7 +4,10 @@ import {
   useContractCommunityToken,
   useNftCommunityRewardPoolContract,
 } from '../../../Hooks/nftPool';
-import { formatValue, getCommunityRewardContractAddress } from '../../../utils';
+import {
+  formatNumberInDecimals,
+  getCommunityRewardContractAddress,
+} from '../../../utils';
 import { useWeb3React } from '@web3-react/core';
 
 import tip from '../../Images/tip.png';
@@ -28,8 +31,8 @@ export const FiveNFTBox = () => {
       setTotalStaked((await tokenContract.balanceOf(nftAddress)).toString());
     }
     if (nftContract) {
-      setTotalEth(formatValue(await nftContract.checkBalance()));
-      setTotalReward(formatValue(await nftContract.totalClaimed()));
+      setTotalEth(formatNumberInDecimals(await nftContract.checkBalance()));
+      setTotalReward(formatNumberInDecimals(await nftContract.totalClaimed()));
     }
 
     if (chainId === 80001 || chainId === 137) {
@@ -103,13 +106,13 @@ export const FiveNFTBox = () => {
             <p className={`mt-3 ${styles.para_statis_nft}`}>
               STAKE YOUR COMMUNITY TOKEN
             </p>
-            <button
+            {/* <button
               type="button"
               className={`btn btn-primary btn-sm mb-4  ${styles.btn_nftBox}`}
               onClick={stake}
             >
               STAKE
-            </button>
+            </button> */}
             <div class={`${styles.lottery_statistics_tip_icon}`}>
               <img src={tip} alt="" data-toggle="tooltip" />
               <span className={`${styles.toolTipText}`}>
@@ -155,8 +158,8 @@ export const FiveNFTBox = () => {
               onChange={(e) => {
                 setAddress(e.target.value);
               }}
-              placeholder="Address here"
-              aria-label="Address here"
+              placeholder="Paste destination wallet address here"
+              aria-label="Paste destination wallet address here"
               aria-describedby="basic-addon1"
             />
             <input

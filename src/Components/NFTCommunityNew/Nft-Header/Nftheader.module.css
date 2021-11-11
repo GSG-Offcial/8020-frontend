@@ -1,0 +1,70 @@
+:root {
+  --color-WH: #fff;
+}
+
+.main_NavBar {
+  width: 100% !important;
+  background-color: #1b3354 !important;
+  min-height: 90px;
+}
+
+.nested_DivDB {
+  max-width: 1500px !important;
+}
+
+.Icon_Navbar_nft {
+  color: var(--color-WH) !important;
+}
+
+.nftheader_heading {
+  font-size: 1.8rem !important;
+}
+
+.sidebar_text_nft {
+  display: none;
+}
+.nft_btn2 {
+  border-radius: 50px !important;
+  border-style: none;
+  height: 40px;
+  color: var(--color-WH) !important;
+  cursor: pointer;
+  background-color: #10b9eb;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 5px 35px;
+}
+
+/* media query */
+@media (max-width: 767px) {
+  .Link_div_nft {
+    text-align: center;
+    font-size: x-large;
+  }
+  .sidebar_text_nft {
+    display: inline-block !important;
+  }
+  .Nav_Link_nft {
+    color: white !important;
+  }
+  .Nav_Link_nft:hover {
+    border-bottom: 1px solid #10b9eb;
+    color: plum !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nft_btn1 {
+    border-style: none;
+    height: 40px;
+    color: white !important;
+    cursor: pointer;
+    background-color: #10b9eb;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 97%;
+    box-sizing: border-box !important;
+  }
+}

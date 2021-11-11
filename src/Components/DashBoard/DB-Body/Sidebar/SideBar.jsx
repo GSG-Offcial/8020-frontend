@@ -33,16 +33,8 @@ export const SideBar = () => {
               <span>
                 <i className="fas fa-chart-pie"></i>
               </span>{' '}
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="#/" className="active">
               <span>
-                <i className="fas fa-dice-d20"></i>
-              </span>{' '}
-              <span>
-                <Link to="/nftPool">Access Pool</Link>{' '}
+                <small>Dashboard</small>
               </span>
             </a>
           </li>
@@ -52,7 +44,33 @@ export const SideBar = () => {
                 <i className="fas fa-dice-d20"></i>
               </span>{' '}
               <span>
-                <Link to="/communityPool">Community Pool</Link>{' '}
+                <Link to="/nftPool">
+                  <small>Access Pool</small>
+                </Link>{' '}
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#/" className="active">
+              <span>
+                <i className="fas fa-dice-d20"></i>
+              </span>{' '}
+              <span>
+                <Link to="/communityPool">
+                  <small>Old Community </small>
+                </Link>{' '}
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#/" className="active">
+              <span>
+                <i className="fas fa-dice-d20"></i>
+              </span>{' '}
+              <span>
+                <Link to="/communityPoolNew">
+                  <small>New Community </small>
+                </Link>{' '}
               </span>
             </a>
           </li>
@@ -62,7 +80,9 @@ export const SideBar = () => {
                 <i className="fas fa-ticket-alt"></i>
               </span>{' '}
               <span>
-                <Link to="/lottery">Drop Lottery</Link>{' '}
+                <Link to="/lottery">
+                  <small>Drop Lottery</small>
+                </Link>{' '}
               </span>{' '}
             </a>
           </li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './YourReward.module.css';
-import { useNftCommunityRewardPoolContract } from '../../../Hooks/nftPool';
+import { useNftCommunityRewardPoolContract2 } from '../../../Hooks/nftPool';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
@@ -9,7 +9,7 @@ import { NFTTable } from '../index';
 import tip from '../../Images/tip.png';
 
 export const YourReward = () => {
-  const nftContract = useNftCommunityRewardPoolContract();
+  const nftContract = useNftCommunityRewardPoolContract2();
   const [rewards, setRewards] = useState('Loading');
   const [currency, setCurrency] = useState('loading');
 

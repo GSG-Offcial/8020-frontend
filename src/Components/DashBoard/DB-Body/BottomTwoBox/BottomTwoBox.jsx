@@ -9,25 +9,37 @@ import ethereum from '../../../Images/MaskGroup24.svg';
 import matic from '../../../Images/matic.svg';
 import binance from '../../../Images/binance.svg';
 import { useWeb3React } from '@web3-react/core';
+import { fail } from '../../../../utils/index';
 
 export const BottomTwoBox = ({ price, withdrawAmount }) => {
   const contract = useContract();
   const { chainId } = useWeb3React();
-
   const [currency, setCurrency] = useState('');
   const [logoInCard, setLogoInCard] = useState();
 
   async function withdraw() {
     if (contract) {
-      const tx = await contract.withdraw();
-      if (await tx.wait()) window.location.reload();
+      try {
+        const tx = await contract.withdraw();
+        if (await tx.wait()) window.location.reload();
+      } catch (e) {
+        if (e.code === 4001) return;
+        let error = JSON.parse(JSON.stringify(e));
+        fail(error.error.message);
+      }
     }
   }
 
   async function cycle() {
     if (contract) {
-      const tx = await contract.reinvest();
-      if (await tx.wait()) window.location.reload();
+      try {
+        const tx = await contract.reinvest();
+        if (await tx.wait()) window.location.reload();
+      } catch (e) {
+        if (e.code === 4001) return;
+        let error = JSON.parse(JSON.stringify(e));
+        fail(error.error.message);
+      }
     }
   }
 

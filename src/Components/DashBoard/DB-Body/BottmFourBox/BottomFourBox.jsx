@@ -4,6 +4,7 @@ import {
   calculatePrice,
   formatValue,
   formatNumberInDecimals,
+  fail,
 } from '../../../../utils/index';
 import { useWeb3React } from '@web3-react/core';
 import { useContract } from '../../../../Hooks/index';

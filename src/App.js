@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { DashBoardNavbar } from './Components/DashBoard/index';
 import { Header } from './Components/Lottery/Header/Header';
 import { NftHeader } from './Components/NFTCommunity/index';
+import { NftHeader2 } from './Components/NFTCommunityNew/index';
 import { NftHeader1 } from './Components/NFT-Pool/index';
 import './App.css';
 import { Web3Provider } from '@ethersproject/providers';
@@ -27,6 +28,7 @@ function App() {
               <Route exact path="/lottery" component={Header} />
               <Route exact path="/nftPool" component={NftHeader1} />
               <Route exact path="/communityPool" component={NftHeader} />
+              <Route exact path="/communityPoolNew" component={NftHeader2} />
             </Switch>
           </div>
         </div>

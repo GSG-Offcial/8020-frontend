@@ -19,7 +19,7 @@ import { useContract } from '../../../Hooks/index';
 import { fromWei } from '../../../utils';
 import { NavLink } from 'react-router-dom';
 
-export const NftHeader = () => {
+export const NftHeader2 = () => {
   const context = useWeb3React();
   const { connector, account, library, chainId, activate } = context;
   const contract = useContract();

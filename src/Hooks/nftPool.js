@@ -6,8 +6,10 @@ import {
   getContract,
   getAccessKeyContractAddress,
   getNftRewardPoolAddress,
+  getNftRewardPoolAddress2,
   getCommunityContractAddress,
   getCommunityRewardContractAddress,
+  getCommunityRewardContractAddress2,
 } from '../utils/index';
 
 export const useContractAccessKey = () => {
@@ -65,6 +67,23 @@ export const useNftCommunityRewardPoolContract = () => {
         ? getContract(
             abi2,
             getCommunityRewardContractAddress(chainId),
+            library,
+            account
+          )
+        : undefined,
+    [library, account, chainId]
+  );
+};
+
+export const useNftCommunityRewardPoolContract2 = () => {
+  const { library, account, chainId } = useWeb3React();
+
+  return useMemo(
+    () =>
+      !!library
+        ? getContract(
+            abi2,
+            getCommunityRewardContractAddress2(chainId),
             library,
             account
           )
