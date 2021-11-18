@@ -64,18 +64,24 @@
   width: 100% !important;
   color: plum !important;
   margin-left: -30px !important;
+  border: none !important;
+  background-color:#0d173a !important;
 }
 .items_dropDown_NftSidebar{
   width: 100% !important;
   color: plum !important;
   background-color: #17203f !important;
 }
-.button_dropDown_nftSidebar{
-  border: none !important;
-  background-color:#0d173a !important;
-}
+/* .button_dropDown_nftSidebar{
+  
+} */
 .dropdown_item_nftsidebar{
   padding-left: 20px;
+}
+.dropdown_item_nftsidebar:hover{
+   background-color: rgba(230,230,250, 0.2);
+  color:plum!important;
+
 }
 @media (max-width: 767px) {
   .nft_sidebar {

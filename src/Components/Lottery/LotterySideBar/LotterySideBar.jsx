@@ -83,6 +83,21 @@ export const LotterySideBar = () => {
               </a>
             </Link>
           </li>
+          <li>
+          <div class="dropdown">
+     <button class="btn btn-secondary  button_dropDown_dropLottery" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        <span>
+                <i className="fas fa-dice-d20 icons_droplottery"></i>
+              </span>{' '}    NFT Launched Paid
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark items_dropDown_dropLottery" aria-labelledby="dropdownMenuButton2">
+    <li><a class="dropdown-item_dropLottery" href="#">ART</a></li>
+    <li><a class="dropdown-item_dropLottery" href="#">MUSIC</a></li>
+    <li><a class="dropdown-item_dropLottery" href="#">SPORTS</a></li>
+    <li><a class="dropdown-item_dropLottery" href="#">UTILITY</a></li>
+  </ul>
+</div>
+          </li>
         </ul>
       </div>
     </div>

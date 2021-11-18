@@ -51,12 +51,38 @@
 
 /* media query */
 
+
+.button_dropDown_dropLottery{
+  background-color: #17203f !important;
+  width: 100% !important;
+  color: plum !important;
+  margin-left: -15px !important;
+  border: none !important;
+  background-color:#0d173a !important;
+}
+.icons_droplottery{
+  font-size: 1.4rem !important;
+  padding-right: 1.1rem !important;
+  padding-left: 0.7rem !important;
+}
+.items_dropDown_dropLottery{
+  width: 100% !important;
+  color: plum !important;
+  background-color: #17203f !important;
+}
+.dropdown-item_dropLottery{
+  padding-left: 20px;
+}
+.dropdown-item_dropLottery:hover{
+  background-color: rgba(230,230,250, 0.2);
+  color:plum!important;
+
+}
 @media (max-width: 767px) {
   .lot_sidebar {
     display: none !important;
   }
 }
-
 /* 
 @media only screen and  (max-width: 640px) {
     .lot_sidebar{

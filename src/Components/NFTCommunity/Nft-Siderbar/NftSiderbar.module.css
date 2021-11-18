@@ -75,6 +75,11 @@
 .dropdown_item_nftsidebarCom{
 padding-left: 20px;
 }
+.dropdown_item_nftsidebarCom:hover{
+  background-color: rgba(230,230,250, 0.2);
+  color:plum!important;
+
+}
 @media (max-width: 767px) {
   .nft_sidebar {
     display: none !important;
