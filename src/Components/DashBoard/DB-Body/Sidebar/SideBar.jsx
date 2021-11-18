@@ -86,6 +86,21 @@ export const SideBar = () => {
               </span>{' '}
             </a>
           </li>
+          {/* <li> */}
+          <div class="dropdown">
+     <button class="btn btn-secondary  button_dropDown" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        <span>
+                <i className="fas fa-dice-d20"></i>
+              </span>{' '}    NFT Launched Paid
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark items_dropDown" aria-labelledby="dropdownMenuButton2">
+    <li><a class="dropdown-item" href="#">ART</a></li>
+    <li><a class="dropdown-item" href="#">MUSIC</a></li>
+    <li><a class="dropdown-item" href="#">SPORTS</a></li>
+    <li><a class="dropdown-item" href="#">UTILITY</a></li>
+  </ul>
+</div>
+          {/* </li> */}
         </ul>
       </div>
     </div>

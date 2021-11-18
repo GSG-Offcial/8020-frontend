@@ -55,7 +55,7 @@
   color: plum !important;
 }
 
-.sidebar-menu a span {
+.sidebar-menu a span,.button_dropDown span i {
   font-size: 1.4rem;
   padding-right: 1.1rem;
   padding-left: 0.3rem;
@@ -86,6 +86,18 @@
 .sidebar-bottom p span {
   padding-right: 0.8rem;
 }
+.button_dropDown,.items_dropDown{
+  background-color: #17203f !important;
+  width: 100%;
+  color: plum !important;
+  margin-left: -15px;
+}
+.button_dropDown{
+  border: none !important;
+  background-color:#0d173a !important;
+}
+
+
 
 @media (max-width: 767px) {
   .sidebar {

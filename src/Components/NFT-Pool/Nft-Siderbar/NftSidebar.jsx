@@ -85,6 +85,22 @@ export const NftSidebar = () => {
               </a>
             </Link>
           </li>
+          {/* <li> */}
+          <div class="dropdown">
+  <button className={`btn btn-secondary  ${styles.button_dropDown_nftSidebar}`} type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+  <span>
+                <i className={`fas fa-dice-d20 ${styles.ion_dropDown}`}></i>
+              </span>{' '}    
+              NFT Launched Paid
+  </button>
+  <ul className={`dropdown-menu dropdown-menu-dark ${styles.items_dropDown_NftSidebar}`} aria-labelledby="dropdownMenuButton2">
+    <li><a className={`${styles.dropdown_item_nftsidebar}`} href="#">ART</a></li>
+    <li><a className={`${styles.dropdown_item_nftsidebar}`} href="#">MUSIC</a></li>
+    <li><a className={`${styles.dropdown_item_nftsidebar}`} href="#">SPORTS</a></li>
+    <li><a className={`${styles.dropdown_item_nftsidebar}`} href="#">UTILITY</a></li>
+  </ul>
+</div>
+            {/* </li> */}
         </ul>
       </div>
     </div>
