@@ -9,4 +9,5 @@
 body{
   /* background-color: #17203F; */
   background-color: rgba(23,32,63, 0.97);
+  overflow-x: hidden;
 }
