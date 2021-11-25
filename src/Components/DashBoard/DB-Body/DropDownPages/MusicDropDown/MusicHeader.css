@@ -1,0 +1,16 @@
+.HeaderSectionResponsive{
+    display: none !important;
+}
+@media (max-width:767px) {
+    .HeaderSectionResponsive{
+        display: inline-block !important;
+        color: white !important;
+        text-align: center !important;
+        font-size: x-large;
+        margin: 20px 0px;
+    }
+    .HeaderSectionResponsive:hover{
+        color: plum !important;
+    }
+    
+}

@@ -10,6 +10,10 @@ import './App.css';
 import { Web3Provider } from '@ethersproject/providers';
 import { Web3ReactProvider } from '@web3-react/core';
 
+
+// dropdown
+import {MusicPage} from './Components/DashBoard/DB-Body/DropDownPages/index'
+
 function getLibrary(provider) {
   const library = new Web3Provider(provider);
   library.pollingInterval = 8000;
@@ -29,6 +33,7 @@ function App() {
               <Route exact path="/nftPool" component={NftHeader1} />
               <Route exact path="/communityPool" component={NftHeader} />
               <Route exact path="/communityPoolNew" component={NftHeader2} />
+              <Route exact path="/dashboard/music" component={MusicPage} />
             </Switch>
           </div>
         </div>
