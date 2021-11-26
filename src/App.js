@@ -12,8 +12,8 @@ import { Web3ReactProvider } from '@web3-react/core';
 
 
 // dropdown
-import {MusicPage} from './Components/DashBoard/DB-Body/DropDownPages/index'
-
+import {MusicPage,ArtdropDown} from './Components/DashBoard/DB-Body/DropDownPages/index'
+import {MusicHeader} from './Components/DashBoard/DB-Body/DropDownPages/MusicDropDown/MusicHeader'
 function getLibrary(provider) {
   const library = new Web3Provider(provider);
   library.pollingInterval = 8000;
@@ -33,11 +33,19 @@ function App() {
               <Route exact path="/nftPool" component={NftHeader1} />
               <Route exact path="/communityPool" component={NftHeader} />
               <Route exact path="/communityPoolNew" component={NftHeader2} />
-              <Route exact path="/dashboard/music" component={MusicPage} />
             </Switch>
           </div>
         </div>
       </Router>
+      <div>
+          <Router>
+          <MusicHeader/>
+            <Switch>
+            <Route exact path="/dashboard/music" component={MusicPage} />
+            <Route exact path="/dashboard/art" component={ArtdropDown} />
+            </Switch>
+          </Router>
+      </div>
     </Web3ReactProvider>
   );
 }

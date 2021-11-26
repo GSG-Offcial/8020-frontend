@@ -106,7 +106,7 @@ export const SideBar = () => {
             >
               <li>
                 <a class="dropdown-item" href="#">
-                  ART
+                <Link to="/dashboard/art"> ART</Link> 
                 </a>
               </li>
               <li>
