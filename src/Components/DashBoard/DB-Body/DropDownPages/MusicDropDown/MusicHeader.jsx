@@ -156,6 +156,7 @@ export const MusicHeader = () => {
               <a className="btn dashboard-btn3 " href="#/">
                 {/* {chainName} */}
                 {/* dashboard-btn3 */}
+                Matic Mainnet
               </a>
             </li>
             <li className="nav-item ms-2 d-none d-md-inline">

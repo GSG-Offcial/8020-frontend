@@ -2,17 +2,18 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 // import Group99 from '../../../Icons/Group 900.svg';
-import Group99 from "../../../Icons/logo2.png";
+import Group99 from "../../../../Icons/logo2.png";
+// ../../../Icons/logo2.png
 // import NFTIcon from '../../../Icons/icon-sidebar-NFT.svg'
 // import Logo8090 from '../../../Logo/Group903.svg
-// import "./SideBar.css";
+import "../../Sidebar/SideBar.css";
 
-export const SideBar = () => {
+export const SideBarDropDown = () => {
   const [height, setHeight] = useState("");
 
   setInterval(() => {
     setHeight(document.body.scrollHeight - 245 + "px");
-  }, 10);
+  }, 100);
 
   return (
     <div
