@@ -12,7 +12,7 @@ export const SideBarDropDown = () => {
   const [height, setHeight] = useState("");
 
   setInterval(() => {
-    setHeight(document.body.scrollHeight - 245 + "px");
+    setHeight(document.body.scrollHeight - 160 + "px");
   }, 100);
 
   return (
@@ -35,7 +35,9 @@ export const SideBarDropDown = () => {
                 <i className="fas fa-chart-pie"></i>
               </span>{" "}
               <span>
+                <Link to="/dashboard">
                 <small>Dashboard</small>
+                </Link>
               </span>
             </a>
           </li>
@@ -107,22 +109,22 @@ export const SideBarDropDown = () => {
             >
               <li>
                 <a class="dropdown-item" href="#">
-                <Link to="/dashboard/art"> ART</Link> 
+                <Link to="/art"> ART</Link> 
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-                  <Link to="/dashboard/music">MUSIC</Link>{" "}
+                  <Link to="/music">MUSIC</Link>{" "}
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-                  SPORTS
+               <Link to="/sports"> SPORTS</Link>  
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-                  UTILITY
+                <Link to="/utilities">UTILITY</Link>  
                 </a>
               </li>
             </ul>

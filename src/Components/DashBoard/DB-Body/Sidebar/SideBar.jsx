@@ -106,22 +106,22 @@ export const SideBar = () => {
             >
               <li>
                 <a class="dropdown-item" href="#">
-                <Link to="/dashboard/art"> ART</Link> 
+                <Link to="/art"> ART</Link> 
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-                  <Link to="/dashboard/music">MUSIC</Link>{" "}
+                  <Link to="/music">MUSIC</Link>{" "}
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-                  SPORTS
+                 <Link to="/sports">SPORTS</Link> 
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-                  UTILITY
+               <Link to="/utilities">UTILITY</Link>   
                 </a>
               </li>
             </ul>

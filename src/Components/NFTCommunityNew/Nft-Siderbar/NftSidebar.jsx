@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './NftSiderbar.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import Group99 from '../../Icons/logo2.png';
 
 export const NftSidebar = () => {
@@ -94,10 +94,10 @@ export const NftSidebar = () => {
               NFT Launched Paid
   </button>
   <ul className={`dropdown-menu dropdown-menu-dark ${styles.items_dropDown_NftSidebarNew}`} aria-labelledby="dropdownMenuButton2">
-    <li><a className={`${styles.dropdown_item_nftsidebarNew}`} href="#">ART</a></li>
-    <li><a className={`${styles.dropdown_item_nftsidebarNew}`} href="#">MUSIC</a></li>
-    <li><a className={`${styles.dropdown_item_nftsidebarNew}`} href="#">SPORTS</a></li>
-    <li><a className={`${styles.dropdown_item_nftsidebarNew}`} href="#">UTILITY</a></li>
+    <li>  <a className={`${styles.dropdown_item_nftsidebarNew}`} href="#/"><Link to="/art">ART</Link> </a></li>
+    <li>   <a className={`${styles.dropdown_item_nftsidebarNew}`} href="#/"><Link to="/music">MUSIC</Link> </a></li>
+    <li>  <a className={`${styles.dropdown_item_nftsidebarNew}`} href="#/"><Link to="/sports">SPORTS</Link> </a> </li>
+    <li>  <a className={`${styles.dropdown_item_nftsidebarNew}`} href="#/"><Link to="/utilities">UTILITY</Link> </a></li>
   </ul>
 </div>
           </li>

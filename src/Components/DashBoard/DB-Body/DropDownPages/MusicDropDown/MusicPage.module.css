@@ -1,0 +1,84 @@
+.MusicPageContetn{
+    position: relative;
+    top: 150px;
+    margin-left: 280px !important;
+}
+.maidDivMusic{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+.contentBox{
+    border: 2px solid #10b9eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 7px;
+}
+.contentBox h2{
+    color: white;  
+    text-align: center;
+}
+.maidDivMusic div{
+        flex: 1;
+
+}
+.nestedBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.content1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  align-items: center;
+}
+.content1 img{
+    width: 100% !important;
+    height: 370px !important;
+    border-radius: 10px !important;
+    margin-left: 1rem;
+    box-sizing: border-box !important;
+}
+.content2{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.content2 p{
+    padding-bottom: 0.2rem !important;
+}
+
+@media (max-width:1275px) {
+    .content2 p{
+        padding-bottom: 0.5rem !important;
+    }
+}
+@media (max-width:950px) {
+    .maidDivMusic{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .MusicPageContetn{
+        margin-left: 8px !important;
+
+    }
+}
+@media only screen and (max-width: 500px) {
+    .nestedBox{
+        flex-direction: column;
+    }
+    .content1 img{
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
