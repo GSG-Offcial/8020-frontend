@@ -86,6 +86,18 @@ export const SideBar = () => {
               </span>{" "}
             </a>
           </li>
+          <li>
+            <a href="#/" className="active" id="Lottery">
+              <span>
+                <i className="fas fa-ticket-alt"></i>
+              </span>{" "}
+              <span>
+                <Link to="/upgradeddashboard">
+                  <small>New Dasboard</small>
+                </Link>{" "}
+              </span>{" "}
+            </a>
+          </li>
           {/* <li> */}
           <div class="dropdown">
             <button
@@ -106,7 +118,7 @@ export const SideBar = () => {
             >
               <li>
                 <a class="dropdown-item" href="#">
-                <Link to="/art"> ART</Link> 
+                  <Link to="/art"> ART</Link>
                 </a>
               </li>
               <li>
@@ -116,12 +128,12 @@ export const SideBar = () => {
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-                 <Link to="/sports">SPORTS</Link> 
+                  <Link to="/sports">SPORTS</Link>
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">
-               <Link to="/utilities">UTILITY</Link>   
+                  <Link to="/utilities">UTILITY</Link>
                 </a>
               </li>
             </ul>
