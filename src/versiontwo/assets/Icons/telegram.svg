@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57.107" height="57.107" viewBox="0 0 57.107 57.107">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4f24ff"/>
+      <stop offset="1" stop-color="#13d9e2"/>
+    </linearGradient>
+  </defs>
+  <path id="telegram" d="M28.553,57.107A28.553,28.553,0,1,0,0,28.553,28.549,28.549,0,0,0,28.553,57.107ZM13.066,27.935,40.6,17.32c1.278-.462,2.394.312,1.98,2.244l0,0L37.89,41.645c-.347,1.566-1.278,1.946-2.579,1.209l-7.138-5.261L24.73,40.91a1.8,1.8,0,0,1-1.44.7l.507-7.264L37.027,22.4c.576-.507-.128-.792-.888-.288L19.79,32.4l-7.048-2.2c-1.53-.485-1.563-1.53.324-2.268Z" fill="url(#linear-gradient)"/>
+</svg>

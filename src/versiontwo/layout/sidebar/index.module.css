@@ -1,0 +1,22 @@
+.main_sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    background-color: rgb(35,34,42);
+
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.menu_sidebar{
+    height: 100%;
+    padding-top: 42px;
+
+}
+.menu_sidebar li{
+    padding: 18px 14px;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}

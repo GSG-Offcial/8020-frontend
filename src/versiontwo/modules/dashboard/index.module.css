@@ -1,0 +1,77 @@
+.DashboardUpdgrade{
+    background-image: url('../../assets/images/bg-image.jpeg');
+    background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Nonito Sans";
+  width: 100%;
+  min-height: 100vh;
+}
+.nested_upgradeDashboard{
+    background-color: rgba(20, 23, 61, 0.6);
+    width: 100%;
+    min-height: 100vh;
+}
+.content{
+    margin-top: 50px;
+      
+    display: grid;
+    grid-template-columns: 250px 1.3fr 1fr;
+    gap: 16px;
+}
+.main_section{
+    /* background-color: rgba(20, 23, 61, 0.6); */
+    background-color: rgb(35,34,42);
+    width: 100%;
+    border-radius: 16px;
+}
+.nested_section{
+   width: 80%; 
+   margin: 10px auto;
+}
+.network_tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.network_heading{
+    /* color: white !important; */
+    background-color: rgb(38,35,57);
+    padding: 14px;
+    border-radius: 16px;
+    color: white !important;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+.contract{
+    margin-top: 14px;
+}
+.contract h1{
+    font-size: 20px;
+    color: rgb(85,85,88);
+    text-transform: uppercase;
+    letter-spacing: 0px !important;
+    margin-left: 12px;
+}
+.contract_status{
+    margin: 14px 0px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+align-items: center;
+gap: 8px;
+}
+.child_status{
+    background-color: rgb(38,35,57);
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.child_status p{
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
+}
