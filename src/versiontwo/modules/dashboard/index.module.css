@@ -137,11 +137,13 @@ gap: 8px;
     width: 100%;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
+    overflow-y: auto;
+    height: 481px;
 }
 .netsed_token{
-    width: 90%;
+    /* width: 90%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
 }
 .bnb_child{
     display: flex;

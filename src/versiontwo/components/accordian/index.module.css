@@ -24,8 +24,8 @@
   }
   .accordion_content {
     background-color: transparent;
-    height: 180px;
-    overflow-y: auto;
+    /* height: 180px;
+    overflow-y: auto; */
   }
   
   

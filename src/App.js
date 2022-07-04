@@ -3,7 +3,7 @@ import { Navbar } from "./Components/Home/NavBar/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { DashBoardNavbar } from "./Components/DashBoard/index";
 import { Header } from "./Components/Lottery/Header/Header";
-// import { UpgradedDashboard } from "./Components/upgradedDashboard/UpgradedDashboard";
+import { UpgradedDashboard } from "./Components/upgradedDashboard/UpgradedDashboard";
 import { NftHeader } from "./Components/NFTCommunity/index";
 import { NftHeader2 } from "./Components/NFTCommunityNew/index";
 import { NftHeader1 } from "./Components/NFT-Pool/index";
