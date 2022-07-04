@@ -7,7 +7,8 @@ import { UpgradedDashboard } from "./Components/upgradedDashboard/UpgradedDashbo
 import { NftHeader } from "./Components/NFTCommunity/index";
 import { NftHeader2 } from "./Components/NFTCommunityNew/index";
 import { NftHeader1 } from "./Components/NFT-Pool/index";
-import { DashboardUpdgrade } from "./versiontwo/modules";
+import { DashboardUpdgrade, StakingPool } from "./versiontwo/modules";
+
 import "./App.css";
 import { Web3Provider } from "@ethersproject/providers";
 import { Web3ReactProvider } from "@web3-react/core";
@@ -56,6 +57,11 @@ function App() {
                exact
                 path={"/dashboard-upgrade"}
                 component={DashboardUpdgrade}
+              />
+              <Route
+               exact
+                path={"/staking-pool"}
+                component={StakingPool}
               />
             </Switch>
           </div>

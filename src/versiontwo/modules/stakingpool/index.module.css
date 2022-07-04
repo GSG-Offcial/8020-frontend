@@ -1,0 +1,26 @@
+.main_stakingpool{
+    background-image: url('../../assets/images/bg-image.jpeg');
+    background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Nonito Sans";
+  width: 100%;
+  min-height: 100vh;
+}
+.nested_satkingpool{
+    background-color: rgba(20, 23, 61, 0.6);
+    width: 100%;
+    min-height: 100vh;
+}
+.content_stakingpool{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 250px 1.3fr 0.8fr;
+    gap: 16px;
+    margin-right: 20px;
+}
+.stakingpool_data, .side_data{
+    background-color: rgb(35,34,42);
+    width: 100%;
+    border-radius: 16px;
+}
