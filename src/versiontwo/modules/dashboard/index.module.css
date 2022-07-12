@@ -72,8 +72,9 @@ gap: 8px;
 .child_status p,.wallet_balance p, .side_heading p, .switch_network p{
     padding-bottom: 0px !important;
     margin-bottom: 0px !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     text-transform: uppercase;
+    text-align: center;
 }
 .groups_btn{
     display: flex;
@@ -138,7 +139,7 @@ gap: 8px;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
     overflow-y: auto;
-    /* height: 481px; */
+    height: 481px;
 }
 .token_section::-webkit-scrollbar{
     width: 10px;

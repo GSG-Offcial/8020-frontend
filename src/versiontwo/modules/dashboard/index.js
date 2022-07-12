@@ -39,19 +39,19 @@ export const DashboardUpdgrade = () => {
                     <p>Bnb</p>
                   </div>
                   <div className={style.child_status}>
-                    <p>Tvl</p>
-                    <p>100</p>
-                    <p>Bnb</p>
+                    <p>Total</p>
+                    <p>75,000</p>
+                    <p>Wallets</p>
                   </div>
                   <div className={style.child_status}>
-                    <p>Tvl</p>
-                    <p>100</p>
-                    <p>Bnb</p>
+                    <p>Total</p>
+                    <p>145</p>
+                    <p>Wallets</p>
                   </div>
                   <div className={style.child_status}>
-                    <p>Tvl</p>
-                    <p>100</p>
-                    <p>Bnb</p>
+                    <p>GS50 Price</p>
+                    <p>$0.50</p>
+                    <p>USD</p>
                   </div>
                 </div>
               </div>
@@ -62,24 +62,24 @@ export const DashboardUpdgrade = () => {
                 <div className={style.contract_status}>
                   {" "}
                   <div className={style.child_status}>
-                    <p>Tvl</p>
-                    <p>100</p>
+                    <p>DIVIDEND</p>
+                    <p>.5</p>
                     <p>Bnb</p>
                   </div>
                   <div className={style.child_status}>
-                    <p>Tvl</p>
-                    <p>100</p>
+                    <p>Bonus</p>
+                    <p>1.2</p>
                     <p>Bnb</p>
                   </div>
                   <div className={style.child_status}>
-                    <p>Tvl</p>
-                    <p>100</p>
+                    <p>Commision</p>
+                    <p>2.4</p>
                     <p>Bnb</p>
                   </div>
                   <div className={style.child_status}>
-                    <p>Tvl</p>
-                    <p>100</p>
-                    <p>Bnb</p>
+                    <p>Share Rated</p>
+                    <p>13%</p>
+                    {/* <p>Bnb</p> */}
                   </div>
                 </div>
               </div>
