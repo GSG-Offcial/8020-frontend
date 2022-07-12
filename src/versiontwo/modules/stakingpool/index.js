@@ -12,7 +12,7 @@ export const StakingPool = () => {
 
         <div className={styles.content_stakingpool}>
           {/* sidebar div */}
-          <div>
+          <div className={styles.sidebar_div}>
             <Sidebar />
           </div>
           <div className={styles.stakingpool_data}>
@@ -37,18 +37,18 @@ export const StakingPool = () => {
                   >
                     <div className={styles.child_status}>
                       <p>Tvl</p>
-                      <p>100</p>
+                      <p>2</p>
                       <p>Bnb</p>
                     </div>
                     <div className={styles.child_status}>
-                      <p>Tvl</p>
-                      <p>100</p>
+                      <p>Trc</p>
+                      <p>2</p>
                       <p>Bnb</p>
                     </div>
                     <div className={styles.child_status}>
-                      <p>Tvl</p>
-                      <p>100</p>
-                      <p>Bnb</p>
+                      <p>Total</p>
+                      <p>25</p>
+                      <p>Stakes</p>
                     </div>
                   </div>
                   <div className={styles.status_staking}>
@@ -65,6 +65,7 @@ export const StakingPool = () => {
 
               {/* line */}
               <hr />
+              <h5>Community Staking Pool</h5>
 
               <div className={styles.access_key}>
                 <div className={styles.access_content}>
@@ -78,23 +79,23 @@ export const StakingPool = () => {
                   >
                     <div className={styles.child_status}>
                       <p>Tvl</p>
-                      <p>100</p>
+                      <p>1.4</p>
                       <p>Bnb</p>
                     </div>
                     <div className={styles.child_status}>
-                      <p>Tvl</p>
-                      <p>100</p>
+                      <p>Trc</p>
+                      <p>7</p>
                       <p>Bnb</p>
                     </div>
                     <div className={styles.child_status}>
-                      <p>Tvl</p>
-                      <p>100</p>
-                      <p>Bnb</p>
+                      <p>Total</p>
+                      <p>50</p>
+                      <p>Stakes</p>
                     </div>
                   </div>
                   <div className={styles.status_staking}>
                     <p>User Reward:</p>
-                    <p className={styles.amount}>1.1 BNB</p>
+                    <p className={styles.amount}>0.95228797 BNB</p>
                   </div>
                 </div>
 

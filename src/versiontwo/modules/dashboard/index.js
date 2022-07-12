@@ -16,7 +16,7 @@ export const DashboardUpdgrade = () => {
       <div className={style.nested_upgradeDashboard}>
         <Header />
         <div className={style.content}>
-          <div>
+          <div className={style.sidebar_div}>
             <Sidebar />
           </div>
           <div className={style.main_section}>
@@ -170,6 +170,9 @@ export const DashboardUpdgrade = () => {
 
               </div>
             </div>
+          </div>
+          <div className={style.dashboard_data}>
+            <p style={{ color: "gray" }}>Advertisment space</p>
           </div>
         </div>
       </div>

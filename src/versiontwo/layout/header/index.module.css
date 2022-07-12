@@ -30,3 +30,22 @@
     text-transform: uppercase;
     
 }
+@media (max-width:980px) {
+    .nested_header{
+        width: 100% !important;
+    }
+}
+@media (max-width:768px) {
+   .boxes_header p{
+    font-size: 12px !important;
+   }   
+   .img_header img{
+    width: 130px;
+   }
+}
+@media (max-width:500px) {
+    .nested_header{
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+}
