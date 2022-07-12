@@ -15,12 +15,151 @@
 .content_stakingpool{
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 250px 1.3fr 0.8fr;
+    grid-template-columns: 250px 1.3fr 0.9fr 0.3fr;
     gap: 16px;
     margin-right: 20px;
 }
-.stakingpool_data, .side_data{
+.stakingpool_data, .side_data, .advertisment_data{
     background-color: rgb(35,34,42);
     width: 100%;
     border-radius: 16px;
 }
+.advertisment_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+    text-align: center;
+}
+.nested_stakingpool{
+    width: 80%;
+    margin: 0 auto;
+}
+.network_tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.network_heading{
+    /* color: white !important; */
+    background-color: rgb(38,35,57);
+    padding: 14px;
+    border-radius: 16px;
+    color: white !important;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+h5{
+   text-transform: uppercase;
+   font-weight: 900;
+   padding: 16px;
+   font-size: 20px;
+    color: rgb(85,85,88);
+}
+.access_key{
+    /* display: flex;
+    justify-content: space-between;
+    width: 100%; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 16px;
+}
+.access_content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    gap: 20px;
+}
+.child_status{
+    background-color: rgb(38,35,57);
+    padding: 8px;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.status_staking{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+    background-color: rgb(38,35,57);
+     padding: 10px;
+     border-radius: 14px;
+}
+.status_staking .amount{
+    color: rgb(30,199,212);
+}
+.accessbtn{
+    width: 100%;
+}
+.accessbtn button{
+    background-color: rgb(30,199,212);
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    width: 100%;
+    margin: 10px 0px;
+    letter-spacing: 0.8px;
+}
+.wallet_balance{
+    display: flex;
+    justify-content: space-between;
+     margin: 10px 0px;
+     background-color: rgb(38,35,57);
+     padding: 10px;
+     border-radius: 14px;
+}
+.wallet_balance p{
+
+    font-size: 16px !important;
+
+}
+.netsed_sideData{
+    width: 95%;
+    margin: 0 auto;
+    overflow-y: auto;
+    height: 550px;
+}
+.netsed_sideData::-webkit-scrollbar{
+    width: 6px;
+}
+.netsed_sideData::-webkit-scrollbar-thumb{
+    width: 6px;
+    background-color: rgb(30,199,212);
+    border-radius: 8px;
+
+}
+.netsed_sideData h3{
+    margin: 14px 6px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.side_content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 20px;
+    /* height: auto; */
+    /* height: 250px; */
+}
+.description{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+     /* margin: 10px 0px; */
+     background-color: rgb(38,35,57);
+     padding: 10px;
+     border-radius: 14px;
+}
+/* .accessbtn{
+    width: 50%;
+} */
